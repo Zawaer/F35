@@ -45,24 +45,29 @@ Master parts list for the Phase 3 F-35B. The tables below reflect the **final Al
 | Silicone wire 10AWG | red+black, 2 m | 1 | 5.01 | Main EDF power |
 | Servo extension | 200 mm, 10 pcs | 1 | 2.68 | ⚠️ may want 300 mm for some runs |
 | 30mm ducted fan EDF | QF1611, 7000KV, 3S (incl. 20A ESC) | 2 | 15.85 | Roll-post motors |
-| Feetech STS3032M | 6V 4.5 kg·cm, magnetic encoder | **3** | 34.62 | ⚠️ cart shows **1** — order **3** total (3BSM) |
+| Feetech STS3032M | 6V 4.5 kg·cm, magnetic encoder | **1** | 34.62 | 3BSM nozzle (sections gear-linked — one servo suffices) |
 | FFC/FPC adapter board | 12P, 0.5 mm → 2.54 mm ZIF, 5 pcs | 1 | 2.95 | For cockpit TFT cable |
 | IRLZ44N MOSFET | TO-220, 10 pcs | 1 | 2.93 | Switch COB strip / landing light |
 | Stainless steel balls | 4 mm, 100 pcs | 1 | 3.54 | 3BSM ball race (see note) |
 | CD74HC4067 | 16-channel analog multiplexer | 1 | 1.74 | Expands ADC for NTC thermistors |
 | FVT LittleBee 20A ESC | BLHeli_S, DSHOT | 2 | 5.81 | Roll-post EDFs (almost sold out ⚠️) |
 
-## Gaps to add before ordering
+## Gaps — ordering later (budget)
 
 | Item | Why | Status |
 |------|-----|--------|
-| **2× more STS3032M** | Need 3 total for 3BSM | ❌ critical |
-| MG90S (5 pc) | Need 1 more + spares | ❌ |
-| 2 mm bullet connectors | EDF motor connections | ❌ |
-| O-ring assortment | Wheels | ❌ |
-| Rear wheel ~50 mm | Front 38 mm in cart; confirm rear size | ⚠️ |
-| Larger heatsink (≥20×20 mm) for 10W LED | 14×14 too small alone (or stack two) | ⚠️ |
-| 8AWG (optional) | 10AWG is marginal at 89A main-EDF | ⚠️ |
+| 2 mm bullet connectors | EDF motor connections | 🛒 later |
+| Standard RC plane wheels (rear) | Main/rear gear; front 38 mm in cart | 🛒 later |
+| MG90S (spares) | Optional spares | 🛒 optional |
+| 8AWG (optional) | 10AWG is marginal at 89A main-EDF | ⚠️ optional |
+
+> **STS3032:** only **1** needed — the 3BSM sections are gear-linked, so one smart servo rotates the
+> whole nozzle (yaw is a separate MG90S/SG90). The single unit already in the cart is sufficient.
+>
+> **10W landing-light heatsink:** the **two 14×14×6 mm** heatsinks on hand are **adequate** — it's a
+> landing light (brief bursts). At full 3 A (~7–8 W heat, still air) they give ~1–2 min continuous
+> from cold before the junction nears its 150 °C limit; real use is 10–30 s with gear-bay airflow.
+> Mount the LED to **metal, not LW-PLA**. Only go ≥20×20 mm (or PWM-dim to ~1–1.5 A) for *continuous* use.
 
 ### Already covered (no purchase needed)
 
@@ -104,5 +109,5 @@ Master parts list for the Phase 3 F-35B. The tables below reflect the **final Al
 
 ## Open questions / TODO
 
-- Add the 2× STS3032M (+ MG90S, bullet connectors, rear wheel, O-rings, big heatsink), then re-total.
+- Order bullet connectors + rear wheels later (budget) — not blocking the main order.
 - Confirm whether the bundled roll-post-EDF ESCs replace the LittleBees.

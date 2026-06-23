@@ -36,10 +36,15 @@ The CC drivers are essentially linear: they dissipate the input–output voltage
   rail exists.**
 
 **Heatsinks:** the 700mA/3A drivers need heatsinks. **14×14×6 mm** (black anodised — better
-radiation than bare silver) suits the small drivers; 4 used, rest spare. The **10W landing-light**
-driver/LED needs more (~400 mm²): use **two 14×14 stacked** or one **≥20×20 mm**, and **thermal-glue
-the 10W LED to metal, never directly to LW-PLA** (LW-PLA softens ~60 °C). Landing light is
-intermittent (approach/landing only), which eases cooling.
+radiation than bare silver) suits the small drivers; 4 used, rest spare.
+
+For the **10W landing light**, the **two 14×14×6 mm heatsinks on hand are adequate** — it's a
+landing light, used in brief bursts. Rough thermal math at full 3 A (~7–8 W heat, still air): the
+two heatsinks (~5–6 g aluminium) take ~540 J to rise +100 °C, i.e. **~1–2 minutes continuous from
+cold** before the junction nears its 150 °C limit; real landing-light use is **10–30 s** and
+in-flight gear-bay airflow cools it further. Always **thermal-glue the 10W LED to metal, never
+directly to LW-PLA** (softens ~60 °C). Only step up to **≥20×20 mm — or PWM-dim to ~1–1.5 A
+(~3 W)** — if you want the light on **continuously** (taxi/headlight use).
 
 ## Current budget (12V VTX/CAM rail, 2A)
 
@@ -95,7 +100,7 @@ See [`code/pico/led_control.py`](../code/pico/led_control.py).
 
 - Remove the CANBUS resistor from the afterburner bulb on arrival; wire it to servo BEC / dedicated tap.
 - Decide afterburner behaviour: throttle-reactive (brighter at high throttle) vs always-on.
-- Confirm 10W landing-light heatsink (stack two 14×14 vs one ≥20×20) and metal mounting.
+- 10W landing-light heatsink resolved: two 14×14×6 mm (stacked, on metal) for intermittent use.
 - Decide COB strip use (interior accent vs exterior) and final colour(s).
 - Decide final strobe method (PWM dim vs hard enable) and flash pattern.
 

@@ -14,7 +14,7 @@
 | NEEBRC 21g | 2 | 9 kg·cm | 21 g | Metal |
 | NEEBRC 28g | 2 | 12 kg·cm | 28 g | Metal |
 | MG996R | 4 | ~15 kg·cm | 55 g | Metal |
-| Feetech STS3032 | 3 | 4.5 kg·cm | 20 g | Metal (built-in magnetic encoder) |
+| Feetech STS3032 | 1 used | 4.5 kg·cm | 20 g | Metal (built-in magnetic encoder) |
 | NEEBRC M005 (2g) | 4 | ~0.5 kg·cm | 2 g | Plastic — **max 4.2 V** |
 | NEEBRC S002 (4.3g) | 2 | ~0.8 kg·cm | 4.3 g | Plastic — **max 5.0 V** |
 
@@ -36,8 +36,8 @@ MG996R are deliberately **avoided** in the final build — too heavy (55 g each)
 | Nose retract | custom 3D-printed retract | — | — | 🛒 design |
 | Gear doors ×2–3 | SG90 | 1.8 kg | 9 g | ✅ own |
 | Nose steering | MG90S | 2.2 kg | 13 g | ✅ own |
-| 3BSM section ×2 | STS3032 | 4.5 kg | 20 g | ✅ ordered |
-| 3BSM yaw (±20°) | MG90S | 2.2 kg | 13 g | ✅ own |
+| 3BSM nozzle rotate (all sections) | STS3032 ×1 | 4.5 kg | 20 g | ✅ — sections gear-linked |
+| 3BSM yaw tilt (±15°) | MG90S (or SG90) | 2.2 kg | 13 g | ✅ own |
 | Lift-fan doors ×2–4 | SG90 | 1.8 kg | 9 g | ✅ own |
 | Lift-fan vane box | MG90S | 2.2 kg | 13 g | ✅ own |
 | Roll post L / R* | MG90S | 2.2 kg | 13 g | ✅ own |
@@ -78,21 +78,23 @@ servo failure on a VTOL is catastrophic. Rudder aerodynamic load is genuinely ti
 > (13.2 × 29.6 mm) fits inside the F-35B wing-root thickness at 70mm EDF scale. Design servo bays
 > and pushrod channels directly into the LW-PLA print in Fusion 360.
 
-## 3BSM smart servos (STS3032)
+## 3BSM actuation — single STS3032 + gear-linked sections
 
-The 3-bearing swivel module needs **continuous rotation with position feedback** (its sections turn
-well past 180°), which standard PWM servos can't do. The chosen solution is the **Feetech STS3032**:
-serial-bus smart servo with a **built-in magnetic encoder** — no separate AS5600 + diametric magnet
-needed. Two STS3032 drive the rotating sections; an MG90S handles the small ±20° yaw.
+The 3-bearing swivel module needs **continuous rotation with position feedback** (sections turn
+well past 180°), which standard PWM servos can't do. **Decision: ONE Feetech STS3032** (serial-bus
+smart servo, built-in magnetic encoder) drives the nozzle, with the **three 3BSM sections coupled
+mechanically by gears running along each section's circumference** — so one motor rotates the whole
+nozzle assembly down for hover. (A YouTube build demonstrated this works well.)
 
-- STS3032 use a **serial half-duplex bus** — this is why **10kΩ resistors** are on the buy list (UART
-  half-duplex trick).
-- STS3032 current: ~100 mA idle, ~300 mA active each (3× ≈ 0.9 A) — easily handled by the PDB servo
-  rail even if PWM servos move to a UBEC.
+Yaw is separate: a **single MG90S (or SG90)** tilts the *whole* 3BSM ±~15° for yaw control — a
+small range, so an ordinary 90°/180° servo is plenty (no continuous rotation needed there).
 
-Alternatives considered and rejected for the 3BSM rotation: gear-driven single servo (too hard;
-LaLaRC didn't actually do it), and a continuous-360 SG90 + external AS5600 encoder + diametric
-magnet (workable, but the STS3032's integrated encoder is cleaner).
+- STS3032 uses a **serial half-duplex bus** — hence the 10kΩ resistor (UART half-duplex). Resistors
+  are covered by the on-hand electronics kit / school stock.
+- STS3032 current: ~100 mA idle, ~300 mA active — trivial for the PDB servo rail.
+- This replaces the earlier "2× STS3032 for the sections" plan — gear-coupling means **one** smart
+  servo suffices, saving ~€35 and a servo. The earlier rejected alternatives (continuous-360 SG90 +
+  external AS5600 encoder) are moot.
 
 ## Landing gear actuation
 

@@ -53,8 +53,10 @@ roll. Yaw in hover comes from the 3BSM yaw element; pitch from the lift-fan/main
 The main EDF exhausts through a **3-bearing swivel module** that vectors thrust from
 horizontal (cruise) to downward (hover), mimicking the real F-35B nozzle.
 
-- Driven by **2× Feetech STS3032** smart servos (continuous rotation + built-in encoder) for the
-  rotating sections, plus an **MG90S** for ±20° yaw. See [Servos](05-servos.md#3bsm-smart-servos-sts3032).
+- Driven by **one Feetech STS3032** smart servo (continuous rotation + built-in encoder); the three
+  sections are **gear-coupled along their circumference** so a single motor rotates the whole
+  nozzle. A separate **MG90S/SG90** tilts the whole 3BSM ±~15° for yaw. See
+  [Servos](05-servos.md#3bsm-actuation--single-sts3032--gear-linked-sections).
 - Needs **bearings at each section junction** — thin-section ball bearings sized to fit inside the
   70mm duct. **6805ZZ (37×25×7 mm)** is the sweet spot; buy ~10 (need 6 for two per junction + spares).
   **Buy bearings before modeling** the 3BSM in Fusion — design the seats around real bearing dims.

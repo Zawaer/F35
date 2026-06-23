@@ -71,8 +71,8 @@ See [Propulsion — 3BSM](06-propulsion.md#3bsm--three-bearing-swivel-module).
 
 ## Landing gear hardware
 
-- **Wheels:** PU rubber, **38 mm** (front) in cart; confirm/add a **~50 mm** rear wheel.
-- **O-ring assortment** for the wheels (on the buy list).
+- **Wheels:** standard RC-plane wheels (no O-ring tricks). A 38 mm PU wheel is in the cart;
+  remaining wheels ordered later (budget).
 
 ## Fasteners
 
