@@ -91,7 +91,36 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ---
 
+### 10W LED 5050 XML-T6 — landing light
+- **Category:** LED (high-power emitter on star PCB)
+- **Status:** 🛒 in cart
+- **Used for:** **landing light** — [Lighting](../docs/08-lighting.md). (3W white is the fallback.)
+- **Variant / qty:** 12 mm / Cold White 6500K · 1 pc
+- **Price:** €5.85 (€4.50 ea ≥2)
+- **Link:** https://www.aliexpress.com/item/1005009615663192.html
+
+| Spec | Value |
+|------|-------|
+| Weight | ⚠️ MISSING |
+| PCB diameter | 12 mm (round aluminium MCPCB; listing also 14/16/20 mm) |
+| Emitter | 5050 (XM-L2 / XML-T6 class) |
+| Power | 10 W |
+| Forward voltage (Vf) | 2.9–4.0 V |
+| Forward current (If) | 3.0 A |
+| Colour / CT | Cold White 6500K (also 3000K / 4500K) |
+| Viewing angle | 110–125° |
+| Thermal resistance | 2.5 °C/W |
+| Max junction temp | 150 °C |
+| Brand / model | SFNCHGOT, 10W 5050 |
+
+- **Notes:** ~10.5 W at full 3 A → significant heat. Drive on the **3A adjustable CC driver** from
+  the 12V rail; **thermal-glue to metal, not LW-PLA**; use ≥20×20 mm or two stacked 14×14×6 mm
+  heatsinks (adequate for intermittent landing-light bursts — see
+  [Lighting heatsinks](../docs/08-lighting.md)). PWM-dim to ~1–1.5 A for continuous use.
+
+---
+
 ## Still to card (paste product pages)
 
-10W LED 5050 XML-T6 6500K · 700mA CC LED driver · 3A adjustable CC LED driver · BA15S P21W
-afterburner bulb · 12V COB strip (green) · IRLZ44N MOSFET · frosted PP diffuser sheet.
+700mA CC LED driver · 3A adjustable CC LED driver · BA15S P21W afterburner bulb ·
+12V COB strip (green) · IRLZ44N MOSFET · frosted PP diffuser sheet.

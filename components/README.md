@@ -36,6 +36,22 @@ When processing a paste, the assistant must:
     cell count & thrust; battery cells/capacity/C; LED Vf & current; ESC current rating & cell count.
 - When asking, list exactly which critical fields are missing and the easiest way to get each.
 
+### Quick-add from a spreadsheet row
+
+Pasting the order-spreadsheet row is enough to identify a part. Column order (Finnish headers):
+
+`Tuote | Määrä | Variantti | Hinta per kpl | Extratoimituskulut | Hinta yhteensä | Linkki`
+→ **product | qty | variant | price/unit | extra shipping | total price | link**
+
+Example:
+
+```
+suuuuper bright white LED  1  12mm / Cold White 6500K  5,85€    5,85€  https://www.aliexpress.com/item/1005009615663192.html
+```
+
+From a row I take the name, qty, variant, unit/total price, any extra shipping, and the **product
+link** (stored in the card). Combine it with the pasted product page / images for the full specs.
+
 ## Files by category
 
 | File | Holds |
@@ -55,7 +71,9 @@ When processing a paste, the assistant must:
 - **Category:** <servo / EDF / battery / …>
 - **Status:** ✅ owned · 🛒 in cart · ordered
 - **Used for:** <subsystem + link, e.g. [Flaperons](../docs/05-servos.md)>
-- **Source / price:** <store, €>
+- **Variant / qty:** <chosen variant, pack qty>
+- **Price:** <€/unit · total · + extra shipping if any>
+- **Link:** <product URL>
 
 | Spec | Value |
 |------|-------|
