@@ -21,8 +21,20 @@ When processing a paste, the assistant must:
   images, so the user may paste screenshots/photos instead of (or alongside) text. Read specs from
   images too.
 - Keep only useful build data — drop marketing copy, reviews, and SEO keywords.
-- Leave unknown fields as `—` to fill in later (and say which fields are still missing).
 - Where a real spec corrects the BOM or a subsystem doc (true weight, current, etc.), update those too.
+
+### Marking missing data
+
+- **Minor/unknown field** → leave as `—`.
+- **Critical field missing** → mark it **`⚠️ MISSING`** in the card *and* ask the user for it in the
+  reply (paste an image, check the listing, or measure it). Don't silently leave a critical gap as
+  `—`, and never guess/fabricate a value — a wrong spec is worse than a flagged blank.
+- A field is **critical** when the build depends on it:
+  - **Weight** — feeds AUW and CG (every component).
+  - **Key dimensions / mounting** — feeds the Fusion model and fit.
+  - The part's **defining electrical spec** — e.g. servo torque & voltage; EDF/motor max current,
+    cell count & thrust; battery cells/capacity/C; LED Vf & current; ESC current rating & cell count.
+- When asking, list exactly which critical fields are missing and the easiest way to get each.
 
 ## Files by category
 

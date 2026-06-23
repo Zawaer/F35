@@ -22,7 +22,8 @@ Build context: [Lighting](../docs/08-lighting.md).
 | Chip | 42 mil |
 | Rated life | >50,000 h |
 | Package | bare emitter — **no 20 mm star PCB** included |
-| Weight / dimensions | — *(image-only; confirm)* |
+| Weight | ⚠️ MISSING |
+| Dimensions / emitter size | ⚠️ MISSING |
 
 - **Notes:** drive on a 700mA CC driver (PWM-dimmable) from the 12V rail; needs a heatsink. 10 pcs
   → spares. As a landing-light substitute, run on the 3A driver dialled down, or its own 700mA driver.
@@ -45,7 +46,8 @@ Build context: [Lighting](../docs/08-lighting.md).
 | Chip | 42 mil |
 | Rated life | >50,000 h |
 | Package | bare emitter — no star PCB |
-| Weight / dimensions | — *(image-only; confirm)* |
+| Weight | ⚠️ MISSING |
+| Dimensions / emitter size | ⚠️ MISSING |
 
 - **Notes:** **lower Vf (2.4–2.6 V)** than the white/green — the 700mA CC driver handles this
   automatically (it's a current source), so no separate resistor needed. Dim to ~40% for scale.
@@ -68,7 +70,8 @@ Build context: [Lighting](../docs/08-lighting.md).
 | Chip | 42 mil |
 | Rated life | >50,000 h |
 | Package | bare emitter — no star PCB |
-| Weight / dimensions | — *(image-only; confirm)* |
+| Weight | ⚠️ MISSING |
+| Dimensions / emitter size | ⚠️ MISSING |
 
 - **Notes:** same 700mA CC driver + heatsink as the others. Dim to ~40% for scale brightness.
 
