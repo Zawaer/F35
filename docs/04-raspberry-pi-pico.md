@@ -1,93 +1,71 @@
-# Raspberry Pi Pico
+# Raspberry Pi Pico (RP2040)
 
-> **Role:** a secondary I/O controller alongside the F405 FC. It (1) provides up to **16 extra PWM
-> outputs** for secondary/cosmetic servos, (2) reads **DS18B20 temperature sensors** on a 1-Wire
-> bus, and (3) drives the **LED system** (nav lights + strobes) via PWM dimming. It talks to the FC
-> over **UART** and is powered from the PDB **5.2V Flight BEC**. Programmed in **MicroPython**.
+> **Role:** the secondary I/O controller alongside the F405 FC. It handles: (1) up to **16 extra
+> PWM outputs** for secondary/cosmetic servos, (2) **temperature sensing** via NTC thermistors
+> through a CD74HC4067 multiplexer, (3) the **LED system** (nav/strobe/landing/COB), and (4) the
+> **cockpit TFT display**. It talks to the FC over **UART** and is powered from the PDB **5.2V
+> Flight BEC**. Programmed in **MicroPython**. ("RP2040" in notes = this Pico.)
 
-The Pico exists because the F405 runs out of both PWM outputs and ADC ports (all 4 ADCs go to
-battery monitoring — see [Flight Controller](03-flight-controller.md)). Offloading temp sensing and
-secondary actuation to the Pico solves both.
+The Pico exists because the F405 runs out of PWM outputs and ADC ports. Offloading temp sensing,
+secondary actuation, lighting, and the cockpit screen to the Pico keeps the FC free for flight.
 
 ## Pin map
 
 | Pico pin | Function | Connected to |
 |----------|----------|--------------|
-| GPIO 26 | 1-Wire bus (DS18B20) | All DS18B20 sensors' DQ, with 4.7kΩ pull-up to 3.3V |
-| GPIO 27 (ADC1) | Spare analog in | (reserved — e.g. NTC if ever used) |
-| GPIO 28 (ADC2) | Spare analog in | (reserved) |
-| GPIO 10 | PWM — red nav light | LED driver PWM input (port wingtip) |
-| GPIO 11 | PWM — green nav light | LED driver PWM input (starboard wingtip) |
-| GPIO 12 | PWM — white strobe | LED driver PWM input (wingtips) |
-| GPIO 15 | Digital out — strobe pattern | LED driver enable (alt strobe method) |
-| UART (TX/RX) | Telemetry + PWM command link | F405 spare UART |
-| 3.3V | Sensor/​pull-up supply | DS18B20 VDD + pull-up |
+| GPIO 26 (ADC0) | Multiplexer analog in | CD74HC4067 SIG (16 NTC channels) |
+| 4× GPIO (e.g. 18–21) | Mux channel select | CD74HC4067 S0–S3 |
+| GPIO 27 / 28 (ADC1/2) | Spare analog in | reserved |
+| GPIO 10 / 11 / 12 | LED PWM | driver PWM inputs (red / green / strobe) |
+| GPIO 15 | Strobe enable / MOSFET gate | LED enable / IRLZ44N (COB strip) |
+| SPI (SCK/MOSI/CS/DC/RST/BLK) | Cockpit TFT | 1.47" ST7789 via FFC adapter |
+| UART (TX/RX) | FC link | F405 spare UART (PWM cmds + telemetry) |
+| PWM GPIOs (allocated) | Secondary servos | gear/lift-fan doors, canopy, nozzle |
+| 3.3V | Sensor / mux / pull-up supply | NTC dividers, mux, screen logic |
 | VSYS/5V in | Power | PDB 5.2V Flight BEC |
 | GND | Common ground | FC / PDB / sensors |
 
-> The GPIO assignments for LEDs (10/11/12/15) and the 1-Wire pin (26) are the values used in the
-> design code below. The PWM-servo expansion pins are allocated as the secondary servo list is
-> finalised — see [Servos](05-servos.md).
+> Pin numbers for LEDs (10/11/12/15) and the mux ADC (26) are design values; SPI and
+> secondary-servo PWM GPIOs are allocated as those subsystems are finalised.
 
 ## Roles in detail
 
 ### 1. Extra PWM outputs
+The F405 has only 11 usable PWM channels; the F-35B needs more. The Pico adds **up to 16** PWM
+outputs over UART. Primary flight surfaces + ESCs stay on the FC; **secondary/cosmetic actuators**
+(gear doors, lift-fan doors, canopy, nozzle) live on the Pico. See [Servos](05-servos.md).
 
-The F405 has only 11 usable PWM channels; the F-35B needs more once VTOL servos, doors, gear, and
-cosmetics are counted. The Pico provides **up to 16 additional PWM outputs**, commanded by the FC
-over UART. Primary flight-surface servos and ESCs stay on the FC; **secondary/cosmetic actuators**
-(gear doors, lift-fan doors, canopy, exhaust nozzle, etc.) live on the Pico.
-
-### 2. Temperature sensing (DS18B20, 1-Wire)
-
-All DS18B20 sensors share **one** GPIO (26) on a single 1-Wire bus with a 4.7kΩ pull-up:
-
-```
-Pico 3.3V ──── 4.7kΩ ──┬──── DQ (pin 2) — all sensors
-                        │
-Pico GPIO 26 ───────────┘
-Pico GND  ───────────────── GND (pin 1) — all sensors
-Pico 3.3V ───────────────── VDD (pin 3) — all sensors
-```
-
-Each DS18B20 has a unique factory 64-bit address, so all sensors live on one wire and are addressed
-individually. Sensors planned: ESC 1, ESC 2, Battery 1 (and optionally Battery 2 / EDF exhaust).
-The Pico reads temps and sends them to the FC over UART for ArduPilot blackbox logging. Full wiring,
-labelling workflow, and reasoning are in [Sensors & Monitoring](07-sensors-monitoring.md). A 5kΩ
-(or 5.1kΩ) pull-up is acceptable in place of 4.7kΩ (1-Wire tolerates ±20%).
+### 2. Temperature sensing (NTC + CD74HC4067)
+NTC 100K thermistors form 10kΩ voltage dividers feeding a **CD74HC4067 16-channel analog
+multiplexer**; the Pico selects channels via S0–S3 and reads the SIG line on one ADC pin. This
+replaced the earlier DS18B20 1-Wire plan (cheaper NTCs, 16 channels from one ADC). Full detail and
+the current-sensing (ACS712) story are in [Sensors & Monitoring](07-sensors-monitoring.md).
 
 ### 3. LED control
+The Pico PWM-dims the CC LED drivers (nav/strobe/landing) and switches the 12V COB strip via an
+IRLZ44N MOSFET. Budget and the afterburner caveat are in [Lighting](08-lighting.md).
 
-The Pico PWM-dims the constant-current LED drivers: nav lights held at a constant ~40% brightness,
-white strobes flashed in software. Details and current budget in [Lighting](08-lighting.md).
+### 4. Cockpit TFT display
+A **1.47" ST7789 SPI TFT** (172×320, 12-pin) shows a cockpit image or live flight data. Its
+permanently-attached **0.5 mm-pitch FFC ribbon** slides into a **ZIF FFC→2.54 mm adapter board**
+(12P); the Pico then connects to the adapter's through-hole pins with 28AWG wire — **no soldering
+to the screen itself**. The 12-pin variant was chosen over 8-pin for thinner bezels (unused touch
+pins left floating). Driven over SPI by the Pico.
 
 ## MicroPython
 
-Working/reference snippets live in [`code/pico/`](../code/pico/):
+Reference snippets in [`code/pico/`](../code/pico/):
 
-- `temp_logger.py` — scan + read all DS18B20 sensors by hardcoded address.
+- `temp_logger.py` — NTC-via-CD74HC4067-mux reading (beta-equation conversion).
 - `led_control.py` — nav-light dimming + strobe pattern.
-
-Minimal DS18B20 read:
-
-```python
-import machine, onewire, ds18x20, time
-ow = onewire.OneWire(machine.Pin(26))
-ds = ds18x20.DS18X20(ow)
-sensors = ds.scan()          # auto-discovers all sensor addresses
-while True:
-    ds.convert_temp()
-    time.sleep_ms(750)       # conversion time
-    for s in sensors:
-        print(ds.read_temp(s))
-    time.sleep(1)
-```
 
 ## Open questions / TODO
 
-- Lock down the UART protocol/framing between Pico and F405 (PWM commands out, telemetry in).
-- Allocate and document the specific GPIOs used for each secondary PWM servo.
-- Confirm whether strobes use PWM dimming (GPIO 12) or hard on/off enable (GPIO 15).
+- Lock down the UART protocol/framing between Pico and F405.
+- Allocate specific GPIOs for each secondary PWM servo and the mux select lines; add to the map.
+- Rewrite the temperature code for NTC + CD74HC4067.
+- Confirm SPI pin mapping for the ST7789 display.
+- Decide whether one Pico handles everything (servos + temp + LEDs + screen) or a second RP2040 is needed.
 
 ## Related
 

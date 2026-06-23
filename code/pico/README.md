@@ -5,7 +5,7 @@ MicroPython for the Raspberry Pi Pico — the F-35B's secondary I/O controller. 
 
 | File | Purpose |
 |------|---------|
-| `temp_logger.py` | Read all DS18B20 temperature sensors on the GPIO 26 1-Wire bus (see [Sensors](../../docs/07-sensors-monitoring.md)) |
+| `temp_logger.py` | Read NTC 100K thermistors via a CD74HC4067 multiplexer on the ADC (see [Sensors](../../docs/07-sensors-monitoring.md)) |
 | `led_control.py` | Nav-light dimming + white strobe pattern (see [Lighting](../../docs/08-lighting.md)) |
 
 These are reference/working snippets, not yet the integrated flight firmware. Still to do:

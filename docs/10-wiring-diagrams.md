@@ -45,16 +45,23 @@ Pico PWM (≤16):   gear doors, lift-fan doors, canopy, exhaust nozzle, other se
 STS3032 ×2 (3BSM): serial half-duplex bus (10kΩ resistor for UART half-duplex)
 ```
 
-## Temperature bus (1-Wire → Pico)
+## Temperature + current sensing (→ Pico)
 
 ```
-Pico 3.3V ──── 4.7kΩ ──┬──── DQ (pin 2) — all DS18B20
-                        │
-Pico GPIO 26 ───────────┘
-Pico GND  ───────────────── GND (pin 1) — all DS18B20
-Pico 3.3V ───────────────── VDD (pin 3) — all DS18B20
+NTC 100K ──┬── CD74HC4067 channel (×16)        CD74HC4067 SIG → Pico ADC (GPIO 26)
+10kΩ ──────┘   (divider: 3.3V─10kΩ─+─NTC─GND)  S0..S3        → Pico GPIO (channel select)
 
-Sensors: ESC1, ESC2, Battery1 (+ optional Battery2 / EDF exhaust)
+ACS712 20A #1 (FC/servo rail)  → Pico ADC
+ACS712 20A #2/#3 (roll-post EDF L/R) → Pico ADC
+
+NTC sensors: ESC1, ESC2, Battery1 (+ optional Battery2 / EDF exhaust)
+```
+(Earlier DS18B20 1-Wire plan superseded by NTC + multiplexer — see [Sensors](07-sensors-monitoring.md).)
+
+## Cockpit display
+
+```
+1.47" ST7789 TFT ── permanent 0.5mm FFC ribbon ── ZIF FFC adapter (12P) ── 2.54mm pins ── Pico SPI
 ```
 
 ## LED system

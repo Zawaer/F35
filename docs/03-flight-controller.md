@@ -46,14 +46,18 @@ only signal (PWM/DSHOT) to the ESCs.
 | USART1 | Wireless expansion board |
 | USART6 | ELRS receiver (CRSF) |
 | One UART (e.g. UART4/5) | **Raspberry Pi Pico** link — 16 extra PWM outputs + temp telemetry (see [Pico](04-raspberry-pi-pico.md)) |
-| ADC 1 | Battery 1 voltage (from PDB divider) |
-| ADC 2 | Battery 1 current (Matek 150A sensor #1, main lead) |
-| ADC 3 | Battery 2 voltage |
-| ADC 4 | Battery 2 current (Matek 150A sensor #2, lift lead) |
+| ADC 1 | Battery 1 (main) voltage — from PDB divider |
+| ADC 2 | Battery 2 (lift) voltage |
+| ADC 3/4 | Spare / RSSI / airspeed |
 
-⚠️ All four ADC ports are consumed by battery monitoring — **no ADC is left on the F405 for
-thermistors**. Temperature sensing is therefore offloaded to the Pico (see
-[Sensors & Monitoring](07-sensors-monitoring.md)).
+> **Current sensing changed:** the earlier plan put Matek 150A sensors on each battery lead into
+> ADC2/ADC4. The current plan uses **3× ACS712 20A** on the FC/servo rail + both roll-post EDFs
+> (read via the Pico), and **does not log main/lift EDF current** in v1 (89A/40A exceed 20A). The
+> PDB's own current detection still reports pack current to the FC. See
+> [Sensors & Monitoring](07-sensors-monitoring.md).
+
+Temperature sensing is offloaded to the Pico regardless — the F405 has no spare ADC for an array of
+thermistors (NTC + multiplexer lives on the Pico).
 
 > **Current scale:** the PDB current sensor matches FC scale **158 in INAV** / **64 A/V in ArduPilot**.
 

@@ -61,13 +61,18 @@ with fuel transfer and flight computers; the RC model has fixed component placem
 chosen to satisfy both regimes. Battery placement is the main tuning lever (see
 [Power — battery placement](02-power-system.md#battery-placement--cg)).
 
-## Optional realism ideas (parked)
+## Realism features
 
-Captured during design, not committed:
+Now committed (parts in the cart — see [BOM](11-bill-of-materials.md)):
 
-- **Engine sound:** DFPlayer Mini (~€2) + 40mm 2W speaker, triggered by Pico from FC flight state
-  (APU start, idle loop, afterburner, VTOL fan, gear clunk). EDFs already sound convincingly jet-like.
-- **Cockpit screen:** 1.8"–2.0" TFT LCD (~15–20 g) showing a static cockpit image or live flight data.
+- **Cockpit screen:** 1.47" ST7789 SPI TFT, Pico-driven (see [Pico](04-raspberry-pi-pico.md#4-cockpit-tft-display)).
+- **Afterburner glow:** BA15S P21W automotive LED bulb, CANBUS resistor removed (see [Lighting](08-lighting.md#afterburner-power--the-canbus-resistor-mod)).
+- **Lighting:** nav lights, strobes, 10W landing light, COB accent strip (see [Lighting](08-lighting.md)).
+
+Still parked (not committed):
+
+- **Engine sound:** DFPlayer Mini (~€2) + 40mm 2W speaker, triggered by Pico from FC flight state.
+  EDFs already sound convincingly jet-like.
 - Weapons-bay battery hot-swap, canopy actuation, variable exhaust nozzle.
 
 ## Side project

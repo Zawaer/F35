@@ -1,62 +1,72 @@
-"""DS18B20 temperature logger for the Raspberry Pi Pico.
+"""NTC thermistor temperature logger for the Raspberry Pi Pico (RP2040).
 
-All DS18B20 sensors share one 1-Wire bus on GPIO 26 with a 4.7kOhm pull-up to 3.3V.
-Each sensor has a unique 64-bit address; hardcode the addresses below after running
-`scan_addresses()` once with sensors connected one at a time (see docs/07-sensors-monitoring.md).
+Reads up to 16 NTC 100K thermistors through a CD74HC4067 16-channel analog multiplexer.
+Each NTC forms a divider with a 10kOhm resistor; the mux SIG output goes to one Pico ADC pin,
+and four GPIOs select the channel. See docs/07-sensors-monitoring.md and docs/04-raspberry-pi-pico.md.
 
-Wiring:
-    Pico 3.3V --- 4.7k --+-- DQ  (pin 2) all sensors
-    Pico GPIO26 --------/
-    Pico GND ------------ GND (pin 1) all sensors
-    Pico 3.3V ----------- VDD (pin 3) all sensors
+Divider:  3.3V --- 10k ---+--- NTC --- GND     (SIG taken at the junction, per channel)
+Mux:      S0..S3 <- GPIO (channel select), SIG -> Pico ADC
+
+NOTE: replaces the earlier DS18B20 1-Wire approach.
 """
 
 import machine
-import onewire
-import ds18x20
 import time
 
-ONE_WIRE_PIN = 26
+# --- wiring ---
+SIG_ADC_PIN = 26                 # CD74HC4067 SIG -> Pico ADC
+SELECT_PINS = (18, 19, 20, 21)   # S0..S3 channel-select GPIOs
+SERIES_R = 10_000.0              # divider resistor (ohms)
+VREF = 3.3
 
-ow = onewire.OneWire(machine.Pin(ONE_WIRE_PIN))
-ds = ds18x20.DS18X20(ow)
+# --- NTC 100K B3950 constants (beta model) ---
+NTC_R25 = 100_000.0
+NTC_BETA = 3950.0
+T25_K = 298.15
 
-# Hardcode after labelling each physical sensor (placeholders — replace with real addresses).
+# Which mux channel is which sensor (label as you wire them).
 SENSORS = {
-    "ESC1": b"\x28\xff\x64\x1e\x16\x05\x00\x1c",
-    "ESC2": b"\x28\xff\x64\x2a\x16\x05\x00\x1c",
-    "BAT1": b"\x28\xff\x64\x3b\x16\x05\x00\x1c",
-    # "BAT2": b"...",            # optional
-    # "EXHAUST": b"...",         # optional EDF duct-exit sensor
+    "ESC1": 0,
+    "ESC2": 1,
+    "BAT1": 2,
+    # "BAT2": 3,
+    # "EXHAUST": 4,
 }
 
+adc = machine.ADC(SIG_ADC_PIN)
+select = [machine.Pin(p, machine.Pin.OUT) for p in SELECT_PINS]
 
-def scan_addresses():
-    """Print all sensor addresses currently on the bus.
 
-    Connect ONE sensor at a time, run this, and record the printed address against
-    the physical sensor (mark it with coloured heat-shrink). Repeat for each sensor.
-    """
-    found = ds.scan()
-    for addr in found:
-        print(addr)
-    return found
+def _set_channel(ch):
+    for i, pin in enumerate(select):
+        pin.value((ch >> i) & 1)
+    time.sleep_us(50)  # let the mux settle
+
+
+def read_raw(ch):
+    _set_channel(ch)
+    return adc.read_u16()
+
+
+def read_temp_c(ch):
+    """Convert one channel's divider reading to deg C via the NTC beta equation."""
+    raw = read_raw(ch)
+    v = raw / 65535.0 * VREF
+    if v <= 0 or v >= VREF:
+        return None
+    r_ntc = SERIES_R * v / (VREF - v)          # NTC on the low side
+    import math
+    inv_t = 1.0 / T25_K + (1.0 / NTC_BETA) * math.log(r_ntc / NTC_R25)
+    return 1.0 / inv_t - 273.15
 
 
 def read_all():
-    """Return {name: temp_celsius} for all hardcoded sensors."""
-    ds.convert_temp()
-    time.sleep_ms(750)  # 12-bit conversion time
-    return {name: ds.read_temp(addr) for name, addr in SENSORS.items()}
+    return {name: read_temp_c(ch) for name, ch in SENSORS.items()}
 
 
 if __name__ == "__main__":
-    # If addresses are not yet known, discover them first.
-    if not SENSORS:
-        scan_addresses()
-    else:
-        while True:
-            temps = read_all()
-            print(", ".join("{}={:.1f}C".format(n, t) for n, t in temps.items()))
-            # TODO: forward `temps` to the F405 over UART for ArduPilot blackbox logging.
-            time.sleep(1)
+    while True:
+        temps = read_all()
+        print(", ".join("{}={:.1f}C".format(n, t) for n, t in temps.items() if t is not None))
+        # TODO: forward `temps` to the F405 over UART for ArduPilot blackbox logging.
+        time.sleep(1)

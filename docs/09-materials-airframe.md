@@ -1,8 +1,8 @@
 # Materials & Airframe
 
 > **Current plan (Phase 3):** LW-PLA printed shell, PETG for structural parts, ASA/ABS for
-> heat-critical parts near the EDF exhaust. Wing spars from **10×6.1 mm carbon tube** (or local
-> aluminium tube to dodge CF shipping cost); existing 6mm CF tubes for secondary structure.
+> heat-critical parts near the EDF exhaust. Spars from **16× 500×8×6 mm carbon tube** (8 mm OD /
+> 6 mm ID), joined with the existing **6 mm OD / 3 mm ID** tubes as press-fit inner sleeves.
 > Plywood reinforcement plates. **Phase 1 trainer is foamboard.**
 
 ## Filaments
@@ -21,53 +21,59 @@ be designed directly into the print (see [Servos — internal actuation](05-serv
 **Rule:** tubes for spars (stiffer per gram — hollow = better strength-to-weight), solid rods for
 pushrods (compression/tension).
 
-### Already owned
+### Owned
 
-- **10× CF tube, 6 mm OD / 4 mm ID, 400 mm** — too thin/short for primary F-35B structure, but good
-  for: stabilator spars, tail reinforcement, 3BSM supports, landing-gear bay, ribs/formers — any
-  piece under 400 mm.
+- **10× CF tube, 6 mm OD / 3 mm ID, 400 mm** — used as **press-fit inner sleeves** to join the
+  500 mm main tubes (the 6 mm OD slides into the 6 mm ID main tube with ~0 mm gap), plus secondary
+  structure, 3BSM supports, ribs/formers.
 
-### Needed for the F-35B (~3 kg airframe)
+### Spar plan (final) — 16× 500×8×6 mm joined with 6 mm sleeves
 
-| Use | Spec | Notes |
-|-----|------|-------|
-| Main wing spar | 10 mm OD, **1.95 mm wall (10×6.1 mm)** | Thick wall is critical for stiffness at EDF speeds |
-| Fuselage spine | 10 mm OD, 10×6.1 mm | Primary structural |
-| Secondary spars | 8 mm OD / 10×8.1 mm (0.95 mm wall) | Lighter, non-critical only |
-| Pushrods | 1.5–2 mm CF rod | Internal surface linkages |
-| Spar sleeve / joiner | 4 mm CF rod | Inner sleeve to join two 500mm tubes → ~980 mm |
+The F-35B is ~1 m long, so a single 500 mm tube is only half a span/length — each full run is
+**two 500 mm tubes joined**. Plan ~4 full runs (main spine, wing spar L+R, secondary spine, wing
+secondary), so **8 tubes minimum**; the **16-pack (€33.71)** gives all runs plus spares and is far
+better value than the 4× 10×6.1 mm option (€25.68, zero spares).
 
-**10×6.1 mm vs 10×8.1 mm:** wall thickness dominates bending stiffness — use **10×6.1 mm for all
-primary roles** (wing spar, fuselage spine); the 0.95 mm-wall 10×8.1 mm is too thin for main spars
-on a 3 kg jet and only suits non-critical reinforcement.
+| Use | Spec |
+|-----|------|
+| Spars / spine (main tubes) | **8 mm OD / 6 mm ID, 500 mm** (1 mm wall), joined in pairs |
+| Joining sleeve | existing **6 mm OD / 3 mm ID** tube, ~80–100 mm, ~50 mm into each side |
+| Pushrods / linkages | 2 mm CF rod (have 2×250 mm 10-pack) |
 
-### Joining short tubes
+**Wall thickness:** 8×6 mm is a **1 mm wall** — adequate for fuselage spines; for the most
+wing-loaded spar, either run **two 8 mm tubes side-by-side** (≈ one 10 mm tube) or accept the 1 mm
+wall given the joined-tube approach. (The earlier 10×6.1 mm / local-aluminium options are dropped.)
 
-Two 400/500 mm tubes can be joined with a 4 mm CF rod inner sleeve (~150 mm, centred, epoxied both
-sides) → ~780–980 mm effective spar. Fine for **secondary** spars; the joint is a weak point and
-6mm OD is undersized for a **primary** wing spar at EDF speed.
+### Joining method (press-fit sleeve + epoxy)
 
-### Avoiding CF shipping cost (~€25 for 1000 mm tubes)
+```
+[8mm tube A] ──[6mm OD sleeve, ~50mm each side]── [8mm tube B]
+```
 
-| Alternative | Notes |
-|-------------|-------|
-| **Aluminium tube 10mm × 1000mm** | Local in Finland (Bauhaus/K-Rauta/Motonet), ~€3–5, free pickup. ~2× heavier than CF (~+45 g/spar, ~+90 g total — ~3% of AUW, acceptable) |
-| Join existing 6mm tubes | Secondary spars only |
-| Fibreglass tube 10mm × 1000mm | ~€3, cheaper shipping than CF, ~70% CF strength |
-| Local hobby shops | Puuilo, Biltema, Verkkokauppa — pickup = no shipping |
-
-**Recommendation:** join existing 6mm tubes for secondary spars; buy local aluminium tube for the
-primary wing spars/fuselage spine.
+The 6 mm OD sleeve in the 6 mm ID tube is a **0 mm-gap interference fit** — ideal: maximum contact,
+epoxy works in **shear** (strong) not tension, carbon-on-carbon. If too tight to slide, lightly sand
+the sleeve or gently warm the outer tube. **Use 2-part epoxy** (5-min is fine) for spar joints —
+*not* CA (brittle under vibration). Sand mating surfaces, glue, align straight, cure fully before
+loading. Resulting run ≈ 900 mm. Budget ~35 ml epoxy total (~5 ml/joint).
 
 ## Bearings (3BSM)
 
-- **6805ZZ thin-section ball bearings, 37 × 25 × 7 mm** — best fit inside the 70 mm EDF duct;
-  ID large enough to pass airflow, OD leaves wall material. (~16 g.) Alternatives: 6806, 6904.
-- ZZ = metal shields both sides (keeps exhaust debris out).
-- Need **2 per junction** (one each side) to prevent wobble → **buy ~10** (6 used + spares).
+- **Large section bearings: 6805ZZ thin-section (37 × 25 × 7 mm)** — best fit inside the 70 mm EDF
+  duct; ID passes airflow, OD leaves wall material (~16 g). ZZ = metal shields both sides (keeps
+  exhaust debris out). Need **2 per junction** (one each side) to prevent wobble → buy ~10.
+- ⚠️ **Centre-shaft bearing:** the cart currently has **MR62ZZ (2 × 6 × 2.5 mm)**, flagged as
+  **too small** for the 3BSM centre shaft — **MR115ZZ (5 × 11 × 4 mm)** was recommended instead.
+  Reconcile before ordering.
+- ⚠️ **Steel balls:** cart has **4 mm (100 pc)**, but **3 mm** was the earlier decision for the
+  printed bearing races — 4 mm may be too large for the printed grooves. Confirm size.
 - ⚠️ **Buy bearings before modeling** the 3BSM — design the seats around real bearing dimensions.
 
 See [Propulsion — 3BSM](06-propulsion.md#3bsm--three-bearing-swivel-module).
+
+## Landing gear hardware
+
+- **Wheels:** PU rubber, **38 mm** (front) in cart; confirm/add a **~50 mm** rear wheel.
+- **O-ring assortment** for the wheels (on the buy list).
 
 ## Fasteners
 
@@ -81,11 +87,13 @@ See [Propulsion — 3BSM](06-propulsion.md#3bsm--three-bearing-swivel-module).
 
 ## Adhesives & misc
 
-- Thin CA (foam/CF fast bond) ×2, thick CA (gap fill) ×1, CA accelerator.
-- 30-minute epoxy ×2 (structural bonds / spar joints).
+- **CA glue: Deli 502** (15 g ×3) for foam/CF fast bonding and panels.
+- **2-part epoxy** for structural bonds / spar joints (~35 ml — see joining method above). CA is
+  too brittle for spar joints.
 - 3 mm plywood sheet (reinforcement plates).
-- Silicone tubing 25–30 mm ID (was for bleed-air ducts — **likely obsolete** now roll posts use
-  motors, see [Propulsion](06-propulsion.md#roll-control)).
+- **Frosted PP sheet 0.5 mm** (100×200 mm, 10 pc) — LED diffuser.
+- Silicone tubing 25–30 mm ID (was for bleed-air ducts — **obsolete** now roll posts use motors,
+  see [Propulsion](06-propulsion.md#roll-control)).
 
 ## Magnets
 
@@ -99,8 +107,10 @@ Grey primer + filler primer (hide layer lines), F-35B livery colours, sandpaper 
 
 ## Open questions / TODO
 
-- Decide CF vs local aluminium for the primary spars (cost vs ~90 g weight).
-- Confirm the 600 pc fastener kit includes M2 nuts; otherwise add separately.
+- Confirm whether one 8 mm tube per wing spar suffices or two should be run side-by-side.
+- Resolve 3BSM bearings (MR62ZZ vs MR115ZZ) and steel-ball size (3 vs 4 mm).
+- Confirm rear wheel size (~50 mm) and add to cart.
+- Confirm the fastener kit includes M2 nuts; otherwise add separately.
 
 ## Related
 

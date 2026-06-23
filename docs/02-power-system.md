@@ -91,9 +91,32 @@ The tap only carries BEC *input* current, not EDF current. Because the BEC steps
 6V, input current is lower than servo output current even at servo stall (~3.4 A input for ~10.8 A
 of 6V servo output). Total tap current peaks ~4–5 A.
 
-- **Use 18AWG silicone wire** for the tap (~10 A rated, ~2× margin). 20AWG also works; 18AWG
-  removes any doubt at negligible weight cost.
+- **Use 18AWG silicone wire** for the tap. At the servo-BEC peak the combined BEC input can
+  approach ~20 A; 18AWG (~16 A continuous) is **marginal at peak** — keep the run **short
+  (<150 mm)**, or step up to **16AWG** if the run is longer.
 - Tap point: battery EC5 joint → 18AWG red/black → PDB input pads.
+
+## Wire gauge plan (final)
+
+| Gauge | Use | Note |
+|-------|-----|------|
+| **10AWG** | Main EDF power (89 A) | ⚠️ marginal (~55 A continuous rating); keep runs <200 mm. 8AWG is the textbook size — optional upgrade. |
+| **18AWG** | Battery tap → PDB; roll-post EDF power (~11 A) | Fine for roll posts; marginal at BEC peak (above) |
+| **22AWG** | All servo cables | Matches standard RC servo wire; durable under flexing |
+| **28AWG** | All signal/data/sensor wires | 7-colour set for easy tracing (SPI, UART, I2C, PWM, ADC, NTC) |
+
+## Connectors
+
+| Connector | Use |
+|-----------|-----|
+| AS150 | Single-battery main feed option (full ~180 A) |
+| XT90 | Per-ESC branch (~90 A each) |
+| EC5 | 5000 mAh main pack lead / system tap joint |
+| XT60→XT90 adapters | Charger side |
+| **XT30** | Roll-post ESC power |
+| **2 mm bullet** | EDF motor leads |
+
+**Battery safety:** add **4× LiPo low-voltage alarms** (one per pack + spares) — on the buy list.
 
 ## Charging
 

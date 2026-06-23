@@ -77,26 +77,26 @@ near-0 PSI compression, ducting loses energy over its length, servo valves respo
 bleeding air **reduces main lift**. Required roll moment ≈ 3400 g × 0.35 m arm → ~100 g+ thrust per
 side; bleed air would deliver maybe 50–150 g with large losses — marginal at best.
 
-Final plan:
+Final plan (parts chosen):
 
-- **2× 30mm micro EDF** in the wingtips (~150 g thrust, ~25 g each) — scale-accurate, hidden inside
-  the wing behind small inlet/outlet doors. (Alternatives: 2204+2" or 2812+3" prop, but props are
-  visible.)
-- **2× small ESCs** (10–15 A each).
+- **2× 30mm 6-blade ducted fan, QF1611 7000KV (3S)** — ~220 g raw thrust → ~165 g after duct losses,
+  ~11.2 A draw. Hidden inside the wingtips behind small inlet/outlet doors. **30 mm chosen over
+  40 mm** (40 mm = more thrust/weight/cost than needed for roll authority).
+- **ESCs:** the 30mm EDFs ship *with* a 20A ESC; the cart also has **2× FVT LittleBee 20A
+  (BLHeli_S/DSHOT)**. ⚠️ Decide whether the bundled ESCs suffice or the LittleBees are kept for
+  faster DSHOT response. At 11.2 A on a 20A ESC they run at ~56% — no heatsink needed.
 - Cosmetic roll-post inlet/outlet doors on SG90.
 - ArduPilot mixes them as quadcopter roll motors.
 
-Cost ~€23–28, weight ~50–60 g — cheap insurance against development crashes.
+#### Roll-post power & wiring
 
-#### Micro-motor power
-
-Small wingtip motors can be powered from a **2S tap off the main 6S battery's balance lead** (7.4 V),
-e.g. 14000KV 2S motor variants — minimal current, no extra battery, lightweight.
+- Power wire: **18AWG** is fine for ~11.2 A (16A ampacity, ~1.4× margin; ~0.05 V drop over 300 mm).
+- Connectors: **XT30** for roll-post ESC power; **2 mm bullet** connectors for the EDF motor leads.
 
 ## Open questions / TODO
 
 - ⚠️ Validate 3BSM thrust-vectoring reliability and bearing wear under exhaust on the ground.
-- Confirm wingtip motor/ESC selection (30mm micro EDF vs prop) and final thrust per side.
+- Decide whether the bundled 30mm-EDF ESCs replace the 2× LittleBee 20A.
 - Finalise ArduPilot quadplane motor mixing for the 4-motor hover layout.
 - Tune lift-fan vane-box authority vs main-EDF balance for hover pitch.
 

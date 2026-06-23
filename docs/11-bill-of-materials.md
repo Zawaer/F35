@@ -1,131 +1,105 @@
 # Bill of Materials
 
-Master parts list for the Phase 3 F-35B. Status: ✅ owned · 🛒 to buy · 🛒 Maybe (conditional) ·
-🛒 Local (local pickup). Prices are approximate (€, mostly AliExpress / local Finland).
+Master parts list for the Phase 3 F-35B. The tables below reflect the **final AliExpress cart**
+(reviewed 23–24 Jun 2026) plus the gaps flagged during that review. Status: ✅ in cart / owned ·
+🛒 to add · ⚠️ needs checking. Prices ≈ as seen (€, AliExpress, VAT incl.).
 
 > Cross-references: [Power](02-power-system.md) · [Propulsion](06-propulsion.md) ·
 > [Servos](05-servos.md) · [Materials](09-materials-airframe.md) · [Sensors](07-sensors-monitoring.md) ·
 > [Lighting](08-lighting.md)
 
-## Priority buy order
+> **Cart totals (snapshot):** subtotal **€210.13**, shipping €14.52, VAT adj −€24.90,
+> **customs estimate €47.53**, **total ≈ €243.65**. ⚠️ Customs is ~22% of subtotal — China→Finland
+> shipments incur it; budget for it.
 
-| # | Item | Why |
-|---|------|-----|
-| 1 | 2× Hobbywing 100A V2 ESC | Can't test EDFs without |
-| 2 | 6805ZZ bearings | Needed before 3BSM modeling |
-| 3 | ELRS receiver | Needed to configure FC |
-| 4 | LW-PLA + PETG filament | Airframe build |
-| 5 | CF tube 10×6.1 mm (or local Al tube) | Wing spars |
-| 6 | Raspberry Pi Pico | Secondary servos |
-| 7 | NEEBRC servos (if any gap) | When airframe ready |
-| 8 | Landing-gear hardware | Late build stage |
-| 9 | Roll-post motors | Confirmed needed (no bleed air) |
-| 10 | Finishing materials | Last stage |
+## In the cart
 
-## Propulsion / power
+| Part | Variant | Qty | €/unit | Use |
+|------|---------|-----|--------|-----|
+| NEEBRC digital micro servo | 2g plastic gear (M005) | 4 | 4.11 (set) | Small door servos |
+| Carbon fibre solid rod | 2×250 mm, 10 pcs | 1 | 3.75 | Pushrods / linkages |
+| COB LED strip 12V | green, 3 mm, 1 m | 1 | 2.68 | Accent / nav strip lighting |
+| Ball bearing | MR62ZZ 2×6×2.5 mm, 10 pcs | 1 | 3.93 | ⚠️ 3BSM — likely too small (see below) |
+| PU rubber wheel | 1.5" / 38 mm | 1 | 2.50 | Landing gear (front) |
+| Silicone wire 22AWG | red+black, 10 m | 1 | 3.58 | All servo cables |
+| NTC thermistor | 100K B3950, 10 pcs | 2 | 1.30 | Temperature sensing |
+| TFT LCD | 1.47" ST7789, 12-pin SPI | 1 | 3.40 | Cockpit display |
+| LED bulb 1156 BA15S | P21W, yellow, 12–48V | 1 | 4.11 | Afterburner glow |
+| Aluminium heatsink | 14×14×6 mm, 10 pcs | 1 | 2.68 | LED driver cooling |
+| ACS712 current sensor | 20A, 3 pcs | 1 | 3.40 | FC/servo rail + roll-post EDFs |
+| Carbon fibre tube | 500×8×6 mm (8 OD/6 ID), 16 pcs | 1 | 33.71 | Main spars (joined) |
+| Frosted PP sheet | 100×200×0.5 mm, 10 pcs | 1 | 3.83 | LED diffuser |
+| 3W LED | white 6500K, 10 pcs | 1 | 1.48 | Strobe / landing accents |
+| 3W LED | green 520nm, 10 pcs | 1 | 1.82 | Starboard nav |
+| 3W LED | red 625nm, 10 pcs | 1 | 1.82 | Port nav |
+| LED driver 700mA | 3W, PWM, constant-current | 4 | 0.70 | Nav lights + strobes |
+| 10W LED | 5050 XML-T6, 6500K, 12 mm | 1 | 5.85 | Landing light |
+| LED driver 3A | adjustable CC step-down, PWM | 1 | 7.42 | 10W landing light |
+| Super glue (Deli 502) | 15 g, 3 bottles | 1 | 3.58 | CA bonding |
 
-| Part | Qty | Status | Notes |
-|------|-----|--------|-------|
-| Hobbywing 100A V2 ESC | 2 | 🛒 | EDF main + lift |
-| QX-Motor 70mm EDF | 2 | (own/order) | Main + lift, 6S |
-| Roll-post micro motor (30mm EDF or 2812+3") | 2 | 🛒 | Wingtip roll, no bleed air |
-| Roll-post ESC 10–15A | 2 | 🛒 | For wingtip motors |
-| 6S 5000 mAh LiPo | 1 | (own) | Main EDF + system tap |
-| 6S 2700 mAh LiPo | 1 | (own) | Lift EDF |
-| Hobbywing 3A UBEC | 1–2 | 🛒 | €1.68, VTOL servo rail (if split needed) |
-| 18AWG silicone wire | 1 m | 🛒 | Battery tap |
-| 10AWG silicone wire | — | 🛒 | EDF/ESC main leads |
-| XT90 connector pairs | 4 | 🛒 | ESC connections |
-| EC5→XT90 adapter | 2 | 🛒 | 5000 mAh to ESC |
-| XT60→XT90 adapter | 2 | 🛒 | Charger to batteries |
-| AS150 connector | — | 🛒 Maybe | Only if consolidating to single battery |
-| Heat shrink assorted | 1 pack | 🛒 | Everywhere |
+### Items in cart but not yet selected (✅ confirmed needed — tick them)
 
-## Flight control / electronics
+| Part | Variant | Qty | €/unit | Note |
+|------|---------|-----|--------|------|
+| Silicone wire 18AWG | red+black, 2 m | 1 | 1.96 | Battery tap to PDB |
+| Silicone wire 10AWG | red+black, 2 m | 1 | 5.01 | Main EDF power |
+| Servo extension | 200 mm, 10 pcs | 1 | 2.68 | ⚠️ may want 300 mm for some runs |
+| 30mm ducted fan EDF | QF1611, 7000KV, 3S (incl. 20A ESC) | 2 | 15.85 | Roll-post motors |
+| Feetech STS3032M | 6V 4.5 kg·cm, magnetic encoder | **3** | 34.62 | ⚠️ only **1** in cart — need **+2** (€69 gap) |
+| FFC/FPC adapter board | 12P, 0.5 mm → 2.54 mm ZIF, 5 pcs | 1 | 2.95 | For cockpit TFT cable |
+| IRLZ44N MOSFET | TO-220, 10 pcs | 1 | 2.93 | Switch COB strip / landing light |
+| Stainless steel balls | ⚠️ 4 mm, 100 pcs | 1 | 3.54 | ⚠️ earlier decided **3 mm** for 3BSM races |
+| CD74HC4067 | 16-channel analog multiplexer | 1 | 1.74 | Expands ADC for NTC thermistors |
+| FVT LittleBee 20A ESC | BLHeli_S, DSHOT | 2 | 5.81 | Roll-post EDFs (almost sold out ⚠️) |
 
-| Part | Qty | Status | Notes |
-|------|-----|--------|-------|
-| CoreWing F405 WING V2 stack | 1 | (own) | FC + PDB PLUS + wireless |
-| ELRS receiver | 1 | 🛒 | USART6 on F405 |
-| Raspberry Pi Pico | 1 | 🛒 | ~€4, secondary servos + temp + LEDs |
-| DS18B20 temp sensor | 20 pack | 🛒 | ~€4, 4 used + spares |
-| Matek 150A current sensor | 2 | (own/order) | Per battery lead |
-| INA219 power monitor | 1 | 🛒 Maybe | Optional servo-rail current logging |
-| 4.7kΩ resistor | 5 | 🛒 | DS18B20 pull-up |
-| 10kΩ resistor | 5 | 🛒 | STS3032 UART half-duplex |
-| Servo extension 30 cm | 10 | 🛒 | Flight-surface servos |
-| Servo Y-splitter | 2 | 🛒 | If merging signals |
-| Dupont connector kit | 1 | 🛒 | General wiring |
+## Gaps to add before ordering (flagged in cart review)
 
-## Servos
+| Item | Why | Status |
+|------|-----|--------|
+| **2× more STS3032M** | Need 3 total for 3BSM | ❌ critical |
+| LM2596 buck converter (5 pc) | 6V→4.0V rail for small door servos | ❌ |
+| MicroSD card 8–16 GB | ArduPilot blackbox logging | ❌ |
+| MG90S (5 pc) | Need 1 more + spares | ❌ |
+| 28AWG wire, 7 colours, 5 m each | All signal/data/sensor wiring | ❌ |
+| 2 mm bullet connectors | EDF motor connections | ❌ |
+| XT30 connectors | Roll-post ESC power | ❌ |
+| 10kΩ resistors | NTC voltage dividers + STS3032 half-duplex | ❌ |
+| Resistor assortment | Voltage dividers | ❌ |
+| O-ring assortment | Wheels | ❌ |
+| LiPo alarms ×4 | Battery safety | ❌ |
+| BA15S bulb socket | Afterburner mounting | ❌ |
+| 2 mm carbon rod | Linkages (have 2×250 mm rod pack — may suffice) | ⚠️ |
+| Rear wheel ~50 mm | Front 38 mm in cart; confirm rear size | ⚠️ |
+| Larger heatsink (≥20×20 mm) for 10W LED | 14×14 too small alone (or stack two) | ⚠️ |
+| 8AWG (optional) | 10AWG is marginal at 89A main-EDF | ⚠️ |
 
-| Part | Qty | Status | Notes |
-|------|-----|--------|-------|
-| NEEBRC 12kg (28g) | 2 | ✅ | Flaperons |
-| NEEBRC 9kg (21g) | 2 | ✅ | Stabilators |
-| MG90S | 7 | ✅ | Rudders, nose steer, 3BSM yaw, vane box, roll-post doors |
-| SG90 | 12 | ✅ | Gear doors, lift-fan doors, canopy, nozzle |
-| Feetech STS3032 | 3 | ✅ ordered | 3BSM sections (2) + spare |
-| MG996R | 4 | ✅ | Avoided in build (too heavy) — spares/other projects |
+## Already owned (not in cart)
 
-## 3BSM mechanism
+| Part | Qty | Use |
+|------|-----|-----|
+| CoreWing F405 WING V2 stack | 1 | FC + PDB + wireless |
+| QX-Motor 70mm EDF | 2 | Main + lift |
+| 6S 5000 mAh / 2700 mAh LiPo | 1 each | Main / lift EDF |
+| NEEBRC 28g (12kg) / 21g (9kg) | 2 / 2 | Flaperons / stabilators |
+| MG90S | 7 | Rudders, nose steer, 3BSM yaw, vane box, roll-post doors |
+| SG90 | 12 | Misc doors / cosmetics |
+| MG996R | 4 | Avoided (too heavy) — spares |
+| Carbon tube 6 OD / 3 ID, 400 mm | 10 | Spar joining sleeves + secondary structure |
+| Raspberry Pi Pico (RP2040) | 1 | Secondary I/O — see [Pico](04-raspberry-pi-pico.md) |
 
-| Part | Qty | Status | Notes |
-|------|-----|--------|-------|
-| 6805ZZ bearing (37×25×7) | 10 pack | 🛒 | Buy before modeling |
-| PETG filament | 1–2 rolls | 🛒 | 3BSM sections |
-| ABS/ASA filament | 1 roll | 🛒 | Motor mounts, heat parts |
-| M2 / M3 screw kit (600 pc) | 1 | 🛒 | General + 3BSM assembly |
-| Linkage rods 2 mm + clevises | pack | 🛒 | Servo linkages |
-| M2 threaded rod 500 mm | 1 | 🛒 | Adjustable linkages |
+## Notes
 
-## Airframe materials
-
-| Part | Qty | Status | Notes |
-|------|-----|--------|-------|
-| LW-PLA filament | 2–3 rolls | 🛒 | Main airframe |
-| PETG filament | 1–2 rolls | 🛒 | Structural |
-| ASA filament | 1 roll | 🛒 | Heat-critical |
-| CF tube 10×6.1 mm 500 mm | 4 | 🛒 | Wing spars (joined) |
-| CF rod 4 mm 500 mm | 4 | 🛒 | Spar sleeve joints |
-| CF rod 1.5–2 mm 500 mm | pack | 🛒 | Pushrods |
-| Aluminium tube 10 mm 1000 mm | 2 | 🛒 Local | Wing spars (CF alt), Bauhaus |
-| Plywood 3 mm sheet | small | 🛒 | Reinforcement plates |
-| Thin CA glue | 2 | 🛒 | Foam/CF bonding |
-| Thick CA glue | 1 | 🛒 | Gap filling |
-| CA accelerator | 1 | 🛒 | Cure speed |
-| 30-min epoxy | 2 | 🛒 | Structural bonds |
-| M2/M3 nyloc nuts | pack | 🛒 | Vibration-prone joints |
-| Threadlocker (Loctite blue) | 1 | 🛒 | Prevent loosening |
-
-## Landing gear
-
-| Part | Qty | Status | Notes |
-|------|-----|--------|-------|
-| Custom 3D-printed retracts | 3 | 🛒 design | Over-centre lock + 90° wheel twist; no COTS units |
-| Wheels | 3 | 🛒 | Main ×2 + nose |
-| Strut wire 3–4 mm | 3 | 🛒 | Or complete strut set |
-
-## Lighting
-
-| Part | Qty | Status | Notes |
-|------|-----|--------|-------|
-| 3W LED red / green / white | 10 each | ✅ | Nav + strobe |
-| 3W 700mA PWM LED driver | 3–4 | 🛒 | €1.86 each |
-| Heatsink 7×7×6 mm | few | 🛒 | For 3W LEDs/strobes |
-
-## Tools
-
-| Tool | Status |
-|------|--------|
-| Clamp meter (e.g. SNAKOL SK-203) | 🛒 — EDF testing |
-| Digital calipers | 🛒 if not owned (~€8, essential for printing) |
-| Soldering iron (fine tip) | ✅ |
-| Heat gun | 🛒 if not owned |
-| Hex driver set M2/M3 | 🛒 if not owned |
+- The **roll-post 30mm EDFs** ship *with* a 20A ESC, yet 2× separate **LittleBee 20A** ESCs are
+  also in the cart — decide whether the bundled ESCs suffice and drop the LittleBees, or keep them
+  for DSHOT/BLHeli_S response. See [Propulsion](06-propulsion.md#roll-control).
+- **Bearings:** MR62ZZ (2×6×2.5) is in the cart but flagged as marginal for the 3BSM centre shaft;
+  MR115ZZ (5×11×4) was recommended as a better fit. The big 3BSM section bearings are still the
+  **6805ZZ** sizing — confirm what's actually needed. See [Materials](09-materials-airframe.md#bearings-3bsm).
+- **Temperature sensing changed** to NTC 100K + CD74HC4067 mux (was DS18B20). See
+  [Sensors](07-sensors-monitoring.md).
 
 ## Open questions / TODO
 
-- Confirm whether QX-Motor EDFs and Matek sensors are already in hand or still to order.
-- Resolve CF vs local aluminium spar purchase.
-- Finalise roll-post motor choice (30mm micro EDF vs prop) — see [Propulsion](06-propulsion.md#roll-control).
+- Add the 2× STS3032M and the gap items above, then re-total.
+- Resolve steel-ball size (3 vs 4 mm) and 3BSM bearing choice.
+- Confirm whether bundled roll-post ESCs replace the LittleBees.
