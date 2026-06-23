@@ -13,12 +13,12 @@ choices, pin mappings, wiring, power architecture, and the reasoning behind ever
 
 | Phase | Build | Status |
 |-------|-------|--------|
-| 1 | Trainer prop plane (foamboard) | Currently building |
-| 2 | Single EDF jet | Planned |
-| 3 | VTOL F-35B (3D-printed) | Future / in design |
+| 1 | Trainer prop plane (foamboard) | Built & repaired — awaiting re-flight (runway needed) |
+| 2 | ~~Single EDF jet~~ | ❌ Scrapped |
+| 3 | VTOL F-35B (3D-printed) | Primary focus / in design |
 
-Phases 1–2 build the skills and validate the electronics path; Phase 3 is the real goal.
-Most technical depth in this KB concerns Phase 3.
+Phase 2 (single EDF jet) was dropped — the build goes straight from the trainer to the F-35B, which
+is the real goal. Most technical depth in this KB concerns Phase 3.
 
 ## Aircraft at a glance (Phase 3 F-35B)
 

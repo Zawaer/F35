@@ -11,12 +11,16 @@
 | Item | Spec |
 |------|------|
 | Motor | A2212 2200KV |
-| Battery | 3S LiPo, 1500–2200 mAh |
+| Battery | 3S LiPo — now using **CNHL MiniStar 850 mAh 3S** (earlier spec 1500–2200 mAh) |
 | ESC | 30–40 A |
 | Props | 5×4 to 6×4 |
 | Airframe | Foamboard |
 
-Purpose: learn to fly and validate the basic FC + receiver setup before EDF/VTOL complexity.
+Purpose: learn to fly and validate the basic FC + receiver setup before VTOL complexity.
+**Status:** built; first hand-launch (no runway) crashed after ~1 s from insufficient launch speed,
+now repaired and intact — awaiting a re-flight from a proper runway. (**Phase 2, the single EDF jet,
+is scrapped** — the project goes straight to the Phase 3 F-35B.) Battery: see
+[CNHL MiniStar 850mAh card](../components/power.md).
 
 ## Phase 3 — EDF propulsion
 
@@ -92,8 +96,9 @@ Final plan (parts chosen):
 
 #### Roll-post power & wiring
 
-- **Power source:** separate **3S 850 mAh** LiPo pack(s) (the 30mm EDFs are 3S 7000KV) — these
-  packs already have **XT60** connectors, so XT60 is used for roll-post ESC power.
+- **Power source:** separate **3S 850 mAh** LiPo packs (CNHL MiniStar 70C, ~59.5 A capability — the
+  30mm EDFs are 3S 7000KV). The packs shipped with XT30U but were **re-soldered to XT60H**, so
+  roll-post power uses **XT60H**. See the [battery](../components/power.md) and XT60H connector cards.
 - Power wire: **18AWG** is fine for ~11.2 A (16A ampacity, ~1.4× margin; ~0.05 V drop over 300 mm).
 - **2 mm bullet** connectors for the EDF motor leads.
 - ⚠️ Confirm pack count/sizing: two 30mm EDFs at ~11 A each ≈ 22 A from one 3S 850 mAh ≈ 26C —

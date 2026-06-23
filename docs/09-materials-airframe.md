@@ -13,8 +13,25 @@
 | PETG | Structural parts, 3BSM sections | 1–2 rolls |
 | ASA / ABS | Heat-critical parts near EDF exhaust, motor mounts | 1 roll |
 
-A big advantage of a 3D-printed airframe: servo bays, internal pushrod channels, and horn slots can
-be designed directly into the print (see [Servos — internal actuation](05-servos.md)).
+**LW-PLA in hand:** 2 rolls of **eSUN LW-PLA, black, 1 kg** (foaming PLA, ~0.54 g/cm³ foamed at
+260–270 °C) — for **test prints + the first airframe**. Full spec on the
+[eSUN LW-PLA card](../components/structural.md). ⚠️ Needs an **all-metal hotend** to foam properly
+(>250 °C); retraction is ineffective so expect stringing. A big advantage of a printed airframe:
+servo bays, internal pushrod channels, and horn slots can be designed straight into the print (see
+[Servos — internal actuation](05-servos.md)).
+
+### Final airframe colour: gray vs paint
+
+Black LW-PLA is **test/first-airframe only** (low HDT ~53 °C → can soften in strong sun; fine in
+weak Finnish sun and for testing). Once the airframe is proven to fly well, pick the final finish:
+
+- **Gray LW-PLA** — closest to the real F-35B colour out of the spool; no paint step, no added paint
+  weight, but limited to that one grey.
+- **White LW-PLA + paint** — full control of the scale livery (panel lines, markings, exact greys),
+  but adds paint/primer weight and work, and LW-PLA's matte foamed surface needs care when painting.
+
+**Decision: pending** — choose after the first airframe flies. Leaning gray for simplicity/weight if
+the shade is close enough; white+paint if a faithful livery matters more. (To revisit.)
 
 ## Carbon fibre / structural rods & tubes
 

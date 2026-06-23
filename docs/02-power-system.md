@@ -10,16 +10,23 @@ measurement**, not by a current shortfall — electrically a single good 6S pack
 
 ## Batteries
 
-| Pack | Cells | Capacity | Role | Connector |
-|------|-------|----------|------|-----------|
-| Main | 6S | 5000 mAh | Main (rear) EDF + system tap | EC5 |
-| Lift | 6S | 2700 mAh | Lift (front) EDF only | (per ESC) |
+| Pack | Model | Capacity | C | Weight | Role | Connector |
+|------|-------|----------|---|--------|------|-----------|
+| Main | CNHL G+Plus 6S | 5000 mAh | 70C | ~714 g | Main (rear) EDF + system tap | EC5 |
+| Lift | CNHL 6S | 2700 mAh | 40C | ~454 g | Lift (front) EDF only | XT60 |
 
-Measured characteristics of the 5000 mAh pack (from the builder's IR measurements):
+Both packs are **borrowed from the school drone club** (an availability/return constraint). Full
+specs in the [battery component cards](../components/power.md).
+
+Characteristics of the 5000 mAh main pack:
 
 - Rated 70C → 5000 mAh × 70 = 350 A theoretical; ~150–250 A realistic continuous.
-- Measured pack IR ≈ **11.4 mΩ**, implying a real C-rating of **~105C** (~300 A+ real capability).
+- Builder's measured pack IR ≈ **11.4 mΩ**, implying a real C-rating of **~105C** (~300 A+ real capability).
 - The cells are never the bottleneck — **connectors and wiring are**.
+- ⚠️ The **lift pack is only 40C** (~108 A) vs the main's 70C — fine for the lift EDF's draw, but the
+  weaker of the two; don't work it as hard.
+- **Battery mass dominates AUW/CG:** 714 g + 454 g ≈ **1168 g (~37% of ~3185 g AUW)** — placement is
+  the main CG lever (below).
 
 ### Battery placement & CG
 
@@ -69,6 +76,12 @@ negligible against the pack's ~300 A capability. Voltage sag from the tap is ~0.
 
 ### Servo rail headroom — the marginal case
 
+> ⚠️ **May not be marginal at all:** the V2 board's product images label the Servo BEC
+> **"Duration 8 A, peak 14 A"** (vs the spec text's 4 A sustained). If it's genuinely **8 A
+> sustained**, the cruise load sits comfortably within rating and the concern below is moot. Verify
+> on the actual board — see the [FC component card](../components/flight-control.md). The analysis
+> below assumes the conservative 4 A figure.
+
 The 6V servo rail's **4A sustained** rating is marginal for the full servo count:
 
 | Phase | Servo current | vs 4A sustained | vs 14A peak |
@@ -117,7 +130,7 @@ of 6V servo output). Total tap current peaks ~4–5 A.
 | XT90 | Per-ESC branch (~90 A each) |
 | EC5 | 5000 mAh main pack lead / system tap joint |
 | XT60→XT90 adapters | Charger side |
-| **XT60** | Roll-post ESC power — reusing the 3S 850 mAh packs' existing XT60s |
+| **XT60H** | Roll-post ESC power — 3S 850 mAh packs re-soldered from XT30U to XT60H |
 | **2 mm bullet** | EDF motor leads (on the buy list) |
 
 **Battery monitoring:** no standalone LiPo alarms — pack voltage is monitored via the FC/PDB
@@ -125,8 +138,12 @@ telemetry (PDB VBAT divider → FC).
 
 ## Charging
 
-- **HOTA D6 Pro** charger + an external **600–800 W DC PSU** is the recommended bench setup for
-  charging the 6S packs (with appropriate XT60→XT90 adapters on the charge leads).
+- **HOTA D6 Pro** charger (borrowed from the school drone club — see the
+  [charger card](../components/power.md)) handles charging/balancing all packs, two channels at once.
+- On **AC it's 200 W total**; for the full 650 W / 15 A×2 it needs an external **DC PSU >24 V**
+  (~600–800 W). AC is fine for moderate charge rates.
+- Charger output is **XT60**; the **main 5000 mAh pack is EC5**, so an **EC5→XT60 charge adapter** is
+  needed for it (lift pack is already XT60). All packs use JST-XH balance leads.
 
 ## Open questions / TODO
 

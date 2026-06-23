@@ -1,18 +1,22 @@
 # Project Overview
 
-> **Goal:** build a 3D-printed, VTOL-capable RC **F-35B** (Phase 3), reached in three phases.
-> Phases 1–2 are stepping stones to de-risk the electronics, flight-control, and build skills
-> before committing to the complex VTOL airframe.
+> **Goal:** build a 3D-printed, VTOL-capable RC **F-35B**. Originally a 3-phase plan; **Phase 2
+> (single EDF jet) is now scrapped** — going straight from the trainer to the F-35B.
 
 ## Phases
 
 | Phase | Build | Purpose | Status |
 |-------|-------|---------|--------|
-| 1 | Trainer prop plane (foamboard) | Learn to fly, validate basic FC/RX setup | Currently building |
-| 2 | Single EDF jet | Learn EDF power systems, higher speeds | Planned |
-| 3 | VTOL F-35B (LW-PLA print) | The real goal — VTOL + transition + scale | In design |
+| 1 | Trainer prop plane (foamboard) | Learn to fly, validate basic FC/RX setup | **Built & repaired — awaiting re-flight** (see below) |
+| 2 | ~~Single EDF jet~~ | — | ❌ **Scrapped** — skipping straight to Phase 3 |
+| 3 | VTOL F-35B (LW-PLA print) | The real goal — VTOL + transition + scale | **Primary focus** / in design |
 
-The trainer and the EDF/VTOL systems are **electrically completely separate** — different
+**Phase 1 status:** the foamboard trainer is fully built. First flight was a hand-launch with no
+runway — it flew ~1 s, dropped, and broke (bad throw / not enough launch speed, not an airframe
+fault). Already repaired and intact; will be re-flown from a proper runway when there's time. Main
+effort is now on the **F-35B**.
+
+The trainer and the F-35B VTOL systems are **electrically completely separate** — different
 batteries, ESCs, and motors (see [Propulsion](06-propulsion.md) and [Power](02-power-system.md)).
 
 ## Phase 3 — F-35B target spec
