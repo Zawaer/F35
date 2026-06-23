@@ -8,9 +8,21 @@ numbers (for CG/AUW, the power budget, and the Fusion model) live here.
 ## How to add a component
 
 Paste the **full product page** (or datasheet) into chat — ideally one part per message, including
-the section that shows **weight, dimensions, and electrical specs**. I'll extract the relevant
-fields into the right category file below using the standard card. Marketing fluff is dropped;
-only useful build data is kept. Unknown fields are left as `—` to fill in later.
+the section that shows **weight, dimensions, and electrical specs**. State the **chosen variant**
+(colour, wattage, size, pack qty) and **how it's used** in the build.
+
+When processing a paste, the assistant must:
+
+- **Strip the clutter.** The page is usually grabbed with select-all (⌘A), so it includes
+  "Recommended", "More to love", "People also searched", store/footer links, the cart sidebar, etc.
+  **Ignore all of that** — extract specs only for the named product/variant. Never card a
+  recommended/related product by mistake.
+- **Accept images as context.** Some specs (weight, dimensions, wiring) live only in product
+  images, so the user may paste screenshots/photos instead of (or alongside) text. Read specs from
+  images too.
+- Keep only useful build data — drop marketing copy, reviews, and SEO keywords.
+- Leave unknown fields as `—` to fill in later (and say which fields are still missing).
+- Where a real spec corrects the BOM or a subsystem doc (true weight, current, etc.), update those too.
 
 ## Files by category
 
