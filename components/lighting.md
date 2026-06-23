@@ -101,7 +101,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 | Spec | Value |
 |------|-------|
-| Weight | ⚠️ MISSING |
+| Weight | ~0.6 g *(est. from 12 mm aluminium MCPCB geometry + emitter)* |
 | PCB diameter | 12 mm (round aluminium MCPCB; listing also 14/16/20 mm) |
 | Emitter | 5050 (XM-L2 / XML-T6 class) |
 | Power | 10 W |
