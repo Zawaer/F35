@@ -22,7 +22,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 | Chip | 42 mil |
 | Rated life | >50,000 h |
 | Package | bare emitter — **no 20 mm star PCB** included |
-| Weight | ⚠️ MISSING *(not on datasheet; ~0.5–1 g typical for this class — weigh to confirm)* |
+| Weight | ~0.3 g *(est. from bulk-carton data; not on datasheet)* |
 | Dimensions | Ø8.0 mm lens, 5.5 mm tall (dome to base), 14.4 mm overall incl. leads |
 | Base / slug | 7.26 mm across; Ø6.0 mm copper slug (bottom) |
 | Pinout | **2-pin** single-die (anode/cathode), thermal slug |
@@ -48,7 +48,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 | Chip | 42 mil |
 | Rated life | >50,000 h |
 | Package | bare emitter — no star PCB |
-| Weight | ⚠️ MISSING *(not on datasheet; ~0.5–1 g typical for this class — weigh to confirm)* |
+| Weight | ~0.3 g *(est. from bulk-carton data; not on datasheet)* |
 | Dimensions | Ø8.0 mm lens, 5.5 mm tall (dome to base), 14.4 mm overall incl. leads |
 | Base / slug | 7.26 mm across; Ø6.0 mm copper slug (bottom) |
 | Pinout | **2-pin** single-die (anode/cathode), thermal slug |
@@ -74,7 +74,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 | Chip | 42 mil |
 | Rated life | >50,000 h |
 | Package | bare emitter — no star PCB |
-| Weight | ⚠️ MISSING *(not on datasheet; ~0.5–1 g typical for this class — weigh to confirm)* |
+| Weight | ~0.3 g *(est. from bulk-carton data; not on datasheet)* |
 | Dimensions | Ø8.0 mm lens, 5.5 mm tall (dome to base), 14.4 mm overall incl. leads |
 | Base / slug | 7.26 mm across; Ø6.0 mm copper slug (bottom) |
 | Pinout | **2-pin** single-die (anode/cathode), thermal slug |
