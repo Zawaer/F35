@@ -26,19 +26,25 @@ One LED type, brightness set per-channel by PWM on the driver: 3W @ 100% = brigh
 ~3.2–3.4V) — each needs a **constant-current driver**, not a voltage regulator. A voltage regulator
 on an LED causes thermal runaway → burnout.
 
-## LED driver heat — power them from 12V, not 22V
+## LED driver heat — efficient buck drivers (no big heatsinks needed)
 
-The CC drivers are essentially linear: they dissipate the input–output voltage difference as heat.
+Both LED drivers are **switch-mode step-down (buck) constant-current** drivers — **not linear**:
 
-- From **22.2V** battery: a 700mA driver wastes ~16.2V × 0.7A ≈ **11.3W each** (33.9W for three) —
-  far too hot.
-- From the **12V VTX rail**: ~6V dropout × 0.7A ≈ **2.9W each** — manageable. **This is why the 12V
-  rail exists.**
+- 700mA nav/strobe driver (ACELEX 3W): ~**96%** efficiency, internal loss <1 W at a single-3W-LED load.
+- 3A landing-light driver (eletechsup LD2740SC): ~**92%** efficiency.
 
-**Heatsinks:** the 700mA/3A drivers need heatsinks. **14×14×6 mm** (black anodised — better
-radiation than bare silver) suits the small drivers; 4 used, rest spare.
+So they **don't** dissipate the input–output voltage difference as heat, and input voltage (12 V vs
+22 V) barely affects their temperature. At nav-light loads the small drivers **run cool — a heatsink
+is optional**. (Powering from the 12V VTX rail is still the plan, but for current-budget/regulation
+reasons, not driver heat.)
 
-For the **10W landing light**, the **two 14×14×6 mm heatsinks on hand are adequate** — it's a
+> **Correction:** an earlier design assumption (from the prior ChatGPT chat) treated these as
+> *linear* regulators wasting ~11 W each at 22 V and concluded "must run off 12 V + heatsinks." That
+> was wrong — the product datasheets confirm both are efficient buck CC drivers. Heatsinks are now
+> only really needed for the **10W landing-light LED itself**.
+
+**The real heat source is the 10W landing light** — at full 3 A the LED makes ~7–8 W. The **two
+14×14×6 mm heatsinks on hand are adequate** for it — it's a
 landing light, used in brief bursts. Rough thermal math at full 3 A (~7–8 W heat, still air): the
 two heatsinks (~5–6 g aluminium) take ~540 J to rise +100 °C, i.e. **~1–2 minutes continuous from
 cold** before the junction nears its 150 °C limit; real landing-light use is **10–30 s** and
