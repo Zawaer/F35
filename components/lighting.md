@@ -130,7 +130,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 | Spec | Value |
 |------|-------|
-| Weight | ⚠️ MISSING *(small — thin 3 mm FPC, a few g/m; weigh to confirm)* |
+| Weight | ~7 g/m *(est. from FPC cross-section; +1–2 g for lead wires; weigh to confirm)* |
 | Model | COB-3mm-400D-12V/24V (2025 Ed.1) |
 | Input voltage | DC 12 V (chosen; listing also 24 V) |
 | Power per metre | **see mismatch below** (~5.76–7 W/m) |
