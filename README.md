@@ -1,0 +1,55 @@
+# F-35B RC Project — Knowledge Base
+
+Centralized, living documentation for a multi-phase RC aircraft project culminating in a
+3D-printed, VTOL-capable **F-35B**. This repo is the single source of truth for component
+choices, pin mappings, wiring, power architecture, and the reasoning behind every decision.
+
+> **How to use this repo:** each doc in [`docs/`](docs/) covers one subsystem and opens with a
+> short **"current decision"** callout, followed by the supporting analysis. When a decision
+> changes, update the doc — keep it a reference, not a history log. Raw chat exports that
+> seeded this KB live in [`archive/`](archive/).
+
+## Project phases
+
+| Phase | Build | Status |
+|-------|-------|--------|
+| 1 | Trainer prop plane (foamboard) | Currently building |
+| 2 | Single EDF jet | Planned |
+| 3 | VTOL F-35B (3D-printed) | Future / in design |
+
+Phases 1–2 build the skills and validate the electronics path; Phase 3 is the real goal.
+Most technical depth in this KB concerns Phase 3.
+
+## Aircraft at a glance (Phase 3 F-35B)
+
+- **Scale:** 70mm EDF class — ~700–800mm wingspan, ~900–1100mm fuselage, **~3185 g** AUW
+- **Propulsion:** 2× QX-Motor 70mm EDF (main + lift), 6S, individual Hobbywing 100A ESCs
+- **Hover control:** ArduPilot quadplane — 4-motor mix (main EDF vectored via 3BSM, front lift
+  fan, 2× wingtip micro motors). See [Propulsion](docs/06-propulsion.md).
+- **Flight controller:** CoreWing F405 WING V2 stack (FC + PDB PLUS + wireless), ArduPilot
+- **Secondary I/O:** Raspberry Pi Pico for extra PWM, temperature sensing, and LED control
+- **Airframe:** LW-PLA print + carbon/aluminium spars + plywood reinforcement
+
+## Documentation index
+
+| # | Doc | Covers |
+|---|-----|--------|
+| 01 | [Project Overview](docs/01-project-overview.md) | Phases, goals, aircraft spec, open design questions |
+| 02 | [Power System](docs/02-power-system.md) | Batteries, ESCs, BEC rails, connectors, current budget |
+| 03 | [Flight Controller](docs/03-flight-controller.md) | CoreWing F405 stack, PDB, UART/ADC/PWM map, firmware |
+| 04 | [Raspberry Pi Pico](docs/04-raspberry-pi-pico.md) | Pin map and roles (PWM expansion, temp, LEDs) |
+| 05 | [Servos](docs/05-servos.md) | Flight-surface + VTOL servo assignment, torque math, STS3032 |
+| 06 | [Propulsion](docs/06-propulsion.md) | EDFs, lift fan, 3BSM thrust vectoring, roll posts, trainer motor |
+| 07 | [Sensors & Monitoring](docs/07-sensors-monitoring.md) | Current sensors, DS18B20 temp, INA219, blackbox logging |
+| 08 | [Lighting](docs/08-lighting.md) | Nav lights, strobes, 3W LEDs + drivers, Pico control |
+| 09 | [Materials & Airframe](docs/09-materials-airframe.md) | Filaments, carbon/aluminium spars, bearings, fasteners, glue |
+| 10 | [Wiring Diagrams](docs/10-wiring-diagrams.md) | Consolidated power/signal wiring and pin connections |
+| 11 | [Bill of Materials](docs/11-bill-of-materials.md) | Master parts list with own/order status and cost |
+
+Code lives in [`code/`](code/) — currently the [Pico firmware](code/pico/).
+
+## Conventions
+
+- **Units & numbers** are kept as recorded during design (mostly metric, currency in €).
+- ⚠️ marks unresolved risks or items needing verification before flight.
+- 🛒 = to buy, ✅ = owned/decided.
