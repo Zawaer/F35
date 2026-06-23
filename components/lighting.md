@@ -120,7 +120,46 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ---
 
+### 3mm 400-LED 12V COB flexible strip — formation lights
+- **Category:** LED strip (COB on flexible FPC)
+- **Status:** 🛒 in cart
+- **Used for:** **formation lights** on the F-35B — [Lighting](../docs/08-lighting.md)
+- **Variant / qty:** Green / 3 mm / 1 m · 1 pc
+- **Price:** €2.68
+- **Link:** https://www.aliexpress.com/item/1005009514688713.html?mp=1&sourceType=570&pdp_ext_f=%7B%22cart2PdpParams%22%3A%7B%22sourceType%22%3A%22570%22%2C%22cartSource%22%3A%22main%22%7D%7D
+
+| Spec | Value |
+|------|-------|
+| Weight | ⚠️ MISSING *(small — thin 3 mm FPC, a few g/m; weigh to confirm)* |
+| Model | COB-3mm-400D-12V/24V (2025 Ed.1) |
+| Input voltage | DC 12 V (chosen; listing also 24 V) |
+| Power per metre | **see mismatch below** (~5.76–7 W/m) |
+| Current draw | ~0.35–0.48 A/m at 12 V (≈4.2–5.8 W/m) |
+| LED density | 400 LEDs/m, COB (Epistar) |
+| Efficacy | 90 lm/W ±10% (@4000K) |
+| CRI (Ra) | >90 |
+| Width × thickness | ~2.7–3 mm × 1.5 mm (see mismatch) |
+| Cut interval | every ~10–20 mm (see mismatch) |
+| Cascade length | >5 m |
+| Leads | both ends 15 cm, 20AWG; free DC head + 2-pin wire |
+| Waterproof | none (IP20/IP21) |
+| Life / cert | 50,000 h · CE/RoHS/UL |
+
+- **⚠️ Spec mismatches in the listing** (flagged per KB convention — verify on arrival):
+  - **Power/m:** PDF says **7 W/m**; product-page spec says **5.76 W/m**; description says
+    **6–8 W/m**; a reviewer measured **~0.35 A/m (≈4.2 W/m)** at 12 V. Use **~0.4–0.5 A/m** for the
+    power budget and confirm by measuring.
+  - **Width:** title/“COB width” say **3 mm**, but the dimensions line says **2.7 mm**.
+  - **Cut interval:** PDF “minimum 10 mm” vs description “20 mm”.
+  - **Waterproof:** PDF IP20 vs description IP21 (both effectively non-waterproof).
+- **Notes:** dimmable; cut to length and solder ~0.3 mm² wire to the pads (don't bridge the two
+  rails). For the [12V VTX rail budget](../docs/08-lighting.md#current-budget-12v-vtxcam-rail-2a),
+  size by the **actual cut length** used for formation lighting — a full metre at ~0.4–0.5 A is
+  more than the ~0.13 A assumed for a short accent segment.
+
+---
+
 ## Still to card (paste product pages)
 
 700mA CC LED driver · 3A adjustable CC LED driver · BA15S P21W afterburner bulb ·
-12V COB strip (green) · IRLZ44N MOSFET · frosted PP diffuser sheet.
+IRLZ44N MOSFET · frosted PP diffuser sheet.

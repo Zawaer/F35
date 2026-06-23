@@ -17,9 +17,14 @@ When processing a paste, the assistant must:
   "Recommended", "More to love", "People also searched", store/footer links, the cart sidebar, etc.
   **Ignore all of that** — extract specs only for the named product/variant. Never card a
   recommended/related product by mistake.
-- **Accept images as context.** Some specs (weight, dimensions, wiring) live only in product
-  images, so the user may paste screenshots/photos instead of (or alongside) text. Read specs from
-  images too.
+- **Accept images and PDFs as context.** Some specs (weight, dimensions, wiring) live only in
+  product images or a **manual/datasheet PDF**, so the user may paste screenshots, photos, or PDFs
+  instead of (or alongside) text. Read specs from all of them.
+- **Flag mismatches.** If specs disagree across sources (PDF vs product page vs images vs reviews
+  — e.g. different power, width, or rating), record the values seen and **tell the user** rather
+  than silently picking one.
+- **Keep links verbatim.** Store the product link exactly as given (bundle-deal links can be long
+  and messy) — don't clean or reformat it.
 - Keep only useful build data — drop marketing copy, reviews, and SEO keywords.
 - **Source:** default to **AliExpress** — do *not* record the specific AliExpress store name. Only
   note a source when it isn't AliExpress: **batteries are from ChinaHobbyLine**, and some parts come
