@@ -10,7 +10,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 - **Status:** 🛒 in cart (1 set)
 - **Used for:** white wingtip **strobes**; fallback **landing light** if the 10W LED is too
   big/hot/power-hungry or fails — [Lighting](../docs/08-lighting.md)
-- **Source / price:** AliExpress (NewStarRiver / QINGYING), €1.48 / 10 pcs
+- **Source / price:** AliExpress · €1.48 / 10 pcs
 
 | Spec | Value |
 |------|-------|
@@ -36,7 +36,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 - **Category:** LED (bare high-power emitter)
 - **Status:** 🛒 in cart (1 set)
 - **Used for:** **port (left) wingtip** navigation light — [Lighting](../docs/08-lighting.md)
-- **Source / price:** AliExpress (NewStarRiver / QINGYING), €1.82 / 10 pcs
+- **Source / price:** AliExpress · €1.82 / 10 pcs
 
 | Spec | Value |
 |------|-------|
@@ -62,7 +62,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 - **Category:** LED (bare high-power emitter)
 - **Status:** 🛒 in cart (1 set)
 - **Used for:** **starboard (right) wingtip** navigation light — [Lighting](../docs/08-lighting.md)
-- **Source / price:** AliExpress (NewStarRiver / QINGYING), €1.82 / 10 pcs
+- **Source / price:** AliExpress · €1.82 / 10 pcs
 
 | Spec | Value |
 |------|-------|

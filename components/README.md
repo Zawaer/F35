@@ -21,6 +21,10 @@ When processing a paste, the assistant must:
   images, so the user may paste screenshots/photos instead of (or alongside) text. Read specs from
   images too.
 - Keep only useful build data — drop marketing copy, reviews, and SEO keywords.
+- **Source:** default to **AliExpress** — do *not* record the specific AliExpress store name. Only
+  note a source when it isn't AliExpress: **batteries are from ChinaHobbyLine**, and some parts come
+  from Finnish local shops (**Biltema**, **Motonet**). The product **link** is what identifies the
+  exact item.
 - Where a real spec corrects the BOM or a subsystem doc (true weight, current, etc.), update those too.
 
 ### Marking missing data
