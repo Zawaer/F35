@@ -100,10 +100,14 @@ of 6V servo output). Total tap current peaks ~4–5 A.
 
 | Gauge | Use | Note |
 |-------|-----|------|
-| **10AWG** | Main EDF power (89 A) | ⚠️ marginal (~55 A continuous rating); keep runs <200 mm. 8AWG is the textbook size — optional upgrade. |
-| **18AWG** | Battery tap → PDB; roll-post EDF power (~11 A) | Fine for roll posts; marginal at BEC peak (above) |
-| **22AWG** | All servo cables | Matches standard RC servo wire; durable under flexing |
+| **10AWG** | Main EDF power (89 A) | ✅ adequate — the silicone wire is rated **172 A** (RC silicone is rated well above NEC chassis figures; 10AWG for 80–100 A ESCs is standard RC practice). 8AWG is an optional upgrade, not needed. |
+| **18AWG** | Battery tap → PDB; roll-post EDF power (~11–20 A) | ✅ rated **24.5 A** — covers the ~20 A BEC-tap peak and the ~11 A roll-post EDFs |
+| **22AWG** | All servo cables | Rated ~9.8 A — ample for ~1 A servos; matches standard RC servo wire, durable under flexing |
 | **~28–30AWG** | All signal/data/sensor wires | Using ~50 m red+black already available at school (no coloured set bought); fine for SPI, UART, I2C, PWM, ADC, NTC |
+
+> Wire ampacities above are the manufacturer's ratings for this fine-strand silicone wire (see the
+> [wire component card](../components/power.md)). They supersede the earlier conservative
+> "10AWG ~55 A / marginal at 89 A" caution.
 
 ## Connectors
 
