@@ -159,7 +159,31 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ---
 
+### Frosted translucent PP sheet — LED diffuser
+- **Category:** Material (diffuser sheet)
+- **Status:** 🛒 in cart
+- **Used for:** diffusing the wingtip nav / formation LEDs (and other point sources) for an even
+  glow — [Lighting](../docs/08-lighting.md)
+- **Variant / qty:** 100 × 200 mm × 0.5 mm · 10 sheets
+- **Price:** €3.83 + €1.58 shipping = €5.41 total
+- **Link:** https://www.aliexpress.com/item/1005008661393360.html?mp=1
+
+| Spec | Value |
+|------|-------|
+| Material | Polypropylene (PP), frosted translucent |
+| Sheet size | 100 × 200 mm |
+| Thickness | 0.5 mm |
+| Qty | 10 sheets |
+| Weight | ~9 g/sheet *(calc: 100×200×0.5 mm × 0.905 g/cm³; negligible per cut piece)* |
+| Heat resistance | up to 105 °C |
+| Model | TP0316V |
+
+- **Notes:** cuts/drills easily; 0.5 mm is flexible. Frosts point LEDs into an even glow / scale
+  lens look. ⚠️ PP softens near 105 °C — keep it off the **10W landing-light** hot metal/heatsink;
+  fine over the cool 3W nav LEDs. Listing offers 0.3–2 mm thicknesses and larger sheets.
+
+---
+
 ## Still to card (paste product pages)
 
-700mA CC LED driver · 3A adjustable CC LED driver · BA15S P21W afterburner bulb ·
-IRLZ44N MOSFET · frosted PP diffuser sheet.
+700mA CC LED driver · 3A adjustable CC LED driver · BA15S P21W afterburner bulb · IRLZ44N MOSFET.
