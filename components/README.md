@@ -1,0 +1,70 @@
+# Component Knowledge Base
+
+A datasheet-style reference for every physical component in the build. Each part gets a **spec
+card** capturing weight, size, and the specs that matter for *this* project (current draw, thrust,
+cell count, etc.) — so the [BOM](../docs/11-bill-of-materials.md) stays a buy-list while the real
+numbers (for CG/AUW, the power budget, and the Fusion model) live here.
+
+## How to add a component
+
+Paste the **full product page** (or datasheet) into chat — ideally one part per message, including
+the section that shows **weight, dimensions, and electrical specs**. I'll extract the relevant
+fields into the right category file below using the standard card. Marketing fluff is dropped;
+only useful build data is kept. Unknown fields are left as `—` to fill in later.
+
+## Files by category
+
+| File | Holds |
+|------|-------|
+| [flight-control.md](flight-control.md) | FC stack, Raspberry Pi Pico, multiplexer, cockpit display |
+| [propulsion.md](propulsion.md) | EDFs, motors, ESCs |
+| [power.md](power.md) | Batteries, BEC/regulators, connectors, wire |
+| [servos.md](servos.md) | All servos (flight surface, VTOL, smart, micro) |
+| [sensors.md](sensors.md) | Current sensors, thermistors, etc. |
+| [lighting.md](lighting.md) | LEDs, LED drivers, MOSFET, COB strip, diffuser |
+| [structural.md](structural.md) | Carbon tube/rod, bearings, balls, fasteners, wheels, glue |
+
+## Spec-card template
+
+```markdown
+### <Model / name> — <short role>
+- **Category:** <servo / EDF / battery / …>
+- **Status:** ✅ owned · 🛒 in cart · ordered
+- **Used for:** <subsystem + link, e.g. [Flaperons](../docs/05-servos.md)>
+- **Source / price:** <store, €>
+
+| Spec | Value |
+|------|-------|
+| Weight | — |
+| Dimensions | — |
+| …category-specific (see below)… | — |
+
+- **Notes:** <quirks, mods, compatibility, what to verify>
+```
+
+### Category-specific fields to capture
+
+- **Servo:** torque (@V), speed (s/60°), voltage range, current (idle / stall), gear material,
+  spline/teeth, bearing type, signal (PWM / serial), wire length, weight, dimensions.
+- **EDF / motor:** fan diameter, KV, cell count, max current (A), max power (W), thrust (g),
+  blade count, shaft/bore, weight, included ESC?, dimensions.
+- **ESC:** continuous / burst current (A), cell count, BEC (V/A) or opto, firmware/protocol
+  (DSHOT/BLHeli_S), weight, dimensions.
+- **Battery:** chemistry, cells (S) / nominal V, capacity (mAh), C-rating (cont/burst),
+  connector, balance lead, measured IR, weight, dimensions.
+- **BEC / regulator / buck:** input V range, output V and/or current, adjustable?, dimming,
+  switching vs linear, efficiency, weight, dimensions.
+- **LED:** power (W), forward voltage (Vf), forward current (A/mA), colour / wavelength / CT,
+  luminous flux (lm), package / emitter size, viewing angle.
+- **Sensor:** measured quantity + range, interface (analog / I2C / 1-Wire), accuracy/resolution,
+  supply voltage, current draw, package, weight.
+- **Display:** diagonal size, resolution, driver IC, interface (SPI/…), pin count + pitch,
+  logic/backlight voltage, dimensions, weight.
+- **Connector / wire:** type, current rating, gauge (AWG), conductor diameter, jacket.
+- **Structural (tube/rod/bearing/fastener/wheel):** material, OD / ID / wall, length, thread,
+  bore, load rating, weight.
+
+## Cross-references
+
+Build context for how each part is used lives in the subsystem docs under [`../docs/`](../docs/).
+Buy status and prices live in the [Bill of Materials](../docs/11-bill-of-materials.md).

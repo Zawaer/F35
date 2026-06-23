@@ -46,7 +46,9 @@ Most technical depth in this KB concerns Phase 3.
 | 10 | [Wiring Diagrams](docs/10-wiring-diagrams.md) | Consolidated power/signal wiring and pin connections |
 | 11 | [Bill of Materials](docs/11-bill-of-materials.md) | Master parts list with own/order status and cost |
 
-Code lives in [`code/`](code/) — currently the [Pico firmware](code/pico/).
+Detailed per-part specs (weight, dimensions, electrical) live in the
+[Component Knowledge Base](components/) — datasheet-style cards that back the BOM and feed the
+CG/AUW and power-budget math. Code lives in [`code/`](code/) — currently the [Pico firmware](code/pico/).
 
 ## Conventions
 
