@@ -64,9 +64,9 @@ a valid fallback if analog noise on the mux proves troublesome.
 
 ## Blackbox logging (ArduPilot)
 
-ArduPilot auto-logs to the FC **microSD** (⚠️ a card is still on the [buy list](11-bill-of-materials.md)):
-per-servo PWM, pack V/A, throttle, flight-mode transitions, RC in vs out. Combined with the Pico's
-temperature + ACS712 telemetry over UART, this gives a complete per-flight picture.
+ArduPilot auto-logs to the FC **microSD** (card owned, fitting later): per-servo PWM, pack V/A,
+throttle, flight-mode transitions, RC in vs out. Combined with the Pico's temperature + ACS712
+telemetry over UART, this gives a complete per-flight picture.
 
 ### Other monitoring ideas (parked)
 
@@ -75,7 +75,8 @@ temperature + ACS712 telemetry over UART, this gives a complete per-flight pictu
 
 ## Open questions / TODO
 
-- Buy the microSD card and 10kΩ resistors (for NTC dividers — also needed for STS3032 half-duplex).
+- MicroSD card: owned, fitting **later**. 10kΩ resistors (NTC dividers + STS3032 half-duplex):
+  covered by the electronics kit / school stock — no purchase needed.
 - Decide final NTC count and whether to add the exhaust-air sensor.
 - Decide whether to add a 150A-class sensor for main/lift EDF current, or accept no logging there.
 - Confirm CD74HC4067 wiring (S0–S3 select pins + SIG) and the Pico ADC pin used.

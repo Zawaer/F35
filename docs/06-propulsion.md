@@ -90,8 +90,12 @@ Final plan (parts chosen):
 
 #### Roll-post power & wiring
 
+- **Power source:** separate **3S 850 mAh** LiPo pack(s) (the 30mm EDFs are 3S 7000KV) — these
+  packs already have **XT60** connectors, so XT60 is used for roll-post ESC power.
 - Power wire: **18AWG** is fine for ~11.2 A (16A ampacity, ~1.4× margin; ~0.05 V drop over 300 mm).
-- Connectors: **XT30** for roll-post ESC power; **2 mm bullet** connectors for the EDF motor leads.
+- **2 mm bullet** connectors for the EDF motor leads.
+- ⚠️ Confirm pack count/sizing: two 30mm EDFs at ~11 A each ≈ 22 A from one 3S 850 mAh ≈ 26C —
+  acceptable for short hover bursts; revisit if hover endurance matters.
 
 ## Open questions / TODO
 

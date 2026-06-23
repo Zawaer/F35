@@ -103,7 +103,7 @@ of 6V servo output). Total tap current peaks ~4–5 A.
 | **10AWG** | Main EDF power (89 A) | ⚠️ marginal (~55 A continuous rating); keep runs <200 mm. 8AWG is the textbook size — optional upgrade. |
 | **18AWG** | Battery tap → PDB; roll-post EDF power (~11 A) | Fine for roll posts; marginal at BEC peak (above) |
 | **22AWG** | All servo cables | Matches standard RC servo wire; durable under flexing |
-| **28AWG** | All signal/data/sensor wires | 7-colour set for easy tracing (SPI, UART, I2C, PWM, ADC, NTC) |
+| **~28–30AWG** | All signal/data/sensor wires | Using ~50 m red+black already available at school (no coloured set bought); fine for SPI, UART, I2C, PWM, ADC, NTC |
 
 ## Connectors
 
@@ -113,10 +113,11 @@ of 6V servo output). Total tap current peaks ~4–5 A.
 | XT90 | Per-ESC branch (~90 A each) |
 | EC5 | 5000 mAh main pack lead / system tap joint |
 | XT60→XT90 adapters | Charger side |
-| **XT30** | Roll-post ESC power |
-| **2 mm bullet** | EDF motor leads |
+| **XT60** | Roll-post ESC power — reusing the 3S 850 mAh packs' existing XT60s |
+| **2 mm bullet** | EDF motor leads (on the buy list) |
 
-**Battery safety:** add **4× LiPo low-voltage alarms** (one per pack + spares) — on the buy list.
+**Battery monitoring:** no standalone LiPo alarms — pack voltage is monitored via the FC/PDB
+telemetry (PDB VBAT divider → FC).
 
 ## Charging
 

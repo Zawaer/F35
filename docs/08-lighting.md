@@ -60,9 +60,10 @@ The BA15S P21W is an automotive LED bulb with a built-in **CANBUS load resistor*
 power to fake an incandescent bulb's current draw for a car computer — useless here. **Remove it**
 (open base, desolder the resistor that runs hot): actual LED draw drops from ~1.5A to **~0.7A**,
 keeping it cool and within budget. Even so, **power the afterburner from the servo BEC or a
-dedicated 12V tap, not the VTX rail** to avoid crowding it. Use the **BA15S** (straight pins,
-180°) variant — easier to 3D-print a socket for than BAU15S (offset). Buy a **BA15S socket** for
-mounting. Amber/yellow (~3000K) gives the right glow.
+dedicated 12V tap, not the VTX rail** to avoid crowding it. The **BA15S** (straight pins, 180°)
+variant is in the cart — easier to mount than BAU15S (offset). A purpose-made BA15S socket is
+**optional**: solder leads directly to the bulb base contacts, or print a holder into the
+afterburner housing. Amber/yellow (~3000K) gives the right glow.
 
 ## Pico/RP2040 control
 

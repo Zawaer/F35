@@ -37,7 +37,7 @@ Master parts list for the Phase 3 F-35B. The tables below reflect the **final Al
 | LED driver 3A | adjustable CC step-down, PWM | 1 | 7.42 | 10W landing light |
 | Super glue (Deli 502) | 15 g, 3 bottles | 1 | 3.58 | CA bonding |
 
-### Items in cart but not yet selected (✅ confirmed needed — tick them)
+### Also in the cart (the unticked state was a UI glitch — all will be ordered)
 
 | Part | Variant | Qty | €/unit | Note |
 |------|---------|-----|--------|------|
@@ -45,33 +45,37 @@ Master parts list for the Phase 3 F-35B. The tables below reflect the **final Al
 | Silicone wire 10AWG | red+black, 2 m | 1 | 5.01 | Main EDF power |
 | Servo extension | 200 mm, 10 pcs | 1 | 2.68 | ⚠️ may want 300 mm for some runs |
 | 30mm ducted fan EDF | QF1611, 7000KV, 3S (incl. 20A ESC) | 2 | 15.85 | Roll-post motors |
-| Feetech STS3032M | 6V 4.5 kg·cm, magnetic encoder | **3** | 34.62 | ⚠️ only **1** in cart — need **+2** (€69 gap) |
+| Feetech STS3032M | 6V 4.5 kg·cm, magnetic encoder | **3** | 34.62 | ⚠️ cart shows **1** — order **3** total (3BSM) |
 | FFC/FPC adapter board | 12P, 0.5 mm → 2.54 mm ZIF, 5 pcs | 1 | 2.95 | For cockpit TFT cable |
 | IRLZ44N MOSFET | TO-220, 10 pcs | 1 | 2.93 | Switch COB strip / landing light |
-| Stainless steel balls | ⚠️ 4 mm, 100 pcs | 1 | 3.54 | ⚠️ earlier decided **3 mm** for 3BSM races |
+| Stainless steel balls | 4 mm, 100 pcs | 1 | 3.54 | 3BSM ball race (see note) |
 | CD74HC4067 | 16-channel analog multiplexer | 1 | 1.74 | Expands ADC for NTC thermistors |
 | FVT LittleBee 20A ESC | BLHeli_S, DSHOT | 2 | 5.81 | Roll-post EDFs (almost sold out ⚠️) |
 
-## Gaps to add before ordering (flagged in cart review)
+## Gaps to add before ordering
 
 | Item | Why | Status |
 |------|-----|--------|
 | **2× more STS3032M** | Need 3 total for 3BSM | ❌ critical |
-| LM2596 buck converter (5 pc) | 6V→4.0V rail for small door servos | ❌ |
-| MicroSD card 8–16 GB | ArduPilot blackbox logging | ❌ |
 | MG90S (5 pc) | Need 1 more + spares | ❌ |
-| 28AWG wire, 7 colours, 5 m each | All signal/data/sensor wiring | ❌ |
 | 2 mm bullet connectors | EDF motor connections | ❌ |
-| XT30 connectors | Roll-post ESC power | ❌ |
-| 10kΩ resistors | NTC voltage dividers + STS3032 half-duplex | ❌ |
-| Resistor assortment | Voltage dividers | ❌ |
 | O-ring assortment | Wheels | ❌ |
-| LiPo alarms ×4 | Battery safety | ❌ |
-| BA15S bulb socket | Afterburner mounting | ❌ |
-| 2 mm carbon rod | Linkages (have 2×250 mm rod pack — may suffice) | ⚠️ |
 | Rear wheel ~50 mm | Front 38 mm in cart; confirm rear size | ⚠️ |
 | Larger heatsink (≥20×20 mm) for 10W LED | 14×14 too small alone (or stack two) | ⚠️ |
 | 8AWG (optional) | 10AWG is marginal at 89A main-EDF | ⚠️ |
+
+### Already covered (no purchase needed)
+
+| Item | Source |
+|------|--------|
+| MicroSD card | Owned — fitting **later** |
+| LM2596 buck converter | Owned (×1) |
+| Signal/data wire (~28–30AWG) | ~50 m red + black at school — no coloured set being bought |
+| 10kΩ resistors + general resistors/caps | Electronics starter kit + school stock (kit has 10× 10K, 10× 1K, etc.) |
+| LiPo low-voltage alarms | Not used — monitoring pack voltage via FC/PDB telemetry instead |
+| BA15S bulb socket | Optional — solder leads to the bulb base / print a holder in the afterburner housing |
+| 2 mm carbon rod (linkages) | Have 2×250 mm rod 10-pack |
+| XT60 connectors | Owned — reusing from 3S 850 mAh packs (roll-post power) |
 
 ## Already owned (not in cart)
 
@@ -92,14 +96,13 @@ Master parts list for the Phase 3 F-35B. The tables below reflect the **final Al
 - The **roll-post 30mm EDFs** ship *with* a 20A ESC, yet 2× separate **LittleBee 20A** ESCs are
   also in the cart — decide whether the bundled ESCs suffice and drop the LittleBees, or keep them
   for DSHOT/BLHeli_S response. See [Propulsion](06-propulsion.md#roll-control).
-- **Bearings:** MR62ZZ (2×6×2.5) is in the cart but flagged as marginal for the 3BSM centre shaft;
-  MR115ZZ (5×11×4) was recommended as a better fit. The big 3BSM section bearings are still the
-  **6805ZZ** sizing — confirm what's actually needed. See [Materials](09-materials-airframe.md#bearings-3bsm).
+- **3BSM rotation:** uses **4 mm loose steel balls** in a printed race for smooth swivel (the
+  4 mm size is intentional). **MR62ZZ** bearings are kept for backup / small gears, not the main
+  swivel. See [Materials](09-materials-airframe.md#bearings--3bsm-rotation).
 - **Temperature sensing changed** to NTC 100K + CD74HC4067 mux (was DS18B20). See
   [Sensors](07-sensors-monitoring.md).
 
 ## Open questions / TODO
 
-- Add the 2× STS3032M and the gap items above, then re-total.
-- Resolve steel-ball size (3 vs 4 mm) and 3BSM bearing choice.
-- Confirm whether bundled roll-post ESCs replace the LittleBees.
+- Add the 2× STS3032M (+ MG90S, bullet connectors, rear wheel, O-rings, big heatsink), then re-total.
+- Confirm whether the bundled roll-post-EDF ESCs replace the LittleBees.

@@ -56,17 +56,16 @@ the sleeve or gently warm the outer tube. **Use 2-part epoxy** (5-min is fine) f
 *not* CA (brittle under vibration). Sand mating surfaces, glue, align straight, cure fully before
 loading. Resulting run ≈ 900 mm. Budget ~35 ml epoxy total (~5 ml/joint).
 
-## Bearings (3BSM)
+## Bearings & 3BSM rotation
 
-- **Large section bearings: 6805ZZ thin-section (37 × 25 × 7 mm)** — best fit inside the 70 mm EDF
-  duct; ID passes airflow, OD leaves wall material (~16 g). ZZ = metal shields both sides (keeps
-  exhaust debris out). Need **2 per junction** (one each side) to prevent wobble → buy ~10.
-- ⚠️ **Centre-shaft bearing:** the cart currently has **MR62ZZ (2 × 6 × 2.5 mm)**, flagged as
-  **too small** for the 3BSM centre shaft — **MR115ZZ (5 × 11 × 4 mm)** was recommended instead.
-  Reconcile before ordering.
-- ⚠️ **Steel balls:** cart has **4 mm (100 pc)**, but **3 mm** was the earlier decision for the
-  printed bearing races — 4 mm may be too large for the printed grooves. Confirm size.
-- ⚠️ **Buy bearings before modeling** the 3BSM — design the seats around real bearing dimensions.
+- **3BSM swivel — loose ball race:** the main 3BSM rotation runs on **4 mm loose steel balls
+  (100 pc)** in a printed race, chosen deliberately for smoother rotation. Design the printed
+  grooves around the 4 mm ball diameter.
+- **MR62ZZ (2 × 6 × 2.5 mm)** bearings are kept as **backup / for small gears**, not the main swivel.
+- **6805ZZ thin-section (37 × 25 × 7 mm)** remains the option for full-section duct bearings if a
+  caged bearing is preferred over the ball race at a junction (~16 g; ZZ shields keep debris out).
+- ⚠️ **Finalise the bearing/ball-race geometry before modeling** the 3BSM — design the seats and
+  grooves around the real ball/bearing dimensions.
 
 See [Propulsion — 3BSM](06-propulsion.md#3bsm--three-bearing-swivel-module).
 
@@ -108,7 +107,6 @@ Grey primer + filler primer (hide layer lines), F-35B livery colours, sandpaper 
 ## Open questions / TODO
 
 - Confirm whether one 8 mm tube per wing spar suffices or two should be run side-by-side.
-- Resolve 3BSM bearings (MR62ZZ vs MR115ZZ) and steel-ball size (3 vs 4 mm).
 - Confirm rear wheel size (~50 mm) and add to cart.
 - Confirm the fastener kit includes M2 nuts; otherwise add separately.
 
