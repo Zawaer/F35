@@ -225,6 +225,81 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 ---
 
+### Neodymium disc magnets N35 5 × 2 mm (×100) — panel / hatch closures
+- **Category:** Hardware (permanent magnets)
+- **Status:** ✅ owned (100 pcs · ordered 2 Apr 2026)
+- **Used for:** **removable panels / hatches** (battery hatch, canopy, access covers) — magnets
+  embedded in printed parts — [Materials & Airframe → magnets](../docs/09-materials-airframe.md#magnets)
+- **Variant / qty:** 5 mm dia × 2 mm · 100 pcs
+- **Price:** $6.02 → **≈ €5.22** ($2.63 item + shipping; @ ~€0.8664/$, 2 Apr 2026)
+- **Source:** AliExpress — N35 NdFeB round magnets (5 × 2 mm, 100 pc)
+
+| Spec | Value |
+|------|-------|
+| Material | NdFeB neodymium, **grade N35** |
+| Coating | **Ni–Cu–Ni** triple nickel plating (corrosion-resistant) |
+| Shape / size | round disc, **5 mm dia × 2 mm** |
+| Qty | 100 pcs |
+| Tolerance | ±0.6 mm |
+| Max operating temp | **80 °C** (176 °F) |
+| Composition (lab) | Fe 64.8 · Nd 4.40 · Gd 3.45 · Pr 1.80 · B 0.97 % — no Sm/Tb/Dy/Lu/Sc/Y |
+| Certification | RoHS; Ningbo Customs report 2500004639 (2025-09-17, tested on a 6×3 mm sample of the same family) |
+
+- **Notes:** glue pairs into printed seats for magnetic closures (**mind polarity — mark before
+  gluing**). ⚠️ **Keep away from any compass/magnetometer** (GPS-compass module) and the steel ball
+  race to avoid interference/attraction. ⚠️ **80 °C limit** — keep clear of EDF/ESC hot spots.
+  100 pcs → many hatches + spares. **Ni–Cu–Ni plated** → corrosion-resistant; CA/epoxy bonds to the
+  nickel fine. ⚠️ The customs lab measured **~10% total rare-earth** (Nd+Pr+Gd) — low for a sintered
+  N35 — so don't over-assume pull force; test hold strength on the actual parts.
+
+---
+
+### Nylon zip ties 2.5 × 150 mm (×200, black) — wiring / harness management
+- **Category:** Hardware (cable ties)
+- **Status:** ✅ owned (200 pcs · ordered 2 Apr 2026)
+- **Used for:** **wire-harness bundling, strain relief, securing cables/components** — general assembly
+- **Variant / qty:** black · 2.5 × 150 mm · 200 pcs
+- **Price:** $3.55 → **≈ €3.08** (@ ~€0.8664/$, 2 Apr 2026)
+- **Source:** AliExpress — nylon self-locking cable ties (2.5 × 150 mm, black, 200 pc)
+
+| Spec | Value |
+|------|-------|
+| Material | nylon (self-locking) |
+| Width | 2.5 mm |
+| Length | 150 mm |
+| Colour | black |
+| Qty | 200 pcs |
+
+- **Notes:** general wiring/harness management — bundle ESC/servo/EDF leads, strain-relief, tidy runs.
+  Black is less visible than white. 200 pcs → plenty. Trim flush after cinching. Listing scales
+  100–1000 pcs and 100/150/200 mm lengths.
+
+---
+
+### Polyimide (Kapton) high-temp tape 15 mm × 30 m — insulation / heat masking
+- **Category:** Consumable (polyimide film tape)
+- **Status:** ✅ owned (1 roll · ordered 1 Apr 2026)
+- **Used for:** **high-temp electrical insulation & masking** — protect wiring/LW-PLA near ESC/EDF
+  heat, insulate LiPo tabs/solder joints, mask during soldering or painting — general
+- **Variant / qty:** 15 mm wide × 30 m · 1 roll (model G536)
+- **Price:** $3.15 → **≈ €2.73** (@ ~€0.8664/$, 1 Apr 2026)
+- **Source:** AliExpress — PI gold-finger polyimide tape (15 mm × 30 m)
+
+| Spec | Value |
+|------|-------|
+| Film | polyimide (PI), amber/brown transparent |
+| Adhesive | silicone, **no residue** on removal |
+| Width × length | 15 mm × 30 m |
+| Temp rating | **220–280 °C** continuous · 300 °C short-term |
+| Properties | electrical insulation · solvent / acid-alkali / radiation resistant · anti-static |
+| Release liner | fluoroplastic |
+
+- **Notes:** Kapton-type tape for high-temp **electrical insulation** and **masking** — protect LW-PLA
+  and wiring from ESC/EDF heat, insulate LiPo tabs/solder joints, mask during soldering/painting
+  (peels clean, no residue). Cut with scissors (too tough to tear). 30 m → ample.
+
+---
+
 > Remaining stubs — paste product pages to card:
 > stainless button-head screw kit (600 pc).
 > *(6805ZZ thin-section bearings dropped — the 3BSM uses the owned 4 mm loose ball race instead.)*

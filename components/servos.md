@@ -166,7 +166,7 @@ Build context: [Servos](../docs/05-servos.md).
 
 | Spec | Value |
 |------|-------|
-| Weight | 21 g |
+| Weight | **28 g** (measured; listing said 21 g) |
 | Size | 42.3 × 15.4 × 32.1 mm |
 | Torque | **12.1 kg·cm** (max) |
 | Speed | ≤0.16 s/60° @ 4.8 V · ≤0.14 s/60° @ 6.0 V |
@@ -184,12 +184,152 @@ Build context: [Servos](../docs/05-servos.md).
   (~2.5 A @ 6 V)** — factor into servo-rail BEC headroom for the worst case (see
   [Power → servo rail](../docs/02-power-system.md#servo-rail-headroom--the-marginal-case)). Runs on
   the 6 V rail. 25T spline horns + brass bushings included. Standard-size body (42 mm) — much
-  heavier/larger than the SG90/MG90S micros. Listing weight **21 g** (the earlier "28 g" stub estimate
-  was high).
+  heavier/larger than the SG90/MG90S micros. **Measured 28 g** (the listing's 21 g was low — the
+  earlier "28 g" stub estimate was right).
+
+---
+
+### NEEBRC NB-S007M 9 kg metal-gear servo ×2 — stabilators
+- **Category:** Servo (mini digital, metal gear, waterproof)
+- **Status:** ✅ owned (2 pcs · ordered 1 Apr 2026)
+- **Used for:** **stabilators** (all-moving horizontal tail) — [Servos](../docs/05-servos.md)
+- **Variant / qty:** 21 g / 9 kg metal gear · 2 pcs
+- **Price:** $13.38 → **≈ €11.59** (~$6.69 each; @ ~€0.8664/$, ~1 Apr 2026)
+- **Source:** AliExpress — NEEBRC NB-S007M (21 g / 9 kg)
+
+| Spec | Value |
+|------|-------|
+| Weight | **21 g** (measured; listing 20.7 g) |
+| Size | 29.6 × 13.2 × 40 mm |
+| Torque | **9 kg·cm** (max) |
+| Speed | ≤0.10 s/60° @ 4.8 V · ≤0.12 s/60° @ 6.0 V ⚠️ |
+| Voltage | 4.8–6.0 V |
+| Stall current | ≤1500 mA @ 4.8 V · ≤1800 mA @ 6.0 V |
+| No-load current | ≤200–210 mA |
+| Travel | 180° ±10° (1000–2000 µs); mech. limit 360° |
+| Dead band | ≤1 µs |
+| Motor / gear | core motor · **metal gear**, waterproof |
+| Interface | PWM · JR 3-pin, 250 mm lead |
+| Brand / model | NEEBRC NB-S007M |
+
+- **Notes:** 9 kg·cm digital servo for the **stabilators** — a step down from the 12 kg
+  [NB-S011M flaperon servo](#neebrc-nb-s011m-12-kg-metal-gear-servo-2--flaperons) (smaller body,
+  20.7 g vs 21 g but 29.6 × 40 mm). Runs on the 6 V rail; ⚠️ stall ~1.8 A @ 6 V — include in the
+  servo-rail BEC budget. Horns + accessories included. ⚠️ Listing speed figures look swapped (6 V is
+  normally faster than 4.8 V). Order line showed $6.99 ea but the total billed $13.38 (~$6.69 ea).
+
+---
+
+### Servo Y-extension cable (JR/Futaba 3-pin) — 150 mm ×3
+- **Category:** Cable (servo Y-splitter lead)
+- **Status:** ✅ owned (3 pcs · ordered 7 Apr 2026)
+- **Used for:** driving **two servos from one FC/Pico channel** (paired doors / mirrored surfaces that
+  move together) — [Servos](../docs/05-servos.md)
+- **Variant / qty:** 150 mm Y-lead · 3 pcs
+- **Price:** $3.07 → **≈ €2.66** (@ ~€0.8664/$, 7 Apr 2026; listed $3.29)
+- **Source:** AliExpress — RC Servo Y Extension Cable (150 mm, 3 pcs)
+
+| Spec | Value |
+|------|-------|
+| Type | **Y-splitter** — 1 male → 2 female, JR/Futaba 3-pin |
+| Length | 150 mm |
+| Qty | 3 |
+| Wire | thin gauge (~26–28 AWG) |
+| Brand | NoEnName_Null |
+
+- **Notes:** a **Y-cable** (not a straight extension — see the
+  [200 mm extension card](#servo-extension-cable-jrfutaba-3-pin--200-mm-10)) — parallels two servos
+  onto one channel so both get the same PWM. Good for **paired doors / mirrored surfaces** that always
+  move together. ⚠️ Both servos get the **same signal** (no independent trim) and **share BEC current**
+  — fine for matched low-load servos; for opposed travel, reverse one servo mechanically. Short at
+  150 mm.
+
+---
+
+### MG996R 13–15 kg metal-gear servo ×2 — spare / high-torque
+- **Category:** Servo (standard-size digital, metal gear, ball-bearing)
+- **Status:** ✅ owned (2 pcs · ordered 23 Mar 2026)
+- **Used for:** **spare / general high-torque** standard servo (heavy control surfaces, bench/testing)
+  — [Servos](../docs/05-servos.md)
+- **Variant / qty:** MG996R · 180° · 2 pcs
+- **Price:** €3.21 / 2 pcs (~€1.60 each; already EUR-priced)
+- **Source:** AliExpress — HORNAXYS/HNX MG996R (180°, 2 pcs)
+
+| Spec | Value |
+|------|-------|
+| Weight | ~55 g (typical MG996R) |
+| Size | 40 × 19 × 43 mm |
+| Torque | 13 kg·cm @ 4.8 V · **15 kg·cm @ 6.0 V** |
+| Speed | 0.17 s/60° @ 4.8 V · 0.14 s/60° @ 6.0 V |
+| Voltage | **4.8–7.2 V** |
+| Motor / gear | coreless · **all-metal gear · double ball bearing** |
+| Travel | 180° |
+| Horn spline | 25T |
+| Interface | PWM · JR 3-pin, 300 mm lead |
+| Brand | HORNAXYS / HNX (MG996R clone) |
+
+- **Notes:** classic **MG996R** standard servo — strongest of the owned servos (15 kg·cm @ 6 V) but
+  also the **heaviest (~55 g)**, so it's the **spare / high-torque** option rather than a primary
+  flight surface (the lighter 9/12 kg NEEBRC servos do the stabilators/flaperons). Tolerates up to
+  7.2 V; runs fine on the 6 V rail. ⚠️ MG996R stall draw can be ~2.5 A — mind the BEC. 25T horns
+  included.
+
+---
+
+### Magnetic snap-on 3-pin cable (1 pair, 20 cm) — experimental quick-disconnect
+- **Category:** Connector (magnetic pogo-pin, 3-pin servo)
+- **Status:** ✅ owned (1 pair · ordered 7 Apr 2026) — **experimental / bought to test**
+- **Used for:** idea: **quick-disconnect for removable wings** — pass servo signal (+ low-current
+  power) across a wing/fuselage joint that auto-separates when the wing comes off — [Servos](../docs/05-servos.md)
+- **Variant / qty:** 1 pair · 20 cm leads
+- **Price:** $3.25 → **≈ €2.82** (@ ~€0.8664/$, 7 Apr 2026)
+- **Source:** AliExpress — 9IMOD magnetic model cable (1 pair, 20 cm)
+
+| Spec | Value |
+|------|-------|
+| Type | **magnetic snap-on** connector, pogo-pin, **3-pin** |
+| Halves | 1 pair (mate magnetically, polarity-protected) |
+| Ends | JR/Futaba servo 3-pin (signal / + / −) |
+| Lead length | 20 cm each side |
+| Pins | ZH1.5 / 2.54 mm, 3P |
+| Insulation | soft rubber wire |
+
+- **Notes:** **exploratory** — one pair bought to test the concept of **removable wings** with an
+  auto-disconnecting servo link (magnets pull apart cleanly if a wing detaches). Polarity-keyed so it
+  can't mate wrong. ⚠️ **Pogo-pin current is limited** — fine for servo signal + a couple of LEDs,
+  *not* for EDF/high-current rails. Not yet committed to the design; if removable wings are adopted,
+  buy more pairs (one per servo/signal crossing). Soft leads route easily.
+
+---
+
+### 3CH servo tester / ESC checker (CCPM) + AA holder — bench tool
+- **Category:** Tool (servo/ESC tester) — **bench tool, not on-aircraft**
+- **Status:** ✅ owned (1 · ordered 1 Apr 2026) — **bought for testing**
+- **Used for:** **bench-testing PWM servos & ESCs** without a TX/RX — sweep / center / manual; drive
+  an ESC throttle to spin a motor — [Servos](../docs/05-servos.md)
+- **Variant / qty:** 3CH digital tester + 4× AA battery holder · 1
+- **Price:** $2.38 → **≈ €2.06** (@ ~€0.8664/$, 1 Apr 2026)
+- **Source:** AliExpress — wishiot 3CH servo tester / CCPM consistency master
+
+| Spec | Value |
+|------|-------|
+| Channels | 3 (CCPM consistency master) |
+| Modes | **Manual** (knob) · **Neutral** (center) · **Automatic** (sweep) |
+| Output signal | 1.5 ms ±0.5 ms (1.0–2.0 ms PWM) |
+| Input | DC 4.2–6.0 V (4× AA holder included; cells not) |
+| Output current | ≤15 mA @ 5 V |
+| Size | 46 × 32 × 17 mm |
+| Brand | wishiot |
+
+- **Notes:** **bench tool** — center/sweep a servo or drive an ESC throttle without the radio. ⚠️
+  Connect the battery holder to the **IN** side, not OUT. PWM only → tests the **SG90 / MG90S / NEEBRC
+  / MG996R PWM servos and the ESCs** (LittleBee, Skywalker, EDF ESCs), but **not the STS3032**
+  (serial-bus, needs its own driver/software). Good for setting servo neutrals and checking EDF
+  spin-up direction. Lights blue when on.
 
 ---
 
 ## Still to card (paste product pages)
 
-NEEBRC 21g (9 kg stabilators) · NEEBRC S002 4.3g (door micro servo) · MG996R (spare).
-Owned-summary specs in [Servos doc inventory](../docs/05-servos.md#inventory-on-hand).
+NEEBRC S002 4.3g (door micro servo). Owned-summary specs in
+[Servos doc inventory](../docs/05-servos.md#inventory-on-hand).

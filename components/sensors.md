@@ -65,4 +65,31 @@ Build context: [Sensors & Monitoring](../docs/07-sensors-monitoring.md).
 
 ---
 
-*Sensors category complete — NTC thermistor + ACS712 carded.*
+### Load cell 10 kg + HX711 ADC — bench thrust-test rig
+- **Category:** Sensor (strain-gauge load cell + 24-bit ADC) — **bench test tool, not on-aircraft**
+- **Status:** ✅ owned (1 set · ordered 2 Apr 2026) — **bought for testing**
+- **Used for:** **bench-measuring EDF/motor thrust** (verify the ~220 g roll-post / ~3300 g main-EDF
+  figures) on a test stand — not flown
+- **Variant / qty:** 10 kg load cell + HX711 module · 1 set
+- **Price:** $3.80 → **≈ €3.29** (@ ~€0.8664/$, 2 Apr 2026)
+- **Source:** AliExpress — GUXINWAY 10 kg load cell + HX711
+
+| Spec | Value |
+|------|-------|
+| Load cell | aluminium-alloy bar, **10 kg** rated, 4-wire strain gauge |
+| ADC | **HX711** 24-bit, 2-channel, PGA gain 32/64/128 |
+| Data rate | 10 or 80 SPS |
+| Supply | 2.6–5.5 V (<1.5 mA; <1 µA power-down) |
+| Interface | 2-wire serial (CLK/DAT), pin-driven |
+| Op temp | −20 to +85 °C |
+| Wiring | load cell **red E+ · black E− · green A+ · white A−** → HX711 |
+
+- **Notes:** **bench tool** for a thrust stand — read by the Pico/Arduino over the HX711 2-wire
+  interface; tare + calibrate against a known weight. 10 kg range covers the **main/lift 70 mm EDFs
+  (~3.3 kg)** and roll-post EDFs (~0.2 kg); mount the cell as a cantilever on a rigid stand. Not a
+  flight component — for validating the thrust numbers in [Propulsion](../docs/06-propulsion.md).
+  HX711 is slow (≤80 SPS) — fine for steady thrust, not fast transients.
+
+---
+
+*Sensors carded: NTC thermistor + ACS712 (on-aircraft) · load cell + HX711 (bench thrust test).*

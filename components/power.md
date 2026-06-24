@@ -222,6 +222,30 @@ Build context: [Power System](../docs/02-power-system.md).
 
 ---
 
+### LiPo battery strap 30 × 2 cm (×5, black) — battery tie-down
+- **Category:** Hardware (hook-and-loop battery strap)
+- **Status:** ✅ owned (5 pcs · ordered 17 Apr 2026)
+- **Used for:** securing **LiPo packs** (main 5000 mAh, lift 2700 mAh, roll-post 850 mAh) to their
+  printed trays — [Power System](../docs/02-power-system.md)
+- **Variant / qty:** black · 30 × 2 cm · 5 pcs
+- **Price:** €3.25 / 5 pcs (already EUR-priced; ~€0.65 each)
+- **Source:** AliExpress — SIRENXI RC LiPo battery straps (30 × 2 cm, 5 pc)
+
+| Spec | Value |
+|------|-------|
+| Type | hook-and-loop (Velcro) tie-down strap, self-locking buckle |
+| Size | 300 × 20 mm |
+| Qty | 5 |
+| Material | nylon, **anti-skid** face |
+| Pack weight | 32 g (all 5) |
+
+- **Notes:** wraps a pack to its printed tray/floor; the anti-skid face stops it sliding. 30 cm
+  comfortably girths the main 5000 mAh pack (~20 cm cross-section perimeter) with overlap; 5 straps
+  cover all three packs + spares. Reusable, no tools. Use alongside a printed battery tray and CG
+  positioning (see [CG](../docs/01-project-overview.md#cg-the-central-challenge)).
+
+---
+
 ## Still to card (paste product pages)
 
 LM2596 buck (owned) · other connectors (AS150 / XT90 / EC5 / bullet for EDF motors) ·

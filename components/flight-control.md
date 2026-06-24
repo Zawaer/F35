@@ -230,3 +230,64 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
   **bind phrase**; WiFi firmware updates (no bind plug). Diversity + LNA/PA = good link reliability
   for the VTOL. Must match the TX's ELRS band/version (both 2.4 GHz). The "ELRS receiver" is now
   owned (no longer a buy-list item).
+
+---
+
+### Electronics starter kit (200+ pcs) — prototyping / passives stock
+- **Category:** Component kit (passives, semiconductors, headers)
+- **Status:** ✅ owned (1 set · ordered 1 Apr 2026)
+- **Used for:** **divider/pull-up resistors, header pins, bench prototyping** across the build (e.g.
+  the STS3032 10 kΩ UART resistor, ADC dividers, breadboarding) — general
+- **Variant / qty:** "Set" · 1 kit (~230 pcs)
+- **Price:** $3.34 → **≈ €2.89** (@ ~€0.8664/$, 1 Apr 2026); pack 53 g
+- **Source:** AliExpress — JYJD basic electronics starter kit
+
+**Contents:**
+
+| Item | Qty |
+|------|-----|
+| 5 mm LEDs — white / yellow / blue / green / red | 10 each (50) |
+| RGB LED | 1 |
+| Photoresistor (LDR) | 2 |
+| Thermistor (NTC) | 1 |
+| Diode 1N4007 | 5 |
+| NPN transistor PN2222 | 5 |
+| Optocoupler 4N35 · shift register 74HC595 | 1 · 1 |
+| Tactile button | 10 |
+| Active / passive buzzer | 1 / 1 |
+| Precision potentiometer | 1 |
+| Ceramic cap 22 pF / 104 (0.1 µF) | 10 / 10 |
+| Electrolytic 10 µF / 100 µF (50 V) | 5 / 5 |
+| Resistors 10R·100R·220R·330R·1K·2K·5K1·10K·100K·1M | 10 each (100) |
+| 40-pin header strips | 2 |
+
+- **Notes:** general bench/prototyping stock — provides the **10 kΩ** for the STS3032 half-duplex UART
+  trick, assorted divider resistors, and **header pins** for the Pico/FC. ⚠️ **No 47 kΩ** in the kit
+  (values jump 10K → 100K), so the **shared 47 kΩ NTC divider resistor** comes from school stock / a
+  separate buy (see [Sensors](../docs/07-sensors-monitoring.md#temperature-sensing-ntc-100k--multiplexer));
+  likewise the ACS712 10 k/20 k pairs. The bundled single NTC + LEDs are hobby-grade — the build's
+  real sensors/lights are the dedicated cards, not these.
+
+---
+
+### 40-pin breakable male header strips 2.54 mm (×30) — Pico / FC / adapter pins
+- **Category:** Connector (pin header)
+- **Status:** ✅ owned (30 strips · ordered 1 Apr 2026)
+- **Used for:** **header pins for the Pico, FC pads, the FFC adapter board, proto wiring** — snap to
+  length
+- **Variant / qty:** 1×40P single-row male, breakable · 30 strips (multi-colour)
+- **Price:** $2.58 → **≈ €2.24** (@ ~€0.8664/$, 1 Apr 2026)
+- **Source:** AliExpress — 30× 1×40P 2.54 mm breakable male headers
+
+| Spec | Value |
+|------|-------|
+| Type | single-row **male** pin header, **breakable / snappable** |
+| Pitch | 2.54 mm |
+| Pins | 40 per strip (snap to any length) |
+| Qty | 30 strips |
+| Colours | black / blue / green / yellow / red / white |
+
+- **Notes:** snap to length for the Pico, FC breakouts, the
+  [FFC adapter board](#ffcfpc-adapter-board-12p-05-mm--254-mm-zif--display-breakout), and
+  prototyping. 30 × 40 = 1200 pins — bulk/spares (the starter kit also includes 2 strips). Colours are
+  cosmetic; pins are standard tin-plated 2.54 mm.
