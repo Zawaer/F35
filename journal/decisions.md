@@ -19,24 +19,32 @@ in git history (`git log`); the *Ref* column points to the doc that holds the fu
 | **Roll-post ESCs** | The 20 A ESCs bundled with the 30 mm EDFs | 2× FVT LittleBee 20A (BLHeli_S/DSHOT) | Better firmware/DShot, known-good. No BEC → cut the red wire, signal+GND to FC | [06](../docs/06-propulsion.md) |
 | **Wingtip roll control** | Bleed-air roll posts (and a 40 mm EDF option) | Dedicated **30 mm EDFs** (inrunner) | Bleed air rejected as impractical; 30 mm over 40 mm (40 mm = more thrust/weight/cost than the roll task needs) | [06](../docs/06-propulsion.md) |
 | **Main/lift EDF current sensing** | Matek 150A sensor on each battery lead → FC ADC | None in v1 (ACS712 20A only on roll posts; PDB reports pack A) | 89 A / 40 A exceed the ACS712 20A range; defer a 150A-class sensor; the PDB already logs pack current/voltage | [07](../docs/07-sensors-monitoring.md) |
-| **3BSM actuation** | Multiple servos (continuous-360 SG90 + separate yaw) | **One** Feetech STS3032 smart servo | Serial-bus, >180° range a PWM servo can't do, sections gear-linked → saves ~€35 and a servo | [05](../docs/05-servos.md) |
+| **3BSM actuation** | continuous-360 SG90 + external AS5600 encoder → then 2× STS3032 (one per section) | **One** STS3032, sections **gear-coupled** | Serial-bus smart servo with a built-in encoder does the >180° a PWM servo can't; gear-linking the sections lets one motor turn the whole nozzle → saves ~€35, a servo, *and* the external AS5600 encoder | [05](../docs/05-servos.md) |
 | **3BSM bearing** | Caged 6805ZZ thin-section bearings | 4 mm loose ball race | Smoother rotation, cheaper, not purchased; the loose race works at the junctions | [06](../docs/06-propulsion.md) |
 | **Secondary MCU** | Owned ESP32-S3 boards | WeAct RP2040 (+ Pico spare) | Cleaner ADC for NTC/ACS712, jitter-free PIO servo/LED timing, no 2.4 GHz clash with the ELRS RX; static cockpit dashboard is within headroom | [04](../docs/04-raspberry-pi-pico.md) |
-| **Micro servos** | M005 2 g / S002 4.3 g (lightest) | Standard SG90 / MG90S-class | M005/S002 need a 4.0 V rail — incompatible with the 5/6 V servo rail, not worth the complication | [05](../docs/05-servos.md) |
+| **Door micro-servos** | SG90 on the 6 V servo rail | **M005 2 g / S002 4.3 g** for the 6 door/gear actuators on a dedicated **4.0 V LM2596 rail** (SG90 kept as fallback) | M005/S002 save weight but max 4.2 V → can't share the 6 V servo rail; one owned LM2596 buck at 4.0 V powers all 6 | [05](../docs/05-servos.md) |
 | **Battery voltage tap** | Solder to the balance lead | Tap the exposed **ESC-side power joint** (never balance leads) | Balance leads are thin and needed for charging — don't disturb them | [07](../docs/07-sensors-monitoring.md#battery-voltage-monitoring) |
 | **Smoke stopper** | Planned for F-35B first power-up | Dropped for the F-35B (kept as bench gear) | Avionics are simple; the tool is XT30/XT60, doesn't fit the EC5 packs | [02](../docs/02-power-system.md) |
 | **Airframe build** | Foam board (as on the trainer) | 3D-printed | The F-35B is printed, not foam | [09](../docs/09-materials-airframe.md) |
 | **Retracts** | COTS electric retract units | Custom 3D-printed, servo-driven | Better fit/cost/control for a scratch airframe | [06](../docs/06-propulsion.md) |
-| **CF spar** | 10×6.1 mm tube / local-aluminium options | Joined-tube CF approach | Earlier options dropped for the joined-tube method | [09](../docs/09-materials-airframe.md) |
+| **CF spar** | 10×6.1 mm tube / local-aluminium; one-piece | **8 mm OD / 6 mm ID tubes joined by 6 mm sleeves** (press-fit), ~900 mm run | Joined tubes ship/store easier; a tight press-fit needs no glue gap | [09](../docs/09-materials-airframe.md#joining-method-press-fit-sleeve--epoxy) |
+| **Spar-joint adhesive** | CA glue only (initial constraint) | **2-part epoxy** for spar joints (CA only for fast tacking) | CA is too brittle in tension; epoxy works in shear, carbon-on-carbon — so a 2-part epoxy was bought locally | [09](../docs/09-materials-airframe.md#joining-method-press-fit-sleeve--epoxy) |
+| **Afterburner LED** | Addressable WS2812B RGB ring | Single **amber BA15S/1156** automotive bulb (throttle-PWM-dimmed; CANBUS resistor removed) | A plain incandescent-look amber bulb reads more realistic and needs no addressable-LED code; BA15S straight pins chosen over BAU15S offset for a simpler printed socket | [08](../docs/08-lighting.md) |
+| **Roll-post exhaust doors** | Servo-actuated wingtip inlet/outlet doors (2× 2 g) | **v1: permanent open slots**; doors deferred to v2 | Skip the actuation complexity until the airframe flies; just cut openings for now | [06](../docs/06-propulsion.md#roll-control) |
 | **Doc prices** | USD + EUR conversions | EUR only | Single currency, less clutter | — |
 
 ## Notable picks (settled, not reversals)
 
 - **Hover control = 4-motor quadcopter mix** (ArduPilot quadplane) over bleed-air schemes.
-- **Afterburner LED = throttle-reactive** (brightness scales with throttle).
+- **Afterburner = amber BA15S bulb, throttle-reactive** (PWM brightness scales with throttle).
 - **COB strip = exterior formation lights** (green, diffused through frosted PP 0.5 mm); cockpit
   glow was considered and dropped (not a priority, not scale-realistic).
 - **Strobe = hard on/off, both wingtips synced** — full brightness, 0.2 s on / 0.8 s off (~1 Hz).
+  Both strobe LEDs wired **in series on one 700 mA driver + one GPIO** (they always flash together) —
+  saves a driver and a GPIO.
+- **10 W landing light driven at ~1 A (~3–4 W), not its full 3 A** — far less heat / longer LED life;
+  it's only on during approach/landing. Heatsink = **2× 14×14×6 mm stacked** (switched from 20×20×6 mm
+  when that size's price jumped).
 - **Cockpit screen = ST7789, 12-pin FFC** over 8-pin (thinner bezel).
 - **Final paint colour = pending** — decided after the first airframe flies.
 
