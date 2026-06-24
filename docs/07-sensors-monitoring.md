@@ -80,13 +80,31 @@ negligible vs 47 kΩ, but settle ~50 µs after switching channels before samplin
 
 ### What to monitor
 
-| Component | Monitor? | Why |
-|-----------|----------|-----|
-| EDF motor | ❌ | ~50,000 RPM mid-airflow; rely on ESC thermal protection |
-| ESC 1 / ESC 2 | ✅ NTC on case | Overheat → throttle cut → crash |
-| Battery 1 (+2) | ✅ NTC on surface | In-flight pack temp; warn >50 °C |
-| EDF exhaust air | optional NTC in duct | Rough motor-temp proxy |
-| LED drivers / misc | optional | Spare mux channels available |
+**Finalised plan: 12 NTC channels** (of the mux's 16 — 4 spare):
+
+| # | Channel | Why |
+|---|---------|-----|
+| 1 | Main EDF ESC | safety-critical — overheat → throttle cut |
+| 2 | Lift EDF ESC | safety-critical |
+| 3 | Roll-post ESC L | |
+| 4 | Roll-post ESC R | |
+| 5 | Main LiPo pack (5000 mAh) | surface temp; warn >50–60 °C |
+| 6 | Lift LiPo pack (5000 mAh) | |
+| 7 | Roll-post LiPo (850 mAh) | |
+| 8 | Main EDF housing (near motor) | motor-area heat-soak proxy |
+| 9 | Lift EDF housing (near motor) | |
+| 10 | Servo-rail BEC / PDB | warms under flaperon load |
+| 11 | FC stack | overall electronics temp |
+| 12 | 10W landing-light LED heatsink | |
+
+**Not monitored:** EDF motors directly (spinning, mid-airflow — rely on ESC thermal protection);
+3BSM nozzle (the main-EDF housing sensor covers that hot zone); nav lights + their drivers (low
+priority). **Spare 4 channels** could later add main-EDF exhaust-air, electronics-bay ambient, or a
+lift-fan duct-wall sensor.
+
+⚠️ ESC / heatsink beads must be **bonded to the case** (thermal paste + Kapton). "EDF housing" = the
+**static duct/mount** — the outrunner can/bell spins, so you can't contact the motor itself. NTC range
+−40 to +110 °C suits all of these; all 12 ride one mux → one Pico ADC pin.
 
 The ESC's built-in thermal protection remains the real safety net; NTC logging is for trend data.
 

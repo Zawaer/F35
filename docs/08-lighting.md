@@ -12,10 +12,10 @@
 |-------|--------|--------|------------|
 | Port nav | 3W LED red 625nm | 700mA CC, PWM | 12V VTX |
 | Starboard nav | 3W LED green 520nm | 700mA CC, PWM | 12V VTX |
-| Strobes | 3W LED white 6500K | 700mA CC, PWM | 12V VTX |
+| Strobes | 3W LED white 6500K | 700mA CC; **hard on/off, both wingtips synced — 0.2 s on / 0.8 s off (20% duty, 1 Hz)** | 12V VTX |
 | Landing light | 10W LED 6500K (XML-T6, 3A) | 3A adjustable CC, PWM | 12V VTX |
 | Afterburner | BA15S P21W 12V auto bulb | built-in CC IC; **throttle-reactive** (brighter at higher throttle, PWM) | servo BEC / dedicated tap ⚠️ |
-| Accent | 12V COB strip (green, 3 mm) | IRLZ44N MOSFET switch | 12V VTX |
+| Formation (exterior) | 12V COB strip (green, 3 mm), **diffused via frosted PP 0.5 mm** | IRLZ44N MOSFET switch | 12V VTX |
 
 (3W LED stock: 10× each red/green/white. Diffusion via frosted **PP sheet** 0.5 mm.)
 
@@ -108,8 +108,11 @@ while True:
 - **Afterburner decided: throttle-reactive** — brightness scales with throttle (PWM from the Pico,
   mapped to the throttle channel), brightest at full throttle.
 - 10W landing-light heatsink resolved: two 14×14×6 mm (stacked, on metal) for intermittent use.
-- Decide COB strip use (interior accent vs exterior) and final colour(s).
-- Decide final strobe method (PWM dim vs hard enable) and flash pattern.
+- **COB strip decided: exterior formation lights** (green), **diffused through the frosted PP 0.5 mm
+  sheet**. Cockpit glow was considered but dropped — not a priority and not very scale-realistic.
+- **Strobe decided: hard on/off, both wingtips synced** — full brightness, **0.2 s on / 0.8 s off**
+  (1.0 s cycle = 20% duty, 1 Hz), matching the real F-35 anti-collision strobe. The Pico toggles the
+  driver on/off (not PWM-dimmed).
 
 ## Related
 
