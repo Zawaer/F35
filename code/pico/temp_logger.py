@@ -16,7 +16,9 @@ import time
 # --- wiring ---
 SIG_ADC_PIN = 26                 # CD74HC4067 SIG -> Pico ADC
 SELECT_PINS = (18, 19, 20, 21)   # S0..S3 channel-select GPIOs
-SERIES_R = 10_000.0              # divider resistor (ohms)
+SERIES_R = 100_000.0             # divider resistor (ohms) — set to the resistor actually fitted.
+                                 # NTC is 100K B3950, so ~47-100K centres the room-to-100C range
+                                 # far better than 10K (10K cramps the low/cold end).
 VREF = 3.3
 
 # --- NTC 100K B3950 constants (beta model) ---

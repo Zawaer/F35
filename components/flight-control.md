@@ -75,40 +75,79 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 
 ---
 
-### CD74HC4067 — 16-channel analog multiplexer
+### CD74HC4067 — 16-channel analog multiplexer (breakout)
 - **Category:** IC / breakout
-- **Status:** 🛒 in cart (€1.74)
-- **Used for:** expand Pico ADC for NTC thermistors — [Sensors](../docs/07-sensors-monitoring.md)
-- **Source / price:** AliExpress, €1.74
+- **Status:** ✅ owned
+- **Used for:** expand Pico ADC for NTC thermistors (16 sensors on 1 ADC pin) — [Sensors](../docs/07-sensors-monitoring.md)
+- **Variant / qty:** module (HW-178 style) · 1
+- **Price:** €1.74
+- **Link:** https://www.aliexpress.com/item/1005008558127708.html?mp=1
 
 | Spec | Value |
 |------|-------|
-| Channels | 16 (S0–S3 select + SIG) |
+| Channels | 16 (C0–C15), common SIG |
+| Control | S0–S3 (channel select) + EN (active-low enable) |
 | Supply voltage | 2–6 V |
-| Weight / dims | — |
+| On-resistance | ~70 Ω |
+| Signal | analog or digital, bidirectional; **input ≤ VCC** |
+| Working temp | −55 to +125 °C |
+| Dimensions | 40.6 × 17.9 mm |
+| Weight | — *(minor)* |
 
-- **Notes:** —
+- **Notes:** 5 Pico pins (S0–S3 + SIG→ADC) read all 16 NTC channels. Tie **EN low** to enable. Run
+  VCC = 3.3 V so signals stay ≤ VCC (matches the Pico ADC range). The ~70 Ω on-resistance is in
+  series with the NTC divider — negligible vs the 10–100 kΩ divider, but let it settle a few µs
+  after switching channels before sampling (the [code](../code/pico/temp_logger.py) waits 50 µs).
 
 ---
 
 ### 1.47" ST7789 TFT — cockpit display
 - **Category:** Display
-- **Status:** 🛒 in cart (€3.40)
+- **Status:** ✅ owned
 - **Used for:** cockpit screen — [Pico](../docs/04-raspberry-pi-pico.md#4-cockpit-tft-display)
-- **Source / price:** AliExpress, €3.40
+- **Variant / qty:** 1.47" 12-pin · 1
+- **Price:** €3.40
+- **Link:** https://www.aliexpress.com/item/1005011816140812.html?mp=1
 
 | Spec | Value |
 |------|-------|
 | Diagonal | 1.47" |
-| Resolution | 172 × 320 |
+| Resolution | 172 × 320 (RGB) |
 | Driver IC | ST7789 |
 | Interface | 4-wire SPI |
 | Pins / pitch | 12-pin, 0.5 mm FFC (permanent ribbon → ZIF adapter) |
 | Logic voltage | 2.8–3.3 V |
-| Weight / dims | — |
+| Module size | 19.39 × 36.28 × 1.51 mm (+ ~20 mm FPC tail) |
+| Active area | 17.39 × 34.15 mm |
+| Weight | — *(minor)* |
 
 - **Notes:** 12-pin chosen over 8-pin for thinner bezels; unused touch pins left floating.
-  Needs a 12P 0.5 mm ZIF FFC→2.54 mm adapter board.
+  Needs a 12P 0.5 mm ZIF FFC→2.54 mm adapter board (carded below). Tiny module (~19×36 mm) — fits the
+  cockpit footprint easily. ⚠️ The cheap listings vary (€3.40 working one vs a €16.58 8-pin that's
+  sold out / won't ship here) — the owned unit is the €3.40 12-pin.
+
+---
+
+### FFC/FPC adapter board 12P 0.5 mm → 2.54 mm (ZIF) — display breakout
+- **Category:** Adapter board
+- **Status:** ✅ owned (5-pack)
+- **Used for:** the [cockpit TFT](#147-st7789-tft--cockpit-display)'s 0.5 mm FFC ribbon → 2.54 mm
+  pins → Pico SPI
+- **Variant / qty:** 12P · 5 pcs
+- **Price:** €2.95 / 5 pcs
+- **Link:** https://www.aliexpress.com/item/1005012257691410.html
+
+| Spec | Value |
+|------|-------|
+| Pins | 12P |
+| FFC pitch | 0.5 mm, **ZIF flip-latch** socket |
+| Output pitch | 2.54 mm through-hole pins |
+| Board | FR-4, 1.6 mm thick, 1 mm holes |
+| Dimensions (12P) | 24 × 26 mm |
+
+- **Notes:** the screen's permanent FFC ribbon slides into the **ZIF socket** (flip latch — no
+  soldering to the screen); then solder wire (28 AWG / school stock) from the 2.54 mm pins to the
+  Pico SPI lines. 5 pcs → 4 spares.
 
 ---
 

@@ -15,6 +15,12 @@
 
 The 3-pack (€3.40) was chosen over a single (€2.32) — only €1.08 more for two extra channels.
 
+> ⚠️ **ACS712 output needs scaling for the Pico ADC.** At 5 V the module outputs 2.5 V @0 A + ~100 mV/A,
+> i.e. **0.5–4.5 V** across ±20 A — but the Pico ADC tops out at **3.3 V**, so above ~8 A it overranges
+> and can stress the pin. Both the FC rail (~11.5 A) and roll-post EDFs (~11 A) exceed 8 A, so add a
+> **resistor divider (~×0.66) on each OUT→ADC** (the chip needs ≥4.5 V, so you can't just run it at
+> 3.3 V). See the [ACS712 card](../components/sensors.md). Calibrate the zero-offset in firmware.
+
 **Not monitored in v1:** main EDF (~89A) and lift EDF (~40A) both exceed the ACS712 20A range.
 Monitoring those would need a higher-range Hall sensor (e.g. the Matek 150A sensors from the
 earlier plan, or the PDB's own 90A/125A current detection). Decision: skip dedicated main/lift

@@ -320,4 +320,26 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ---
 
+### Aluminium heatsink 14×14×6 mm (black) — LED cooling
+- **Category:** Heatsink (thermal hardware)
+- **Status:** ✅ owned (10-pack)
+- **Used for:** cooling the **10W landing-light LED** (stack two); spares for any warm LED driver — [Lighting → driver heat](../docs/08-lighting.md#led-driver-heat--efficient-buck-drivers-no-big-heatsinks-needed)
+- **Variant / qty:** black, 14×14×6 mm · 10 pcs
+- **Price:** €2.68 / 10 pcs
+- **Link:** https://www.aliexpress.com/item/1005006066873634.html?mp=1&sourceType=570&pdp_ext_f=%7B%22cart2PdpParams%22%3A%7B%22sourceType%22%3A%22570%22%2C%22cartSource%22%3A%22main%22%7D%7D
+
+| Spec | Value |
+|------|-------|
+| Dimensions | 14 × 14 × 6 mm |
+| Material | aluminium 6063, **black anodised** |
+| Mounting | pre-applied thermal double-sided adhesive tape |
+| Finish | slotted/finned |
+
+- **Notes:** **black anodised → better radiative cooling** than bare silver (matches the lighting-doc
+  pick). Stack two on the 10W LED for intermittent landing-light use (≈400 mm² needed). ⚠️ For the
+  **10W LED, don't rely on the adhesive tape alone onto LW-PLA** — bond the LED to the metal and keep
+  the plastic out of the heat path. 10 pcs → ~2 used + spares.
+
+---
+
 *Lighting category complete — all parts carded.*
