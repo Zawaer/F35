@@ -1,6 +1,6 @@
 # Materials & Airframe
 
-> **Current plan (Phase 3):** LW-PLA printed shell, PETG for structural parts, ASA/ABS for
+> **Current plan (Phase 2):** LW-PLA printed shell, PETG for structural parts, ASA/ABS for
 > heat-critical parts near the EDF exhaust. Spars from **16× 500×8×6 mm carbon tube** (8 mm OD /
 > 6 mm ID), joined with the existing **6 mm OD / 3 mm ID** tubes as press-fit inner sleeves.
 > Plywood reinforcement plates. **Phase 1 trainer is foamboard.**

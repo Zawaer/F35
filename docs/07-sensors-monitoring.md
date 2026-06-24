@@ -1,7 +1,7 @@
 # Sensors & Monitoring
 
 > **Current setup:** **NTC 100K thermistors** read through a **CD74HC4067 16-channel analog
-> multiplexer** into the Pico/RP2040 ADC (replaces the earlier DS18B20 plan). **3× ACS712 20A**
+> multiplexer** into the Pico/RP2040 ADC. **3× ACS712 20A**
 > Hall current sensors monitor the FC/servo rail and both roll-post EDFs. Main and lift EDF current
 > are **not** monitored in v1 (89A/40A exceed the 20A sensors). ArduPilot blackbox logs to microSD.
 
@@ -51,9 +51,9 @@ current logging for v1; the PDB still reports pack voltage/current to the FC.
 ### Approach
 
 NTC 100K thermistors (MF52, B3950) form a voltage divider read through a **CD74HC4067 16-channel
-multiplexer**, which the Pico/RP2040 reads on a single ADC pin by selecting channels. This replaces
-the DS18B20 1-Wire approach — NTCs are cheaper, and the mux gives up to 16 channels from one ADC,
-leaving room for many sensors plus other analog inputs.
+multiplexer**, which the Pico/RP2040 reads on a single ADC pin by selecting channels. NTCs are cheap,
+and the mux gives up to 16 channels from one ADC, leaving room for many sensors plus other analog
+inputs.
 
 **NTC divider recipe — single shared 47 kΩ (the "mux trick"):**
 
@@ -90,16 +90,9 @@ negligible vs 47 kΩ, but settle ~50 µs after switching channels before samplin
 
 The ESC's built-in thermal protection remains the real safety net; NTC logging is for trend data.
 
-### Why the switch from DS18B20
-
-The DS18B20 (digital 1-Wire, ±0.5 °C, daisy-chainable) was the earlier plan. The build moved to
-**NTC + CD74HC4067** because: NTCs are far cheaper in bulk, the multiplexer scales to 16 analog
-channels (useful beyond temperature), and it keeps everything on the RP2040's ADC. DS18B20 remains
-a valid fallback if analog noise on the mux proves troublesome.
-
 ## Blackbox logging (ArduPilot)
 
-ArduPilot auto-logs to the FC **microSD** (card owned, fitting later): per-servo PWM, pack V/A,
+ArduPilot auto-logs to the FC **microSD** (card not owned yet — buy when needed): per-servo PWM, pack V/A,
 throttle, flight-mode transitions, RC in vs out. Combined with the Pico's temperature + ACS712
 telemetry over UART, this gives a complete per-flight picture.
 
@@ -110,7 +103,7 @@ telemetry over UART, this gives a complete per-flight picture.
 
 ## Open questions / TODO
 
-- MicroSD card: owned, fitting **later**. Divider resistors (one 47 kΩ for the shared NTC divider,
+- MicroSD card: **not owned — buy when needed.** Divider resistors (one 47 kΩ for the shared NTC divider,
   10 kΩ for STS3032 half-duplex, 10 k/20 k ×3 for the ACS712 dividers): covered by the electronics
   kit / school stock — no purchase needed.
 - Decide final NTC count and whether to add the exhaust-air sensor.

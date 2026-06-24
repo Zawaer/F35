@@ -1,6 +1,6 @@
 # Servos
 
-> **Current assignment (Phase 3 F-35B):** flaperons on NEEBRC 12kg, stabilators on NEEBRC 9kg,
+> **Current assignment (Phase 2 F-35B):** flaperons on NEEBRC 12kg, stabilators on NEEBRC 9kg,
 > rudders on MG90S, VTOL/cosmetic actuators on MG90S/SG90, 3BSM sections on Feetech **STS3032**
 > smart servos. Landing gear uses **custom 3D-printed retracts** (no COTS retract units, no MG996R).
 > All servos run off the PDB 6V rail (with a possible UBEC split — see [Power](02-power-system.md)).

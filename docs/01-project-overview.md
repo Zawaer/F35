@@ -1,15 +1,14 @@
 # Project Overview
 
-> **Goal:** build a 3D-printed, VTOL-capable RC **F-35B**. Originally a 3-phase plan; **Phase 2
-> (single EDF jet) is now scrapped** — going straight from the trainer to the F-35B.
+> **Goal:** build a 3D-printed, VTOL-capable RC **F-35B**. Two-phase plan — a foamboard trainer
+> first, then the F-35B itself.
 
 ## Phases
 
 | Phase | Build | Purpose | Status |
 |-------|-------|---------|--------|
 | 1 | Trainer prop plane (foamboard) | Learn to fly, validate basic FC/RX setup | **Built & repaired — awaiting re-flight** (see below) |
-| 2 | ~~Single EDF jet~~ | — | ❌ **Scrapped** — skipping straight to Phase 3 |
-| 3 | VTOL F-35B (LW-PLA print) | The real goal — VTOL + transition + scale | **Primary focus** / in design |
+| 2 | VTOL F-35B (LW-PLA print) | The real goal — VTOL + transition + scale | **Primary focus** / in design |
 
 **Phase 1 status:** the foamboard trainer is fully built. First flight was a hand-launch with no
 runway — it flew ~1 s, dropped, and broke (bad throw / not enough launch speed, not an airframe
@@ -19,7 +18,7 @@ effort is now on the **F-35B**.
 The trainer and the F-35B VTOL systems are **electrically completely separate** — different
 batteries, ESCs, and motors (see [Propulsion](06-propulsion.md) and [Power](02-power-system.md)).
 
-## Phase 3 — F-35B target spec
+## Phase 2 — F-35B target spec
 
 | Parameter | Value |
 |-----------|-------|
@@ -28,7 +27,7 @@ batteries, ESCs, and motors (see [Propulsion](06-propulsion.md) and [Power](02-p
 | Fuselage length | ~900–1100 mm |
 | Wing chord | ~150–200 mm |
 | Wing area | ~0.12 m² |
-| All-up weight (AUW) | ~3185 g |
+| All-up weight (AUW) | ~3445 g (two 5000 mAh packs) |
 | Cruise speed (est.) | 80–120 km/h (22–33 m/s) |
 
 ### Subsystems
@@ -78,8 +77,3 @@ Still parked (not committed):
 - **Engine sound:** DFPlayer Mini (~€2) + 40mm 2W speaker, triggered by Pico from FC flight state.
   EDFs already sound convincingly jet-like.
 - Weapons-bay battery hot-swap, canopy actuation, variable exhaust nozzle.
-
-## Side project
-
-A **GL823K-based SD card reader PCB** is referenced as a separate side project — tracked here only
-as a pointer; it is not part of the aircraft build.

@@ -1,9 +1,9 @@
 # Power System
 
-> **Current setup (Phase 3 F-35B):** two 6S LiPos — **5000 mAh** (main EDF) and **2700 mAh**
-> (lift EDF) — each feeding its own Hobbywing 100A ESC over 10AWG. The FC/servo/LED system runs
-> off an 18AWG **tap** from the main battery into the CoreWing PDB, which provides three regulated
-> BEC rails. Two Matek 150A current sensors sit on the battery leads. No external buck converters.
+> **Current setup (Phase 2 F-35B):** **two 6S 5000 mAh LiPos** — one per fan (main EDF + lift EDF),
+> each feeding its own Hobbywing 100A ESC over 10AWG. The FC/servo/LED system runs off an 18AWG
+> **tap** from the main battery into the CoreWing PDB, which provides three regulated BEC rails. No
+> external buck converters.
 
 The dual-battery choice is driven by **CG/weight distribution** and **clean per-EDF current
 measurement**, not by a current shortfall — electrically a single good 6S pack could feed both EDFs.
@@ -13,7 +13,7 @@ measurement**, not by a current shortfall — electrically a single good 6S pack
 | Pack | Model | Capacity | C | Weight | Role | Connector |
 |------|-------|----------|---|--------|------|-----------|
 | Main | CNHL G+Plus 6S | 5000 mAh | 70C | ~714 g | Main (rear) EDF + system tap | EC5 |
-| Lift | CNHL 6S | 2700 mAh | 40C | ~454 g | Lift (front) EDF only | XT60 |
+| Lift | CNHL G+Plus 6S | 5000 mAh | 70C | ~714 g | Lift (front) EDF only | EC5 |
 
 Both packs are **borrowed from the school drone club** (an availability/return constraint). Full
 specs in the [battery component cards](../components/power.md).
@@ -23,17 +23,18 @@ Characteristics of the 5000 mAh main pack:
 - Rated 70C → 5000 mAh × 70 = 350 A theoretical; ~150–250 A realistic continuous.
 - Builder's measured pack IR ≈ **11.4 mΩ**, implying a real C-rating of **~105C** (~300 A+ real capability).
 - The cells are never the bottleneck — **connectors and wiring are**.
-- ⚠️ The **lift pack is only 40C** (~108 A) vs the main's 70C — fine for the lift EDF's draw, but the
-  weaker of the two; don't work it as hard.
-- **Battery mass dominates AUW/CG:** 714 g + 454 g ≈ **1168 g (~37% of ~3185 g AUW)** — placement is
-  the main CG lever (below).
+- Both fans now run the **same 70C 5000 mAh** pack — matched current headroom, charging, and spares.
+- **Battery mass dominates AUW/CG:** 714 g + 714 g ≈ **1428 g (~41% of ~3445 g AUW)** — placement is
+  the main CG lever (below). ⚠️ The lift pack going 454 → 714 g (**+260 g, forward**) shifts CG
+  forward — plan to move the main pack rearward to compensate, and re-verify CG.
 
 ### Battery placement & CG
 
 To balance the nose-heavy lift fan and keep CG between the lift fan (front) and 3BSM (rear):
 
-- **5000 mAh main** → central (e.g. weapons-bay area), heavier and more central.
-- **2700 mAh lift** → forward, near the lift fan, to shorten its moment arm.
+- **Main 5000 mAh** → central (e.g. weapons-bay area).
+- **Lift 5000 mAh** → forward, near the lift fan — but it's **+260 g heavier** than the old 2700 mAh,
+  so its forward moment is larger; expect to shift the main pack rearward to compensate.
 
 ⚠️ Verify CG carefully before first flight; CG must work for **both** hover and cruise (see
 [Project Overview — CG](01-project-overview.md#cg-the-central-challenge)). A long power-wire run to
@@ -142,15 +143,17 @@ telemetry (PDB VBAT divider → FC).
   [charger card](../components/power.md)) handles charging/balancing all packs, two channels at once.
 - On **AC it's 200 W total**; for the full 650 W / 15 A×2 it needs an external **DC PSU >24 V**
   (~600–800 W). AC is fine for moderate charge rates.
-- Charger output is **XT60**; the **main 5000 mAh pack is EC5**, so an **EC5→XT60 charge adapter** is
-  needed for it (lift pack is already XT60). All packs use JST-XH balance leads.
+- Charger output is **XT60**; **both 5000 mAh packs are EC5**, so each needs an **EC5→XT60 charge
+  adapter** (4 owned). All packs use JST-XH balance leads.
 
 ## Open questions / TODO
 
 - ⚠️ Confirm final CG once component placement is fixed; may need nose ballast or battery shuffle.
 - ⚠️ Validate servo-rail behaviour in a full ground test before deciding whether the 3A UBEC split
   is needed.
-- Decide whether the lift battery stays 2700 mAh or grows for flight-time/balance reasons.
+- **Lift battery decided: a 2nd 5000 mAh pack** (matched pair) for current margin + hover time, at a
+  +260 g forward CG cost. Fallbacks if CG/weight don't work out: **2700 mAh lift + 5000 mAh main**
+  (the old plan, lighter front), or **2× 2700 mAh** (lightest, shortest flight).
 
 ## Related
 

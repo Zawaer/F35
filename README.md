@@ -14,15 +14,14 @@ choices, pin mappings, wiring, power architecture, and the reasoning behind ever
 | Phase | Build | Status |
 |-------|-------|--------|
 | 1 | Trainer prop plane (foamboard) | Built & repaired — awaiting re-flight (runway needed) |
-| 2 | ~~Single EDF jet~~ | ❌ Scrapped |
-| 3 | VTOL F-35B (3D-printed) | Primary focus / in design |
+| 2 | VTOL F-35B (3D-printed) | Primary focus / in design |
 
-Phase 2 (single EDF jet) was dropped — the build goes straight from the trainer to the F-35B, which
-is the real goal. Most technical depth in this KB concerns Phase 3.
+The trainer (Phase 1) validates basic flying and the FC/RX setup; the F-35B (Phase 2) is the real
+goal, and most of the technical depth in this KB concerns it.
 
-## Aircraft at a glance (Phase 3 F-35B)
+## Aircraft at a glance (Phase 2 F-35B)
 
-- **Scale:** 70mm EDF class — ~700–800mm wingspan, ~900–1100mm fuselage, **~3185 g** AUW
+- **Scale:** 70mm EDF class — ~700–800mm wingspan, ~900–1100mm fuselage, **~3445 g** AUW
 - **Propulsion:** 2× QX-Motor 70mm EDF (main + lift), 6S, individual Hobbywing 100A ESCs
 - **Hover control:** ArduPilot quadplane — 4-motor mix (main EDF vectored via 3BSM, front lift
   fan, 2× wingtip micro motors). See [Propulsion](docs/06-propulsion.md).
@@ -40,7 +39,7 @@ is the real goal. Most technical depth in this KB concerns Phase 3.
 | 04 | [Raspberry Pi Pico](docs/04-raspberry-pi-pico.md) | Pin map and roles (PWM expansion, temp, LEDs) |
 | 05 | [Servos](docs/05-servos.md) | Flight-surface + VTOL servo assignment, torque math, STS3032 |
 | 06 | [Propulsion](docs/06-propulsion.md) | EDFs, lift fan, 3BSM thrust vectoring, roll posts, trainer motor |
-| 07 | [Sensors & Monitoring](docs/07-sensors-monitoring.md) | Current sensors, DS18B20 temp, INA219, blackbox logging |
+| 07 | [Sensors & Monitoring](docs/07-sensors-monitoring.md) | NTC temp + ACS712 current sensing, blackbox logging |
 | 08 | [Lighting](docs/08-lighting.md) | Nav lights, strobes, 3W LEDs + drivers, Pico control |
 | 09 | [Materials & Airframe](docs/09-materials-airframe.md) | Filaments, carbon/aluminium spars, bearings, fasteners, glue |
 | 10 | [Wiring Diagrams](docs/10-wiring-diagrams.md) | Consolidated power/signal wiring and pin connections |

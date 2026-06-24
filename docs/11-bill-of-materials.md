@@ -1,6 +1,6 @@
 # Bill of Materials
 
-Master parts list for the Phase 3 F-35B. The tables below reflect the **final AliExpress cart**
+Master parts list for the Phase 2 F-35B. The tables below reflect the **final AliExpress cart**
 (reviewed 23–24 Jun 2026) plus the gaps flagged during that review. Status: ✅ in cart / owned ·
 🛒 to add · ⚠️ needs checking. Prices ≈ as seen (€, AliExpress, VAT incl.).
 
@@ -73,7 +73,7 @@ Master parts list for the Phase 3 F-35B. The tables below reflect the **final Al
 
 | Item | Source |
 |------|--------|
-| MicroSD card | Owned — fitting **later** |
+| MicroSD card | **Not owned — buy when needed** |
 | LM2596 buck converter | Owned (×1) |
 | Signal/data wire (~28–30AWG) | ~50 m red + black at school — no coloured set being bought |
 | 10kΩ resistors + general resistors/caps | Electronics starter kit + school stock (kit has 10× 10K, 10× 1K, etc.) |
@@ -88,7 +88,7 @@ Master parts list for the Phase 3 F-35B. The tables below reflect the **final Al
 |------|-----|-----|
 | CoreWing F405 WING V2 stack | 1 | FC + PDB + wireless |
 | QX-Motor 70mm EDF | 2 | Main + lift |
-| 6S 5000 mAh / 2700 mAh LiPo | 1 each | Main / lift EDF |
+| 6S 5000 mAh LiPo | ×2 | Main + lift EDF (one each); 2700 mAh kept as spare |
 | NEEBRC 28g (12kg) / 21g (9kg) | 2 / 2 | Flaperons / stabilators |
 | MG90S | 7 | Rudders, nose steer, 3BSM yaw, vane box, roll-post doors |
 | SG90 | 12 | Misc doors / cosmetics |
@@ -98,16 +98,15 @@ Master parts list for the Phase 3 F-35B. The tables below reflect the **final Al
 
 ## Notes
 
-- The **roll-post 30mm EDFs** ship *with* a 20A ESC, yet 2× separate **LittleBee 20A** ESCs are
-  also in the cart — decide whether the bundled ESCs suffice and drop the LittleBees, or keep them
-  for DSHOT/BLHeli_S response. See [Propulsion](06-propulsion.md#roll-control).
+- The **roll-post 30mm EDFs** ship *with* a 20A ESC, but the build uses the 2× separate **LittleBee
+  20A** ESCs (cheap + BLHeli_S/DSHOT); the bundled ESCs are kept as spares. See
+  [Propulsion](06-propulsion.md#roll-control).
 - **3BSM rotation:** uses **4 mm loose steel balls** in a printed race for smooth swivel (the
   4 mm size is intentional). **MR62ZZ** bearings are kept for backup / small gears, not the main
   swivel. See [Materials](09-materials-airframe.md#bearings--3bsm-rotation).
-- **Temperature sensing changed** to NTC 100K + CD74HC4067 mux (was DS18B20). See
+- **Temperature sensing:** NTC 100K + CD74HC4067 mux. See
   [Sensors](07-sensors-monitoring.md).
 
 ## Open questions / TODO
 
 - Order bullet connectors + rear wheels later (budget) — not blocking the main order.
-- Confirm whether the bundled roll-post-EDF ESCs replace the LittleBees.

@@ -56,22 +56,33 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 
 ---
 
-### Raspberry Pi Pico (RP2040) — secondary I/O controller
+### RP2040 secondary I/O controller — WeAct RP2040 (primary) + Pi Pico (spare)
 - **Category:** Microcontroller board
-- **Status:** ✅ owned (had on hand — never ordered for this build)
-- **Used for:** PWM expansion, NTC temp mux, LEDs, cockpit display — [Pico](../docs/04-raspberry-pi-pico.md)
+- **Status:** ✅ owned (both: WeAct RP2040 ×1 + Raspberry Pi Pico ×1 — both had on hand, neither ordered for this build)
+- **Used for:** PWM expansion (doors/nozzle servos), NTC temp mux, LEDs, cockpit ST7789 display, UART
+  to the FC — [Pico/RP2040 doc](../docs/04-raspberry-pi-pico.md)
 - **Source / price:** —
 
-| Spec | Value |
-|------|-------|
-| Weight | — |
-| Dimensions | — *(≈51 × 21 mm — confirm)* |
-| MCU | RP2040 (dual Cortex-M0+) |
-| GPIO / ADC | 26 GPIO / 3× 12-bit ADC |
-| Logic voltage | 3.3 V |
-| Input power | via VSYS from PDB 5.2 V rail |
+| Spec | WeAct RP2040 (primary) | Raspberry Pi Pico (spare) |
+|------|------------------------|---------------------------|
+| MCU | RP2040 (dual Cortex-M0+ @133 MHz) | RP2040 (same) |
+| Flash | 2 MB QSPI | 2 MB QSPI |
+| RAM | 264 KB | 264 KB |
+| GPIO / ADC | ~28 GPIO / 3× 12-bit | 26 GPIO / 3× 12-bit |
+| USB | **USB-C** | micro-USB |
+| Reset button | **yes** | no |
+| Size | 53 × 21.5 mm | 51 × 21 mm |
+| Logic / power | 3.3 V · VSYS from PDB 5.2 V rail | same |
 
-- **Notes:** programmed in MicroPython. Pin map in [Pico doc](../docs/04-raspberry-pi-pico.md#pin-map).
+- **Notes:** **WeAct is the primary** secondary-I/O board (USB-C + hardware reset button = nicer for
+  flashing/field resets); the bare **Pi Pico is the flash-and-swap spare** — same RP2040, pin/firmware
+  compatible, so a crash-fried board is a 2-minute swap. Programmed in MicroPython; pin map in the
+  [RP2040 doc](../docs/04-raspberry-pi-pico.md#pin-map).
+- **Why RP2040 over the ESP32-S3 stash:** the secondary controller's analog sensing (NTC mux + ACS712)
+  wants the RP2040's cleaner 3.3 V ADC, PIO gives jitter-free multi-servo/LED timing, and there's **no
+  2.4 GHz conflict** with the ELRS RX (the ESP32's WiFi/BT shares the control band). The cockpit screen
+  (172×320 ST7789, mostly-static dashboard) is well within RP2040 headroom. ESP32-S3 is ~4–5× the CPU
+  but that power isn't needed here — those boards are better used for bench/ground tooling.
 
 ---
 

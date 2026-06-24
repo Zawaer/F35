@@ -33,17 +33,17 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 
 - **Notes:** ~220 g raw → **~165 g after duct losses**, ~11.2 A draw — drives the wingtip roll posts.
   30 mm chosen over 40 mm (40 mm = more thrust/weight/cost than the roll task needs). At 11.2 A the
-  bundled **20A ESC runs ~56%** — no heatsink needed; ⚠️ open question whether these bundled ESCs are
-  kept or swapped for the **2× FVT LittleBee 20A** (BLHeli_S, faster DSHOT response). Motor leads use
+  bundled **20A ESC runs ~56%** — no heatsink needed; **decision: the build uses the 2× FVT LittleBee
+  20A** (BLHeli_S/DSHOT) instead, so these bundled 20A ESCs are kept as **spares**. Motor leads use
   **2 mm bullet** connectors; powered from a 3S 850 mAh pack via **XT60H** (see
   [power.md](power.md)). Reverse spin by swapping any two motor leads.
 
 ---
 
-### FVT LittleBee Spring 20A ESC (BLHeli_S) ×2 — roll-post ESC option
+### FVT LittleBee Spring 20A ESC (BLHeli_S) ×2 — roll-post ESCs (chosen)
 - **Category:** Propulsion (brushless ESC)
 - **Status:** 🛒 in cart (2 pcs)
-- **Used for:** **roll-post 30 mm EDFs** — DSHOT alternative to the EDFs' bundled 20A ESCs —
+- **Used for:** **roll-post 30 mm EDFs** — the **chosen** roll-post ESCs (over the EDFs' bundled 20A) —
   [Propulsion → roll control](../docs/06-propulsion.md#roll-control)
 - **Variant / qty:** LittleBee Spring **20A** · 2 pcs
 - **Price:** €11.56 total (€5.78 ×2)
@@ -64,11 +64,10 @@ Build context: [Propulsion](../docs/06-propulsion.md).
   wires) and the battery end is **bare tinned power leads**. So: solder the EDF's three motor leads
   **directly to the pads** (no 2 mm bullets needed/possible there), and solder a **XT60H** (roll-post
   standard) onto the power leads. This differs from the bundled-ESC wiring assumption in the
-  [30 mm EDF card](#qx-motor-30-mm-edf-qf1611-7000kv-3s--20a-esc-2--roll-posts) above — factor it into
-  the bundled-ESC-vs-LittleBee decision.
+  [30 mm EDF card](#qx-motor-30-mm-edf-qf1611-7000kv-3s--20a-esc-2--roll-posts) above.
 - **Notes:** at ~11.2 A on a 20A ESC → ~56% load, no heatsink. **No BEC**, so it can't power the RX/FC
-  rail — fine here (FC has its own supply). Chosen for fast **DSHOT** response; still an open question
-  whether these replace the EDFs' bundled 20A ESCs or are kept as spares.
+  rail — fine here (FC has its own supply). **Decision: these are the roll-post ESCs** (cheap +
+  BLHeli_S/DSHOT response); the EDFs' bundled 20A ESCs become spares.
 
 ---
 
@@ -76,7 +75,7 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 - **Category:** Propulsion (ducted fan + brushless motor)
 - **Status:** ✅ owned (2 pcs: **one CW + one CCW** · ordered 12 May 2026)
 - **Used for:** **main rear EDF** (thrust-vectored via 3BSM) + **front lift fan** —
-  [Propulsion → Phase 3](../docs/06-propulsion.md#phase-3--edf-propulsion)
+  [Propulsion → Phase 2](../docs/06-propulsion.md#phase-2--edf-propulsion)
 - **Variant / qty:** 70 mm 12-blade EDF · QF3027 **2200KV** · 6S · 2 pcs (1× CW, 1× CCW)
 - **Price:** €105.14 total (€52.57 each)
 - **Link:** https://www.aliexpress.com/item/1005006621270183.html
@@ -104,7 +103,7 @@ Build context: [Propulsion](../docs/06-propulsion.md).
   opposite ways — their reaction torques partially cancel and ArduPilot can use the differential for
   yaw trim in hover. Keep track of which is which when mounting.
 - **Notes:** ~3300 g peak each at full 6S; ~72–89 A normal draw (peaks ~100 A) → each needs a **100A
-  ESC** on its own pack (main 5000 mAh, lift 2700 mAh — see [power.md](power.md)). Already produces a
+  ESC** on its own pack (main + lift each a 5000 mAh pack — see [power.md](power.md)). Already produces a
   convincing jet sound across the throttle range. **Out of ACS712 range** (89 A ≫ 20 A) so EDF current
   isn't logged — rely on ESC thermal protection. Reverse spin by swapping any two motor leads.
 
@@ -114,7 +113,7 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 - **Category:** Propulsion (brushless ESC, with UBEC)
 - **Status:** ✅ owned (2 pcs · ordered 12 May 2026)
 - **Used for:** **main EDF + lift-fan EDF** (one each, individual not 4-in-1) —
-  [Propulsion → Phase 3](../docs/06-propulsion.md#phase-3--edf-propulsion)
+  [Propulsion → Phase 2](../docs/06-propulsion.md#phase-2--edf-propulsion)
 - **Variant / qty:** Skywalker **100A V2** · 2 pcs
 - **Price:** €70.26 total (€29.74 ×2 + €10.78 shipping)
 - **Link:** https://www.aliexpress.com/item/1005009269823714.html

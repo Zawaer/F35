@@ -1,6 +1,6 @@
 # Wiring Diagrams
 
-Consolidated power and signal wiring for the Phase 3 F-35B. Source detail lives in
+Consolidated power and signal wiring for the Phase 2 F-35B. Source detail lives in
 [Power System](02-power-system.md), [Flight Controller](03-flight-controller.md),
 [Raspberry Pi Pico](04-raspberry-pi-pico.md), and [Sensors & Monitoring](07-sensors-monitoring.md).
 
@@ -14,12 +14,12 @@ Consolidated power and signal wiring for the Phase 3 F-35B. Source detail lives 
                                   ├── Servo BEC   6V/4A-14A ─► all servos + STS3032
                                   └── VTX/CAM BEC 12V/2A   ─► LED drivers
 
-[6S 2700mAh lift]
+[6S 5000mAh lift]
    └── 10AWG ──────────────► ESC 2 (Hobbywing 100A) ──► Lift EDF (~89A)
 
 Current sensors:
-   Matek 150A #1 → on 5000mAh main lead → F405 ADC 2
-   Matek 150A #2 → on 2700mAh lift lead → F405 ADC 4
+   ACS712 20A ×3 → FC/servo rail + roll-post EDF L/R (read via Pico)
+   Main/lift EDF current not logged in v1 (>20A); Matek 150A optional, buy-later if needed
 ```
 
 No external buck converters or standalone BECs — the PDB supplies all three rails. If the servo
@@ -48,15 +48,15 @@ STS3032 ×2 (3BSM): serial half-duplex bus (10kΩ resistor for UART half-duplex)
 ## Temperature + current sensing (→ Pico)
 
 ```
-NTC 100K ──┬── CD74HC4067 channel (×16)        CD74HC4067 SIG → Pico ADC (GPIO 26)
-10kΩ ──────┘   (divider: 3.3V─10kΩ─+─NTC─GND)  S0..S3        → Pico GPIO (channel select)
+NTC (×16) ── CD74HC4067 channel ── GND         SIG → Pico ADC (GPIO 26)
+3.3V ── 47kΩ ──┴── SIG  (ONE shared resistor)  S0..S3 → Pico GPIO (channel select)
 
 ACS712 20A #1 (FC/servo rail)  → Pico ADC
 ACS712 20A #2/#3 (roll-post EDF L/R) → Pico ADC
 
-NTC sensors: ESC1, ESC2, Battery1 (+ optional Battery2 / EDF exhaust)
+NTC sensors (~12 ch): both EDF ESCs, roll-post ESCs, main/lift/roll-post batteries,
+            EDF housings, BEC/PDB, FC, landing-light heatsink — see Sensors doc
 ```
-(Earlier DS18B20 1-Wire plan superseded by NTC + multiplexer — see [Sensors](07-sensors-monitoring.md).)
 
 ## Cockpit display
 
@@ -79,13 +79,13 @@ PDB 12V ──► LED driver (700mA CC, PWM dim) ──► 3W LED
 | USART6 | ELRS / CRSF |
 | USART1 | Wireless board |
 | One UART (e.g. UART4/5) | Pico link |
-| ADC 1 / 2 | Battery 1 voltage / current (Matek #1) |
-| ADC 3 / 4 | Battery 2 voltage / current (Matek #2) |
+| ADC 1 / 2 | Battery voltages (main / lift) |
+| ADC 3 / 4 | spare (main/lift EDF current optional — Matek 150A buy-later) |
 | PWM ×11 | ESCs + primary surfaces |
 
 | Pico GPIO | Use |
 |-----------|-----|
-| 26 | DS18B20 1-Wire bus |
+| 26 | NTC mux SIG (CD74HC4067 → ADC0) |
 | 27 / 28 | spare ADC |
 | 10 / 11 / 12 | LED PWM (red / green / strobe) |
 | 15 | strobe enable (alt) |

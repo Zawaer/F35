@@ -51,7 +51,7 @@ Build context: [Power System](../docs/02-power-system.md).
 ### CNHL MiniStar 850mAh 3S 70C — trainer + roll-post EDF battery
 - **Category:** LiPo battery
 - **Status:** ✅ ordered (2-pack)
-- **Used for:** Phase 1 trainer prop plane; Phase 3 **roll-post 30mm EDFs** — [Propulsion](../docs/06-propulsion.md)
+- **Used for:** Phase 1 trainer prop plane; Phase 2 **roll-post 30mm EDFs** — [Propulsion](../docs/06-propulsion.md)
 - **Variant / qty:** "2 Packs … 850mAh 3S" · 2 batteries
 - **Price:** €14.28 (with coupon; €22.94 list) + €10.38 shipping
 - **Source:** **ChinaHobbyLine** (not AliExpress)
@@ -108,11 +108,12 @@ Build context: [Power System](../docs/02-power-system.md).
 
 ---
 
-### CNHL G+Plus 5000mAh 6S 70C (EC5) — main EDF battery
+### CNHL G+Plus 5000mAh 6S 70C (EC5) ×2 — main + lift EDF battery
 - **Category:** LiPo battery
 - **Status:** 🔄 **borrowed** (school drone club; school order 9 Apr 2026) — not owned outright
-- **Used for:** main (rear) EDF + 18AWG system tap — [Power System](../docs/02-power-system.md)
-- **Variant / qty:** 6S 5000 mAh 70C, EC5 · (school order had 2)
+- **Used for:** **main (rear) EDF + lift (front) EDF** — one pack each — plus an 18AWG system tap off
+  the main pack — [Power System](../docs/02-power-system.md)
+- **Variant / qty:** 6S 5000 mAh 70C, EC5 · **2 in use (main + lift)**
 - **Price:** €58.82 (school order; list €60.32)
 - **Source:** ChinaHobbyLine
 - **Link:** ChinaHobbyLine — CNHL G+Plus 5000mAh 22.2V 6S 70C EC5 (stock 500706EC5)
@@ -131,15 +132,17 @@ Build context: [Power System](../docs/02-power-system.md).
 | Lead wire | 10 AWG |
 | Stock # | 500706EC5 |
 
-- **Notes:** feeds ESC 1 (main EDF ~89 A) + the system tap to the PDB. 70C × 5 Ah ≈ 350 A theoretical
-  → huge headroom over the ~94 A total draw (matches the build's earlier ~11.4 mΩ IR measurement).
-  **Heaviest single item (~714 g)** — dominant CG/AUW factor (see
+- **Notes:** one pack per fan — main EDF (~89 A) + the system tap to the PDB, and an identical pack on
+  the lift EDF. 70C × 5 Ah ≈ 350 A theoretical → huge headroom over each EDF's ~94 A peak (matches the
+  ~11.4 mΩ IR measurement). **~714 g each (×2 ≈ 1.43 kg)** — dominant CG/AUW factor; the lift pack is
+  **+260 g** vs the old 2700 mAh, shifting CG forward (see
   [CG](../docs/01-project-overview.md#cg-the-central-challenge)).
 
-### CNHL 2700mAh 6S 40C (XT60) — lift EDF battery
+### CNHL 2700mAh 6S 40C (XT60) — spare / fallback lift battery
 - **Category:** LiPo battery
 - **Status:** 🔄 **borrowed** (school drone club; school order 9 Apr 2026)
-- **Used for:** lift (front) EDF — [Power System](../docs/02-power-system.md)
+- **Used for:** **spare / fallback** — the lift fan now runs a 2nd 5000 mAh pack; this is the lighter
+  alternative — [Power System](../docs/02-power-system.md)
 - **Variant / qty:** 6S 2700 mAh 40C, XT60 · (school order had 4)
 - **Price:** €24.06 (school order; list €31.07)
 - **Source:** ChinaHobbyLine
@@ -159,18 +162,19 @@ Build context: [Power System](../docs/02-power-system.md).
 | Lead wire | 12 AWG |
 | Stock # | 270406XT60 |
 
-- **Notes:** feeds ESC 2 (lift EDF). 40C × 2.7 Ah ≈ **108 A** continuous — covers the lift EDF (which
-  mostly runs in hover). ⚠️ **40C is lower than the main pack's 70C** — adequate for the lift draw
-  but don't push it as hard. Placed forward near the lift fan for CG balance. ~454 g.
+- **Notes:** **no longer the primary lift battery** — the lift fan now uses a 2nd 5000 mAh pack
+  (matched pair). Kept as a **lighter fallback (454 g vs 714 g)** if the +260 g forward weight upsets
+  CG: revert to *2700 lift + 5000 main*, or go *2× 2700* (lightest, shortest flight). 40C × 2.7 Ah ≈
+  **108 A** — adequate for the lift EDF if used; don't push as hard as the 70C packs.
 
-> **Battery weight note:** main 714 g + lift 454 g = **~1168 g of battery** on a ~3185 g AUW (~37%).
+> **Battery weight note:** main 714 g + lift 714 g = **~1428 g of battery** on a ~3445 g AUW (~41%).
 > Both are **borrowed from the school drone club** — an availability/return constraint to plan
 > around, and the packs are larger/heavier than a bespoke choice might be (worth revisiting for CG).
 
 ### HOTA D6 Pro — LiPo charger (bench equipment)
 - **Category:** Charger (AC/DC dual-channel smart charger) — bench tool, not on-aircraft
 - **Status:** 🔄 **borrowed** (school drone club; school order 9 Apr 2026)
-- **Used for:** charging/balancing all LiPo packs (main 5000 mAh EC5, lift 2700 mAh XT60, roll-post
+- **Used for:** charging/balancing all LiPo packs (main + lift 5000 mAh EC5, roll-post
   850 mAh) — [Power System → Charging](../docs/02-power-system.md#charging)
 - **Variant / qty:** EU plug · 1
 - **Price:** €105.96 + €3.18 shipping (list €111.80)
@@ -226,7 +230,7 @@ Build context: [Power System](../docs/02-power-system.md).
 ### LiPo battery straps (hook-and-loop, 200 & 300 mm) ×10 — battery tie-down
 - **Category:** Hardware (hook-and-loop battery strap)
 - **Status:** ✅ owned (10 pcs total — two orders)
-- **Used for:** securing **LiPo packs** (main 5000 mAh, lift 2700 mAh, roll-post/trainer 850 mAh) to
+- **Used for:** securing **LiPo packs** (main + lift 5000 mAh, roll-post/trainer 850 mAh) to
   their printed trays — [Power System](../docs/02-power-system.md)
 - **Variant / qty:** **5× 300 × 20 mm** (SIRENXI, ordered 17 Apr 2026) + **5× 200 × 20 mm** (Eastern
   Aviation, black, ordered 2 Apr 2026)
@@ -241,8 +245,8 @@ Build context: [Power System](../docs/02-power-system.md).
 | Material | nylon, **anti-skid** face |
 
 - **Notes:** wrap a pack to its printed tray/floor; the anti-skid face stops it sliding. **300 mm**
-  girths the main 5000 mAh pack (~20 cm cross-section perimeter) with overlap; **200 mm** suits the
-  smaller lift / roll-post / trainer packs. Reusable, no tools. Use alongside a printed battery tray +
+  girths the 5000 mAh packs (main + lift, ~20 cm cross-section perimeter) with overlap; **200 mm**
+  suits the smaller roll-post / trainer 850 mAh packs. Reusable, no tools. Use alongside a printed battery tray +
   CG positioning (see [CG](../docs/01-project-overview.md#cg-the-central-challenge)).
 
 ---
@@ -251,7 +255,7 @@ Build context: [Power System](../docs/02-power-system.md).
 - **Category:** Safety equipment (fireproof LiPo bag) — **bench, not on-aircraft**
 - **Status:** ✅ owned (1 · ordered 1 Apr 2026)
 - **Used for:** **safe LiPo charging & storage** — contains a pack fire; for all the build's LiPos
-  (main 5000, lift 2700, roll-post/trainer 850 mAh) — [Power System → Charging](../docs/02-power-system.md#charging)
+  (main + lift 5000, roll-post/trainer 850 mAh) — [Power System → Charging](../docs/02-power-system.md#charging)
 - **Variant / qty:** type4 · 1 pc
 - **Price:** **€4.70**
 - **Source:** AliExpress — ARRIS-style LiPo Guard safety bag

@@ -1,6 +1,6 @@
 # Propulsion
 
-> **Phase 3 F-35B:** 2× QX-Motor **70mm EDF** (6S) — one **main** (rear, thrust-vectored by the
+> **Phase 2 F-35B:** 2× QX-Motor **70mm EDF** (6S) — one **main** (rear, thrust-vectored by the
 > 3BSM) and one **lift** (front), each on its own Hobbywing 100A V2 ESC. Hover is flown as an
 > **ArduPilot 4-motor quadcopter**: main EDF + lift fan + **2× small wingtip motors** for roll.
 > **Phase 1 trainer:** A2212 2200KV + 3S + 30–40A ESC + 5×4–6×4 prop. The two systems are entirely
@@ -18,11 +18,10 @@
 
 Purpose: learn to fly and validate the basic FC + receiver setup before VTOL complexity.
 **Status:** built; first hand-launch (no runway) crashed after ~1 s from insufficient launch speed,
-now repaired and intact — awaiting a re-flight from a proper runway. (**Phase 2, the single EDF jet,
-is scrapped** — the project goes straight to the Phase 3 F-35B.) Battery: see
+now repaired and intact — awaiting a re-flight from a proper runway. Battery: see
 [CNHL MiniStar 850mAh card](../components/power.md).
 
-## Phase 3 — EDF propulsion
+## Phase 2 — EDF propulsion
 
 | Item | Spec |
 |------|------|
@@ -30,7 +29,7 @@ is scrapped** — the project goes straight to the Phase 3 F-35B.) Battery: see
 | Motor RPM | ~50,000 RPM |
 | Thrust | ~3300 g each |
 | Current draw | ~72–89 A normal (peaks ~100 A) |
-| Battery | 6S (main 5000 mAh, lift 2700 mAh) |
+| Battery | 6S 5000 mAh ×2 (one per fan: main + lift) |
 | ESC | 2× Hobbywing 100A V2, individual (not 4-in-1) |
 
 The EDFs already produce a convincing jet sound across the throttle range (rising whine on spool-up,
@@ -89,9 +88,9 @@ Final plan (parts chosen):
 - **2× 30mm 6-blade ducted fan, QF1611 7000KV (3S)** — ~220 g raw thrust → ~165 g after duct losses,
   ~11.2 A draw. Hidden inside the wingtips behind small inlet/outlet doors. **30 mm chosen over
   40 mm** (40 mm = more thrust/weight/cost than needed for roll authority).
-- **ESCs:** the 30mm EDFs ship *with* a 20A ESC; the cart also has **2× FVT LittleBee 20A
-  (BLHeli_S/DSHOT)**. ⚠️ Decide whether the bundled ESCs suffice or the LittleBees are kept for
-  faster DSHOT response. At 11.2 A on a 20A ESC they run at ~56% — no heatsink needed.
+- **ESCs:** **decision — use the 2× FVT LittleBee 20A (BLHeli_S/DSHOT)**; the 20A ESCs bundled with
+  the 30mm EDFs become spares. (LittleBees are cheap and give better/faster response.) At 11.2 A on a
+  20A ESC they run ~56% — no heatsink needed.
 - Cosmetic roll-post inlet/outlet doors on SG90.
 - ArduPilot mixes them as quadcopter roll motors.
 
@@ -108,7 +107,6 @@ Final plan (parts chosen):
 ## Open questions / TODO
 
 - ⚠️ Validate 3BSM thrust-vectoring reliability and bearing wear under exhaust on the ground.
-- Decide whether the bundled 30mm-EDF ESCs replace the 2× LittleBee 20A.
 - Finalise ArduPilot quadplane motor mixing for the 4-motor hover layout.
 - Tune lift-fan vane-box authority vs main-EDF balance for hover pitch.
 

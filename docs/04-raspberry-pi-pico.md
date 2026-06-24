@@ -4,10 +4,16 @@
 > PWM outputs** for secondary/cosmetic servos, (2) **temperature sensing** via NTC thermistors
 > through a CD74HC4067 multiplexer, (3) the **LED system** (nav/strobe/landing/COB), and (4) the
 > **cockpit TFT display**. It talks to the FC over **UART** and is powered from the PDB **5.2V
-> Flight BEC**. Programmed in **MicroPython**. ("RP2040" in notes = this Pico.)
+> Flight BEC**. Programmed in **MicroPython**. ("RP2040" in notes = this board.)
 
-The Pico exists because the F405 runs out of PWM outputs and ADC ports. Offloading temp sensing,
-secondary actuation, lighting, and the cockpit screen to the Pico keeps the FC free for flight.
+> **Board:** the **WeAct Studio RP2040 (2 MB)** is the primary board (USB-C + hardware reset button);
+> a bare **Raspberry Pi Pico** is the pin/firmware-compatible **spare** (flash-and-swap after a crash).
+> Both are RP2040, so the pin map below applies to either. **RP2040 chosen over the owned ESP32-S3
+> boards** for cleaner ADC (NTC/ACS712 sensing), jitter-free PIO servo/LED timing, and no 2.4 GHz
+> clash with the ELRS RX; the mostly-static 172×320 cockpit dashboard is well within its headroom.
+
+The board exists because the F405 runs out of PWM outputs and ADC ports. Offloading temp sensing,
+secondary actuation, lighting, and the cockpit screen to it keeps the FC free for flight.
 
 ## Pin map
 
@@ -36,9 +42,9 @@ outputs over UART. Primary flight surfaces + ESCs stay on the FC; **secondary/co
 (gear doors, lift-fan doors, canopy, nozzle) live on the Pico. See [Servos](05-servos.md).
 
 ### 2. Temperature sensing (NTC + CD74HC4067)
-NTC 100K thermistors form 10kΩ voltage dividers feeding a **CD74HC4067 16-channel analog
-multiplexer**; the Pico selects channels via S0–S3 and reads the SIG line on one ADC pin. This
-replaced the earlier DS18B20 1-Wire plan (cheaper NTCs, 16 channels from one ADC). Full detail and
+NTC 100K thermistors form a voltage divider — **one shared 47 kΩ** on the mux SIG line — feeding a
+**CD74HC4067 16-channel analog multiplexer**; the Pico selects channels via S0–S3 and reads the SIG
+line on one ADC pin (cheap, 16 channels from one ADC). Full detail and
 the current-sensing (ACS712) story are in [Sensors & Monitoring](07-sensors-monitoring.md).
 
 ### 3. LED control
