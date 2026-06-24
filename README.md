@@ -48,7 +48,8 @@ is the real goal. Most technical depth in this KB concerns Phase 3.
 
 Detailed per-part specs (weight, dimensions, electrical) live in the
 [Component Knowledge Base](components/) — datasheet-style cards that back the BOM and feed the
-CG/AUW and power-budget math. Code lives in [`code/`](code/) — currently the [Pico firmware](code/pico/).
+CG/AUW and power-budget math. Code will live in [`code/`](code/) — the [Pico firmware](code/pico/) is
+not written yet (planned modules + wiring recipes documented there).
 
 ## Conventions
 

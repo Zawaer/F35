@@ -100,7 +100,7 @@ while True:
     strobe.off(); time.sleep_ms(950)
 ```
 
-See [`code/pico/led_control.py`](../code/pico/led_control.py).
+(Reference snippet above; the integrated Pico firmware will be written once components are in hand.)
 
 ## Notes & TODO
 

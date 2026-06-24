@@ -96,8 +96,8 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 
 - **Notes:** 5 Pico pins (S0–S3 + SIG→ADC) read all 16 NTC channels. Tie **EN low** to enable. Run
   VCC = 3.3 V so signals stay ≤ VCC (matches the Pico ADC range). The ~70 Ω on-resistance is in
-  series with the NTC divider — negligible vs the 10–100 kΩ divider, but let it settle a few µs
-  after switching channels before sampling (the [code](../code/pico/temp_logger.py) waits 50 µs).
+  series with the NTC divider — negligible vs the shared 47 kΩ divider, but let it settle a few µs
+  after switching channels before sampling (~50 µs is plenty).
 
 ---
 

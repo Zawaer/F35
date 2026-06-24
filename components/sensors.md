@@ -25,12 +25,12 @@ Build context: [Sensors & Monitoring](../docs/07-sensors-monitoring.md).
 | Response time | ~3 s |
 | Encapsulation | epoxy resin |
 
-- **Notes:** wire as a divider with a series resistor → mux channel → Pico ADC; convert via the
-  beta equation (`temp_logger.py` is preset to NTC_R25=100k, BETA=3950). ⚠️ **Divider resistor:**
-  `temp_logger.py` currently uses a **10 kΩ** series R — for a **100 kΩ** NTC a **~47–100 kΩ** series
-  resistor centres the room-to-100 °C range far better (10 kΩ cramps the low end). Pick the resistor,
-  then set `SERIES_R` in the code to match. **Enamelled leads must be scraped/tinned** before
-  soldering. 20 pcs → ~16 used + spares.
+- **Notes:** each NTC goes mux channel → GND; a **single shared 47 kΩ** resistor on the mux SIG line
+  (3.3 V → 47 kΩ → SIG) forms the divider with whichever channel is selected — one resistor for all 16
+  channels (full recipe: [Sensors & Monitoring](../docs/07-sensors-monitoring.md#temperature-sensing-ntc-100k--multiplexer)).
+  Convert via the beta equation (NTC_R25 = 100 k, B = 3950). ⚠️ **Divider resistor:** **47 kΩ** (not the
+  naive 10 kΩ) centres the room-to-100 °C range for a 100 kΩ NTC — 10 kΩ cramps the hot end.
+  **Enamelled leads must be scraped/tinned** before soldering. 20 pcs → ~16 used + spares.
 
 ---
 

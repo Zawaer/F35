@@ -61,9 +61,10 @@ horizontal (cruise) to downward (hover), mimicking the real F-35B nozzle.
   sections are **gear-coupled along their circumference** so a single motor rotates the whole
   nozzle. A separate **MG90S/SG90** tilts the whole 3BSM ±~15° for yaw. See
   [Servos](05-servos.md#3bsm-actuation--single-sts3032--gear-linked-sections).
-- Needs **bearings at each section junction** — thin-section ball bearings sized to fit inside the
-  70mm duct. **6805ZZ (37×25×7 mm)** is the sweet spot; buy ~10 (need 6 for two per junction + spares).
-  **Buy bearings before modeling** the 3BSM in Fusion — design the seats around real bearing dims.
+- The section junctions run on the **4 mm loose ball race** (100 pc owned) in printed grooves —
+  chosen for smoother rotation. (Caged **6805ZZ 37×25×7 mm** thin-section bearings were considered as
+  an alternative but **dropped/not purchased**.) **Finalise the ball-race geometry before modeling**
+  the 3BSM in Fusion — design the seats/grooves around the real 4 mm ball dimensions.
 - ⚠️ Reliability of the 3BSM under exhaust pressure is a key open risk — test thoroughly on the
   ground before any hover attempt. See [Materials & Airframe](09-materials-airframe.md) for bearings.
 

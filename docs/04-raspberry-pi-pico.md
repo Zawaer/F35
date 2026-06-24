@@ -54,10 +54,13 @@ pins left floating). Driven over SPI by the Pico.
 
 ## MicroPython
 
-Reference snippets in [`code/pico/`](../code/pico/):
+Firmware will be written once the actual components are in hand. The wiring/divider recipes it will
+implement are recorded in
+[Sensors & Monitoring](07-sensors-monitoring.md#temperature-sensing-ntc-100k--multiplexer) (NTC + mux)
+and [Lighting](08-lighting.md) (strobe/dimming). Planned modules:
 
-- `temp_logger.py` — NTC-via-CD74HC4067-mux reading (beta-equation conversion).
-- `led_control.py` — nav-light dimming + strobe pattern.
+- temperature — NTC-via-CD74HC4067-mux reading (beta-equation conversion).
+- LED control — nav-light dimming + strobe pattern.
 
 ## Open questions / TODO
 
