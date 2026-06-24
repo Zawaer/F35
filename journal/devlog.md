@@ -9,6 +9,22 @@ records go in [decisions.md](decisions.md); this is the looser narrative around 
 
 ---
 
+## 2026-06-24 — Big AliExpress order placed; all in-cart parts ordered
+
+- Ordered everything that was in the cart in one go. Covers:
+  - **Lighting** — 3× nav LEDs (white/red/green 3W ×10 each), 10W landing-light, green COB strip (1 m),
+    4× ACELEX 700mA drivers, LD2740SC 3A driver, 10× IRLZ44N MOSFET, PP diffuser sheet, 14×14×6 mm
+    heatsinks, 2× YiRui 1156 BA15S yellow bulb (afterburner).
+  - **Sensors / display** — 20× NTC 100K B3950, 3× ACS712-20A, CD74HC4067 mux board, 1.47″ ST7789 TFT,
+    5× 12P FFC adapter.
+  - **Servos** — Feetech STS3032 360° (magnetic encoder, 3BSM nozzle), 4× NB-M005 2g micro (light
+    doors), 10× 200 mm servo extension.
+  - **Roll-post propulsion** — 2× 30 mm EDF 7000KV 3S (bundled ESCs = spares), 2× FVT LittleBee 20A.
+  - **Wire** — 10 AWG (2 m), 18 AWG (2 m), 22 AWG (10 m).
+  - **Structural** — CF tube 500×8×6 mm ×16, CF rod 2×250 mm ×10, 4 mm steel balls ×100, MR62ZZ ×10,
+    38 mm nose wheel ×2, CA glue ×3.
+- BOM "In cart" section cleared — all items now in **Owned / ordered** with this date.
+
 ## 2026-06-24 — Power architecture & monitoring locked in
 
 - Settled the whole power tree: **two 6S 5000 mAh packs** (one per fan, matched pair), EDFs wired
