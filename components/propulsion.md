@@ -169,4 +169,79 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 
 ---
 
-> All known propulsion parts are now carded.
+### XXD A2212 1400KV + 30A ESC — trainer (low-KV / bigger-prop option)
+- **Category:** Propulsion (brushless motor + ESC)
+- **Status:** ✅ owned (1 set · ordered 17 Apr 2026)
+- **Used for:** **Phase 1 trainer** — a **lower-KV (1400KV)** alternative to the kit's 2200KV motor
+  (more torque, larger/slower prop) — [Propulsion → Phase 1](../docs/06-propulsion.md#phase-1--trainer-prop-plane)
+- **Variant / qty:** A2212 1400KV + 30A ESC · 1 set
+- **Price:** €11.10 (already EUR-priced)
+- **Source:** AliExpress — XXD A2212 1400KV + 30A ESC
+
+| Spec | Value |
+|------|-------|
+| Motor | XXD A2212, **1400KV**, 47 g, Ø27.5 × 30 mm, 3.17 mm shaft |
+| Cells (motor) | 2–3S LiPo |
+| Current | ~1.4 A no-load · peak 14–22 A |
+| ESC | **30A** continuous / 40A max (<10 s) · BEC **5 V / 3 A** |
+| ESC cells | 2–3S LiPo / 4–10 NiMH (auto-detect) |
+| ESC LVC | slow at 3.0 V/cell, cutoff 2.9 V/cell · brake on/off |
+| ESC size/weight | 45 × 24 × 9 mm · 23 g |
+| Includes | motor + 30A ESC + X-mount, prop adapter, bullets, screws |
+
+- **Notes:** same A2212 frame as the **trainer 2200KV kit above** but **1400KV** (vs 2200KV) → lower
+  RPM/V, **more torque, swings a bigger prop**, lower top speed — a calmer trainer setup or spare. 30A
+  ESC (vs the kit's 40A) is ample at the A2212's ~10–15 A. **2–3S only — not 4S.** ⚠️ Prop sizing
+  differs from the 2200KV: 1400KV typically wants a larger prop (~8–9″ on 3S vs the kit's ~6″) — pick
+  accordingly. Trainer-only.
+
+---
+
+### EP-6035 propellers (6×3.5") ×4 — trainer spares
+- **Category:** Propulsion (propeller)
+- **Status:** ✅ owned (4 pcs · ordered 7 Apr 2026)
+- **Used for:** **Phase 1 trainer** props — spares/replacements for the A2212 kit's 6035 props
+  (fragile, break on hard landings) — [Propulsion → Phase 1](../docs/06-propulsion.md#phase-1--trainer-prop-plane)
+- **Variant / qty:** EP-6035 (6×3.5") · 4 pcs
+- **Price:** $2.04 → **≈ €1.77** (@ ~€0.8664/$, 7 Apr 2026)
+- **Source:** AliExpress — EP-6035 GWS-style direct-drive prop (4 pc)
+
+| Spec | Value |
+|------|-------|
+| Size | **6035** = 6″ dia × 3.5″ pitch |
+| Type | direct-drive electric prop (GWS EP replacement) |
+| Qty | 4 |
+| Bore | macro-bore + **adapter gaskets** (3.0/3.2/3.5/4.0/4.8/5.0/6.0/6.3 mm) |
+| Material | nylon / composite |
+
+- **Notes:** matches the A2212 kit's **6035** props (Phase 1 plan was 5×4–6×4) — these are **spares**
+  since props break easily on hard landings. Fit the A2212's 3.17 mm shaft via the included gasket.
+  Trainer-only — the F-35B is EDF (no props). ⚠️ Balance before use to cut vibration.
+
+---
+
+### Gemfan 8×4 propellers (2 pcs) — trainer (for the 1400KV motor)
+- **Category:** Propulsion (propeller)
+- **Status:** ✅ owned (2 pcs · ordered 17 Apr 2026)
+- **Used for:** **Phase 1 trainer** — larger prop suited to the **A2212 1400KV** motor (low-KV wants a
+  bigger prop) — [Propulsion → Phase 1](../docs/06-propulsion.md#phase-1--trainer-prop-plane)
+- **Variant / qty:** 8.0 × 4.0″ · 2 pcs
+- **Price:** €3.34 / 2 pcs (already EUR-priced)
+- **Source:** AliExpress — Gemfan-style "Horse Blade" fibreglass-nylon prop (8×4)
+
+| Spec | Value |
+|------|-------|
+| Size | **8 × 4″** (8″ dia, 4″ pitch) |
+| Material | fibreglass-reinforced nylon, high-strength |
+| Qty | 2 |
+| Type | direct-drive, 2-blade |
+| Brand | EVYVKV (Gemfan "Horse Blade" style) |
+
+- **Notes:** the **bigger prop for the low-KV A2212 1400KV** set (vs the 6035 on the 2200KV kit) — 8×4
+  is a sensible match for 1400KV on 3S. Fibreglass-nylon is stiffer/stronger than plain GWS EP props.
+  ⚠️ Check the bore fits the A2212's 3.17 mm shaft (use the motor's prop adapter); balance before
+  flight. Trainer-only.
+
+---
+
+> All known propulsion parts are now carded (+ trainer prop spares).

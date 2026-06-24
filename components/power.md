@@ -193,8 +193,9 @@ Build context: [Power System](../docs/02-power-system.md).
 
 - **Notes:** dual channel → charge main + lift packs at once. ⚠️ On **AC it's 200 W total**; the full
   650 W / 15 A×2 needs a **DC supply >24 V** (e.g. a 600–800 W PSU) — fine on AC for moderate C-rates.
-  ⚠️ Charger output is **XT60**, but the **main 5000 mAh pack is EC5** → need an **EC5→XT60 charge
-  adapter**. Both packs use JST-XH balance leads (match). Reads pack IR while charging. Borrowed.
+  ⚠️ Charger output is **XT60**, but the **main 5000 mAh pack is EC5** → bridged by the owned
+  **XT60↔EC5 adapter** (carded below). Both packs use JST-XH balance leads (match). Reads pack IR
+  while charging. Borrowed.
 
 ### Racepow S21700FJ 4000mAh 30A — transmitter cells (Li-ion 21700)
 - **Category:** Li-ion cell (21700) — **transmitter power, not aircraft**
@@ -222,31 +223,133 @@ Build context: [Power System](../docs/02-power-system.md).
 
 ---
 
-### LiPo battery strap 30 × 2 cm (×5, black) — battery tie-down
+### LiPo battery straps (hook-and-loop, 200 & 300 mm) ×10 — battery tie-down
 - **Category:** Hardware (hook-and-loop battery strap)
-- **Status:** ✅ owned (5 pcs · ordered 17 Apr 2026)
-- **Used for:** securing **LiPo packs** (main 5000 mAh, lift 2700 mAh, roll-post 850 mAh) to their
-  printed trays — [Power System](../docs/02-power-system.md)
-- **Variant / qty:** black · 30 × 2 cm · 5 pcs
-- **Price:** €3.25 / 5 pcs (already EUR-priced; ~€0.65 each)
-- **Source:** AliExpress — SIRENXI RC LiPo battery straps (30 × 2 cm, 5 pc)
+- **Status:** ✅ owned (10 pcs total — two orders)
+- **Used for:** securing **LiPo packs** (main 5000 mAh, lift 2700 mAh, roll-post/trainer 850 mAh) to
+  their printed trays — [Power System](../docs/02-power-system.md)
+- **Variant / qty:** **5× 300 × 20 mm** (SIRENXI, ordered 17 Apr 2026) + **5× 200 × 20 mm** (Eastern
+  Aviation, black, ordered 2 Apr 2026)
+- **Price:** €3.25 (300 mm) + $3.40 ≈ €2.95 (200 mm) ≈ **€6.20 total**
+- **Source:** AliExpress — SIRENXI (300 mm) & Eastern Aviation (200 mm) nylon battery straps
 
 | Spec | Value |
 |------|-------|
 | Type | hook-and-loop (Velcro) tie-down strap, self-locking buckle |
-| Size | 300 × 20 mm |
-| Qty | 5 |
+| Sizes | 300 × 20 mm (×5) · 200 × 20 mm (×5) |
+| Qty | 10 total |
 | Material | nylon, **anti-skid** face |
-| Pack weight | 32 g (all 5) |
 
-- **Notes:** wraps a pack to its printed tray/floor; the anti-skid face stops it sliding. 30 cm
-  comfortably girths the main 5000 mAh pack (~20 cm cross-section perimeter) with overlap; 5 straps
-  cover all three packs + spares. Reusable, no tools. Use alongside a printed battery tray and CG
-  positioning (see [CG](../docs/01-project-overview.md#cg-the-central-challenge)).
+- **Notes:** wrap a pack to its printed tray/floor; the anti-skid face stops it sliding. **300 mm**
+  girths the main 5000 mAh pack (~20 cm cross-section perimeter) with overlap; **200 mm** suits the
+  smaller lift / roll-post / trainer packs. Reusable, no tools. Use alongside a printed battery tray +
+  CG positioning (see [CG](../docs/01-project-overview.md#cg-the-central-challenge)).
+
+---
+
+### LiPo safety bag (fireproof) — charging / storage
+- **Category:** Safety equipment (fireproof LiPo bag) — **bench, not on-aircraft**
+- **Status:** ✅ owned (1 · ordered 1 Apr 2026)
+- **Used for:** **safe LiPo charging & storage** — contains a pack fire; for all the build's LiPos
+  (main 5000, lift 2700, roll-post/trainer 850 mAh) — [Power System → Charging](../docs/02-power-system.md#charging)
+- **Variant / qty:** type4 · 1 pc
+- **Price:** $5.45 → **≈ €4.72** (@ ~€0.8664/$, 1 Apr 2026)
+- **Source:** AliExpress — ARRIS-style LiPo Guard safety bag
+
+| Spec | Value |
+|------|-------|
+| Material | fibreglass (glass-fibre), fire-retardant |
+| Dimensions | ~215 × 155 × 115 mm (type4 — confirm on arrival) |
+| Closure | hook-and-loop flap |
+| Function | fireproof / explosion-resistant, high-temp |
+| Colour | silver |
+
+- **Notes:** **always charge/store LiPos in the bag** on a non-flammable surface; never leave a
+  charging pack unattended. Big enough for the main 5000 mAh 6S pack (~149 mm long). Reduces (not
+  eliminates) damage if a pack vents/ignites. Bench safety gear — not flown. Pairs with the HOTA D6
+  Pro charging workflow.
+
+---
+
+### Amass/JHEMCU Smoke Stopper (XT30/XT60, 1–6S) — bench first-power-up fuse
+- **Category:** Safety tool (inline resettable fuse) — **bench, not on-aircraft**
+- **Status:** ✅ owned (1) — bought for the school drone club; usable here as a bench tool
+- **Used for:** **smoke-testing new wiring** on first power-up — catches dead shorts before releasing
+  the magic smoke — [Power System](../docs/02-power-system.md)
+- **Variant / qty:** XT30 & XT60 · 1
+- **Price:** €2.79 (already EUR-priced)
+- **Source:** AliExpress — JHEMCU/Amass Smoke Stopper
+
+| Spec | Value |
+|------|-------|
+| Connectors | XT30 **&** XT60 (input + output) |
+| Input voltage | 1–6S (3–30 V) |
+| Trip current | **1.0 A** |
+| Hold current | **0.5 A** |
+| Type | resettable PTC fuse, inline battery → device |
+| Indicator | green = OK · red = tripped |
+| Weight | 14.1 g |
+
+- **Notes:** plug **in series between battery and device** for the first "smoke test" — a short trips
+  the fuse (red) instead of frying the board. ✅ **Useful here for first power-up of the F-35B
+  avionics/wiring** (FC + PDB + LED + servo harness at idle) to catch shorts. ⚠️ **Bench/no-load only**
+  — the 0.5 A hold / 1.0 A trip is far below any motor/EDF draw, so it can't be used in flight or with
+  motors armed. XT60 matches the lift/roll-post packs; the main pack is EC5 (needs an adapter). Bought
+  for the school drone club.
+
+---
+
+### XT60↔EC5 charge adapter (XT60F → EC5M) ×4 — charge the EC5 main pack
+- **Category:** Connector (charge adapter)
+- **Status:** ✅ owned (4 pcs · ordered 14 Apr 2026)
+- **Used for:** **charging the EC5 main 5000 mAh pack** on the HOTA D6 Pro (XT60 output) —
+  [Power → Charging](../docs/02-power-system.md#charging)
+- **Variant / qty:** XT60 female → EC5 male · 4 pcs
+- **Price:** €8.21 / 4 pcs (already EUR-priced)
+- **Source:** AliExpress — XT60↔EC5/XT90/T/TRX adapter set (XT60F-EC5M)
+
+| Spec | Value |
+|------|-------|
+| Adapter | **XT60 female → EC5 male** |
+| Qty | 4 |
+| Path | charger XT60 lead → adapter → EC5 pack |
+| Listing | also XT30 / XT90 / EC3 / T(Deans) / TRX variants |
+
+- **Notes:** the HOTA D6 Pro outputs **XT60** but the **main 5000 mAh pack is EC5** — this adapter
+  bridges them so the main pack can be charged/balanced. Resolves the previously-flagged adapter gap.
+  Bought for the drone-club packs (the main pack is borrowed from the club). **Charge-only** — fine for
+  the ≤15 A charge current.
+
+---
+
+### LiPo voltage tester + low-voltage buzzer alarm (1–8S) — field battery check
+- **Category:** Tool (cell-voltage meter + LVC buzzer) — **field/bench, not on-aircraft**
+- **Status:** ✅ owned (1 · ordered 1 Apr 2026)
+- **Used for:** **field per-cell voltage check + audible low-voltage alarm** — plug onto the balance
+  lead to verify charge / catch a sagging cell — [Power System](../docs/02-power-system.md)
+- **Variant / qty:** 1–8S · 1
+- **Price:** $1.62 → **≈ €1.40** (@ ~€0.8664/$, 1 Apr 2026)
+- **Source:** AliExpress — 1–8S LiPo voltage tester / buzzer alarm
+
+| Spec | Value |
+|------|-------|
+| Cells | 1–8S (LiPo / Li-ion / LiMn / LiFe) |
+| Per-cell display | 0.5–4.5 V (±0.01 V) |
+| Total display | 0.5–36 V |
+| Alarm | buzzer + red LED below set threshold (2–8S) |
+| Alarm set | OFF / 2.7–3.8 V (default 3.3 V, saved) |
+| Protection | reverse-connection |
+| Size / weight | 40 × 25 × 11 mm · 9 g |
+| Connection | plugs onto **JST-XH balance lead** |
+
+- **Notes:** plug onto a pack's balance lead → shows each cell + total, and **buzzes if a cell drops
+  below the set voltage** — leave it on during ground/hover tests as a live low-voltage warning.
+  **Better than a multimeter for the field**: pocket-sized (9 g), reads **all cells at once**, audible
+  alarm a meter can't do. (A multimeter still wins for bench work — continuity, current, arbitrary
+  points.) Works on all the build's packs (3S/6S, JST-XH balance). Not flown.
 
 ---
 
 ## Still to card (paste product pages)
 
-LM2596 buck (owned) · other connectors (AS150 / XT90 / EC5 / bullet for EDF motors) ·
-EC5→XT60 charge adapter (needed for charging the main pack).
+LM2596 buck (owned) · other connectors (AS150 / XT90 / EC5 / bullet for EDF motors).

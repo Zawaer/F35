@@ -94,8 +94,9 @@ See [Propulsion — 3BSM](06-propulsion.md#3bsm--three-bearing-swivel-module).
 
 ## Landing gear hardware
 
-- **Wheels:** standard RC-plane wheels (no O-ring tricks). **38 mm PU pair in cart** (front/nose gear,
-  2.1 mm bore → 2 mm axle); remaining wheels (main gear) ordered later (budget).
+- **Wheels:** standard RC-plane wheels (no O-ring tricks). **38 mm PU pair in cart** = planned **F35B
+  nose gear** (2.1 mm bore → 2 mm axle). F35B **main-gear** wheels still TBD; a **45/50 mm PU pair** is
+  owned (bought for the trainer, possible F35B main-gear backup).
 
 ## Fasteners
 

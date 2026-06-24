@@ -329,6 +329,83 @@ Build context: [Servos](../docs/05-servos.md).
 
 ---
 
+### Pushrod linkage stoppers D1.3 mm (×20) — servo linkage clamps
+- **Category:** Hardware (pushrod linkage stopper)
+- **Status:** ✅ owned (2× 10 = 20 pcs · ordered 7 Apr 2026)
+- **Used for:** clamping **thin pushrod wires to servo arms/horns** — trainer control linkages;
+  possible F35B light/secondary surfaces — [Servos](../docs/05-servos.md)
+- **Variant / qty:** D1.3 mm hole · 20 pcs (2× 10)
+- **Price:** $4.27 → **≈ €3.70** ($2.29 × 2; @ ~€0.8664/$, 7 Apr 2026)
+- **Source:** AliExpress — Realhawk pushrod connectors / linkage stoppers (D1.3 mm)
+
+| Spec | Value |
+|------|-------|
+| Type | linkage stopper (grub-screw pushrod clamp) |
+| Hole Ø | **1.3 mm** (fits 1.0–1.3 mm pushrod wire) |
+| Qty | 20 |
+| Weight | ~0.7 g each |
+| Material | metal, nickel-plated |
+| Fixing | set screw + nut |
+
+- **Notes:** clamps a thin steel pushrod wire to a servo horn and locks the throw with a grub screw —
+  standard RC linkage hardware. **D1.3 = thin 1.0–1.3 mm wire**, *not* the F35B's 2 mm CF rods (those
+  use clevises / M2 — see [Materials → fasteners](../docs/09-materials-airframe.md#fasteners)). Bought
+  for the trainer; usable on the F-35B for **light/secondary surfaces** with thin-wire links. 20 pcs →
+  plenty. The listing also offers D1.8 / 2.1 / 3.1 mm for thicker rods.
+
+---
+
+### Control horns + clevises (nylon, 21 mm) ×20 sets — control-surface linkages
+- **Category:** Hardware (control horn + clevis)
+- **Status:** ✅ owned (2× 10 = 20 sets · ordered 7 Apr 2026)
+- **Used for:** **control-surface linkages** — horn on the surface, clevis on the pushrod (rudder,
+  ailerons/flaperons, elevators/stabilators); trainer + usable on F35B — [Servos](../docs/05-servos.md)
+- **Variant / qty:** medium lock-on horn + 21 mm clevis · 20 sets
+- **Price:** $3.15 → **≈ €2.73** ($1.69 × 2; @ ~€0.8664/$, 7 Apr 2026)
+- **Source:** AliExpress — medium lock-on nylon control horn + clevis set (21 mm)
+
+| Spec | Value |
+|------|-------|
+| Horn | nylon, **lock-on** (serrated + backplate, no glue) |
+| Horn height | 18 mm from base · base 12 × 8 mm |
+| Max surface thickness | 6 mm |
+| Clevis | nylon, **3.2 × 5.4 × 21 mm**, threaded / push-fit rod |
+| Clevis fixing | side shaft for a **2 mm grub screw** |
+| Qty | 20 sets |
+
+- **Notes:** standard fixed-wing linkage hardware — the **lock-on horn** clips onto the control surface
+  (no glue) and the **clevis** joins the pushrod with a 2 mm grub screw. More F35B-relevant than the
+  [D1.3 stoppers above](#pushrod-linkage-stoppers-d13-mm-20--servo-linkage-clamps) (the grub-screw
+  clevis suits a wider rod range). 20 sets → flaperons + stabilators + rudder + spares. Pairs with the
+  [2 mm CF rod / M2 linkage hardware](../docs/09-materials-airframe.md#fasteners).
+
+---
+
+### Z-bend pushrod wires 1.2 mm × 200 mm (×40) — control pushrods
+- **Category:** Hardware (pushrod / pull rod)
+- **Status:** ✅ owned (2× 20 = 40 pcs · ordered 7 Apr 2026)
+- **Used for:** **control-surface pushrods** — Z-bend hooks into the servo arm, far end into a linkage
+  stopper/clevis; trainer + F35B light surfaces — [Servos](../docs/05-servos.md)
+- **Variant / qty:** 1.2 mm dia × 200 mm, Z-type · 40 pcs
+- **Price:** $5.31 → **≈ €4.60** ($0.86 × 2 + shipping; @ ~€0.8664/$, 7 Apr 2026)
+- **Source:** AliExpress — Sparkhobby Z-type steering rod (1.2 mm × 200 mm)
+
+| Spec | Value |
+|------|-------|
+| Material | stainless steel |
+| Diameter | **1.2 mm** |
+| Length | 200 mm |
+| End | pre-formed **Z-bend** (servo-arm end) |
+| Qty | 40 |
+
+- **Notes:** the thin steel pushrod that **pairs with the
+  [D1.3 mm linkage stoppers](#pushrod-linkage-stoppers-d13-mm-20--servo-linkage-clamps)** (1.2 mm fits
+  the 1.0–1.3 mm range). Z-bend clicks into the servo horn; cut to length and clamp the far end. For
+  **light/secondary control surfaces** (the F35B's primary surfaces use 2 mm CF rods). 40 pcs → ample.
+  ⚠️ Thin 1.2 mm wire flexes under load — keep runs short or use only for low-force surfaces.
+
+---
+
 ## Still to card (paste product pages)
 
 NEEBRC S002 4.3g (door micro servo). Owned-summary specs in

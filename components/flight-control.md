@@ -291,3 +291,52 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
   [FFC adapter board](#ffcfpc-adapter-board-12p-05-mm--254-mm-zif--display-breakout), and
   prototyping. 30 × 40 = 1200 pins — bulk/spares (the starter kit also includes 2 strips). Colours are
   cosmetic; pins are standard tin-plated 2.54 mm.
+
+---
+
+### Dupont jumper wires 15 cm (M-M / M-F / F-F) ×240 — prototyping / signal wiring
+- **Category:** Cable (Dupont jumper wires)
+- **Status:** ✅ owned (2× 120 = 240 pcs · ordered 2 Apr 2026)
+- **Used for:** **general prototyping & low-current signal hookups** — Pico/FC/sensor breadboarding,
+  temporary links — general
+- **Variant / qty:** 15 cm · 3 kinds (M-M, M-F, F-F) · 120 ×2 = 240
+- **Price:** $9.08 → **≈ €7.87** ($4.54 × 2; @ ~€0.8664/$, 2 Apr 2026)
+- **Source:** AliExpress — ENLINCA Dupont jumper wire kit (15 cm, 3 kinds)
+
+| Spec | Value |
+|------|-------|
+| Pitch | 2.54 mm, 1-pin Dupont |
+| Length | 15 cm |
+| Types | M-M, M-F, F-F (40 each per 120-pack) |
+| Qty | 240 (2× 120) |
+| Wire | thin ribbon, multicolour |
+
+- **Notes:** general bench/prototyping jumpers — breadboard the Pico/FC/sensors and make temporary
+  signal links. ⚠️ **Thin, low-current, crimped Dupont ends** — fine for signal/logic, **not** for
+  power or vibration-critical flight connections (solder + strain-relieve those). Pairs with the
+  [40-pin headers](#40-pin-breakable-male-header-strips-254-mm-30--pico--fc--adapter-pins) and the
+  starter kit.
+
+---
+
+### Breadboards MB-102 (830-pt) + 400-pt — solderless prototyping
+- **Category:** Tool (solderless breadboard) — **bench, not on-aircraft**
+- **Status:** ✅ owned (1 of each · ordered 1 Apr 2026)
+- **Used for:** **solderless bench prototyping** — test Pico/FC/sensor circuits before soldering —
+  general
+- **Variant / qty:** "Kit" = **1× 830-point (MB-102) + 1× 400-point (mini)**
+- **Price:** $4.37 → **≈ €3.79** (@ ~€0.8664/$, 1 Apr 2026)
+- **Source:** AliExpress — MB-102 breadboard kit (400 + 830 points)
+
+| Spec | Value |
+|------|-------|
+| Boards | 830-point (MB-102) + 400-point (mini) |
+| Pitch | 2.54 mm |
+| 830-pt size | 163 × 54 mm |
+| Rails | ± power buses both sides |
+| Type | solderless, reusable |
+
+- **Notes:** bench tool for breadboarding the Pico + sensors/dividers before committing to solder —
+  e.g. prototype the NTC/mux + ACS712 divider circuits and the LED-driver/MOSFET wiring. Pairs with
+  the [Dupont jumpers](#dupont-jumper-wires-15-cm-m-m--m-f--f-f-240--prototyping--signal-wiring) and
+  the starter kit. Not flown.

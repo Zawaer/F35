@@ -168,8 +168,29 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 | Brand / model | NoEnName_Null · LT602 |
 
 - **Notes:** 2.1 mm bore → suits a **2 mm axle** (CF rod or wire). Standard RC-plane wheel, no O-ring
-  tricks. This pair is for the **front gear**; remaining wheels (main gear) ordered later. Same listing
-  scales 1.0″–5.0″ if a different size is needed.
+  tricks. **Planned as the F35B nose-gear wheel** (currently in cart). For the trainer / a larger
+  main-gear option see the 45/50 mm PU wheels below. Same listing scales 1.0″–5.0″.
+
+---
+
+### PU wheels 1.75″ (45 mm) + 2.0″ (50 mm) — trainer main gear (F35B backup)
+- **Category:** Hardware (landing-gear wheels)
+- **Status:** ✅ owned (2 + 2 pcs · ordered ~1 Apr 2026, due 27 Apr 2026)
+- **Used for:** **RC trainer plane** main gear (two sizes to trial); **possible F35B main-gear backup**
+  if 38 mm proves too small — [Materials & Airframe → landing gear](../docs/09-materials-airframe.md#landing-gear-hardware)
+- **Variant / qty:** 1.75″/45 mm ×2 + 2.0″/50 mm ×2 (same LT602 listing, two sizes)
+- **Price:** $5.36 → **≈ €4.64** ($2.54 + $2.82; @ ~€0.8664/$)
+- **Source:** AliExpress — PU rubber wheel LT602 (1.75″ + 2.0″)
+
+| Size | Ø | Thick | Bore | Weight |
+|------|-----|-------|------|--------|
+| 1.75″ | 43–45 mm | 15 mm | **2.1 mm** | ~5 g |
+| 2.0″ | 50 mm | 19 mm | **2.6 mm** | ~7 g |
+
+- **Notes:** PU rubber, plastic hub — same family as the 38 mm nose-gear wheel above. Bought for the
+  **Phase 1 trainer**'s main gear (trial both sizes); could serve as an **F35B main-gear** option if
+  the 38 mm is too small. ⚠️ Bores differ: 1.75″ = **2.1 mm** (2 mm axle), 2.0″ = **2.6 mm** (needs a
+  thicker axle / bushing).
 
 ---
 
