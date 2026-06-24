@@ -20,10 +20,11 @@
 
 MG996R are deliberately **avoided** in the final build — too heavy (55 g each).
 
-> ⚠️ **Small servo voltage:** the M005 (2g) and S002 (4.3g) door servos run on **3.7–5 V** and will
-> burn out on the 6 V servo rail. Power them through an **LM2596 buck set to 4.0 V** (a safe 0.2 V
+> ⚠️ **Small servo voltage:** the M005 (2g, **max 4.2 V**) and S002 (4.3g, max 5.0 V) door servos
+> will **burn out on the 6 V servo rail**. Power them through an **LM2596 buck set to 4.0 V** (safely
 > below the M005's 4.2 V max). One LM2596 (max 3 A; ~85–92% efficient) easily covers all 6 small
-> servos (~1.8 A stall, ~0.3 A average). See [Power System](02-power-system.md).
+> servos (~1.8 A stall, ~0.3 A average). See [Power System](02-power-system.md). (The M005 listing's
+> "4.8–6 V" text is a mislabel — the 3.7–4.2 V spec is correct for a 2 g micro servo.)
 
 ## Final servo assignment
 

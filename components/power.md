@@ -196,6 +196,30 @@ Build context: [Power System](../docs/02-power-system.md).
   ⚠️ Charger output is **XT60**, but the **main 5000 mAh pack is EC5** → need an **EC5→XT60 charge
   adapter**. Both packs use JST-XH balance leads (match). Reads pack IR while charging. Borrowed.
 
+### Racepow S21700FJ 4000mAh 30A — transmitter cells (Li-ion 21700)
+- **Category:** Li-ion cell (21700) — **transmitter power, not aircraft**
+- **Status:** ✅ owned (2 cells)
+- **Used for:** powering the [Jumper T14 transmitter](flight-control.md) (2× 21700 in series)
+- **Variant / qty:** 2 cells
+- **Price:** €4.09 each (€8.18 for 2)
+- **Source:** Rotorama
+
+| Spec | Value |
+|------|-------|
+| Chemistry / size | Li-ion, 21700 |
+| Capacity | 4000 mAh |
+| Dimensions | 21.3 × 70.4 mm |
+| Weight | 68 g each |
+| Voltage | 4.2 V max / 2.5 V min (~3.6–3.7 V nominal) |
+| Discharge | up to 30 A |
+| Charge | 0.2–1C |
+| Energy density | 217 Wh/kg |
+| Protection | none (unprotected cells) |
+
+- **Notes:** these power the **transmitter**, not the aircraft — listed here only to keep all cells
+  together. Charged in-radio via the T14's USB-C (10 W). ⚠️ Unprotected cells — rely on the radio's
+  charge management; don't over-discharge below 2.5 V.
+
 ---
 
 ## Still to card (paste product pages)

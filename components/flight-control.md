@@ -109,3 +109,85 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 
 - **Notes:** 12-pin chosen over 8-pin for thinner bezels; unused touch pins left floating.
   Needs a 12P 0.5 mm ZIF FFC→2.54 mm adapter board.
+
+---
+
+### Jumper T14 CNC Hall ELRS — RC transmitter (ground side)
+- **Category:** RC transmitter (radio) — ground equipment, not on-aircraft
+- **Status:** ✅ owned
+- **Used for:** piloting; its built-in **ELRS 2.4 GHz** pairs with the on-aircraft ELRS receiver →
+  FC **USART6/CRSF** ([Flight Controller](../docs/03-flight-controller.md))
+- **Variant / qty:** CNC Hall gimbals · 1
+- **Price:** €123.09 (+ 2× 21700 cells €8.18, +€14.49 ship → €145.76 order)
+- **Source:** Rotorama (rotorama.com)
+- **Link:** Rotorama — Jumper T14 CNC Hall ELRS
+
+| Spec | Value |
+|------|-------|
+| Weight | 471 g (without cells) |
+| Dimensions | 185 × 175 × 79 mm |
+| Firmware | EdgeTX |
+| RF module | built-in ELRS 2.4 GHz, **up to 1000 mW**, refresh up to 1 kHz, active-cooled |
+| Gimbals | Hall-effect CNC metal |
+| Controls | 4 switches, 2 buttons, 2 pots, trims |
+| Display | 2.42" OLED |
+| Power | 2× 21700 Li-ion (not included); USB-C charging, 10 W |
+| Storage | integrated memory (no SD card) |
+| Expansion | JR-bay external module shaft |
+| Includes | TX, USB-C cable, case |
+
+- **Notes:** the airframe needs a matching **ELRS 2.4 GHz receiver** (on the buy list) to bind to
+  this TX → CRSF into the FC's USART6. EdgeTX = full mixes/telemetry for the VTOL modes. Comparable
+  in size to a RadioMaster Boxer / TBS Mambo.
+
+---
+
+### Jumper T14/T15 modified rocker (switch mod) — extra TX switches
+- **Category:** Transmitter accessory (ground side)
+- **Status:** ✅ owned
+- **Used for:** add **switch controls** to the T14 for the F-35B's many modes (VTOL transition,
+  gear, lights, afterburner, etc.) — pairs with the [Jumper T14](#jumper-t14-cnc-hall-elrs--rc-transmitter-ground-side)
+- **Variant / qty:** 1 set (2 switches)
+- **Price:** €6.51 (+€1.32 ship)
+- **Source:** Banggood
+
+| Spec | Value |
+|------|-------|
+| Type | 2× 2-position toggle switches (replace the top momentary button + 2-pos button) |
+| Fits | Jumper T14 / T15 |
+| Weight / dims | — *(minor; not specified)* |
+
+- **Notes:** swaps the two top push-buttons for proper 2-position toggles → more latching switch
+  channels in EdgeTX, useful for assigning the F-35B's flight-mode/gear/lighting toggles. Cosmetic/
+  ergonomic mod; no effect on the airframe.
+
+---
+
+### RadioMaster RP3 — ELRS 2.4 GHz diversity receiver (on-aircraft)
+- **Category:** RC receiver (ExpressLRS, diversity)
+- **Status:** ✅ owned
+- **Used for:** binds to the [Jumper T14](#jumper-t14-cnc-hall-elrs--rc-transmitter-ground-side); **CRSF
+  → FC USART6** ([Flight Controller](../docs/03-flight-controller.md))
+- **Variant / qty:** RP3 diversity · 1
+- **Price:** €22.03 (+€1.38 ship)
+- **Source:** Banggood
+
+| Spec | Value |
+|------|-------|
+| Weight | 4.6 g (incl. both antennas) |
+| Dimensions | 22 × 13 × 4 mm |
+| MCU / RF | ESP8285 / SX1280 (Skyworks SE2431L LNA+PA) |
+| Band | 2.4 GHz (2400–2480 MHz) |
+| Diversity | dual antenna (2× 65 mm UFL T antenna) + switching |
+| Telemetry power | up to 100 mW |
+| Refresh rate | 25 Hz … 500 Hz / 1000 Hz (F1000) |
+| Working voltage | 5 V |
+| Bus interface | **CRSF** |
+| Firmware | ExpressLRS v3.0 preinstalled (target "RadioMaster RP3 Diversity 2400 RX") |
+| Includes | RX, 2× 65 mm UFL T antenna, manual |
+
+- **Notes:** this is the receiver the original project plan named ("RP3 → F405 UART6"). Wire **CRSF
+  to USART6** (TX6/RX6 pads), power from the FC 5 V pad (PDB Flight BEC 5.2 V is fine). Bind via
+  **bind phrase**; WiFi firmware updates (no bind plug). Diversity + LNA/PA = good link reliability
+  for the VTOL. Must match the TX's ELRS band/version (both 2.4 GHz). The "ELRS receiver" is now
+  owned (no longer a buy-list item).
