@@ -58,13 +58,21 @@ Voltage matters more than current here — you must land before a pack is over-d
 | **Main** 5000 mAh | **resistor divider → Pico ADC** (isolated from the FC; **100 kΩ / 10 kΩ** from the kit → 25.2 V ≈ 2.3 V; or 100 k/15 k for fuller range) |
 | **Roll-post** 850 mAh | **resistor divider → Pico ADC** (3S; **10 kΩ / 2 kΩ** from the kit → 12.6 V ≈ 2.1 V) |
 
-**Wiring:** `Batt+ → R_top → [ADC pin] → R_bottom → GND`. Ground is **already common** (each ESC's
-signal-ground lead ties its pack − to the FC/Pico ground), so no extra ground wire is needed. Optional
-**0.1 µF (kit "104") from ADC→GND** to filter noise. **Firmware scale:** V_batt = V_adc ×
-(R_top+R_bottom)/R_bottom → **×11** for 100 k/10 k, **×6** for 10 k/2 k; calibrate against a multimeter
-(kit resistors are 5 %, so a one-time cal gets you accurate). The 100 k top draws only ~0.2 mA — fine
-in flight, just unplug for long storage. ACS712 reads **current only** (no voltage). Main/lift EDF
-*current* stays unmonitored until a Matek 150A-class sensor is added.
+**Wiring:** `Batt+ → R_top → [ADC pin] → R_bottom → GND`.
+
+- **Where to tap `Batt+`:** the **exposed power-connector solder joint**, same as the 18 AWG avionics
+  tap — the **main ESC's EC5 joint** for the main pack, a **LittleBee XT60H power-input pad** for the
+  850 mAh. **Never tap the balance leads** — they're thin (~22 AWG) and reserved for charging/balancing;
+  leave them alone. (The lift pack needs no divider — its voltage already comes through the PDB.)
+- **Ground** is already common (each ESC's signal-ground lead ties its pack − to the FC/Pico ground),
+  so `R_bottom` goes to any nearby system-ground point — no extra wire run back to the battery.
+- Optional **0.1 µF (kit "104") from ADC→GND** to filter noise.
+- **Firmware scale:** V_batt = V_adc × (R_top+R_bottom)/R_bottom → **×11** for 100 k/10 k, **×6** for
+  10 k/2 k; calibrate against a multimeter (kit resistors are 5 %, so a one-time cal gets you accurate).
+- The 100 k top draws only ~0.2 mA — fine in flight, just unplug for long storage.
+
+ACS712 reads **current only** (no voltage). Main/lift EDF *current* stays unmonitored until a Matek
+150A-class sensor is added.
 
 ## Temperature sensing (NTC 100K + multiplexer)
 

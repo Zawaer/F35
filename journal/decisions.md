@@ -1,0 +1,44 @@
+# Decision log
+
+A terse, **append-only** record of decisions that *changed* — what we were going to do, what we
+do now, and why. The `docs/` KB only shows the *current* answer; this file remembers the path
+there, so future-me doesn't re-litigate a settled question or forget why something is the way it is.
+
+**How to use:** add a row when you reverse or settle a decision. Keep it one line. Exact dates live
+in git history (`git log`); the *Ref* column points to the doc that holds the full reasoning.
+
+## Reversals & settled trade-offs
+
+| Decision | Was / considered | Now | Why | Ref |
+|----------|------------------|-----|-----|-----|
+| **Temp sensing** | DS18B20 digital (1-Wire) | NTC 100K + CD74HC4067 mux (shared 47 kΩ) | NTC is faster-responding and finer-grained, cheaper, and 16 ch ride one ADC pin; DS18B20 conversion latency/cost wasn't worth it | [07](../docs/07-sensors-monitoring.md) |
+| **Project phases** | 3 phases (Trainer → single-EDF jet → VTOL F-35B) | 2 phases (Trainer → F-35B) | The single-EDF jet was a redundant stepping-stone; dropped to focus budget/effort on the F-35B | [01](../docs/01-project-overview.md) |
+| **Lift battery** | 2700 mAh 6S (lighter nose) | 2nd 5000 mAh 6S (matched pair) | Current margin + longer hover + matched charging/spares; accepts +260 g forward CG (shift main pack rearward). Lighter fallbacks kept | [02](../docs/02-power-system.md) |
+| **Servo BEC rating** | Feared 4 A → considered a UBEC split | Confirmed **8 A cont / 14 A peak** | Product *text* said 4 A, but the manual + module images + RaceDayQuads listing all confirm 8 A; rail isn't marginal → no external UBEC ordered | [02](../docs/02-power-system.md#servo-rail-headroom) |
+| **Roll-post battery** | Per-side: one 850 mAh per roll post | Single 3S 850 mAh feeds **both** | A dead pack in a split = uncommanded asymmetric roll; one shared pack fails *symmetric* (both posts die together) — safer, and one 70C pack has ample current | [06](../docs/06-propulsion.md#roll-control) |
+| **Roll-post ESCs** | The 20 A ESCs bundled with the 30 mm EDFs | 2× FVT LittleBee 20A (BLHeli_S/DSHOT) | Better firmware/DShot, known-good. No BEC → cut the red wire, signal+GND to FC | [06](../docs/06-propulsion.md) |
+| **Wingtip roll control** | Bleed-air roll posts (and a 40 mm EDF option) | Dedicated **30 mm EDFs** (inrunner) | Bleed air rejected as impractical; 30 mm over 40 mm (40 mm = more thrust/weight/cost than the roll task needs) | [06](../docs/06-propulsion.md) |
+| **Main/lift EDF current sensing** | Matek 150A sensor on each battery lead → FC ADC | None in v1 (ACS712 20A only on roll posts; PDB reports pack A) | 89 A / 40 A exceed the ACS712 20A range; defer a 150A-class sensor; the PDB already logs pack current/voltage | [07](../docs/07-sensors-monitoring.md) |
+| **3BSM actuation** | Multiple servos (continuous-360 SG90 + separate yaw) | **One** Feetech STS3032 smart servo | Serial-bus, >180° range a PWM servo can't do, sections gear-linked → saves ~€35 and a servo | [05](../docs/05-servos.md) |
+| **3BSM bearing** | Caged 6805ZZ thin-section bearings | 4 mm loose ball race | Smoother rotation, cheaper, not purchased; the loose race works at the junctions | [06](../docs/06-propulsion.md) |
+| **Secondary MCU** | Owned ESP32-S3 boards | WeAct RP2040 (+ Pico spare) | Cleaner ADC for NTC/ACS712, jitter-free PIO servo/LED timing, no 2.4 GHz clash with the ELRS RX; static cockpit dashboard is within headroom | [04](../docs/04-raspberry-pi-pico.md) |
+| **Micro servos** | M005 2 g / S002 4.3 g (lightest) | Standard SG90 / MG90S-class | M005/S002 need a 4.0 V rail — incompatible with the 5/6 V servo rail, not worth the complication | [05](../docs/05-servos.md) |
+| **Battery voltage tap** | Solder to the balance lead | Tap the exposed **ESC-side power joint** (never balance leads) | Balance leads are thin and needed for charging — don't disturb them | [07](../docs/07-sensors-monitoring.md#battery-voltage-monitoring) |
+| **Smoke stopper** | Planned for F-35B first power-up | Dropped for the F-35B (kept as bench gear) | Avionics are simple; the tool is XT30/XT60, doesn't fit the EC5 packs | [02](../docs/02-power-system.md) |
+| **Airframe build** | Foam board (as on the trainer) | 3D-printed | The F-35B is printed, not foam | [09](../docs/09-materials-airframe.md) |
+| **Retracts** | COTS electric retract units | Custom 3D-printed, servo-driven | Better fit/cost/control for a scratch airframe | [06](../docs/06-propulsion.md) |
+| **CF spar** | 10×6.1 mm tube / local-aluminium options | Joined-tube CF approach | Earlier options dropped for the joined-tube method | [09](../docs/09-materials-airframe.md) |
+| **Doc prices** | USD + EUR conversions | EUR only | Single currency, less clutter | — |
+
+## Notable picks (settled, not reversals)
+
+- **Hover control = 4-motor quadcopter mix** (ArduPilot quadplane) over bleed-air schemes.
+- **Afterburner LED = throttle-reactive** (brightness scales with throttle).
+- **COB strip = exterior formation lights** (green, diffused through frosted PP 0.5 mm); cockpit
+  glow was considered and dropped (not a priority, not scale-realistic).
+- **Strobe = hard on/off, both wingtips synced** — full brightness, 0.2 s on / 0.8 s off (~1 Hz).
+- **Cockpit screen = ST7789, 12-pin FFC** over 8-pin (thinner bezel).
+- **Final paint colour = pending** — decided after the first airframe flies.
+
+## Related
+[Project overview](../docs/01-project-overview.md) · [devlog](devlog.md)

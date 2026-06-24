@@ -6,8 +6,9 @@ choices, pin mappings, wiring, power architecture, and the reasoning behind ever
 
 > **How to use this repo:** each doc in [`docs/`](docs/) covers one subsystem and opens with a
 > short **"current decision"** callout, followed by the supporting analysis. When a decision
-> changes, update the doc — keep it a reference, not a history log. Raw chat exports that
-> seeded this KB live in [`archive/`](archive/).
+> changes, update the doc — keep it a reference, not a history log. The *history* — why decisions
+> changed, plus build progress — lives in [`journal/`](journal/) ([decision log](journal/decisions.md)
+> + [devlog](journal/devlog.md)). Raw chat exports that seeded this KB live in [`archive/`](archive/).
 
 ## Project phases
 
