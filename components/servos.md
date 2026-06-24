@@ -183,7 +183,7 @@ Build context: [Servos](../docs/05-servos.md).
 
 - **Notes:** strong **12 kg·cm** digital servo for the **flaperons**. ⚠️ **High stall current
   (~2.5 A @ 6 V)** — factor into servo-rail BEC headroom for the worst case (see
-  [Power → servo rail](../docs/02-power-system.md#servo-rail-headroom--the-marginal-case)). Runs on
+  [Power → servo rail](../docs/02-power-system.md#servo-rail-headroom)). Runs on
   the 6 V rail. 25T spline horns + brass bushings included. Standard-size body (42 mm) — much
   heavier/larger than the SG90/MG90S micros. **Measured 28 g** (the listing's 21 g was low — the
   earlier "28 g" stub estimate was right).

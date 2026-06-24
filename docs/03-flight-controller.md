@@ -81,11 +81,11 @@ thermistors (NTC + multiplexer lives on the Pico).
 | TVS surge suppression | included |
 | Flight BEC | 5.2V ±0.1, 4A sustained, 5A peak → FC, ELRS, GPS, Pico |
 | VTX/CAM BEC | 9V ±0.1, 2A sustained, 3A peak; switchable 5/9/12V → LED drivers |
-| Servo BEC | 5V ±0.1, 4A sustained, **14A peak**; adjustable 5/6/7.2V → servos |
+| Servo BEC | 5V ±0.1, **8A sustained, 14A peak**; adjustable 5/6/7.2V → servos |
 
 All three BECs run **simultaneously and independently** (like a PC PSU's 3.3/5/12V rails). See
 [Power System — BEC rails](02-power-system.md#bec-rails-from-the-corewing-pdb) for the load budget
-and the marginal servo-rail analysis.
+and the servo-rail analysis (servo BEC **resolved at 8 A continuous**).
 
 ## Wireless expansion board (PRO)
 

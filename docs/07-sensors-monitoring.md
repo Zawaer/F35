@@ -80,7 +80,7 @@ negligible vs 47 kΩ, but settle ~50 µs after switching channels before samplin
 
 ### What to monitor
 
-**Finalised plan: 12 NTC channels** (of the mux's 16 — 4 spare):
+**Finalised plan: 13 NTC channels** (of the mux's 16 — 3 spare):
 
 | # | Channel | Why |
 |---|---------|-----|
@@ -93,18 +93,23 @@ negligible vs 47 kΩ, but settle ~50 µs after switching channels before samplin
 | 7 | Roll-post LiPo (850 mAh) | |
 | 8 | Main EDF housing (near motor) | motor-area heat-soak proxy |
 | 9 | Lift EDF housing (near motor) | |
-| 10 | Servo-rail BEC / PDB | warms under flaperon load |
-| 11 | FC stack | overall electronics temp |
-| 12 | 10W landing-light LED heatsink | |
+| 10 | Roll-post EDF housing L | enclosed in wingtip — limited airflow |
+| 11 | Roll-post EDF housing R | |
+| 12 | Servo-rail BEC | warms under flaperon load |
+| 13 | 10W landing-light LED heatsink | |
 
-**Not monitored:** EDF motors directly (spinning, mid-airflow — rely on ESC thermal protection);
-3BSM nozzle (the main-EDF housing sensor covers that hot zone); nav lights + their drivers (low
-priority). **Spare 4 channels** could later add main-EDF exhaust-air, electronics-bay ambient, or a
-lift-fan duct-wall sensor.
+Plus the **WeAct/Pico RP2040 self-monitors** via its **built-in on-chip temperature sensor** (read in
+firmware — no NTC channel needed).
+
+**Not monitored (deliberately):** EDF motors directly (spinning outrunners — the ESC thermal cutoff is
+the real net); 3BSM nozzle (the main-EDF housing covers that zone); **the FC stack** (the F405 + IMU
+already self-report temp); cockpit ST7789 screen + LED driver boards (run cool — the 10W LED *heatsink*
+is the only hot LED part); nav lights; and — **skipped for now** — a dedicated **PDB-board**,
+**bay-ambient**, or **EDF exhaust-air** sensor. **3 mux channels left spare.**
 
 ⚠️ ESC / heatsink beads must be **bonded to the case** (thermal paste + Kapton). "EDF housing" = the
 **static duct/mount** — the outrunner can/bell spins, so you can't contact the motor itself. NTC range
-−40 to +110 °C suits all of these; all 12 ride one mux → one Pico ADC pin.
+−40 to +110 °C suits all of these; all 13 ride one mux → one Pico ADC pin.
 
 The ESC's built-in thermal protection remains the real safety net; NTC logging is for trend data.
 

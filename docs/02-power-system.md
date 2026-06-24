@@ -68,36 +68,37 @@ One battery tap → PDB → three independent, simultaneous regulated rails:
 
 ```
 Rail 1: Flight BEC   5.2V  4A (peak 5A)  → FC + ELRS + Pico        (~1A)
-Rail 2: Servo BEC    6V    4A (peak 14A) → all servos + STS3032
+Rail 2: Servo BEC    6V    8A (peak 14A) → all servos + STS3032
 Rail 3: VTX/CAM BEC  9-12V 2A (peak 3A)  → LED drivers
 ```
 
 Total realistic BEC load ≈ **25 W**, i.e. only **~1.1 A** drawn from the 22.2 V battery —
 negligible against the pack's ~300 A capability. Voltage sag from the tap is ~0.057 V — immeasurable.
 
-### Servo rail headroom — the marginal case
+### Servo rail headroom
 
-> ⚠️ **May not be marginal at all:** the V2 board's product images label the Servo BEC
-> **"Duration 8 A, peak 14 A"** (vs the spec text's 4 A sustained). If it's genuinely **8 A
-> sustained**, the cruise load sits comfortably within rating and the concern below is moot. Verify
-> on the actual board — see the [FC component card](../components/flight-control.md). The analysis
-> below assumes the conservative 4 A figure.
+> ✅ **Resolved: 8 A continuous.** The product-page *text* said 4 A, but its images said 8 A — and the
+> **official manual + RaceDayQuads listing confirm 5 V (adj 5/6/7.2 V) @ 8 A continuous, 14 A peak.**
+> The rail is **not marginal**; no UBEC split is needed.
 
-The 6V servo rail's **4A sustained** rating is marginal for the full servo count:
+The 6V servo rail at **8A sustained / 14A peak** comfortably covers the servo count:
 
-| Phase | Servo current | vs 4A sustained | vs 14A peak |
+| Phase | Servo current | vs 8A sustained | vs 14A peak |
 |-------|--------------|-----------------|-------------|
-| Hover | ~2.1 A | ✅ fine | ✅ |
-| Cruise | ~3.8–4.1 A | ⚠️ marginal | ✅ |
-| Transition (2–3 s) | ~8–10 A | ❌ over | ✅ covered |
-| All servos stalled | ~11 A | ❌ | ✅ briefly |
+| Hover | ~2.1 A | ✅ | ✅ |
+| Cruise | ~3.8–4.1 A | ✅ | ✅ |
+| Transition (2–3 s) | ~8–10 A | ✅ brief | ✅ |
+| All servos stalled | ~11 A | brief | ✅ |
 
-**Decision:** start on the PDB servo rail alone and fly conservatively — the 14A peak covers
-transients and the FC sits on a *separate* 5.2V rail, so a servo-rail sag can't reboot the FC.
-**Mitigation if brownout occurs** (FC reboot, servo twitch): add a **Hobbywing 3A UBEC** (~€1.68)
-and *split the load* — PDB 6V rail drives the heavy flight-surface servos, UBEC drives the lighter
-VTOL servos + Pico secondary servos. **Never join two BEC outputs onto one wire.** A 3A UBEC alone
-is not enough (load ~3.8A); if going fully external instead, size a **10A UBEC**.
+**Decision:** run all servos off the PDB 6V rail directly — 8 A sustained covers cruise with margin,
+14 A peak covers transition/stall transients, and the FC sits on a *separate* 5.2 V rail so a servo
+sag can't reboot it. **No UBEC split — no external UBEC will be ordered.** (Only a future servo
+upgrade pushing sustained load past ~8 A would call for one — never join two BEC outputs onto one wire.)
+
+> 🔧 **Still worth self-verifying the 8 A** first-hand: read the **servo-BEC regulator chip's part
+> number** on the PDB (the IC by the SERVO BEC inductor) and check its datasheet, **and/or bench-load
+> the 6 V rail to ~8 A** for a few minutes and watch for voltage sag / overheat. Belt-and-braces — the
+> 8 A is already confirmed by the manual + retailer listings.
 
 ## System tap wiring
 
@@ -149,8 +150,9 @@ telemetry (PDB VBAT divider → FC).
 ## Open questions / TODO
 
 - ⚠️ Confirm final CG once component placement is fixed; may need nose ballast or battery shuffle.
-- ⚠️ Validate servo-rail behaviour in a full ground test before deciding whether the 3A UBEC split
-  is needed.
+- Servo rail **resolved: 8 A continuous** — no UBEC split, **no external UBEC to order**. Still nice
+  to self-verify first-hand: read the PDB servo-BEC regulator chip number and/or bench-load the 6 V
+  rail to ~8 A.
 - **Lift battery decided: a 2nd 5000 mAh pack** (matched pair) for current margin + hover time, at a
   +260 g forward CG cost. Fallbacks if CG/weight don't work out: **2700 mAh lift + 5000 mAh main**
   (the old plan, lighter front), or **2× 2700 mAh** (lightest, shortest flight).

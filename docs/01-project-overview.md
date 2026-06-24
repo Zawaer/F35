@@ -53,7 +53,7 @@ These are the genuinely unsolved / high-risk items flagged during design:
 | 3BSM | Reliable 3-bearing swivel module that vectors main EDF and survives exhaust | [Propulsion](06-propulsion.md) |
 | Roll control | Confirmed: small wingtip motors, **not** bleed air | [Propulsion](06-propulsion.md#roll-control) |
 | Landing gear | Custom 3D-printed retracts with over-centre lock + 90° wheel twist (no COTS retracts) | [Servos](05-servos.md) |
-| Servo power | PDB 6V rail marginal at sustained cruise; split load with a 3A UBEC as mitigation | [Power](02-power-system.md) |
+| Servo power | PDB 6V servo BEC = **8 A continuous** (confirmed) — ample, no UBEC split needed | [Power](02-power-system.md) |
 
 ### CG: the central challenge
 

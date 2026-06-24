@@ -11,7 +11,7 @@ Consolidated power and signal wiring for the Phase 2 F-35B. Source detail lives 
    ├── 10AWG ──────────────► ESC 1 (Hobbywing 100A) ──► Main EDF (~89A)
    └── 18AWG tap (EC5 joint) ─► CoreWing PDB input
                                   ├── Flight BEC  5.2V/4A ─► F405 + ELRS + Pico
-                                  ├── Servo BEC   6V/4A-14A ─► all servos + STS3032
+                                  ├── Servo BEC   6V/8A-14A ─► all servos + STS3032
                                   └── VTX/CAM BEC 12V/2A   ─► LED drivers
 
 [6S 5000mAh lift]
@@ -22,9 +22,9 @@ Current sensors:
    Main/lift EDF current not logged in v1 (>20A); Matek 150A optional, buy-later if needed
 ```
 
-No external buck converters or standalone BECs — the PDB supplies all three rails. If the servo
-rail browns out, add a Hobbywing 3A UBEC fed from the battery tap and **split** the servo load
-(never join two BEC outputs). See [Power — servo rail](02-power-system.md#servo-rail-headroom--the-marginal-case).
+No external buck converters or standalone BECs — the PDB supplies all three rails. The 6V servo BEC
+is **8 A continuous / 14 A peak** (confirmed) — ample for all servos, **no UBEC split needed**. See
+[Power — servo rail](02-power-system.md#servo-rail-headroom).
 
 ### Single-battery alternative (if ever consolidated)
 

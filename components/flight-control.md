@@ -17,7 +17,7 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 
 | Spec | Value |
 |------|-------|
-| Weight | **40 g** (stack) |
+| Weight | **40 g** (full stack, **incl. the wireless/USB expansion board**) |
 | Dimensions | **52 × 32 mm**, ~17–18 mm stack height |
 | MCU | STM32F405, 168 MHz, 1 MB flash |
 | IMU | ICM-42688-P (BMI270 optional) |
@@ -31,24 +31,15 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 | PDB current sense | 90 A cont, 125 A peak |
 | Flight BEC | 5.2 V ±0.1, 4 A (5 A peak) |
 | VTX/CAM BEC | 9 V ±0.1, 2 A (3 A peak); switchable 5/9/12 V |
-| Servo BEC | 5/6/7.2 V adjustable, **14 A peak** — sustained ⚠️ see below |
+| Servo BEC | 5/6/7.2 V adjustable, **8 A sustained, 14 A peak** |
 | Firmware | INAV (factory) / ArduPilot (used here) |
 
-- **⚠️ Servo BEC sustained rating mismatch:** the spec text says **4 A sustained**, but the V2
-  product images ("61% super enhanced") label the Servo BEC **"Duration 8 A, peak 14 A"**. If it's
-  truly **8 A sustained**, the servo-rail "marginal at ~4 A cruise" worry in
-  [Power](../docs/02-power-system.md#servo-rail-headroom--the-marginal-case) and
-  [Servos](../docs/05-servos.md) **goes away**. Until confirmed, docs keep the conservative 4 A.
-  **How to verify (ranked):**
-  1. **Read the servo-BEC regulator IC** (chip near "SERVO BEC" on the PDB) — zoom a photo, read the
-     part number, check its datasheet continuous-current rating. The silicon is the hard limit; settles
-     it for free. (A ~5–6 A buck IC → 8 A is marketing; a 10 A+ part → 8 A plausible.)
-  2. **Bench load test** the 6 V rail: hold **5 A → 6 A → 8 A** for ~5–10 min each via an electronic
-     DC load / power resistors / ganged servos; watch rail voltage stays ~6 V and the regulator temp
-     (IR/thermistor). Holds 8 A near 6 V w/o cutoff → real 8 A; sags/cuts early → ~4 A. (The rail's
-     ACS712 reads the current.)
-  3. **Official V2 manual / ask CoreWing** — the V1 spec text may be stale; the "61% enhanced" wording
-     implies a V2 BEC upgrade.
+- **✅ Servo BEC = 8 A continuous (confirmed).** The product-page *text* said 4 A but its images said
+  8 A; the **official manual + RaceDayQuads listing** confirm **5 V (adj 5/6/7.2 V) @ 8 A continuous,
+  14 A peak**. So the servo rail is **not marginal** — no UBEC split, and **no external UBEC will be
+  ordered** (see [Power → servo rail](../docs/02-power-system.md#servo-rail-headroom)). Still worth
+  confirming first-hand: read the PDB servo-BEC regulator chip's part number (IC by the SERVO BEC
+  inductor) and/or bench-load the 6 V rail to ~8 A.
 - **Notes:** "formerly SpeedyBee F405 WING APP". Three boards in a stack (FC + PDB PLUS + wireless);
   PDB does all power, FC only signals. Wireless board: BLE / WiFi-AP / WiFi-STA. Current scale
   158 (INAV) / 64 A/V (ArduPilot). Ships with mounting hardware (M2×12 brass standoffs, M2×4 screws),
