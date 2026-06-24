@@ -8,7 +8,7 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 
 ### CoreWing F405 WING V2 — flight controller
 - **Category:** Flight controller stack (FC + PDB PLUS + wireless board)
-- **Status:** ✅ owned
+- **Status:** ✅ owned (ordered 9 Apr 2026)
 - **Used for:** main flight control — [Flight Controller](../docs/03-flight-controller.md)
 - **Variant:** ICM-42688-P IMU, pre-soldered needle + pre-soldered XT60 plug
 - **Price:** €66.88 (list €93.60) + €2.84 shipping
@@ -58,7 +58,7 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 
 ### Raspberry Pi Pico (RP2040) — secondary I/O controller
 - **Category:** Microcontroller board
-- **Status:** ✅ owned
+- **Status:** ✅ owned (had on hand — never ordered for this build)
 - **Used for:** PWM expansion, NTC temp mux, LEDs, cockpit display — [Pico](../docs/04-raspberry-pi-pico.md)
 - **Source / price:** —
 
@@ -81,7 +81,7 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 - **Used for:** expand Pico ADC for NTC thermistors (16 sensors on 1 ADC pin) — [Sensors](../docs/07-sensors-monitoring.md)
 - **Variant / qty:** module (HW-178 style) · 1
 - **Price:** €1.74
-- **Link:** https://www.aliexpress.com/item/1005008558127708.html?mp=1
+- **Link:** https://www.aliexpress.com/item/1005008558127708.html
 
 | Spec | Value |
 |------|-------|
@@ -107,7 +107,7 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 - **Used for:** cockpit screen — [Pico](../docs/04-raspberry-pi-pico.md#4-cockpit-tft-display)
 - **Variant / qty:** 1.47" 12-pin · 1
 - **Price:** €3.40
-- **Link:** https://www.aliexpress.com/item/1005011816140812.html?mp=1
+- **Link:** https://www.aliexpress.com/item/1005011816140812.html
 
 | Spec | Value |
 |------|-------|
@@ -153,7 +153,7 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 
 ### Jumper T14 CNC Hall ELRS — RC transmitter (ground side)
 - **Category:** RC transmitter (radio) — ground equipment, not on-aircraft
-- **Status:** ✅ owned
+- **Status:** ✅ owned (ordered 10 Nov 2025)
 - **Used for:** piloting; its built-in **ELRS 2.4 GHz** pairs with the on-aircraft ELRS receiver →
   FC **USART6/CRSF** ([Flight Controller](../docs/03-flight-controller.md))
 - **Variant / qty:** CNC Hall gimbals · 1
@@ -183,7 +183,7 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 
 ### Jumper T14/T15 modified rocker (switch mod) — extra TX switches
 - **Category:** Transmitter accessory (ground side)
-- **Status:** ✅ owned
+- **Status:** ✅ owned (ordered 9 Apr 2026)
 - **Used for:** add **switch controls** to the T14 for the F-35B's many modes (VTOL transition,
   gear, lights, afterburner, etc.) — pairs with the [Jumper T14](#jumper-t14-cnc-hall-elrs--rc-transmitter-ground-side)
 - **Variant / qty:** 1 set (2 switches)
@@ -204,7 +204,7 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 
 ### RadioMaster RP3 — ELRS 2.4 GHz diversity receiver (on-aircraft)
 - **Category:** RC receiver (ExpressLRS, diversity)
-- **Status:** ✅ owned
+- **Status:** ✅ owned (ordered 1 Apr 2026)
 - **Used for:** binds to the [Jumper T14](#jumper-t14-cnc-hall-elrs--rc-transmitter-ground-side); **CRSF
   → FC USART6** ([Flight Controller](../docs/03-flight-controller.md))
 - **Variant / qty:** RP3 diversity · 1
@@ -239,7 +239,7 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 - **Used for:** **divider/pull-up resistors, header pins, bench prototyping** across the build (e.g.
   the STS3032 10 kΩ UART resistor, ADC dividers, breadboarding) — general
 - **Variant / qty:** "Set" · 1 kit (~230 pcs)
-- **Price:** $3.34 → **≈ €2.89** (@ ~€0.8664/$, 1 Apr 2026); pack 53 g
+- **Price:** **€2.88** (pack 53 g)
 - **Source:** AliExpress — JYJD basic electronics starter kit
 
 **Contents:**
@@ -276,7 +276,7 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 - **Used for:** **header pins for the Pico, FC pads, the FFC adapter board, proto wiring** — snap to
   length
 - **Variant / qty:** 1×40P single-row male, breakable · 30 strips (multi-colour)
-- **Price:** $2.58 → **≈ €2.24** (@ ~€0.8664/$, 1 Apr 2026)
+- **Price:** **€2.23**
 - **Source:** AliExpress — 30× 1×40P 2.54 mm breakable male headers
 
 | Spec | Value |
@@ -300,7 +300,7 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 - **Used for:** **general prototyping & low-current signal hookups** — Pico/FC/sensor breadboarding,
   temporary links — general
 - **Variant / qty:** 15 cm · 3 kinds (M-M, M-F, F-F) · 120 ×2 = 240
-- **Price:** $9.08 → **≈ €7.87** ($4.54 × 2; @ ~€0.8664/$, 2 Apr 2026)
+- **Price:** **€7.87** (€3.94 × 2 packs)
 - **Source:** AliExpress — ENLINCA Dupont jumper wire kit (15 cm, 3 kinds)
 
 | Spec | Value |
@@ -325,7 +325,7 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 - **Used for:** **solderless bench prototyping** — test Pico/FC/sensor circuits before soldering —
   general
 - **Variant / qty:** "Kit" = **1× 830-point (MB-102) + 1× 400-point (mini)**
-- **Price:** $4.37 → **≈ €3.79** (@ ~€0.8664/$, 1 Apr 2026)
+- **Price:** **€3.77**
 - **Source:** AliExpress — MB-102 breadboard kit (400 + 830 points)
 
 | Spec | Value |

@@ -11,7 +11,7 @@ Build context: [Servos](../docs/05-servos.md).
 - **Used for:** **3BSM nozzle rotation** — one servo drives all gear-linked sections — [Servos](../docs/05-servos.md#3bsm-actuation--single-sts3032--gear-linked-sections)
 - **Variant / qty:** STS3032M · 1
 - **Price:** €34.62
-- **Link:** https://www.aliexpress.com/item/1005008704310197.html?mp=1
+- **Link:** https://www.aliexpress.com/item/1005008704310197.html
 
 | Spec | Value |
 |------|-------|
@@ -77,7 +77,7 @@ Build context: [Servos](../docs/05-servos.md).
 - **Status:** **300 mm ✅ owned** (ordered 2 Apr 2026) · **200 mm 🛒 in cart**
 - **Used for:** extending servo leads to the FC/Pico across the airframe — [Servos](../docs/05-servos.md)
 - **Variant / qty:** 200 mm ×10 + 300 mm ×10
-- **Price:** 200 mm €2.68 (in cart) · 300 mm $3.14 ≈ **€2.72** (owned, U-Angel-1988)
+- **Price:** 200 mm €2.68 (in cart) · 300 mm **€2.72** (owned, U-Angel-1988)
 - **Link:** [200 mm](https://www.aliexpress.com/item/1005007480672910.html) · 300 mm = U-Angel-1988 X501
 
 | Spec | Value |
@@ -100,7 +100,7 @@ Build context: [Servos](../docs/05-servos.md).
 - **Used for:** lightweight **doors / cosmetic actuation** — gear doors, lift-fan doors, roll-post
   inlet/outlet doors; candidate for the **3BSM yaw tilt** — [Servos](../docs/05-servos.md)
 - **Variant / qty:** 180° · 10 pcs
-- **Price:** $11.93 → **€10.34** (@ €0.8664/$, 2 Apr 2026; ~€1.03/servo)
+- **Price:** **€10.34** (~€1.03/servo)
 - **Source:** AliExpress — PYLRC SG90 (180°, 10 pcs)
 
 | Spec | Value |
@@ -131,7 +131,7 @@ Build context: [Servos](../docs/05-servos.md).
 - **Used for:** higher-load control vs SG90 — **rudders, 3BSM yaw tilt (±~15°), lift-fan vane box** —
   [Servos](../docs/05-servos.md)
 - **Variant / qty:** all-metal gear · 5 pcs × 2 = 10
-- **Price:** $22.68 → **≈ €19.65** ($11.34 / 5-pack; @ ~€0.8664/$, ~€1.97/servo)
+- **Price:** **€19.41** (2× 5-pack; ~€1.94/servo)
 - **Source:** AliExpress — Skyquist MG90S (all-metal, 5 pcs × 2)
 
 | Spec | Value |
@@ -162,7 +162,7 @@ Build context: [Servos](../docs/05-servos.md).
 - **Status:** ✅ owned (2 pcs · ordered 2 Apr 2026)
 - **Used for:** **flaperons** (high-torque primary control surfaces) — [Servos](../docs/05-servos.md)
 - **Variant / qty:** 12 kg metal gear · 2 pcs
-- **Price:** $18.18 → **€15.75** ($9.09 each; @ €0.8664/$, 2 Apr 2026)
+- **Price:** **€15.75** (~€7.88 each)
 - **Source:** AliExpress — NEEBRC NB-S011M (12 kg, model N1045); original listing gone
 
 | Spec | Value |
@@ -195,7 +195,7 @@ Build context: [Servos](../docs/05-servos.md).
 - **Status:** ✅ owned (2 pcs · ordered 1 Apr 2026)
 - **Used for:** **stabilators** (all-moving horizontal tail) — [Servos](../docs/05-servos.md)
 - **Variant / qty:** 21 g / 9 kg metal gear · 2 pcs
-- **Price:** $13.38 → **≈ €11.59** (~$6.69 each; @ ~€0.8664/$, ~1 Apr 2026)
+- **Price:** **€11.54** (~€5.77 each)
 - **Source:** AliExpress — NEEBRC NB-S007M (21 g / 9 kg)
 
 | Spec | Value |
@@ -217,7 +217,8 @@ Build context: [Servos](../docs/05-servos.md).
   [NB-S011M flaperon servo](#neebrc-nb-s011m-12-kg-metal-gear-servo-2--flaperons) (smaller body,
   20.7 g vs 21 g but 29.6 × 40 mm). Runs on the 6 V rail; ⚠️ stall ~1.8 A @ 6 V — include in the
   servo-rail BEC budget. Horns + accessories included. ⚠️ Listing speed figures look swapped (6 V is
-  normally faster than 4.8 V). Order line showed $6.99 ea but the total billed $13.38 (~$6.69 ea).
+  normally faster than 4.8 V). (Order-line unit price ran higher than the billed total — effective
+  ≈ €5.77 each.)
 
 ---
 
@@ -227,7 +228,7 @@ Build context: [Servos](../docs/05-servos.md).
 - **Used for:** driving **two servos from one FC/Pico channel** (paired doors / mirrored surfaces that
   move together) — [Servos](../docs/05-servos.md)
 - **Variant / qty:** 150 mm Y-lead · 3 pcs
-- **Price:** $3.07 → **≈ €2.66** (@ ~€0.8664/$, 7 Apr 2026; listed $3.29)
+- **Price:** **€2.63**
 - **Source:** AliExpress — RC Servo Y Extension Cable (150 mm, 3 pcs)
 
 | Spec | Value |
@@ -253,7 +254,7 @@ Build context: [Servos](../docs/05-servos.md).
 - **Used for:** **spare / general high-torque** standard servo (heavy control surfaces, bench/testing)
   — [Servos](../docs/05-servos.md)
 - **Variant / qty:** MG996R · 180° · **2× (HNX, 23 Mar 2026) + 2× (JYJD, 1 Apr 2026) = 4 pcs**
-- **Price:** €3.21 (HNX) + $6.68 ≈ €5.79 (JYJD) ≈ **€9.00 total** (~€2.25 each)
+- **Price:** €3.21 (HNX) + €5.76 (JYJD) ≈ **€8.97 total** (~€2.24 each)
 - **Source:** AliExpress — HORNAXYS/HNX + JYJD MG996R (180°)
 
 | Spec | Value |
@@ -284,7 +285,7 @@ Build context: [Servos](../docs/05-servos.md).
 - **Used for:** idea: **quick-disconnect for removable wings** — pass servo signal (+ low-current
   power) across a wing/fuselage joint that auto-separates when the wing comes off — [Servos](../docs/05-servos.md)
 - **Variant / qty:** 1 pair · 20 cm leads
-- **Price:** $3.25 → **≈ €2.82** (@ ~€0.8664/$, 7 Apr 2026)
+- **Price:** **€2.78**
 - **Source:** AliExpress — 9IMOD magnetic model cable (1 pair, 20 cm)
 
 | Spec | Value |
@@ -310,7 +311,7 @@ Build context: [Servos](../docs/05-servos.md).
 - **Used for:** **bench-testing PWM servos & ESCs** without a TX/RX — sweep / center / manual; drive
   an ESC throttle to spin a motor — [Servos](../docs/05-servos.md)
 - **Variant / qty:** 3CH digital tester + 4× AA battery holder · 1
-- **Price:** $2.38 → **≈ €2.06** (@ ~€0.8664/$, 1 Apr 2026)
+- **Price:** **€2.05**
 - **Source:** AliExpress — wishiot 3CH servo tester / CCPM consistency master
 
 | Spec | Value |
@@ -337,7 +338,7 @@ Build context: [Servos](../docs/05-servos.md).
 - **Used for:** clamping **thin pushrod wires to servo arms/horns** — trainer control linkages;
   possible F35B light/secondary surfaces — [Servos](../docs/05-servos.md)
 - **Variant / qty:** D1.3 mm hole · 20 pcs (2× 10)
-- **Price:** $4.27 → **≈ €3.70** ($2.29 × 2; @ ~€0.8664/$, 7 Apr 2026)
+- **Price:** **€3.65** (2 packs of 10)
 - **Source:** AliExpress — Realhawk pushrod connectors / linkage stoppers (D1.3 mm)
 
 | Spec | Value |
@@ -363,7 +364,7 @@ Build context: [Servos](../docs/05-servos.md).
 - **Used for:** **control-surface linkages** — horn on the surface, clevis on the pushrod (rudder,
   ailerons/flaperons, elevators/stabilators); trainer + usable on F35B — [Servos](../docs/05-servos.md)
 - **Variant / qty:** medium lock-on horn + 21 mm clevis · 20 sets
-- **Price:** $3.15 → **≈ €2.73** ($1.69 × 2; @ ~€0.8664/$, 7 Apr 2026)
+- **Price:** **€2.70** (2 packs of 10)
 - **Source:** AliExpress — medium lock-on nylon control horn + clevis set (21 mm)
 
 | Spec | Value |
@@ -389,7 +390,7 @@ Build context: [Servos](../docs/05-servos.md).
 - **Used for:** **control-surface pushrods** — Z-bend hooks into the servo arm, far end into a linkage
   stopper/clevis; trainer + F35B light surfaces — [Servos](../docs/05-servos.md)
 - **Variant / qty:** 1.2 mm dia × 200 mm, Z-type · 40 pcs
-- **Price:** $5.31 → **≈ €4.60** ($0.86 × 2 + shipping; @ ~€0.8664/$, 7 Apr 2026)
+- **Price:** **€4.54** (2 packs of 20 + shipping)
 - **Source:** AliExpress — Sparkhobby Z-type steering rod (1.2 mm × 200 mm)
 
 | Spec | Value |

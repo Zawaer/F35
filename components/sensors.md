@@ -71,7 +71,7 @@ Build context: [Sensors & Monitoring](../docs/07-sensors-monitoring.md).
 - **Used for:** **bench-measuring EDF/motor thrust** (verify the ~220 g roll-post / ~3300 g main-EDF
   figures) on a test stand — not flown
 - **Variant / qty:** 10 kg load cell + HX711 module · 1 set
-- **Price:** $3.80 → **≈ €3.29** (@ ~€0.8664/$, 2 Apr 2026)
+- **Price:** **€3.29**
 - **Source:** AliExpress — GUXINWAY 10 kg load cell + HX711
 
 | Spec | Value |

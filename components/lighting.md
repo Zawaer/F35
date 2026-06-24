@@ -7,7 +7,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ### 3W High-Power LED — Pure White 6500K — strobes (+ landing-light fallback)
 - **Category:** LED (bare high-power emitter)
-- **Status:** ✅ owned (1 set)
+- **Status:** 🛒 in cart (1 set)
 - **Used for:** white wingtip **strobes**; fallback **landing light** if the 10W LED is too
   big/hot/power-hungry or fails — [Lighting](../docs/08-lighting.md)
 - **Source / price:** AliExpress · €1.48 / 10 pcs
@@ -34,7 +34,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ### 3W High-Power LED — Red 625nm — port nav light
 - **Category:** LED (bare high-power emitter)
-- **Status:** ✅ owned (1 set)
+- **Status:** 🛒 in cart (1 set)
 - **Used for:** **port (left) wingtip** navigation light — [Lighting](../docs/08-lighting.md)
 - **Source / price:** AliExpress · €1.82 / 10 pcs
 
@@ -60,7 +60,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ### 3W High-Power LED — Green 520nm — starboard nav light
 - **Category:** LED (bare high-power emitter)
-- **Status:** ✅ owned (1 set)
+- **Status:** 🛒 in cart (1 set)
 - **Used for:** **starboard (right) wingtip** navigation light — [Lighting](../docs/08-lighting.md)
 - **Source / price:** AliExpress · €1.82 / 10 pcs
 
@@ -93,7 +93,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ### 10W LED 5050 XML-T6 — landing light
 - **Category:** LED (high-power emitter on star PCB)
-- **Status:** ✅ owned
+- **Status:** 🛒 in cart
 - **Used for:** **landing light** — [Lighting](../docs/08-lighting.md). (3W white is the fallback.)
 - **Variant / qty:** 12 mm / Cold White 6500K · 1 pc
 - **Price:** €5.85 (€4.50 ea ≥2)
@@ -122,7 +122,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ### 3mm 400-LED 12V COB flexible strip — formation lights
 - **Category:** LED strip (COB on flexible FPC)
-- **Status:** ✅ owned
+- **Status:** 🛒 in cart
 - **Used for:** **formation lights** on the F-35B — [Lighting](../docs/08-lighting.md)
 - **Variant / qty:** Green / 3 mm / 1 m · 1 pc
 - **Price:** €2.68
@@ -161,12 +161,12 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ### Frosted translucent PP sheet — LED diffuser
 - **Category:** Material (diffuser sheet)
-- **Status:** ✅ owned
+- **Status:** 🛒 in cart
 - **Used for:** diffusing the wingtip nav / formation LEDs (and other point sources) for an even
   glow — [Lighting](../docs/08-lighting.md)
 - **Variant / qty:** 100 × 200 mm × 0.5 mm · 10 sheets
 - **Price:** €3.83 + €1.58 shipping = €5.41 total
-- **Link:** https://www.aliexpress.com/item/1005008661393360.html?mp=1
+- **Link:** https://www.aliexpress.com/item/1005008661393360.html
 
 | Spec | Value |
 |------|-------|
@@ -186,7 +186,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ### YiRui 1156 BA15S P21W LED bulb — afterburner
 - **Category:** LED bulb (automotive turn-signal type)
-- **Status:** ✅ owned
+- **Status:** 🛒 in cart
 - **Used for:** **afterburner glow** — [Lighting](../docs/08-lighting.md#afterburner-power--the-canbus-resistor-mod)
 - **Variant / qty:** 1156 BA15S P21W / Yellow (amber) · 2 pcs
 - **Price:** €4.11 / 2 pcs
@@ -220,11 +220,11 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ### eletechsup LD2740SC 3A — constant-current LED driver (landing light)
 - **Category:** LED driver (switch-mode buck, constant-current)
-- **Status:** ✅ owned
+- **Status:** 🛒 in cart
 - **Used for:** drives the **10W landing light** — [Lighting](../docs/08-lighting.md)
 - **Variant / qty:** 3A, No Terminal · 1 pc
 - **Price:** €7.42
-- **Link:** https://www.aliexpress.com/item/1005005776802021.html?mp=1
+- **Link:** https://www.aliexpress.com/item/1005005776802021.html
 
 | Spec | Value |
 |------|-------|
@@ -256,7 +256,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ### ACELEX 3W 700mA LED driver — nav-light / strobe driver
 - **Category:** LED driver (switch-mode buck, constant-current)
-- **Status:** ✅ owned
+- **Status:** 🛒 in cart
 - **Used for:** drives the **3W nav LEDs + white strobes** (one driver per channel) — [Lighting](../docs/08-lighting.md)
 - **Variant / qty:** "3W LED Driver" (700 mA) · 4 pcs
 - **Price:** €0.70 ea · 4 × €0.70 = €2.80 + €2.36 shipping = €5.16 total
@@ -290,7 +290,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ### IRLZ44N — logic-level N-channel MOSFET (LED-strip / load switch)
 - **Category:** MOSFET (low-side switch)
-- **Status:** ✅ owned
+- **Status:** 🛒 in cart
 - **Used for:** switching the **12V COB strip** on/off from an RP2040 GPIO (also usable as a
   landing-light on/off switch) — [Lighting](../docs/08-lighting.md)
 - **Variant / qty:** IRLZ44N · 10 pcs
@@ -322,7 +322,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ### Aluminium heatsink 14×14×6 mm (black) — LED cooling
 - **Category:** Heatsink (thermal hardware)
-- **Status:** ✅ owned (10-pack)
+- **Status:** 🛒 in cart (10-pack)
 - **Used for:** cooling the **10W landing-light LED** (stack two); spares for any warm LED driver — [Lighting → driver heat](../docs/08-lighting.md#led-driver-heat--efficient-buck-drivers-no-big-heatsinks-needed)
 - **Variant / qty:** black, 14×14×6 mm · 10 pcs
 - **Price:** €2.68 / 10 pcs

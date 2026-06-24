@@ -7,7 +7,7 @@ Build context: [Power System](../docs/02-power-system.md).
 
 ### Silicone wire (high-strand, 0.08 mm TS) — power & servo wiring
 - **Category:** Wire (silicone-jacket, fine-strand tinned copper)
-- **Status:** ✅ owned (all three gauges: 10 / 18 / 22 AWG)
+- **Status:** 🛒 in cart (all three gauges: 10 / 18 / 22 AWG)
 - **Used for:** **10AWG** = main EDF power; **18AWG** = battery tap + roll-post EDF; **22AWG** =
   servo cables — [Power System](../docs/02-power-system.md)
 
@@ -80,7 +80,7 @@ Build context: [Power System](../docs/02-power-system.md).
 
 ### XT60H connector (AOKIN) — battery/ESC power connector
 - **Category:** Connector (2-pin power, bullet + sheath)
-- **Status:** ✅ owned
+- **Status:** ✅ owned (ordered 17 Apr 2026)
 - **Used for:** roll-post 3S 850 mAh packs (re-soldered on) + roll-post ESC power; general battery
   connectors — [Power System](../docs/02-power-system.md)
 - **Variant / qty:** 10 pair with cover · 1 set (10 pairs)
@@ -110,7 +110,7 @@ Build context: [Power System](../docs/02-power-system.md).
 
 ### CNHL G+Plus 5000mAh 6S 70C (EC5) — main EDF battery
 - **Category:** LiPo battery
-- **Status:** 🔄 **borrowed** (school drone club) — not owned outright
+- **Status:** 🔄 **borrowed** (school drone club; school order 9 Apr 2026) — not owned outright
 - **Used for:** main (rear) EDF + 18AWG system tap — [Power System](../docs/02-power-system.md)
 - **Variant / qty:** 6S 5000 mAh 70C, EC5 · (school order had 2)
 - **Price:** €58.82 (school order; list €60.32)
@@ -138,7 +138,7 @@ Build context: [Power System](../docs/02-power-system.md).
 
 ### CNHL 2700mAh 6S 40C (XT60) — lift EDF battery
 - **Category:** LiPo battery
-- **Status:** 🔄 **borrowed** (school drone club)
+- **Status:** 🔄 **borrowed** (school drone club; school order 9 Apr 2026)
 - **Used for:** lift (front) EDF — [Power System](../docs/02-power-system.md)
 - **Variant / qty:** 6S 2700 mAh 40C, XT60 · (school order had 4)
 - **Price:** €24.06 (school order; list €31.07)
@@ -169,7 +169,7 @@ Build context: [Power System](../docs/02-power-system.md).
 
 ### HOTA D6 Pro — LiPo charger (bench equipment)
 - **Category:** Charger (AC/DC dual-channel smart charger) — bench tool, not on-aircraft
-- **Status:** 🔄 **borrowed** (school drone club)
+- **Status:** 🔄 **borrowed** (school drone club; school order 9 Apr 2026)
 - **Used for:** charging/balancing all LiPo packs (main 5000 mAh EC5, lift 2700 mAh XT60, roll-post
   850 mAh) — [Power System → Charging](../docs/02-power-system.md#charging)
 - **Variant / qty:** EU plug · 1
@@ -199,7 +199,7 @@ Build context: [Power System](../docs/02-power-system.md).
 
 ### Racepow S21700FJ 4000mAh 30A — transmitter cells (Li-ion 21700)
 - **Category:** Li-ion cell (21700) — **transmitter power, not aircraft**
-- **Status:** ✅ owned (2 cells)
+- **Status:** ✅ owned (2 cells · ordered 10 Nov 2025)
 - **Used for:** powering the [Jumper T14 transmitter](flight-control.md) (2× 21700 in series)
 - **Variant / qty:** 2 cells
 - **Price:** €4.09 each (€8.18 for 2)
@@ -230,7 +230,7 @@ Build context: [Power System](../docs/02-power-system.md).
   their printed trays — [Power System](../docs/02-power-system.md)
 - **Variant / qty:** **5× 300 × 20 mm** (SIRENXI, ordered 17 Apr 2026) + **5× 200 × 20 mm** (Eastern
   Aviation, black, ordered 2 Apr 2026)
-- **Price:** €3.25 (300 mm) + $3.40 ≈ €2.95 (200 mm) ≈ **€6.20 total**
+- **Price:** €3.25 (300 mm) + €2.95 (200 mm) ≈ **€6.20 total**
 - **Source:** AliExpress — SIRENXI (300 mm) & Eastern Aviation (200 mm) nylon battery straps
 
 | Spec | Value |
@@ -253,7 +253,7 @@ Build context: [Power System](../docs/02-power-system.md).
 - **Used for:** **safe LiPo charging & storage** — contains a pack fire; for all the build's LiPos
   (main 5000, lift 2700, roll-post/trainer 850 mAh) — [Power System → Charging](../docs/02-power-system.md#charging)
 - **Variant / qty:** type4 · 1 pc
-- **Price:** $5.45 → **≈ €4.72** (@ ~€0.8664/$, 1 Apr 2026)
+- **Price:** **€4.70**
 - **Source:** AliExpress — ARRIS-style LiPo Guard safety bag
 
 | Spec | Value |
@@ -273,7 +273,7 @@ Build context: [Power System](../docs/02-power-system.md).
 
 ### Amass/JHEMCU Smoke Stopper (XT30/XT60, 1–6S) — bench first-power-up fuse
 - **Category:** Safety tool (inline resettable fuse) — **bench, not on-aircraft**
-- **Status:** ✅ owned (1) — bought for the school drone club; usable here as a bench tool
+- **Status:** ✅ owned (1 · ordered 17 Apr 2026) — bought for the school drone club; usable here as a bench tool
 - **Used for:** **smoke-testing new wiring** on first power-up — catches dead shorts before releasing
   the magic smoke — [Power System](../docs/02-power-system.md)
 - **Variant / qty:** XT30 & XT60 · 1
@@ -328,7 +328,7 @@ Build context: [Power System](../docs/02-power-system.md).
 - **Used for:** **field per-cell voltage check + audible low-voltage alarm** — plug onto the balance
   lead to verify charge / catch a sagging cell — [Power System](../docs/02-power-system.md)
 - **Variant / qty:** 1–8S · 1
-- **Price:** $1.62 → **≈ €1.40** (@ ~€0.8664/$, 1 Apr 2026)
+- **Price:** **€1.40**
 - **Source:** AliExpress — 1–8S LiPo voltage tester / buzzer alarm
 
 | Spec | Value |

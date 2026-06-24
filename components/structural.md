@@ -7,7 +7,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 ### eSUN LW-PLA (ePLA-LW) — airframe filament
 - **Category:** Filament (lightweight / foaming PLA)
-- **Status:** ✅ owned (2 rolls, black)
+- **Status:** ✅ owned (2 rolls, black · ordered 19 May 2026)
 - **Used for:** F-35B airframe — **test prints + first airframe** ([Materials & Airframe](../docs/09-materials-airframe.md))
 - **Variant / qty:** 1.75 mm, 1 kg spool, **black** · 2 rolls
 - **Price:** €31.94 total (€15.96/roll)
@@ -96,10 +96,11 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 ---
 
-### Carbon fibre rod 2 × 250 mm — pushrods / linkages
+### Carbon fibre rod 2 × 250 mm — door joints / light mechanical linkages
 - **Category:** Structural (solid CF rod)
 - **Status:** 🛒 in cart (10 pcs)
-- **Used for:** **pushrods / control linkages** (solid rod for compression/tension) —
+- **Used for:** **joints & mechanical linking of light F35B parts** (gear/lift-fan/canopy door hinges
+  & links, light pushrods) — solid rod in compression/tension —
   [Materials & Airframe](../docs/09-materials-airframe.md#carbon-fibre--structural-rods--tubes)
 - **Variant / qty:** 2 mm dia × 250 mm · 10 pcs
 - **Price:** €3.75 / 10 pcs (€14.94 list, −74%)
@@ -114,9 +115,11 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 | Material | pure carbon fibre |
 | Properties | high strength, light (~1/5 steel weight), corrosion-resistant, electrically conductive |
 
-- **Notes:** solid rod (not tube) — the rule is **rods for pushrods/linkages** (compression/tension),
-  **tubes for spars** (stiffer per gram). Conductive — keep clear of exposed electronics. Cuts with a
-  rotary tool / fine hacksaw; wear a mask (CF dust). 10 pcs is plenty for all control linkages + spares.
+- **Notes:** solid rod (not tube) — the rule is **rods for linkages/joints** (compression/tension),
+  **tubes for spars** (stiffer per gram). Earmarked for **light door joints / mechanical links** on the
+  F35B. Conductive — keep clear of exposed electronics. Cuts with a rotary tool / fine hacksaw; wear a
+  mask (CF dust). 10 pcs → plenty. ⚠️ Note: a **separate** 2×250 mm rod order (EasyHome1) is for an
+  unrelated project — not this build.
 
 ---
 
@@ -127,7 +130,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
   ~900 mm runs — [Materials & Airframe → spar plan](../docs/09-materials-airframe.md#spar-plan-final--16-50086-mm-joined-with-6-mm-sleeves)
 - **Variant / qty:** 8 mm OD / 6 mm ID × 500 mm · 16 pcs (one "lot")
 - **Price:** €33.71 (8×6 mm variant; listing's €12.72 base price is the 3×2 mm size)
-- **Link:** https://www.aliexpress.com/item/4000086818185.html?mp=1
+- **Link:** https://www.aliexpress.com/item/4000086818185.html
 
 | Spec | Value |
 |------|-------|
@@ -175,11 +178,11 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 ### PU wheels 1.75″ (45 mm) + 2.0″ (50 mm) — trainer main gear (F35B backup)
 - **Category:** Hardware (landing-gear wheels)
-- **Status:** ✅ owned (2 + 2 pcs · ordered ~1 Apr 2026, due 27 Apr 2026)
+- **Status:** ✅ owned (2 + 2 pcs · ordered 7 Apr 2026, due 27 Apr 2026)
 - **Used for:** **RC trainer plane** main gear (two sizes to trial); **possible F35B main-gear backup**
   if 38 mm proves too small — [Materials & Airframe → landing gear](../docs/09-materials-airframe.md#landing-gear-hardware)
 - **Variant / qty:** 1.75″/45 mm ×2 + 2.0″/50 mm ×2 (same LT602 listing, two sizes)
-- **Price:** $5.36 → **≈ €4.64** ($2.54 + $2.82; @ ~€0.8664/$)
+- **Price:** **€4.59** (45 mm + 50 mm pairs)
 - **Source:** AliExpress — PU rubber wheel LT602 (1.75″ + 2.0″)
 
 | Size | Ø | Thick | Bore | Weight |
@@ -201,7 +204,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
   [Materials & Airframe → adhesives](../docs/09-materials-airframe.md#adhesives--misc)
 - **Variant / qty:** 15 g · 3 bottles
 - **Price:** €6.54 (€3.48 item + €3.06 shipping; ~€2.18/bottle)
-- **Link:** https://www.aliexpress.com/item/1005010806670083.html?mp=1
+- **Link:** https://www.aliexpress.com/item/1005010806670083.html
 
 | Spec | Value |
 |------|-------|
@@ -220,7 +223,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 ### Carbon fibre tube 6 OD / 3 ID / 400 mm (×10) — joining sleeves
 - **Category:** Structural (CF tube, hollow)
-- **Status:** ✅ owned (2× 5-pack = 10 pcs)
+- **Status:** ✅ owned (2× 5-pack = 10 pcs · ordered 12 May 2026)
 - **Used for:** **press-fit inner sleeves** to join the 500 mm 8 mm spar tubes (6 mm OD → 6 mm ID =
   ~0 mm-gap fit), plus secondary structure / 3BSM supports / ribs —
   [Materials & Airframe → joining method](../docs/09-materials-airframe.md#joining-method-press-fit-sleeve--epoxy)
@@ -252,7 +255,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 - **Used for:** **removable panels / hatches** (battery hatch, canopy, access covers) — magnets
   embedded in printed parts — [Materials & Airframe → magnets](../docs/09-materials-airframe.md#magnets)
 - **Variant / qty:** 5 mm dia × 2 mm · 100 pcs
-- **Price:** $6.02 → **≈ €5.22** ($2.63 item + shipping; @ ~€0.8664/$, 2 Apr 2026)
+- **Price:** **€5.22** (incl. shipping)
 - **Source:** AliExpress — N35 NdFeB round magnets (5 × 2 mm, 100 pc)
 
 | Spec | Value |
@@ -280,7 +283,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 - **Status:** ✅ owned (200 pcs · ordered 2 Apr 2026)
 - **Used for:** **wire-harness bundling, strain relief, securing cables/components** — general assembly
 - **Variant / qty:** black · 2.5 × 150 mm · 200 pcs
-- **Price:** $3.55 → **≈ €3.08** (@ ~€0.8664/$, 2 Apr 2026)
+- **Price:** **€3.08**
 - **Source:** AliExpress — nylon self-locking cable ties (2.5 × 150 mm, black, 200 pc)
 
 | Spec | Value |
@@ -303,7 +306,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 - **Used for:** **high-temp electrical insulation & masking** — protect wiring/LW-PLA near ESC/EDF
   heat, insulate LiPo tabs/solder joints, mask during soldering or painting — general
 - **Variant / qty:** 15 mm wide × 30 m · 1 roll (model G536)
-- **Price:** $3.15 → **≈ €2.73** (@ ~€0.8664/$, 1 Apr 2026)
+- **Price:** **€2.72**
 - **Source:** AliExpress — PI gold-finger polyimide tape (15 mm × 30 m)
 
 | Spec | Value |
@@ -318,6 +321,54 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 - **Notes:** Kapton-type tape for high-temp **electrical insulation** and **masking** — protect LW-PLA
   and wiring from ESC/EDF heat, insulate LiPo tabs/solder joints, mask during soldering/painting
   (peels clean, no residue). Cut with scissors (too tough to tear). 30 m → ample.
+
+---
+
+### Airplac 5 mm foam board 50 × 70 cm (×2) — trainer airframe
+- **Category:** Material (paper-faced foam board / kapaline) — **trainer-only**
+- **Status:** ✅ owned (2 pcs · 1 used on the trainer, 1 spare · ordered 2 Jun 2026)
+- **Used for:** **Phase 1 foamboard trainer** airframe — *not* the F35B (which is 3D-printed LW-PLA)
+- **Variant / qty:** 5 mm · 50 × 70 cm · 2 sheets
+- **Price:** €14.93 total (€4.99 ea + €4.95 shipping)
+- **Source:** **Kärkkäinen** (karkkainen.com) — *not AliExpress* (EAN 3555980100693, art. 103271679)
+
+| Spec | Value |
+|------|-------|
+| Material | paper-faced lightweight foam board (kapaline) |
+| Thickness | 5 mm |
+| Sheet size | 50 × 70 cm |
+| Qty | 2 (1 used, 1 spare) |
+| Working | cuts with a hobby / mat knife |
+
+- **Notes:** trainer-only airframe material — the F-35B airframe is **3D-printed LW-PLA**, so this
+  won't be used on it. One sheet already consumed building the trainer; one spare remains (repairs /
+  another foamboard build). Listing also offers 3 mm and smaller sizes.
+
+---
+
+### Heat-shrink tubing kit 800 pcs (1–13 mm, 2:1) — wire insulation
+- **Category:** Consumable (heat-shrink tubing, assorted)
+- **Status:** ✅ owned (800-pc box · ordered 2 Apr 2026)
+- **Used for:** **insulating solder joints, strain relief, bundling/colour-coding wires** — general
+- **Variant / qty:** mixed-size box, **800 pcs** (1.0–13.0 mm)
+- **Price:** **€5.83**
+- **Source:** AliExpress — 2:1 heat-shrink tube kit (800-pc box, mixed)
+
+| Spec | Value |
+|------|-------|
+| Material | PE / cross-linked polyethylene |
+| Shrink ratio | **2:1** |
+| Sizes | 1.0 / 1.5 / 2.0 / 2.5 / 3.0 / 3.5 / 4.0 / 5.0 / 6.0 / 7.0 / 10 / 13 mm |
+| Length | 45 mm pcs (40 mm for 3.5 mm) |
+| Shrink temp | ≥84 °C start · ≥120 °C full |
+| Op temp | −55 to +125 °C |
+| Dielectric | 15 kV · flame-retardant |
+| Colours | black + red / yellow / green / blue |
+
+- **Notes:** insulate/strengthen solder joints (ESC/EDF/servo/LED leads), strain-relief, colour-code
+  wiring. 2:1 → pick a size ~1.5–2× the joint OD. Shrink with a heat gun. ⚠️ When shrinking near
+  LW-PLA keep the gun moving (the plastic softens ~53 °C). 800 pcs → ample. Pairs with the
+  [Kapton tape](#polyimide-kapton-high-temp-tape-15-mm--30-m--insulation--heat-masking).
 
 ---
 

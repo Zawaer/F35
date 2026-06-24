@@ -12,7 +12,7 @@ Build context: [Propulsion](../docs/06-propulsion.md).
   [Propulsion → roll control](../docs/06-propulsion.md#roll-control)
 - **Variant / qty:** 30 mm 6-blade EDF · QF1611 **7000KV** · 3S · bundled 20A ESC · 2 pcs
 - **Price:** €39.06 total (€15.79 ×2 + €7.48 shipping; ~€19.53/unit delivered)
-- **Link:** https://www.aliexpress.com/item/1005007548588279.html?mp=1
+- **Link:** https://www.aliexpress.com/item/1005007548588279.html
 
 | Spec | Value |
 |------|-------|
@@ -47,7 +47,7 @@ Build context: [Propulsion](../docs/06-propulsion.md).
   [Propulsion → roll control](../docs/06-propulsion.md#roll-control)
 - **Variant / qty:** LittleBee Spring **20A** · 2 pcs
 - **Price:** €11.56 total (€5.78 ×2)
-- **Link:** https://www.aliexpress.com/item/1005007038091583.html?mp=1
+- **Link:** https://www.aliexpress.com/item/1005007038091583.html
 
 | Spec | Value |
 |------|-------|
@@ -74,7 +74,7 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 
 ### QX-Motor 70 mm EDF, QF3027 2200KV (6S) ×2 (1 CW + 1 CCW) — main + lift fan
 - **Category:** Propulsion (ducted fan + brushless motor)
-- **Status:** ✅ owned (2 pcs: **one CW + one CCW**)
+- **Status:** ✅ owned (2 pcs: **one CW + one CCW** · ordered 12 May 2026)
 - **Used for:** **main rear EDF** (thrust-vectored via 3BSM) + **front lift fan** —
   [Propulsion → Phase 3](../docs/06-propulsion.md#phase-3--edf-propulsion)
 - **Variant / qty:** 70 mm 12-blade EDF · QF3027 **2200KV** · 6S · 2 pcs (1× CW, 1× CCW)
@@ -112,7 +112,7 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 
 ### Hobbywing Skywalker 100A V2 ESC ×2 — main + lift EDF ESCs
 - **Category:** Propulsion (brushless ESC, with UBEC)
-- **Status:** ✅ owned (2 pcs)
+- **Status:** ✅ owned (2 pcs · ordered 12 May 2026)
 - **Used for:** **main EDF + lift-fan EDF** (one each, individual not 4-in-1) —
   [Propulsion → Phase 3](../docs/06-propulsion.md#phase-3--edf-propulsion)
 - **Variant / qty:** Skywalker **100A V2** · 2 pcs
@@ -144,7 +144,7 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 
 ### A2212 2200KV power kit (motor + 40A ESC + 2× SG90 + props) — Phase 1 trainer
 - **Category:** Propulsion (trainer power-kit bundle)
-- **Status:** ✅ owned (1 kit)
+- **Status:** ✅ owned (1 kit · ordered 12 May 2026)
 - **Used for:** **Phase 1 foamboard trainer** (learn to fly + validate FC/RX before VTOL) — *not* the
   F-35B itself — [Propulsion → Phase 1](../docs/06-propulsion.md#phase-1--trainer-prop-plane)
 - **Variant / qty:** 2212 **2200KV** · 40A ESC · **XT60** · 1 kit
@@ -203,7 +203,7 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 - **Used for:** **Phase 1 trainer** props — spares/replacements for the A2212 kit's 6035 props
   (fragile, break on hard landings) — [Propulsion → Phase 1](../docs/06-propulsion.md#phase-1--trainer-prop-plane)
 - **Variant / qty:** EP-6035 (6×3.5") · 4 pcs
-- **Price:** $2.04 → **≈ €1.77** (@ ~€0.8664/$, 7 Apr 2026)
+- **Price:** **€1.75**
 - **Source:** AliExpress — EP-6035 GWS-style direct-drive prop (4 pc)
 
 | Spec | Value |
