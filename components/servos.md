@@ -72,24 +72,25 @@ Build context: [Servos](../docs/05-servos.md).
 
 ---
 
-### Servo extension cable (JR/Futaba 3-pin) — 200 mm ×10
+### Servo extension cables (JR/Futaba 3-pin) — 200 & 300 mm, ×10 each
 - **Category:** Cable (servo extension lead)
-- **Status:** 🛒 in cart
+- **Status:** **300 mm ✅ owned** (ordered 2 Apr 2026) · **200 mm 🛒 in cart**
 - **Used for:** extending servo leads to the FC/Pico across the airframe — [Servos](../docs/05-servos.md)
-- **Variant / qty:** 200 mm · 1 set (10 cables)
-- **Price:** €2.68 / 10 pcs
-- **Link:** https://www.aliexpress.com/item/1005007480672910.html?mp=1&sourceType=570&pdp_ext_f=%7B%22cart2PdpParams%22%3A%7B%22sourceType%22%3A%22570%22%2C%22cartSource%22%3A%22main%22%7D%7D
+- **Variant / qty:** 200 mm ×10 + 300 mm ×10
+- **Price:** 200 mm €2.68 (in cart) · 300 mm $3.14 ≈ **€2.72** (owned, U-Angel-1988)
+- **Link:** [200 mm](https://www.aliexpress.com/item/1005007480672910.html) · 300 mm = U-Angel-1988 X501
 
 | Spec | Value |
 |------|-------|
 | Type | 3-pin JR/Futaba servo extension (signal / + / −) |
-| Length | 200 mm |
-| Qty | 10 |
-| Wire | thin gauge (~26–28 AWG); random colour set (BRW or YRB) |
+| Lengths | 200 mm (×10) · 300 mm (×10) |
+| Qty | 10 each |
+| Wire | thin gauge (~0.35 mm² ≈ 22 AWG per listing); random colour |
 
-- **Notes:** ⚠️ **200 mm may be short** for the longest runs (e.g. wingtip → FC on a ~1 m fuselage) —
-  the BOM had flagged wanting 300 mm; daisy-chain two or order longer if needed. Thin signal wire is
-  fine for servo PWM current.
+- **Notes:** extend servo leads across the ~1 m airframe. The **300 mm (owned)** covers the long
+  wingtip → FC runs that 200 mm can't — resolving the earlier "200 mm may be short" concern; the
+  **200 mm (in cart)** suits shorter hops. Thin signal wire is fine for servo PWM current; daisy-chain
+  for even longer runs.
 
 ---
 
@@ -246,18 +247,18 @@ Build context: [Servos](../docs/05-servos.md).
 
 ---
 
-### MG996R 13–15 kg metal-gear servo ×2 — spare / high-torque
+### MG996R 13–15 kg metal-gear servo ×4 — spare / high-torque
 - **Category:** Servo (standard-size digital, metal gear, ball-bearing)
-- **Status:** ✅ owned (2 pcs · ordered 23 Mar 2026)
+- **Status:** ✅ owned (4 pcs total — two orders)
 - **Used for:** **spare / general high-torque** standard servo (heavy control surfaces, bench/testing)
   — [Servos](../docs/05-servos.md)
-- **Variant / qty:** MG996R · 180° · 2 pcs
-- **Price:** €3.21 / 2 pcs (~€1.60 each; already EUR-priced)
-- **Source:** AliExpress — HORNAXYS/HNX MG996R (180°, 2 pcs)
+- **Variant / qty:** MG996R · 180° · **2× (HNX, 23 Mar 2026) + 2× (JYJD, 1 Apr 2026) = 4 pcs**
+- **Price:** €3.21 (HNX) + $6.68 ≈ €5.79 (JYJD) ≈ **€9.00 total** (~€2.25 each)
+- **Source:** AliExpress — HORNAXYS/HNX + JYJD MG996R (180°)
 
 | Spec | Value |
 |------|-------|
-| Weight | ~55 g (typical MG996R) |
+| Weight | ~55–56 g |
 | Size | 40 × 19 × 43 mm |
 | Torque | 13 kg·cm @ 4.8 V · **15 kg·cm @ 6.0 V** |
 | Speed | 0.17 s/60° @ 4.8 V · 0.14 s/60° @ 6.0 V |
@@ -266,13 +267,14 @@ Build context: [Servos](../docs/05-servos.md).
 | Travel | 180° |
 | Horn spline | 25T |
 | Interface | PWM · JR 3-pin, 300 mm lead |
-| Brand | HORNAXYS / HNX (MG996R clone) |
+| Brand | HORNAXYS/HNX · JYJD (MG996R clones) |
 
 - **Notes:** classic **MG996R** standard servo — strongest of the owned servos (15 kg·cm @ 6 V) but
   also the **heaviest (~55 g)**, so it's the **spare / high-torque** option rather than a primary
   flight surface (the lighter 9/12 kg NEEBRC servos do the stabilators/flaperons). Tolerates up to
-  7.2 V; runs fine on the 6 V rail. ⚠️ MG996R stall draw can be ~2.5 A — mind the BEC. 25T horns
-  included.
+  7.2 V; runs fine on the 6 V rail. ⚠️ MG996R stall draw can be ~2.5 A — mind the BEC. ⚠️ **Cheap
+  clones sometimes ship plastic gears despite the "metal gear" label** (the JYJD listing's reviews
+  note this) — check the gears on arrival. 25T horns included. 4 pcs total → plenty of spares.
 
 ---
 
