@@ -40,11 +40,14 @@ pushrods (compression/tension).
 
 ### Owned
 
-- **16× CF tube, 8 mm OD / 6 mm ID, 500 mm** (1 mm wall) — **main spars & fuselage spine**, joined
-  in pairs into ~900 mm runs (see spar plan below).
 - **10× CF tube, 6 mm OD / 3 mm ID, 400 mm** — used as **press-fit inner sleeves** to join the
   500 mm main tubes (the 6 mm OD slides into the 6 mm ID main tube with ~0 mm gap), plus secondary
   structure, 3BSM supports, ribs/formers.
+
+### In cart (not yet ordered)
+
+- **16× CF tube, 8 mm OD / 6 mm ID, 500 mm** (1 mm wall) — **main spars & fuselage spine**, joined
+  in pairs into ~900 mm runs (see spar plan below).
 - **10× CF rod, 2 mm × 250 mm** (solid) — pushrods / control linkages.
 
 ### Spar plan (final) — 16× 500×8×6 mm joined with 6 mm sleeves
@@ -91,7 +94,7 @@ See [Propulsion — 3BSM](06-propulsion.md#3bsm--three-bearing-swivel-module).
 
 ## Landing gear hardware
 
-- **Wheels:** standard RC-plane wheels (no O-ring tricks). **38 mm PU pair owned** (front/nose gear,
+- **Wheels:** standard RC-plane wheels (no O-ring tricks). **38 mm PU pair in cart** (front/nose gear,
   2.1 mm bore → 2 mm axle); remaining wheels (main gear) ordered later (budget).
 
 ## Fasteners

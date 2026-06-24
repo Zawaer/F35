@@ -7,7 +7,7 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 
 ### QX-Motor 30 mm EDF, QF1611 7000KV (3S) + 20A ESC ×2 — roll posts
 - **Category:** Propulsion (ducted fan + brushless motor + ESC bundle)
-- **Status:** ✅ owned (2 pcs)
+- **Status:** 🛒 in cart (2 pcs)
 - **Used for:** **wingtip roll-post thrusters** for hover roll authority (quadcopter mix) —
   [Propulsion → roll control](../docs/06-propulsion.md#roll-control)
 - **Variant / qty:** 30 mm 6-blade EDF · QF1611 **7000KV** · 3S · bundled 20A ESC · 2 pcs
@@ -42,7 +42,7 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 
 ### FVT LittleBee Spring 20A ESC (BLHeli_S) ×2 — roll-post ESC option
 - **Category:** Propulsion (brushless ESC)
-- **Status:** ✅ owned (2 pcs)
+- **Status:** 🛒 in cart (2 pcs)
 - **Used for:** **roll-post 30 mm EDFs** — DSHOT alternative to the EDFs' bundled 20A ESCs —
   [Propulsion → roll control](../docs/06-propulsion.md#roll-control)
 - **Variant / qty:** LittleBee Spring **20A** · 2 pcs
