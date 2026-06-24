@@ -298,12 +298,10 @@ Build context: [Power System](../docs/02-power-system.md).
 | Indicator | green = OK · red = tripped |
 | Weight | 14.1 g |
 
-- **Notes:** plug **in series between battery and device** for the first "smoke test" — a short trips
-  the fuse (red) instead of frying the board. ✅ **Useful here for first power-up of the F-35B
-  avionics/wiring** (FC + PDB + LED + servo harness at idle) to catch shorts. ⚠️ **Bench/no-load only**
-  — the 0.5 A hold / 1.0 A trip is far below any motor/EDF draw, so it can't be used in flight or with
-  motors armed. XT60 matches the lift/roll-post packs; the main pack is EC5 (needs an adapter). Bought
-  for the school drone club.
+- **Notes:** plug **in series between battery and device** for a first "smoke test" — a short trips
+  the fuse (red) instead of frying the board. **Not planned for the F-35B**: the avionics are simple,
+  and it's **XT30/XT60, not EC5** (won't fit the 5000 mAh packs). ⚠️ **Bench/no-load only** anyway — the
+  0.5 A hold / 1.0 A trip is far below any motor/EDF draw. Kept as general bench / drone-club gear.
 
 ---
 

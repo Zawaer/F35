@@ -116,6 +116,26 @@ for ~10.8 A of 6 V servo output). **Total tap current peaks ~4–5 A.**
   new joint with heat shrink / Kapton, then run red/black to the PDB input pads.
 - **The PDB's own current sensor reads this whole avionics load** — no separate ACS712 needed on the tap.
 
+## Build caveats (power)
+
+Verified-sound architecture; the must-gets:
+
+- **Common ground is mandatory.** Every ESC's **signal-ground** lead must run to the FC (alongside its
+  throttle signal) — this commons all three battery grounds at the FC through *thin signal wires*, not
+  the fat power leads. Without it the throttle signals have no reference. It falls out naturally from
+  wiring each ESC's 3-pin lead to the FC — just don't forget the ground pin.
+- **The lift pack is a single point of failure for the avionics.** It powers the lift fan **and** the
+  whole avionics tap, so **always fly with it connected** and watch its voltage (the PDB reads it). It
+  does double duty (hover thrust + avionics), so it may sag before the main pack.
+- **Plug-in spark:** EC5 is *not* anti-spark — a 6S pack sparks on connection (caps charging).
+  Functionally harmless, but repeated sparks can **slowly corrode/pit the EC5 contacts**. If they
+  degrade too much, just swap to **XT90-S** (anti-spark) — the wear is localized to the connectors, so
+  it's a cheap, contained fix. (No smoke stopper used here — the avionics are simple, and the one on
+  hand is XT30/XT60, not EC5.)
+- **EDFs wire battery→ESC→motor directly** — no high current through the FC.
+- **Roll-post split:** pack→split **trunk = the pack's 14AWG lead** (carries the combined ~22–29 A);
+  the two per-ESC branches are 18AWG.
+
 ## Wire gauge plan (final)
 
 | Gauge | Use | Note |
