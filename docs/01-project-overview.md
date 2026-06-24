@@ -10,10 +10,14 @@
 | 1 | Trainer prop plane (foamboard) | Learn to fly, validate basic FC/RX setup | **Built & repaired — awaiting re-flight** (see below) |
 | 2 | VTOL F-35B (LW-PLA print) | The real goal — VTOL + transition + scale | **Primary focus** / in design |
 
-**Phase 1 status:** the foamboard trainer is fully built. First flight was a hand-launch with no
-runway — it flew ~1 s, dropped, and broke (bad throw / not enough launch speed, not an airframe
-fault). Already repaired and intact; will be re-flown from a proper runway when there's time. Main
-effort is now on the **F-35B**.
+**Phase 1 status:** the foamboard trainer is fully built. It was built by following a
+[YouTube tutorial](https://www.youtube.com/watch?v=fMezISrCoNE) ([backup copy](https://drive.google.com/file/d/1ASnp0k2xXMjiM-009wzewt9H2370stzq/view?usp=sharing)),
+with one deviation — the tutorial uses a plain receiver, but this build uses the project's **CoreWing
+F405 WING V2 FC** instead (so the trainer also validates the FC/RX setup). The printed parts (motor
+mount, landing gear, spar connectors) live in [`models/trainer/`](../models/trainer/). First flight was
+a hand-launch with no runway — it flew ~1 s, dropped, and broke (bad throw / not enough launch speed,
+not an airframe fault). Already repaired and intact; will be re-flown from a proper runway when there's
+time. Main effort is now on the **F-35B**.
 
 The trainer and the F-35B VTOL systems are **electrically completely separate** — different
 batteries, ESCs, and motors (see [Propulsion](06-propulsion.md) and [Power](02-power-system.md)).
