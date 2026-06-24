@@ -273,9 +273,9 @@ Build context: [Servos](../docs/05-servos.md).
 - **Notes:** classic **MG996R** standard servo — strongest of the owned servos (15 kg·cm @ 6 V) but
   also the **heaviest (~55 g)**, so it's the **spare / high-torque** option rather than a primary
   flight surface (the lighter 9/12 kg NEEBRC servos do the stabilators/flaperons). Tolerates up to
-  7.2 V; runs fine on the 6 V rail. ⚠️ MG996R stall draw can be ~2.5 A — mind the BEC. ⚠️ **Cheap
-  clones sometimes ship plastic gears despite the "metal gear" label** (the JYJD listing's reviews
-  note this) — check the gears on arrival. 25T horns included. 4 pcs total → plenty of spares.
+  7.2 V; runs fine on the 6 V rail. ⚠️ MG996R stall draw can be ~2.5 A — mind the BEC. ✅ **Gears
+  confirmed all-metal** (opened and checked both orders). 25T horns included. 4 pcs total → plenty
+  of spares.
 
 ---
 

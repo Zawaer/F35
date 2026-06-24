@@ -171,16 +171,17 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 | Brand / model | NoEnName_Null · LT602 |
 
 - **Notes:** 2.1 mm bore → suits a **2 mm axle** (CF rod or wire). Standard RC-plane wheel, no O-ring
-  tricks. **Planned as the F35B nose-gear wheel** (currently in cart). For the trainer / a larger
-  main-gear option see the 45/50 mm PU wheels below. Same listing scales 1.0″–5.0″.
+  tricks. **The F35B nose-gear wheel** (currently in cart) — scale-matched. F35B **main gear** is a
+  larger wheel ordered later (~55/56 mm). Same listing scales 1.0″–5.0″.
 
 ---
 
-### PU wheels 1.75″ (45 mm) + 2.0″ (50 mm) — trainer main gear (F35B backup)
+### PU wheels 1.75″ (45 mm) + 2.0″ (50 mm) — trainer landing gear
 - **Category:** Hardware (landing-gear wheels)
-- **Status:** ✅ owned (2 + 2 pcs · ordered 7 Apr 2026, due 27 Apr 2026)
-- **Used for:** **RC trainer plane** main gear (two sizes to trial); **possible F35B main-gear backup**
-  if 38 mm proves too small — [Materials & Airframe → landing gear](../docs/09-materials-airframe.md#landing-gear-hardware)
+- **Status:** ✅ owned (2 + 2 pcs · ordered 7 Apr 2026)
+- **Used for:** **RC trainer plane** — 1× **45 mm** as the trainer **nose** wheel, 2× **50 mm** as the
+  trainer **main** gear. **Not used on the F35B** (45 mm off-scale; F35B nose = 38 mm, main = larger,
+  ordered later) — [Materials & Airframe → landing gear](../docs/09-materials-airframe.md#landing-gear-hardware)
 - **Variant / qty:** 1.75″/45 mm ×2 + 2.0″/50 mm ×2 (same LT602 listing, two sizes)
 - **Price:** **€4.59** (45 mm + 50 mm pairs)
 - **Source:** AliExpress — PU rubber wheel LT602 (1.75″ + 2.0″)
@@ -190,10 +191,10 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 | 1.75″ | 43–45 mm | 15 mm | **2.1 mm** | ~5 g |
 | 2.0″ | 50 mm | 19 mm | **2.6 mm** | ~7 g |
 
-- **Notes:** PU rubber, plastic hub — same family as the 38 mm nose-gear wheel above. Bought for the
-  **Phase 1 trainer**'s main gear (trial both sizes); could serve as an **F35B main-gear** option if
-  the 38 mm is too small. ⚠️ Bores differ: 1.75″ = **2.1 mm** (2 mm axle), 2.0″ = **2.6 mm** (needs a
-  thicker axle / bushing).
+- **Notes:** PU rubber, plastic hub — same family as the 38 mm nose-gear wheel above. In use on the
+  **trainer** (45 mm nose + 2× 50 mm main). **F35B uses the 38 mm for the nose** and a larger main
+  wheel (plan ~55/56 mm, ordered later when cheap/in stock) — the 45 mm is off-scale for the F35B.
+  ⚠️ Bores differ: 1.75″ = **2.1 mm** (2 mm axle), 2.0″ = **2.6 mm** (thicker axle / bushing).
 
 ---
 

@@ -31,6 +31,9 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 |-------|------|-------|--------|-----------|
 | 11.1 V | **11.2 A** | 124.3 W | **220 g** (7.76 oz) | 1.77 g/W |
 
+- **Full-charge draw:** the table is at 11.1 V nominal; at full **12.6 V** current rises to **~14–15 A
+  each** (~29 A the pair, ~181 W) by ~V² scaling — manufacturer lists only the 11.1 V point. The 20A
+  roll-post ESCs then run ~75% (vs ~56% at nominal) — fine for short bursts.
 - **Notes:** ~220 g raw → **~165 g after duct losses**, ~11.2 A draw — drives the wingtip roll posts.
   30 mm chosen over 40 mm (40 mm = more thrust/weight/cost than the roll task needs). At 11.2 A the
   bundled **20A ESC runs ~56%** — no heatsink needed; **decision: the build uses the 2× FVT LittleBee

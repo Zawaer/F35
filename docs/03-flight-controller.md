@@ -39,6 +39,16 @@ only signal (PWM/DSHOT) to the ESCs.
 | LEDs | Blue/Green/Red status (3.3V) |
 | Firmware | INAV (factory) or **ArduPilot** (used here for VTOL) |
 
+> **Barometer (SPA06-003) placement:** the onboard baro is enough — keep it where it is. A *buried*
+> FC is actually good for a baro (away from EDF wash + ram air); the risks are **light** and
+> **airflow**, not depth. Do: **cover the baro with a scrap of open-cell foam** (dish sponge / soft
+> packing foam — *not* closed-cell styrofoam, which would trap a pressure pocket) to block light and
+> damp downwash, and give the electronics bay **one small vent** to ambient (don't pressurize it or
+> place it in the EDF intake/exhaust stream). A second external baro won't help. For better hover
+> altitude hold the real upgrades are a **GPS** (EKF fusion — **planned for later**, after the
+> airframe is validated; deferred for budget) and/or a **downward rangefinder/lidar** (e.g. TF-Luna /
+> VL53L1X) — **both deferred for budget**, likely added after airframe validation — not another baro.
+
 ### Port assignments (planned)
 
 | Port | Assigned to |
@@ -97,6 +107,9 @@ cosmetic actuators move to the Pico. See [Servos](05-servos.md) and [Pico](04-ra
 - Finalise exact UART number for the Pico link and the CRSF/MAVLink-style framing used.
 - Confirm ArduPilot quadplane motor/servo output mapping against the [Propulsion](06-propulsion.md)
   4-motor hover mix.
+- **GPS + downward rangefinder/lidar:** both planned for **later** (after the airframe is validated) —
+  GPS strongly benefits ArduPilot VTOL altitude/position hold, lidar gives precise low-altitude hover
+  hold; both deferred now for budget.
 
 ## Related
 

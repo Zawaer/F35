@@ -142,8 +142,10 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | Item | Why | Status |
 |------|-----|--------|
 | MicroSD card | ArduPilot blackbox logging | 🛒 when needed |
+| GPS module | ArduPilot VTOL altitude / position hold (EKF) | 🛒 later — post-validation, budget |
+| Downward rangefinder / lidar | Precise low-altitude hover hold (TF-Luna / VL53L1X) | 🛒 later — post-validation, budget |
 | 2 mm bullet connectors | EDF motor leads | 🛒 later |
-| Main/rear landing wheels | Front 38 mm covered | 🛒 later |
+| Main landing wheels (~55/56 mm) | F35B main gear (38 mm nose in cart) | 🛒 later |
 | Matek 150A current sensor | Main/lift EDF current logging (>20A) | ⚠️ optional |
 | 8 AWG wire | 10 AWG is adequate per cards — only if extra margin wanted | ⚠️ optional |
 | Stainless button-head screw kit (600 pc) | General fasteners | 🛒 to card |

@@ -101,8 +101,13 @@ Final plan (parts chosen):
   roll-post power uses **XT60H**. See the [battery](../components/power.md) and XT60H connector cards.
 - Power wire: **18AWG** is fine for ~11.2 A (16A ampacity, ~1.4× margin; ~0.05 V drop over 300 mm).
 - **2 mm bullet** connectors for the EDF motor leads.
-- ⚠️ Confirm pack count/sizing: two 30mm EDFs at ~11 A each ≈ 22 A from one 3S 850 mAh ≈ 26C —
-  acceptable for short hover bursts; revisit if hover endurance matters.
+- **Pack count — DECIDED: one 3S 850 mAh feeds both roll posts.** Draw is ~22 A at nominal (~11 A
+  each) rising to **~29 A at full 12.6 V** (~14–15 A each) → only **26–34C** of the pack's 70C, ample
+  (≥2× margin). Full-throttle runtime is ~2 min (it's 850 mAh), but roll posts run in **short hover
+  bursts** at low average current, so capacity is plenty. One shared pack also fails **symmetrically**
+  (both roll posts together) — a per-side two-pack split was **rejected** because a dead pack would
+  give an **uncommanded roll**. The **2nd 850 mAh is a spare.** Shared trunk = the pack's 14AWG lead;
+  18AWG per-EDF branches.
 
 ## Open questions / TODO
 

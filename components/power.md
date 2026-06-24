@@ -70,9 +70,12 @@ Build context: [Power System](../docs/02-power-system.md).
 | Lead wire | 14 AWG |
 | Stock # | 85703G3 |
 
-- **Notes:** 70C × 0.85 Ah ≈ **59.5 A** continuous — ample for two 30 mm roll-post EDFs (~22 A total,
-  ~37% of capability). For the Phase 1 trainer it's a small/light pack — note the earlier trainer
-  spec assumed 1500–2200 mAh, so 850 mAh means shorter flights (fine for a light foamboard trainer).
+- **Notes:** 70C × 0.85 Ah ≈ **59.5 A** continuous — **one pack feeds both roll-post EDFs** (decided):
+  ~22 A at nominal, ~29 A at full 12.6 V ≈ **34C** — well within 70C. Full-throttle runtime ~2 min,
+  but roll posts run in short hover bursts so capacity is fine. The **2nd pack is a spare**; per-side
+  two-pack split rejected (a dead pack → uncommanded roll — see
+  [Propulsion → roll-post power](../docs/06-propulsion.md#roll-post-power--wiring)). Trainer use:
+  small/light pack (earlier spec assumed 1500–2200 mAh, so 850 mAh = shorter flights — fine).
 - **Connector:** shipped with XT30U, but the user **cut it off and soldered XT60H** on both packs —
   so roll-post power is **XT60H** (matches the docs). See the XT60H connector card below.
 

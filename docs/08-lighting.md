@@ -14,7 +14,7 @@
 | Starboard nav | 3W LED green 520nm | 700mA CC, PWM | 12V VTX |
 | Strobes | 3W LED white 6500K | 700mA CC, PWM | 12V VTX |
 | Landing light | 10W LED 6500K (XML-T6, 3A) | 3A adjustable CC, PWM | 12V VTX |
-| Afterburner | BA15S P21W 12V auto bulb | built-in CC IC (no driver) | servo BEC / dedicated tap ⚠️ |
+| Afterburner | BA15S P21W 12V auto bulb | built-in CC IC; **throttle-reactive** (brighter at higher throttle, PWM) | servo BEC / dedicated tap ⚠️ |
 | Accent | 12V COB strip (green, 3 mm) | IRLZ44N MOSFET switch | 12V VTX |
 
 (3W LED stock: 10× each red/green/white. Diffusion via frosted **PP sheet** 0.5 mm.)
@@ -105,7 +105,8 @@ while True:
 ## Notes & TODO
 
 - Remove the CANBUS resistor from the afterburner bulb on arrival; wire it to servo BEC / dedicated tap.
-- Decide afterburner behaviour: throttle-reactive (brighter at high throttle) vs always-on.
+- **Afterburner decided: throttle-reactive** — brightness scales with throttle (PWM from the Pico,
+  mapped to the throttle channel), brightest at full throttle.
 - 10W landing-light heatsink resolved: two 14×14×6 mm (stacked, on metal) for intermittent use.
 - Decide COB strip use (interior accent vs exterior) and final colour(s).
 - Decide final strobe method (PWM dim vs hard enable) and flash pattern.
