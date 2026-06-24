@@ -2,18 +2,20 @@
 
 > **Current setup:** **NTC 100K thermistors** read through a **CD74HC4067 16-channel analog
 > multiplexer** into the Pico/RP2040 ADC. **3× ACS712 20A**
-> Hall current sensors monitor the FC/servo rail and both roll-post EDFs. Main and lift EDF current
+> Hall current sensors monitor **both roll-post EDFs** (the avionics-tap current is read by the PDB's
+> own sensor). Main and lift EDF current
 > are **not** monitored in v1 (89A/40A exceed the 20A sensors). ArduPilot blackbox logs to microSD.
 
 ## Current sensing (ACS712 20A ×3)
 
 | Sensor | On | Current | Fits 20A? |
 |--------|----|---------|-----------|
-| #1 | FC + servo + LED rail (tap) | ~11.5A max | ✅ |
-| #2 | Roll-post EDF L | ~11.2A | ✅ |
-| #3 | Roll-post EDF R | ~11.2A | ✅ |
+| #1 | Roll-post EDF L | ~11–15A | ✅ (÷0.66 divider) |
+| #2 | Roll-post EDF R | ~11–15A | ✅ (÷0.66 divider) |
+| #3 | spare | — | — |
 
-The 3-pack (€3.40) was chosen over a single (€2.32) — only €1.08 more for two extra channels.
+The **avionics-tap current** (FC/BEC/servo/LED) is read by the **PDB's own current sensor**, so no
+ACS712 is needed there — both used sensors go on the roll-post EDFs, one spare. (3-pack was €3.40.)
 
 > ⚠️ **ACS712 output needs scaling for the Pico ADC.** At 5 V the module outputs 2.5 V @0 A + ~100 mV/A,
 > i.e. **0.5–4.5 V** across ±20 A — but the Pico ADC tops out at **3.3 V**, so above ~8 A it overranges
@@ -45,6 +47,24 @@ current logging for v1; the PDB still reports pack voltage/current to the FC.
 > ⚠️ This supersedes the earlier "Matek 150A on each battery lead → ADC2/ADC4" plan in
 > [Flight Controller](03-flight-controller.md). If precise main/lift EDF current logging is wanted
 > later, add a 150A-class sensor — the ACS712 cannot do it.
+
+## Battery voltage monitoring
+
+Voltage matters more than current here — you must land before a pack is over-discharged. Plan:
+
+| Pack | How its voltage is sensed |
+|------|---------------------------|
+| **Lift** 5000 mAh | **via the PDB** — the avionics tap comes off this pack, so the FC reads its voltage directly |
+| **Main** 5000 mAh | **resistor divider → Pico ADC** (isolated from the FC; **100 kΩ / 10 kΩ** from the kit → 25.2 V ≈ 2.3 V; or 100 k/15 k for fuller range) |
+| **Roll-post** 850 mAh | **resistor divider → Pico ADC** (3S; **10 kΩ / 2 kΩ** from the kit → 12.6 V ≈ 2.1 V) |
+
+**Wiring:** `Batt+ → R_top → [ADC pin] → R_bottom → GND`. Ground is **already common** (each ESC's
+signal-ground lead ties its pack − to the FC/Pico ground), so no extra ground wire is needed. Optional
+**0.1 µF (kit "104") from ADC→GND** to filter noise. **Firmware scale:** V_batt = V_adc ×
+(R_top+R_bottom)/R_bottom → **×11** for 100 k/10 k, **×6** for 10 k/2 k; calibrate against a multimeter
+(kit resistors are 5 %, so a one-time cal gets you accurate). The 100 k top draws only ~0.2 mA — fine
+in flight, just unplug for long storage. ACS712 reads **current only** (no voltage). Main/lift EDF
+*current* stays unmonitored until a Matek 150A-class sensor is added.
 
 ## Temperature sensing (NTC 100K + multiplexer)
 
@@ -107,9 +127,10 @@ already self-report temp); cockpit ST7789 screen + LED driver boards (run cool �
 is the only hot LED part); nav lights; and — **skipped for now** — a dedicated **PDB-board**,
 **bay-ambient**, or **EDF exhaust-air** sensor. **3 mux channels left spare.**
 
-⚠️ ESC / heatsink beads must be **bonded to the case** (thermal paste + Kapton). "EDF housing" = the
-**static duct/mount** — the outrunner can/bell spins, so you can't contact the motor itself. NTC range
-−40 to +110 °C suits all of these; all 13 ride one mux → one Pico ADC pin.
+⚠️ ESC / heatsink beads must be **bonded to the case** (thermal paste + Kapton). **EDF housing:** the
+main/lift **70 mm are outrunners** (the can spins) → bond the bead to the **static duct/mount**; the
+roll-post **30 mm are inrunners** (static case) → the bead can sit on the **motor body** directly. NTC
+range −40 to +110 °C suits all of these; all 13 ride one mux → one Pico ADC pin.
 
 The ESC's built-in thermal protection remains the real safety net; NTC logging is for trend data.
 

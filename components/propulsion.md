@@ -17,10 +17,10 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 | Spec | Value |
 |------|-------|
 | Fan | 30 mm, **6-blade**, all-composite, factory dynamic-balanced |
-| Motor | QF1611 outrunner, **9N6P**, 7000KV |
+| Motor | QF1611 **inrunner**, 9N6P, 7000KV (motor bullets pre-attached) |
 | Cells | 2–4S LiPo (run on **3S** here) |
 | Shaft / mount | 1.5 mm shaft · 4× M1.5 on Ø8 mm bolt circle |
-| Motor weight | 21.8 g (bare motor; listing's "168 g" is packaged/shipping) |
+| Weight | **21.8 g** (full EDF assembly — motor + duct + 6-blade fan; confirmed via Amazon listing. The page's "168 g" was a copy-paste error) |
 | Max continuous | 160 W / 20 A (per 10 s rating) |
 | Bundled ESC | 20A (no BEC info given) |
 | Duct dims | Ø37.5 mm housing · Ø34 mm fan bore · 50 mm long (22 mm motor section) |
@@ -71,6 +71,11 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 - **Notes:** at ~11.2 A on a 20A ESC → ~56% load, no heatsink. **No BEC**, so it can't power the RX/FC
   rail — fine here (FC has its own supply). **Decision: these are the roll-post ESCs** (cheap +
   BLHeli_S/DSHOT response); the EDFs' bundled 20A ESCs become spares.
+- **Connectors (none fitted):** solder the spare **XT60H** onto the bare power leads (fed by the 3S
+  850 mAh pack). **3-pin servo lead → FC:** use **signal + GND** for throttle (ArduPilot drives the
+  roll posts); LittleBee has **no BEC**, so **cut/de-pin the red +5 V wire** (avoids backfeed to the
+  FC 5 V rail). Motor end is **bare pads** — the 30 mm EDF already has 2 mm bullets, so either fit
+  matching **2 mm bullets** to the pads (to buy — not in cart) or solder the EDF leads straight on.
 
 ---
 
@@ -89,7 +94,7 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 | Motor | QF3027 outrunner, **12N10P**, 2200KV |
 | Cells | **6S** LiPo |
 | Shaft / motor dia | 4.0 mm shaft · 30 mm motor |
-| Weight | **209 g** (motor; fan/duct extra) |
+| Weight | **209 g** (full EDF assembly — motor + duct + 12-blade fan) |
 | Max continuous | **2200 W / 89 A** (per 10 s rating) |
 | Recommended ESC | **100A** (Hobbywing 100A V2 planned, not yet carded) |
 | Duct dims | Ø84 mm fan · Ø73.5 mm housing · 93 mm long |
@@ -108,7 +113,8 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 - **Notes:** ~3300 g peak each at full 6S; ~72–89 A normal draw (peaks ~100 A) → each needs a **100A
   ESC** on its own pack (main + lift each a 5000 mAh pack — see [power.md](power.md)). Already produces a
   convincing jet sound across the throttle range. **Out of ACS712 range** (89 A ≫ 20 A) so EDF current
-  isn't logged — rely on ESC thermal protection. Reverse spin by swapping any two motor leads.
+  isn't logged — rely on ESC thermal protection. Motor leads have **bullets pre-attached** (mate the
+  Skywalker's 4 mm bullet outputs). Reverse spin by swapping any two motor leads.
 
 ---
 
@@ -139,7 +145,7 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 - **Notes:** 100A/120A comfortably covers each 70 mm EDF's ~89 A peak (~12–26% margin). **Has a 5 V/7A
   UBEC** — can power the RX/servo rail (decide whether to use it or the FC's own supply; avoid
   back-feeding two BECs). Output **4 mm bullets** mate to the EDF motor leads; input is **bare 10AWG**
-  → terminate with the main-pack connector (see [power.md](power.md)). Configure 6S, set LVC, and the
+  → terminate with **EC5** (both 5000 mAh packs are EC5, so the pack plugs straight in). Configure 6S, set LVC, and the
   brake/timing to taste via the transmitter or LED box.
 
 ---

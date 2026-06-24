@@ -7,19 +7,25 @@ Consolidated power and signal wiring for the Phase 2 F-35B. Source detail lives 
 ## Power distribution (dual battery)
 
 ```
-[6S 5000mAh main]
-   ├── 10AWG ──────────────► ESC 1 (Hobbywing 100A) ──► Main EDF (~89A)
-   └── 18AWG tap (EC5 joint) ─► CoreWing PDB input
-                                  ├── Flight BEC  5.2V/4A ─► F405 + ELRS + Pico
-                                  ├── Servo BEC   6V/8A-14A ─► all servos + STS3032
-                                  └── VTX/CAM BEC 12V/2A   ─► LED drivers
+Each EDF is wired battery → ESC → motor DIRECTLY — no high current through the FC.
 
-[6S 5000mAh lift]
-   └── 10AWG ──────────────► ESC 2 (Hobbywing 100A) ──► Lift EDF (~89A)
+[6S 5000mAh main] ──EC5── ESC (Hobbywing 100A) ──► Main EDF (~89A)      (rear)
 
-Current sensors:
-   ACS712 20A ×3 → FC/servo rail + roll-post EDF L/R (read via Pico)
-   Main/lift EDF current not logged in v1 (>20A); Matek 150A optional, buy-later if needed
+[6S 5000mAh lift] ──EC5──┬─ ESC (Hobbywing 100A) ──► Lift EDF (~89A)    (front)
+                         └─ 18AWG avionics tap (soldered at the ESC's EC5 joint) ──► CoreWing PDB
+                                ├── Flight BEC  5.2V/4A     ─► F405 + ELRS + Pico
+                                ├── Servo BEC   6V/8A(14A pk)─► all servos + STS3032
+                                └── VTX/CAM BEC 9-12V/2A    ─► LED drivers
+        (tap is off the LIFT pack — dead weight in cruise, so it balances the two packs; ~5A load)
+
+[3S 850mAh] ──XT60H──┬─ LittleBee 20A ──► roll-post EDF L   (FC throttle → each LittleBee's 3-pin
+                     └─ LittleBee 20A ──► roll-post EDF R    SIGNAL lead; LittleBee has no BEC)
+
+Sensing:
+   PDB built-in current sensor → avionics-tap current (FC/BEC/servo/LED) → F405
+   ACS712 20A ×2 → roll-post EDF L/R current (÷0.66 divider → Pico ADC); 1 ACS712 spare
+   Voltage: lift pack via PDB (tap); main pack + 850mAh via resistor dividers → Pico ADC
+   Main/lift EDF current not logged yet (>20A) — Matek 150A optional, buy-later
 ```
 
 No external buck converters or standalone BECs — the PDB supplies all three rails. The 6V servo BEC

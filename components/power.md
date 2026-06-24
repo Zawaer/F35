@@ -115,8 +115,9 @@ Build context: [Power System](../docs/02-power-system.md).
 - **Category:** LiPo battery
 - **Status:** 🔄 **borrowed** (school drone club; school order 9 Apr 2026) — not owned outright
 - **Used for:** **main (rear) EDF + lift (front) EDF** — one pack each — plus an 18AWG system tap off
-  the main pack — [Power System](../docs/02-power-system.md)
-- **Variant / qty:** 6S 5000 mAh 70C, EC5 · **2 in use (main + lift)**
+  the **lift** pack — [Power System](../docs/02-power-system.md)
+- **Variant / qty:** 6S 5000 mAh 70C, **EC5** · **2 in use (main + lift)** — each plugs straight into a
+  Skywalker 100A ESC (also EC5)
 - **Price:** €58.82 (school order; list €60.32)
 - **Source:** ChinaHobbyLine
 - **Link:** ChinaHobbyLine — CNHL G+Plus 5000mAh 22.2V 6S 70C EC5 (stock 500706EC5)
@@ -135,8 +136,8 @@ Build context: [Power System](../docs/02-power-system.md).
 | Lead wire | 10 AWG |
 | Stock # | 500706EC5 |
 
-- **Notes:** one pack per fan — main EDF (~89 A) + the system tap to the PDB, and an identical pack on
-  the lift EDF. 70C × 5 Ah ≈ 350 A theoretical → huge headroom over each EDF's ~94 A peak (matches the
+- **Notes:** one pack per fan, each wired **direct to its ESC** (no FC in the high-current path); the
+  **lift** pack also carries the 18AWG avionics tap to the PDB. 70C × 5 Ah ≈ 350 A theoretical → huge headroom over each EDF's ~94 A peak (matches the
   ~11.4 mΩ IR measurement). **~714 g each (×2 ≈ 1.43 kg)** — dominant CG/AUW factor; the lift pack is
   **+260 g** vs the old 2700 mAh, shifting CG forward (see
   [CG](../docs/01-project-overview.md#cg-the-central-challenge)).

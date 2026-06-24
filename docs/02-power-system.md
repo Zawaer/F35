@@ -2,7 +2,9 @@
 
 > **Current setup (Phase 2 F-35B):** **two 6S 5000 mAh LiPos** — one per fan (main EDF + lift EDF),
 > each feeding its own Hobbywing 100A ESC over 10AWG. The FC/servo/LED system runs off an 18AWG
-> **tap** from the main battery into the CoreWing PDB, which provides three regulated BEC rails. No
+> **tap** from the **lift** battery (it's dead weight in cruise, so this balances the two packs) into
+the CoreWing PDB, which provides three regulated BEC rails. **Both EDFs are wired battery→ESC→motor
+directly — no high current through the FC.** No
 > external buck converters.
 
 The dual-battery choice is driven by **CG/weight distribution** and **clean per-EDF current
@@ -12,8 +14,8 @@ measurement**, not by a current shortfall — electrically a single good 6S pack
 
 | Pack | Model | Capacity | C | Weight | Role | Connector |
 |------|-------|----------|---|--------|------|-----------|
-| Main | CNHL G+Plus 6S | 5000 mAh | 70C | ~714 g | Main (rear) EDF + system tap | EC5 |
-| Lift | CNHL G+Plus 6S | 5000 mAh | 70C | ~714 g | Lift (front) EDF only | EC5 |
+| Main | CNHL G+Plus 6S | 5000 mAh | 70C | ~714 g | Main (rear) EDF (direct) | EC5 |
+| Lift | CNHL G+Plus 6S | 5000 mAh | 70C | ~714 g | Lift (front) EDF + 18AWG avionics tap | EC5 |
 
 Both packs are **borrowed from the school drone club** (an availability/return constraint). Full
 specs in the [battery component cards](../components/power.md).
@@ -102,14 +104,17 @@ upgrade pushing sustained load past ~8 A would call for one — never join two B
 
 ## System tap wiring
 
-The tap only carries BEC *input* current, not EDF current. Because the BEC steps 22.2V down to
-6V, input current is lower than servo output current even at servo stall (~3.4 A input for ~10.8 A
-of 6V servo output). Total tap current peaks ~4–5 A.
+The tap comes off the **lift-fan battery** (not the main) — the lift fan is dead weight in cruise, so
+drawing the avionics from it balances the two packs. It carries only BEC *input* current, not EDF
+current: the BEC steps 22.2 V → 6 V, so input current is far lower than servo output (~3.4 A input
+for ~10.8 A of 6 V servo output). **Total tap current peaks ~4–5 A.**
 
-- **Use 18AWG silicone wire** for the tap. At the servo-BEC peak the combined BEC input can
-  approach ~20 A; 18AWG (~16 A continuous) is **marginal at peak** — keep the run **short
-  (<150 mm)**, or step up to **16AWG** if the run is longer.
-- Tap point: battery EC5 joint → 18AWG red/black → PDB input pads.
+- **18AWG silicone wire** (in cart) is plenty — rated ~24.5 A vs the ~5 A tap load. (The cart's
+  **10AWG** is for *extending the main/lift EDF power* runs if needed — those carry the ~89 A.)
+- **Tap point:** solder the 18AWG to the **exposed solder joint between the lift ESC and its EC5
+  connector** (the battery-side EC5 joint is already heat-shrunk, so use the ESC side). Re-protect the
+  new joint with heat shrink / Kapton, then run red/black to the PDB input pads.
+- **The PDB's own current sensor reads this whole avionics load** — no separate ACS712 needed on the tap.
 
 ## Wire gauge plan (final)
 
