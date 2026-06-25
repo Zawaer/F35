@@ -23,10 +23,16 @@ ACS712 is needed there — both used sensors go on the roll-post EDFs, one spare
 > **resistor divider (~×0.66) on each OUT→ADC** (the chip needs ≥4.5 V, so you can't just run it at
 > 3.3 V). See the [ACS712 card](../components/sensors.md). Calibrate the zero-offset in firmware.
 
-**ACS712 divider recipe (×3, one per sensor):**
+> **ADC routing (important):** the RP2040 has only **3 ADC pins** (GP26/27/28) but the analog suite
+> needs 17 inputs (13 NTC + 2 ACS712 + 2 battery dividers). Resolved by reading the **2 ACS712
+> through 2 of the spare CD74HC4067 mux channels** (13 NTC + 2 current = 15 of 16, 1 free), so the
+> **avionics RP2040** uses: **GP26 = mux SIG** (all 16), **GP27 = main-pack V**, **GP28 = roll-post
+> V**. See [Pico — why two boards](04-raspberry-pi-pico.md#why-two-boards-pin-budget).
+
+**ACS712 divider recipe (×2, one per sensor in use):**
 
 ```
-ACS712 OUT ── 10 kΩ ──┬── Pico ADC (GPIO 26/27/28)
+ACS712 OUT ── 10 kΩ ──┬── CD74HC4067 spare channel (→ GP26 mux SIG)
                       │
                     20 kΩ
                       │
@@ -55,8 +61,8 @@ Voltage matters more than current here — you must land before a pack is over-d
 | Pack | How its voltage is sensed |
 |------|---------------------------|
 | **Lift** 5000 mAh | **via the PDB** — the avionics tap comes off this pack, so the FC reads its voltage directly |
-| **Main** 5000 mAh | **resistor divider → Pico ADC** (isolated from the FC; **100 kΩ / 10 kΩ** from the kit → 25.2 V ≈ 2.3 V; or 100 k/15 k for fuller range) |
-| **Roll-post** 850 mAh | **resistor divider → Pico ADC** (3S; **10 kΩ / 2 kΩ** from the kit → 12.6 V ≈ 2.1 V) |
+| **Main** 5000 mAh | **resistor divider → avionics RP2040 GP27** (isolated from the FC; **100 kΩ / 10 kΩ** from the kit → 25.2 V ≈ 2.3 V; or 100 k/15 k for fuller range) |
+| **Roll-post** 850 mAh | **resistor divider → avionics RP2040 GP28** (3S; **10 kΩ / 2 kΩ** from the kit → 12.6 V ≈ 2.1 V) |
 
 **Wiring:** `Batt+ → R_top → [ADC pin] → R_bottom → GND`.
 
@@ -133,7 +139,8 @@ firmware — no NTC channel needed).
 the real net); 3BSM nozzle (the main-EDF housing covers that zone); **the FC stack** (the F405 + IMU
 already self-report temp); cockpit ST7789 screen + LED driver boards (run cool — the 10W LED *heatsink*
 is the only hot LED part); nav lights; and — **skipped for now** — a dedicated **PDB-board**,
-**bay-ambient**, or **EDF exhaust-air** sensor. **3 mux channels left spare.**
+**bay-ambient**, or **EDF exhaust-air** sensor. **3 mux channels left spare** by the NTCs — 2 of them
+take the ACS712 current sensors, leaving **1 truly free**.
 
 ⚠️ ESC / heatsink beads must be **bonded to the case** (thermal paste + Kapton). **EDF housing:** the
 main/lift **70 mm are outrunners** (the can spins) → bond the bead to the **static duct/mount**; the
@@ -158,9 +165,12 @@ telemetry over UART, this gives a complete per-flight picture.
 - MicroSD card: **not owned — buy when needed.** Divider resistors (one 47 kΩ for the shared NTC divider,
   10 kΩ for STS3032 half-duplex, 10 k/20 k ×3 for the ACS712 dividers): covered by the electronics
   kit / school stock — no purchase needed.
-- Decide final NTC count and whether to add the exhaust-air sensor.
-- Decide whether to add a 150A-class sensor for main/lift EDF current, or accept no logging there.
-- Confirm CD74HC4067 wiring (S0–S3 select pins + SIG) and the Pico ADC pin used.
+- ✅ **NTC count resolved: 13 channels** (see [above](#what-to-monitor)); **no exhaust-air sensor** —
+  the main-EDF-housing channel covers that zone. 2 of the 3 spare mux channels take the ACS712 (15 of
+  16 used, 1 free).
+- ✅ **Main/lift EDF current: accept no logging in v1.** A 150A-class Hall sensor (e.g. Matek 150A) is
+  **buy-later/optional** if precise EDF-current logging is wanted; the PDB still reports pack current.
+- Confirm CD74HC4067 wiring (S0–S3 select pins + SIG on GP26) and the spare-channel ACS712 mapping.
 
 ## Related
 

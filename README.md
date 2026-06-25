@@ -27,7 +27,7 @@ goal, and most of the technical depth in this KB concerns it.
 - **Hover control:** ArduPilot quadplane — 4-motor mix (main EDF vectored via 3BSM, front lift
   fan, 2× wingtip micro motors). See [Propulsion](docs/06-propulsion.md).
 - **Flight controller:** CoreWing F405 WING V2 stack (FC + PDB PLUS + wireless), ArduPilot
-- **Secondary I/O:** Raspberry Pi Pico for extra PWM, temperature sensing, and LED control
+- **Secondary I/O:** two RP2040 boards (WeAct avionics + Pi Pico servo bank) for extra PWM, temperature sensing, and LED control
 - **Airframe:** LW-PLA print + carbon/aluminium spars + plywood reinforcement
 
 ## Documentation index

@@ -55,10 +55,19 @@ only signal (PWM/DSHOT) to the ESCs.
 |------|-------------|
 | USART1 | Wireless expansion board |
 | USART6 | ELRS receiver (CRSF) |
-| One UART (e.g. UART4/5) | **Raspberry Pi Pico** link — 16 extra PWM outputs + temp telemetry (see [Pico](04-raspberry-pi-pico.md)) |
+| One UART | **RP2040 avionics board** (WeAct) — MAVLink: temp/current/voltage telemetry + LED/screen cmds |
+| One UART | **RP2040 servo-bank board** (Pico) — MAVLink: secondary-servo PWM commands |
+| One UART | **Feetech STS3032** serial half-duplex bus (3BSM nozzle) |
 | ADC 1 | Battery 1 (main) voltage — from PDB divider |
 | ADC 2 | Battery 2 (lift) voltage |
 | ADC 3/4 | Spare / RSSI / airspeed |
+
+> Six UARTs, four now spoken for (wireless, ELRS, two RP2040s) plus the STS3032 bus = five; one
+> free. The **two RP2040 boards** (one couldn't fit the pin/ADC budget) each run **MAVLink** to the
+> FC — see [Pico — why two boards](04-raspberry-pi-pico.md#why-two-boards-pin-budget). Note: their
+> custom sensor values reach a MAVLink GCS and the blackbox easily, but **only ArduPilot's fixed CRSF
+> schema reaches the Jumper T14** — custom temps go on the cockpit TFT, not the radio (see
+> [Pico — communication](04-raspberry-pi-pico.md#communication-with-the-fc-and-onward-to-the-t14)).
 
 > **Current sensing changed:** the earlier plan put Matek 150A sensors on each battery lead into
 > ADC2/ADC4. The current plan uses **3× ACS712 20A** on the FC/servo rail + both roll-post EDFs

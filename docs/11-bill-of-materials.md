@@ -131,9 +131,9 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | GPS module | ArduPilot VTOL altitude / position hold (EKF) | 🛒 later — post-validation, budget |
 | Downward rangefinder / lidar | Precise low-altitude hover hold (TF-Luna / VL53L1X) | 🛒 later — post-validation, budget |
 | 2 mm bullet connectors | EDF motor leads | 🛒 later |
-| Main landing wheels (~55/56 mm) | F35B main gear (38 mm nose in cart) | 🛒 later |
+| Main / rear landing wheels (~50–56 mm) | F35B main gear (38 mm nose ordered) | 🛒 later |
 | Matek 150A current sensor | Main/lift EDF current logging (>20A) | ⚠️ optional |
-| 8 AWG wire | 10 AWG is adequate per cards — only if extra margin wanted | ⚠️ optional |
+| Spare RP2040 board | Flash-and-swap hot-spare (bare Pico now an active board — see [Pico](04-raspberry-pi-pico.md)) | 🛒 later |
 | Stainless button-head screw kit (600 pc) | General fasteners | 🛒 to card |
 
 ## Key decisions
@@ -142,12 +142,14 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 - **3BSM rotation:** **4 mm loose steel ball race** (printed groove); MR62ZZ = backup; **6805ZZ
   dropped** (not bought). One **STS3032** suffices (sections gear-linked); yaw is a separate MG90S/SG90.
 - **Temperature:** NTC 100K + CD74HC4067 mux (one shared 47 kΩ divider); **DS18B20 dropped**.
-- **Current:** 3× ACS712 20A (FC/servo rail + roll-post EDFs); main/lift EDF current **not logged** in
-  v1 (Matek 150A optional, buy-later).
+- **Current:** 3× ACS712 20A owned — **2 used** (both roll-post EDFs), 1 spare; avionics-tap current
+  read by the PDB. Read via 2 spare mux channels. Main/lift EDF current **not logged** in v1 (Matek
+  150A optional, buy-later).
 - **Batteries:** **two 5000 mAh 6S** packs (one per fan) — lift +260 g vs the old 2700 mAh (now spare),
   AUW ~3445 g. Fallbacks: 2700 lift + 5000 main, or 2× 2700.
-- **Secondary controller:** WeAct RP2040 primary + Pi Pico spare (ESP32-S3 stash kept for bench/ground
-  tooling).
+- **Secondary controller:** **two RP2040 boards** — WeAct (avionics: sensors + screen + LEDs) + Pi Pico
+  (servo bank); one board can't fit the pin/ADC budget. Spare RP2040 now buy-later (Pico promoted to
+  active). ESP32-S3 stash kept for bench/ground tooling.
 
 ## Related
 [Power System](02-power-system.md) · [Propulsion](06-propulsion.md) · [Servos](05-servos.md) ·

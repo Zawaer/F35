@@ -134,8 +134,9 @@ Grey primer + filler primer (hide layer lines), F-35B livery colours, sandpaper 
 
 ## Open questions / TODO
 
-- Confirm whether one 8 mm tube per wing spar suffices or two should be run side-by-side.
-- Confirm rear wheel size (~50 mm) and add to cart.
+- ⚠️ **Still open:** one 8 mm tube per wing spar, or two side-by-side? (Undecided — needs a load call.)
+- Rear/main wheel (~50–56 mm): **deferred to buy-later** (see [BOM](11-bill-of-materials.md)); 38 mm
+  nose wheel already ordered.
 - Confirm the fastener kit includes M2 nuts; otherwise add separately.
 
 ## Related

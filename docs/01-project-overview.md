@@ -42,8 +42,9 @@ batteries, ESCs, and motors (see [Propulsion](06-propulsion.md) and [Power](02-p
   main EDF (vectored by the 3BSM), front lift fan, and 2× wingtip micro motors for roll. Bleed-air
   roll posts were evaluated and **rejected** (see [Propulsion](06-propulsion.md#roll-control)).
 - **Flight controller:** CoreWing F405 WING V2 stack, ArduPilot firmware. See [Flight Controller](03-flight-controller.md).
-- **Secondary controller:** Raspberry Pi Pico for extra PWM outputs, temperature sensing, and LED
-  control, talking to the FC over UART. See [Pico](04-raspberry-pi-pico.md).
+- **Secondary controller:** two RP2040 boards (WeAct avionics + Pi Pico servo bank) for extra PWM
+  outputs, temperature sensing, and LED control, each talking to the FC over UART (MAVLink). See
+  [Pico](04-raspberry-pi-pico.md).
 - **Airframe:** LW-PLA printed shell + carbon/aluminium spars + plywood reinforcement. See
   [Materials & Airframe](09-materials-airframe.md).
 
