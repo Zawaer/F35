@@ -70,7 +70,7 @@ One battery tap → PDB → three independent, simultaneous regulated rails:
 
 ```
 Rail 1: Flight BEC   5.2V  4A (peak 5A)  → FC + ELRS + Pico        (~1A)
-Rail 2: Servo BEC    6V    8A (peak 14A) → all servos + STS3032
+Rail 2: Servo BEC    6V    7.5A (peak 14A) → all servos + STS3032
 Rail 3: VTX/CAM BEC  9-12V 2A (peak 3A)  → LED drivers
 ```
 
@@ -79,28 +79,25 @@ negligible against the pack's ~300 A capability. Voltage sag from the tap is ~0.
 
 ### Servo rail headroom
 
-> ✅ **Resolved: 8 A continuous.** The product-page *text* said 4 A, but its images said 8 A — and the
-> **official manual + RaceDayQuads listing confirm 5 V (adj 5/6/7.2 V) @ 8 A continuous, 14 A peak.**
-> The rail is **not marginal**; no UBEC split is needed.
+> ✅ **Verified: 7.5 A continuous / 14 A peak** (IC-confirmed 2026-06-26). The servo-BEC controller
+> is a **SCT2481** (Silicon Content Technology synchronous step-down). The adjacent **CSD18511Q5A MOSFET
+> (30 A rated)** corroborates a high-current design. Official manual says 8 A (slightly rounded up);
+> product-page text said 4 A (wrong). Real value: **7.5 A continuous**. Rail is not marginal; no UBEC split needed.
 
-The 6V servo rail at **8A sustained / 14A peak** comfortably covers the servo count:
+The 6V servo rail at **7.5A sustained / 14A peak** comfortably covers the servo count:
 
-| Phase | Servo current | vs 8A sustained | vs 14A peak |
-|-------|--------------|-----------------|-------------|
+| Phase | Servo current | vs 7.5A sustained | vs 14A peak |
+|-------|--------------|-------------------|-------------|
 | Hover | ~2.1 A | ✅ | ✅ |
 | Cruise | ~3.8–4.1 A | ✅ | ✅ |
 | Transition (2–3 s) | ~8–10 A | ✅ brief | ✅ |
 | All servos stalled | ~11 A | brief | ✅ |
 
-**Decision:** run all servos off the PDB 6V rail directly — 8 A sustained covers cruise with margin,
+**Decision:** run all servos off the PDB 6V rail directly — 7.5 A sustained covers cruise with margin,
 14 A peak covers transition/stall transients, and the FC sits on a *separate* 5.2 V rail so a servo
 sag can't reboot it. **No UBEC split — no external UBEC will be ordered.** (Only a future servo
-upgrade pushing sustained load past ~8 A would call for one — never join two BEC outputs onto one wire.)
+upgrade pushing sustained load past ~7.5 A would call for one — never join two BEC outputs onto one wire.)
 
-> 🔧 **Still worth self-verifying the 8 A** first-hand: read the **servo-BEC regulator chip's part
-> number** on the PDB (the IC by the SERVO BEC inductor) and check its datasheet, **and/or bench-load
-> the 6 V rail to ~8 A** for a few minutes and watch for voltage sag / overheat. Belt-and-braces — the
-> 8 A is already confirmed by the manual + retailer listings.
 
 ## System tap wiring
 
@@ -175,9 +172,7 @@ telemetry (PDB VBAT divider → FC).
 ## Open questions / TODO
 
 - ⚠️ Confirm final CG once component placement is fixed; may need nose ballast or battery shuffle.
-- Servo rail **resolved: 8 A continuous** — no UBEC split, **no external UBEC to order**. Still nice
-  to self-verify first-hand: read the PDB servo-BEC regulator chip number and/or bench-load the 6 V
-  rail to ~8 A.
+- Servo rail **verified: 7.5 A continuous (SCT2481 IC, 2026-06-26)** — no UBEC split, no external UBEC to order.
 - **Lift battery decided: a 2nd 5000 mAh pack** (matched pair) for current margin + hover time, at a
   +260 g forward CG cost. Fallbacks if CG/weight don't work out: **2700 mAh lift + 5000 mAh main**
   (the old plan, lighter front), or **2× 2700 mAh** (lightest, shortest flight).

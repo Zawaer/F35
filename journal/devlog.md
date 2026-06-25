@@ -9,6 +9,19 @@ records go in [decisions.md](decisions.md); this is the looser narrative around 
 
 ---
 
+## 2026-06-26 — BEC specs verified via IC identification
+
+- Photographed the CoreWing V1.85 PDB and read the IC markings directly to close the "8 A or 4 A?" question.
+- **Servo BEC controller: SCT2481** (Silicon Content Technology synchronous step-down) — datasheet gives **7.5 A continuous / 14 A peak**. The official manual says 8 A (slightly rounded up); the product page's 4 A was flat wrong. Real value: **7.5 A continuous**.
+- **FC BEC: MPS MP9447 family** — 4 A cont / 5 A peak; matches the manual exactly.
+- **VTX/CAM BEC: AMGT 155** — 2 A cont / 3 A peak; matches the manual exactly.
+- Corroborating evidence on the servo BEC: the **CSD18511Q5A MOSFET** (30 A continuous) next to the SCT2481 — nobody drops a 30 A FET on a 4 A BEC.
+- SCT domestic IC initially unreadable in English databases; identified via the Silicon Content Technology (芯洲科技) family (their 8 A buck = SCT2280 series → SCT2481 is a variant in that current class).
+- All servos still comfortably within headroom (peak cruise ~4 A, peak transition ~8–10 A). No UBEC split needed.
+- Decisions.md + power doc updated to reflect 7.5 A (was "8 A, still worth self-verifying").
+
+---
+
 ## 2026-06-24 — Big AliExpress order placed; all in-cart parts ordered
 
 - Ordered everything that was in the cart in one go. Covers:
