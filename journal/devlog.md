@@ -9,6 +9,17 @@ records go in [decisions.md](decisions.md); this is the looser narrative around 
 
 ---
 
+## 2026-06-26 — Trainer second flight; leftward roll crash again
+
+- Went to school — Aki happened to be there, which turned out useful since he has the sports-hall keys.
+- Quick repair from the first crash done on the spot; got the trainer flight-ready.
+- First tried the piazza but too cramped — not worth it.
+- Moved to the sports hall. It got airborne briefly but curved left again (same as last time) and hit the ground.
+- Damage: one prop blade snapped, nose wheel came off — should be a fast fix.
+- **Root cause / lesson:** aileron trim is off to the left. Next flight, pre-correct ailerons before launch, and consider a permanent right-trim. Also: sports hall from the start — not the piazza.
+
+---
+
 ## 2026-06-26 — BEC specs verified via IC identification
 
 - Photographed the CoreWing V1.85 PDB and read the IC markings directly to close the "8 A or 4 A?" question.
