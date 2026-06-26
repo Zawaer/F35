@@ -9,9 +9,8 @@
 
 > **Boards:** **two RP2040s.** The **WeAct Studio RP2040 (2 MB)** (USB-C + hardware reset) runs the
 > **avionics board** (sensors + screen + lights); a **Raspberry Pi Pico** runs the **servo-bank
-> board**. Both are RP2040, so firmware/pinouts are interchangeable. Because the bare Pico is now an
-> *active* board (no longer the spare), a fresh RP2040 is on the buy-later list as the flash-and-swap
-> hot-spare. **RP2040 chosen over the owned ESP32-S3 boards** for cleaner ADC (NTC/ACS712 sensing),
+> board**. Both are RP2040, so firmware/pinouts are interchangeable. **RP2040 chosen over the owned
+> ESP32-S3 boards** for cleaner ADC (NTC/ACS712 sensing),
 > jitter-free PIO servo/LED timing, and no 2.4 GHz clash with the ELRS RX; the mostly-static 172×320
 > cockpit dashboard is well within its headroom.
 
