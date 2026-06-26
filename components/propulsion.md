@@ -147,8 +147,21 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 - **Notes:** 100A/120A comfortably covers each 70 mm EDF's ~89 A peak (~12–26% margin). **Has a 5 V/7A
   UBEC** — can power the RX/servo rail (decide whether to use it or the FC's own supply; avoid
   back-feeding two BECs). Output **4 mm bullets** mate to the EDF motor leads; input is **bare 10AWG**
-  → terminate with **EC5** (both 5000 mAh packs are EC5, so the pack plugs straight in). Configure 6S, set LVC, and the
-  brake/timing to taste via the transmitter or LED box.
+  → terminate with **EC5** (both 5000 mAh packs are EC5, so the pack plugs straight in).
+
+**Programmable parameters** (via transmitter or LED program box; * = factory default):
+
+| Parameter | Options | Use |
+|-----------|---------|-----|
+| Brake Type | *Disabled / Normal / Reverse / Linear Reverse | **Disabled** — never brake an EDF |
+| Brake Force | *Low / Medium / High | irrelevant (brake off) |
+| Voltage Cutoff Type | *Soft / Hard | **Soft** — throttle-reduces before cut; safer for VTOL |
+| LiPo Cells | *Auto Calc / 3S / 4S / 5S / **6S** | ⚠️ **Set to 6S manually** — Auto Calc can misread a storage-charged 6S as 5S |
+| Cutoff Voltage | Disabled / Low / *Medium / High | **Medium** default is fine |
+| Start-up Mode | *Normal / Soft / Very Soft | **Normal** |
+| Timing | Low / *Medium / High | **Medium** suits the 2200KV inrunner |
+| Active Freewheeling | *On / Off | **On** (DEO — keep it) |
+| Search Mode | *Off / 5min / 10min / 15min | **Off** (ArduPilot handles signal loss) |
 
 ---
 
