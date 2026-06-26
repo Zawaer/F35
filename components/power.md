@@ -205,8 +205,14 @@ Build context: [Power System](../docs/02-power-system.md).
 - **Notes:** dual channel → charge main + lift packs at once. ⚠️ On **AC it's 200 W total**; the full
   650 W / 15 A×2 needs a **DC supply >24 V** (e.g. a 600–800 W PSU) — fine on AC for moderate C-rates.
   ⚠️ Charger output is **XT60**, but the **main 5000 mAh pack is EC5** → bridged by the owned
-  **XT60↔EC5 adapter** (carded below). Both packs use JST-XH balance leads (match). Reads pack IR
-  while charging. Borrowed.
+  **XT60↔EC5 adapter** (carded below). Both packs use JST-XH balance leads (match). Borrowed.
+
+**How to get a reliable IR reading:**
+The D6 Pro measures IR during charging. Two ways to get an accurate number:
+
+1. **During charge — wait for it to settle:** start a normal balance charge, then wait at least 5 minutes for the charger to enter steady CC (constant current) phase. Watch the per-cell IR numbers on screen; when they stop changing between display updates, they're stable. IR captured right after plugging in (before CC stabilises) reads artificially high.
+
+2. **At rest — most accurate:** charge the pack fully, unplug, and let it sit 15–30 min to cool and settle. Reconnect and start a charge or storage-discharge; read the IR in the first few seconds before current ramps up, or use a storage-discharge cycle which also displays IR at a known mid-voltage. A resting pack with no current flowing gives the cleanest measurement, especially for comparing packs over time.
 
 ### Racepow S21700FJ 4000mAh 30A — transmitter cells (Li-ion 21700)
 - **Category:** Li-ion cell (21700) — **transmitter power, not aircraft**

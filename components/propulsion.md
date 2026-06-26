@@ -124,6 +124,7 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 - **Used for:** **main EDF + lift-fan EDF** (one each, individual not 4-in-1) —
   [Propulsion → Phase 2](../docs/06-propulsion.md#phase-2--edf-propulsion)
 - **Variant / qty:** Skywalker **100A V2** · 2 pcs
+- **Product number:** 80060441
 - **Price:** €70.26 total (€29.74 ×2 + €10.78 shipping)
 - **Link:** https://www.aliexpress.com/item/1005009269823714.html
 
@@ -136,7 +137,8 @@ Build context: [Propulsion](../docs/06-propulsion.md).
 | Input wires | 10AWG ×2 (red/black), 150 mm, **bare** (fit pack connector) |
 | Output wires | 12AWG ×3, 100 mm → **4.0 mm gold bullet (female)** |
 | Size / weight | 85 × 36 × 9 mm · **92 g** |
-| Programming | transmitter / LED program box / program port — **no firmware upgrade** |
+| Programming | transmitter ✅ · LED program box ✅ · program wire ✅ — LED program card ✗ · LCD box ✗ · WiFi ✗ · OTA ✗ |
+| Firmware upgrade | **Not supported** |
 | Features | DEO active freewheeling, reverse brake (HW patent), search mode, thermal/LVC/signal-loss protection |
 
 - **⚠️ Signal protocol — PWM only:** the Skywalker V2 is a **standard PWM airplane ESC (no DSHOT)**.
