@@ -57,7 +57,7 @@ only signal (PWM/DSHOT) to the ESCs.
 | USART6 | ELRS receiver (CRSF) |
 | One UART | **RP2040 avionics board** (WeAct) — MAVLink: temp/current/voltage telemetry + LED/screen cmds |
 | One UART | **RP2040 servo-bank board** (Pico) — MAVLink: secondary-servo PWM commands |
-| One UART | **Feetech STS3032** serial half-duplex bus (3BSM nozzle) |
+| One UART | **Feetech STS3032** serial half-duplex bus (3BSM nozzle) — `PROTOCOL=23, BAUD=1000, OPTIONS=4` |
 | ADC 1 | Battery 1 (main) voltage — from PDB divider |
 | ADC 2 | Battery 2 (lift) voltage |
 | ADC 3/4 | Spare / RSSI / airspeed |

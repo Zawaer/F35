@@ -88,12 +88,39 @@ nozzle assembly down for hover. (A YouTube build demonstrated this works well.)
 Yaw is separate: a **single MG90S (or SG90)** tilts the *whole* 3BSM ±~15° for yaw control — a
 small range, so an ordinary 90°/180° servo is plenty (no continuous rotation needed there).
 
-- STS3032 uses a **serial half-duplex bus** — hence the 10kΩ resistor (UART half-duplex). Resistors
-  are covered by the on-hand electronics kit / school stock.
+- STS3032 uses a **serial half-duplex bus** driven directly from the F405 over one UART.
 - STS3032 current (datasheet): **6 mA idle · 150 mA no-load · 1200 mA stall** @ 6 V — stall is non-trivial; factor into servo-rail budget for worst-case transitions.
 - This replaces the earlier "2× STS3032 for the sections" plan — gear-coupling means **one** smart
   servo suffices, saving ~€35 and a servo. The earlier rejected alternatives (continuous-360 SG90 +
   external AS5600 encoder) are moot.
+
+### Wiring (half-duplex, software option)
+
+Connect the STS3032 signal wire to the **TX pad** of a free F405 UART only (no RX connection needed
+for a single servo). A **10 kΩ resistor** between TX and the bus line provides the required
+pull-up. ArduPilot handles half-duplex internally — no hardware transceiver needed.
+
+### ArduPilot parameters
+
+| Parameter | Value | Notes |
+|-----------|-------|-------|
+| `SERIALx_PROTOCOL` | `23` | Smart Servo (native Feetech/Dynamixel driver) |
+| `SERIALx_BAUD` | `1000` | 1 Mbps — STS3032 default |
+| `SERIALx_OPTIONS` | `4` | Half-duplex mode (ties TX/RX internally) |
+
+Replace `x` with the actual UART number once assigned (see [Flight Controller](03-flight-controller.md)).
+
+### Lua script required for 3BSM mixing
+
+The 3BSM nozzle must transition 0° (forward flight) → 90° down (hover) while also handling yaw
+vectoring. This cannot be done with standard fixed-wing mixing. An ArduPilot **Lua script**
+(`SCR_ENABLE = 1`) reads internal pitch/yaw output channels and translates them into Feetech
+position packets (servo ID + target angle + checksum) sent over the UART.
+
+> ⚠️ **Servo rail voltage: set to 6.0 V — not 7.2 V.** The STS3032 operating range is 4.8–6.0 V;
+> 7.2 V will burn it out. The PDB servo BEC is adjustable — confirm the solder bridge is at 6 V
+> before powering the bus. All other servos (MG90S, SG90, NEEBRC) are also rated to 6 V — no
+> conflict.
 
 ## Landing gear actuation
 
@@ -142,7 +169,8 @@ See [Flight Controller](03-flight-controller.md) and [Pico](04-raspberry-pi-pico
 
 - Finalise the custom retract linkage geometry and validate the over-centre lock under load. ⚠️
 - Map each servo to a specific FC or Pico PWM output.
-- Confirm STS3032 half-duplex bus wiring and IDs.
+- ✅ **Resolved: STS3032 wiring and ArduPilot config** — TX-only + 10 kΩ, PROTOCOL=23, BAUD=1000, OPTIONS=4; Lua script for 3BSM mixing.
+- Write the Lua script for 3BSM nozzle mixing (pitch/yaw → STS position packets).
 
 ## Related
 
