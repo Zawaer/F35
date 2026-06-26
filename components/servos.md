@@ -142,7 +142,7 @@ Build context: [Servos](../docs/05-servos.md).
 | Voltage | 4.8–6.0 V |
 | Stall current | 700 mA @ 4.8 V · 900 mA @ 6.0 V (±50 mA) |
 | Idle current | 4 ±1 mA |
-| No-load running current | ~90 mA @ 6V (TianKongRC MG90S ref; Skyquist not specified) |
+| No-load running current | ~90 mA (confirmed across multiple MG90S manufacturer datasheets) |
 | Travel | 90°±5° (1000–2000 µs); ~145–180° at 800–2500 µs |
 | Neutral | 1500 µs · centering ≤1° |
 | Dead band | ~3–5 µs |

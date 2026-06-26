@@ -90,7 +90,7 @@ small range, so an ordinary 90°/180° servo is plenty (no continuous rotation n
 
 - STS3032 uses a **serial half-duplex bus** — hence the 10kΩ resistor (UART half-duplex). Resistors
   are covered by the on-hand electronics kit / school stock.
-- STS3032 current: ~100 mA idle, ~300 mA active — trivial for the PDB servo rail.
+- STS3032 current (datasheet): **6 mA idle · 150 mA no-load · 1200 mA stall** @ 6 V — stall is non-trivial; factor into servo-rail budget for worst-case transitions.
 - This replaces the earlier "2× STS3032 for the sections" plan — gear-coupling means **one** smart
   servo suffices, saving ~€35 and a servo. The earlier rejected alternatives (continuous-360 SG90 +
   external AS5600 encoder) are moot.
