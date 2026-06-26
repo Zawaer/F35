@@ -111,6 +111,7 @@ Final plan (parts chosen):
 
 ## Open questions / TODO
 
+- ⚠️ **Before first power-up:** set Hobbywing ESC **LiPo Cells → 6S** (currently factory default "Auto Calc" — must be changed manually via transmitter stick protocol or LED program box). See [ESC card](../components/propulsion.md) for the full parameter table and step-by-step procedure.
 - ⚠️ Validate 3BSM thrust-vectoring reliability and bearing wear under exhaust on the ground.
 - Finalise ArduPilot quadplane motor mixing for the 4-motor hover layout.
 - Tune lift-fan vane-box authority vs main-EDF balance for hover pitch.
