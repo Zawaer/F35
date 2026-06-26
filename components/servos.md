@@ -42,7 +42,7 @@ Build context: [Servos](../docs/05-servos.md).
 
 ---
 
-### Mini 2g servo (plastic gear) — door micro servo
+### NEEBRC M005 "2g" (plastic gear) — door micro servo
 - **Category:** Servo (micro, PWM, coreless)
 - **Status:** ✅ owned (4 pcs)
 - **Used for:** lightweight **doors** (gear doors / lift-fan doors) — [Servos](../docs/05-servos.md)

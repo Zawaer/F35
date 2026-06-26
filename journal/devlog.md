@@ -41,7 +41,7 @@ records go in [decisions.md](decisions.md); this is the looser narrative around 
     heatsinks, 2× YiRui 1156 BA15S yellow bulb (afterburner).
   - **Sensors / display** — 20× NTC 100K B3950, 3× ACS712-20A, CD74HC4067 mux board, 1.47″ ST7789 TFT,
     5× 12P FFC adapter.
-  - **Servos** — Feetech STS3032 360° (magnetic encoder, 3BSM nozzle), 4× mini 2g servo plastic gear (light
+  - **Servos** — Feetech STS3032 360° (magnetic encoder, 3BSM nozzle), 4× NEEBRC M005 2g plastic gear (light
     doors), 10× 200 mm servo extension.
   - **Roll-post propulsion** — 2× 30 mm EDF 7000KV 3S (bundled ESCs = spares), 2× FVT LittleBee 20A.
   - **Wire** — 10 AWG (2 m), 18 AWG (2 m), 22 AWG (10 m).

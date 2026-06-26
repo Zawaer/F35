@@ -15,7 +15,7 @@
 | NEEBRC 28g | 2 | 12 kg·cm | 28 g | Metal |
 | MG996R | 4 | ~15 kg·cm | 55 g | Metal |
 | Feetech STS3032 | 1 used | 4.5 kg·cm | 20 g | Metal (built-in magnetic encoder) |
-| Mini 2g servo (plastic gear) | 4 | ~0.5 kg·cm | 2 g | Plastic — **max 4.2 V** |
+| NEEBRC M005 "2g" (plastic gear) | 4 | ~0.5 kg·cm | 2 g | Plastic — **max 4.2 V** |
 
 MG996R are deliberately **avoided** in the final build — too heavy (55 g each).
 
@@ -47,7 +47,7 @@ MG996R are deliberately **avoided** in the final build — too heavy (55 g each)
 \* Roll-post *servos* only apply if vanes/doors are actuated; roll **thrust** now comes from small
 wingtip motors, not bleed-air vanes — see [Propulsion — roll control](06-propulsion.md#roll-control).
 
-**Door servos:** the 4 owned **mini 2g servos (plastic gear)** cover the lightweight door actuators
+**Door servos:** the 4 owned **NEEBRC M005 2g micro servos** cover the lightweight door actuators
 instead of SG90 to save weight — but they run on the **4.0 V LM2596 rail**, not the 6 V servo rail
 (see voltage warning above). SG90 remain the fallback for any doors not covered by the 4 units.
 
