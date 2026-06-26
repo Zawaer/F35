@@ -9,6 +9,15 @@ records go in [decisions.md](decisions.md); this is the looser narrative around 
 
 ---
 
+## 2026-06-27 — Battery IR baseline logged
+
+- First internal-resistance measurements taken with the HOTA D6 Pro during charge (2 Jun 2026).
+- **5000 mAh 6S 70C** — C1 1.5 · C2 1.9 · C3 1.5 · C4 2.2 · C5 2.1 · C6 2.2 mΩ (~11.4 mΩ total). Excellent; 0.7 mΩ spread.
+- **2700 mAh 6S 40C** — C1 5.8 · C2 5.9 · C3 4.5 · C4 6.3 · C5 4.6 · C6 4.8 mΩ (~31.9 mΩ total). Photo taken early in the charge cycle so may read a touch high; recheck at rest for a cleaner number. Normal for a 40C/2700 mAh pack.
+- Component cards updated with these values as a dated baseline.
+
+---
+
 ## 2026-06-26 — Trainer second flight; leftward roll crash again
 
 - Went to school — Aki happened to be there, which turned out useful since he has the sports-hall keys.

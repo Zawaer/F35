@@ -137,10 +137,11 @@ Build context: [Power System](../docs/02-power-system.md).
 | Stock # | 500706EC5 |
 
 - **Notes:** one pack per fan, each wired **direct to its ESC** (no FC in the high-current path); the
-  **lift** pack also carries the 18AWG avionics tap to the PDB. 70C × 5 Ah ≈ 350 A theoretical → huge headroom over each EDF's ~94 A peak (matches the
-  ~11.4 mΩ IR measurement). **~714 g each (×2 ≈ 1.43 kg)** — dominant CG/AUW factor; the lift pack is
+  **lift** pack also carries the 18AWG avionics tap to the PDB. 70C × 5 Ah ≈ 350 A theoretical → huge headroom over each EDF's ~94 A peak. **~714 g each (×2 ≈ 1.43 kg)** — dominant CG/AUW factor; the lift pack is
   **+260 g** vs the old 2700 mAh, shifting CG forward (see
   [CG](../docs/01-project-overview.md#cg-the-central-challenge)).
+- **IR baseline (2 Jun 2026, during charge, HOTA D6 Pro):**
+  C1 1.5 · C2 1.9 · C3 1.5 · C4 2.2 · C5 2.1 · C6 2.2 mΩ — pack total ~11.4 mΩ. Healthy, balanced (0.7 mΩ spread).
 
 ### CNHL 2700mAh 6S 40C (XT60) — spare / fallback lift battery
 - **Category:** LiPo battery
@@ -170,6 +171,8 @@ Build context: [Power System](../docs/02-power-system.md).
   (matched pair). Kept as a **lighter fallback (454 g vs 714 g)** if the +260 g forward weight upsets
   CG: revert to *2700 lift + 5000 main*, or go *2× 2700* (lightest, shortest flight). 40C × 2.7 Ah ≈
   **108 A** — adequate for the lift EDF if used; don't push as hard as the 70C packs.
+- **IR baseline (2 Jun 2026, during charge — captured early so may read slightly high, HOTA D6 Pro):**
+  C1 5.8 · C2 5.9 · C3 4.5 · C4 6.3 · C5 4.6 · C6 4.8 mΩ — pack total ~31.9 mΩ. Normal for a 40C/2700 mAh cell. 1.8 mΩ spread is fine; recheck at rest for a cleaner baseline.
 
 > **Battery weight note:** main 714 g + lift 714 g = **~1428 g of battery** on a ~3445 g AUW (~41%).
 > Both are **borrowed from the school drone club** — an availability/return constraint to plan
