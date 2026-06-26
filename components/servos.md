@@ -73,7 +73,7 @@ Build context: [Servos](../docs/05-servos.md).
 
 ### Servo extension cables (JR/Futaba 3-pin) — 200 & 300 mm, ×10 each
 - **Category:** Cable (servo extension lead)
-- **Status:** **300 mm ✅ owned** (ordered 2 Apr 2026) · **200 mm 🛒 in cart**
+- **Status:** **300 mm ✅ owned** (ordered 2 Apr 2026) · **200 mm ✅ owned** (ordered 24 Jun 2026)
 - **Used for:** extending servo leads to the FC/Pico across the airframe — [Servos](../docs/05-servos.md)
 - **Variant / qty:** 200 mm ×10 + 300 mm ×10
 - **Price:** 200 mm €2.68 (in cart) · 300 mm **€2.72** (owned, U-Angel-1988)

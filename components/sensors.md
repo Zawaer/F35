@@ -7,7 +7,7 @@ Build context: [Sensors & Monitoring](../docs/07-sensors-monitoring.md).
 
 ### NTC thermistor MF52B 100K B3950 — temperature sensing
 - **Category:** Sensor (NTC thermistor, analog)
-- **Status:** 🛒 in cart (2× 10-pack = 20 pcs)
+- **Status:** ✅ owned (2× 10-pack = 20 pcs · ordered 24 Jun 2026)
 - **Used for:** ESC / battery / exhaust temperature → CD74HC4067 mux → Pico ADC — [Sensors & Monitoring](../docs/07-sensors-monitoring.md)
 - **Variant / qty:** B3950 100K · 2 packs (20 pcs)
 - **Price:** €1.78 / 10 pcs (€3.56 for 2 packs)
@@ -36,7 +36,7 @@ Build context: [Sensors & Monitoring](../docs/07-sensors-monitoring.md).
 
 ### ACS712 20A — Hall current sensor ×3
 - **Category:** Sensor (Hall-effect current, analog)
-- **Status:** 🛒 in cart (3 pcs)
+- **Status:** ✅ owned (3 pcs · ordered 24 Jun 2026)
 - **Used for:** FC/servo/LED rail current (×1) + roll-post EDF L/R (×2) — [Sensors & Monitoring](../docs/07-sensors-monitoring.md)
 - **Variant / qty:** 3 pcs ACS712-20A
 - **Price:** €3.40 (3 pcs, ~€1.13/pc)

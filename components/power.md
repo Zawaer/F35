@@ -7,7 +7,7 @@ Build context: [Power System](../docs/02-power-system.md).
 
 ### Silicone wire (high-strand, 0.08 mm TS) — power & servo wiring
 - **Category:** Wire (silicone-jacket, fine-strand tinned copper)
-- **Status:** 🛒 in cart (all three gauges: 10 / 18 / 22 AWG)
+- **Status:** ✅ owned (all three gauges: 10 / 18 / 22 AWG · ordered 24 Jun 2026)
 - **Used for:** **10AWG** = main EDF power; **18AWG** = battery tap + roll-post EDF; **22AWG** =
   servo cables — [Power System](../docs/02-power-system.md)
 

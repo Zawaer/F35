@@ -79,7 +79,7 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 
 ### CD74HC4067 — 16-channel analog multiplexer (breakout)
 - **Category:** IC / breakout
-- **Status:** 🛒 in cart
+- **Status:** ✅ owned (ordered 24 Jun 2026)
 - **Used for:** expand Pico ADC for NTC thermistors (16 sensors on 1 ADC pin) — [Sensors](../docs/07-sensors-monitoring.md)
 - **Variant / qty:** module (HW-178 style) · 1
 - **Price:** €1.74
@@ -105,7 +105,7 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 
 ### 1.47" ST7789 TFT — cockpit display
 - **Category:** Display
-- **Status:** 🛒 in cart
+- **Status:** ✅ owned (ordered 24 Jun 2026)
 - **Used for:** cockpit screen — [Pico](../docs/04-raspberry-pi-pico.md#4-cockpit-tft-display)
 - **Variant / qty:** 1.47" 12-pin · 1
 - **Price:** €3.40
@@ -132,7 +132,7 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 
 ### FFC/FPC adapter board 12P 0.5 mm → 2.54 mm (ZIF) — display breakout
 - **Category:** Adapter board
-- **Status:** 🛒 in cart (5-pack)
+- **Status:** ✅ owned (5-pack · ordered 24 Jun 2026)
 - **Used for:** the [cockpit TFT](#147-st7789-tft--cockpit-display)'s 0.5 mm FFC ribbon → 2.54 mm
   pins → Pico SPI
 - **Variant / qty:** 12P · 5 pcs

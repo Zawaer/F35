@@ -49,7 +49,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 ### 304 stainless steel balls 4 mm — 3BSM ball race
 - **Category:** Hardware (loose bearing balls)
-- **Status:** 🛒 in cart (100 pcs)
+- **Status:** ✅ owned (100 pcs · ordered 24 Jun 2026)
 - **Used for:** **3BSM swivel ball race** — loose balls in a printed groove for smooth 360° nozzle
   rotation — [Propulsion → 3BSM](../docs/06-propulsion.md#3bsm--three-bearing-swivel-module)
 - **Variant / qty:** 4 mm · 100 pcs
@@ -72,7 +72,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 ### MR62ZZ deep-groove ball bearing (2×6×2.5 mm) — small shafts / backup
 - **Category:** Bearing (deep-groove, shielded)
-- **Status:** 🛒 in cart (10 pcs)
+- **Status:** ✅ owned (10 pcs · ordered 24 Jun 2026)
 - **Used for:** small shafts / gears / **backup** for the 3BSM (the main swivel uses the 4 mm ball
   race) — [Materials → bearings](../docs/09-materials-airframe.md#bearings--3bsm-rotation)
 - **Variant / qty:** MR62ZZ 2×6×2.5 · 10 pcs
@@ -98,7 +98,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 ### Carbon fibre rod 2 × 250 mm — door joints / light mechanical linkages
 - **Category:** Structural (solid CF rod)
-- **Status:** 🛒 in cart (10 pcs)
+- **Status:** ✅ owned (10 pcs · ordered 24 Jun 2026)
 - **Used for:** **joints & mechanical linking of light F35B parts** (gear/lift-fan/canopy door hinges
   & links, light pushrods) — solid rod in compression/tension —
   [Materials & Airframe](../docs/09-materials-airframe.md#carbon-fibre--structural-rods--tubes)
@@ -125,7 +125,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 ### Carbon fibre tube 500 × 8 × 6 mm (×16) — main spars / spine
 - **Category:** Structural (3K CF tube, hollow)
-- **Status:** 🛒 in cart (16-pack)
+- **Status:** ✅ owned (16-pack · ordered 24 Jun 2026)
 - **Used for:** **main spars & fuselage spine** — 500 mm tubes joined in pairs with 6 mm sleeves into
   ~900 mm runs — [Materials & Airframe → spar plan](../docs/09-materials-airframe.md#spar-plan-final--16-50086-mm-joined-with-6-mm-sleeves)
 - **Variant / qty:** 8 mm OD / 6 mm ID × 500 mm · 16 pcs (one "lot")
@@ -153,7 +153,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 ### PU wheel 1.5" / 38 mm (×2) — nose/front gear
 - **Category:** Hardware (landing-gear wheel)
-- **Status:** 🛒 in cart (1 pair)
+- **Status:** ✅ owned (1 pair · ordered 24 Jun 2026)
 - **Used for:** **front / nose landing gear wheels** —
   [Materials & Airframe → landing gear](../docs/09-materials-airframe.md#landing-gear-hardware)
 - **Variant / qty:** 1.5 inch / 38 mm · 2 pcs (one pair)
@@ -200,7 +200,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 ### Deli 502 super glue (CA) — 15 g × 3 — fast bonds / panels
 - **Category:** Adhesive (cyanoacrylate, thin/instant)
-- **Status:** 🛒 in cart (3 bottles)
+- **Status:** ✅ owned (3 bottles · ordered 24 Jun 2026)
 - **Used for:** **fast foam/CF tacking, panels, small parts** — *not* spar joints (use epoxy) —
   [Materials & Airframe → adhesives](../docs/09-materials-airframe.md#adhesives--misc)
 - **Variant / qty:** 15 g · 3 bottles
