@@ -7,7 +7,7 @@ Build context: [Servos](../docs/05-servos.md).
 
 ### Feetech STS3032 (STS3032M) — 3BSM serial-bus smart servo
 - **Category:** Servo (TTL serial-bus, magnetic encoder, 360°)
-- **Status:** 🛒 in cart
+- **Status:** ✅ owned (1 pc · ordered 24 Jun 2026)
 - **Used for:** **3BSM nozzle rotation** — one servo drives all gear-linked sections — [Servos](../docs/05-servos.md#3bsm-actuation--single-sts3032--gear-linked-sections)
 - **Variant / qty:** STS3032M · 1
 - **Price:** €34.62
@@ -15,30 +15,29 @@ Build context: [Servos](../docs/05-servos.md).
 
 | Spec | Value |
 |------|-------|
-| Weight | 20.6 ±1 g |
+| Weight | 20 g ±0.2 |
 | Body size | 23.2 × 12.1 × 28.5 mm (~32 mm length incl. mounting tabs) |
-| Torque | 4.5 kg·cm @ 6 V |
-| Speed | 0.09 s/60° @ 6 V (stall ~111 RPM) |
-| Voltage | 4.8–6 V (operating 4–7.4 V) |
-| Current | ~150 mA @ 6 V running |
-| Motor | coreless |
-| Gear | metal (copper + steel), ball bearings |
-| Horn | 25T, OD 4.95 mm (M2.3 spline) |
-| Sensor | 12-bit magnetic encoder (4096 pos, 0.088° resolution) |
-| Rotation | 360° absolute (0–4096); ±7-turn multi-turn (turns not saved on power loss) |
-| Interface | **TTL half-duplex serial bus**, 38400 bps–1 Mbps; up to 253 IDs daisy-chained |
-| Feedback | position, speed, load, voltage, current, temperature |
-| Modes | position / speed closed-loop / speed open-loop / step |
-| Protection | overheat / overcurrent / overvoltage / overload (self-unload) |
-| Includes | servo, 25T metal + plastic horns, screws, TTL bus adapter board, cables |
+| Torque | 4.0 kg·cm @ 4.8 V · **4.5 kg·cm @ 6 V** |
+| Speed | 0.10 s/60° @ 4.8 V · **0.09 s/60° @ 6 V** |
+| Voltage | 4.8–6 V |
+| Idle current | 4.8 mA @ 4.8 V · 6 mA @ 6 V |
+| No-load current | 125 mA @ 4.8 V · **150 mA @ 6 V** |
+| Stall current | 900 mA @ 4.8 V · **1200 mA @ 6 V** |
+| Case | **Aluminium alloy** (confirmed from datasheet) |
+| Motor | Coreless (空心杯马达) |
+| Gear | Metal gear · 2 ball bearings |
+| Horn | 25T spline · plastic/POM horn |
+| Sensor | Magnetic encoder · 12-bit (4096 pos/rev, 0.088°/step) |
+| Rotation | 360° continuous (0–4096 counts) |
+| Interface | **TTL half-duplex serial bus**, 38400 bps–1 Mbps; ID range 0–253 |
+| Feedback | position, temperature, speed, voltage, load |
+| Connector | 200 mm ±5 mm |
 
 - **Notes:** continuous 360° rotation *with* absolute position feedback — why it suits the 3BSM
   (standard PWM servos can't). Half-duplex bus → uses the **10kΩ resistor** UART trick (covered by
-  the kit). Power from the 6 V servo rail. Built-in temp/current feedback is a bonus for monitoring.
-- **⚠️ Listing inconsistencies:** case material — title says **"Metal Case"** but the description
-  says **engineering-plastic / "Plastic Case"** (the docs had assumed metal; verify on the unit).
-  Gear ratio quoted as both **1:205** and **1:345**. Body dims 23.2×12.1×28.5 mm vs the "32×12×27.5"
-  figure (latter includes mounting tabs).
+  the kit). Power from the 6 V servo rail. Built-in temp/load feedback is a bonus for monitoring.
+  ⚠️ **Stall current is 1.2 A @ 6 V** — higher than the ~300 mA estimate; factor into servo-rail budget.
+  Gear ratio inconsistency (1:205 vs 1:345 in listing) unresolved but irrelevant to usage.
 
 ---
 
