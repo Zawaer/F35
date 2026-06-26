@@ -42,7 +42,7 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | Z-bend pushrod wires 1.2 mm × 200 mm | 40 | 4.54 | Light pushrods · 7 Apr 2026 |
 | 3CH servo / ESC tester (CCPM) | 1 | 2.05 | Bench tool · 1 Apr 2026 |
 | Feetech STS3032 360° servo (magnetic encoder) | 1 | 34.62 | 3BSM nozzle rotation · 24 Jun 2026 |
-| NEEBRC NB-M005 "2g" micro servo | 4 | 16.44 | Light doors · 24 Jun 2026 |
+| Mini 2g servo (plastic gear) | 4 | 16.44 | Light doors · 24 Jun 2026 |
 | Servo extension 200 mm | 10 | 2.68 | Shorter runs · 24 Jun 2026 |
 
 ### Power

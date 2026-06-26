@@ -15,16 +15,15 @@
 | NEEBRC 28g | 2 | 12 kg·cm | 28 g | Metal |
 | MG996R | 4 | ~15 kg·cm | 55 g | Metal |
 | Feetech STS3032 | 1 used | 4.5 kg·cm | 20 g | Metal (built-in magnetic encoder) |
-| NEEBRC M005 (2g) | 4 | ~0.5 kg·cm | 2 g | Plastic — **max 4.2 V** |
-| NEEBRC S002 (4.3g) | 2 | ~0.8 kg·cm | 4.3 g | Plastic — **max 5.0 V** |
+| Mini 2g servo (plastic gear) | 4 | ~0.5 kg·cm | 2 g | Plastic — **max 4.2 V** |
 
 MG996R are deliberately **avoided** in the final build — too heavy (55 g each).
 
-> ⚠️ **Small servo voltage:** the M005 (2g, **max 4.2 V**) and S002 (4.3g, max 5.0 V) door servos
-> will **burn out on the 6 V servo rail**. Power them through an **LM2596 buck set to 4.0 V** (safely
-> below the M005's 4.2 V max). One LM2596 (max 3 A; ~85–92% efficient) easily covers all 6 small
-> servos (~1.8 A stall, ~0.3 A average). See [Power System](02-power-system.md). (The M005 listing's
-> "4.8–6 V" text is a mislabel — the 3.7–4.2 V spec is correct for a 2 g micro servo.)
+> ⚠️ **Small servo voltage:** the 2g mini servos (**max 4.2 V**) will **burn out on the 6 V servo
+> rail**. Power them through an **LM2596 buck set to 4.0 V** (safely below the 4.2 V max). One
+> LM2596 (max 3 A; ~85–92% efficient) easily covers all 4 small servos (~1.4 A stall, ~0.2 A
+> average). See [Power System](02-power-system.md). (The listing's "4.8–6 V" text is a mislabel —
+> the 3.7–4.2 V spec is correct for a 2 g micro servo.)
 
 ## Final servo assignment
 
@@ -48,10 +47,9 @@ MG996R are deliberately **avoided** in the final build — too heavy (55 g each)
 \* Roll-post *servos* only apply if vanes/doors are actuated; roll **thrust** now comes from small
 wingtip motors, not bleed-air vanes — see [Propulsion — roll control](06-propulsion.md#roll-control).
 
-**Door servos:** the 6 lightweight door actuators (gear doors, lift-fan doors) can use the new
-**M005 2g / S002 4.3g** micro servos instead of SG90 to save weight — but these run on the **4.0 V
-LM2596 rail**, not the 6 V servo rail (see the voltage warning above). SG90 remain an option on the
-6 V rail.
+**Door servos:** the 4 owned **mini 2g servos (plastic gear)** cover the lightweight door actuators
+instead of SG90 to save weight — but they run on the **4.0 V LM2596 rail**, not the 6 V servo rail
+(see voltage warning above). SG90 remain the fallback for any doors not covered by the 4 units.
 
 ### MG90S count check
 

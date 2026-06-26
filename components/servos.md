@@ -42,9 +42,9 @@ Build context: [Servos](../docs/05-servos.md).
 
 ---
 
-### NEEBRC NB-M005 "2g" — door micro servo
+### Mini 2g servo (plastic gear) — door micro servo
 - **Category:** Servo (micro, PWM, coreless)
-- **Status:** 🛒 in cart (4 pcs)
+- **Status:** ✅ owned (4 pcs)
 - **Used for:** lightweight **doors** (gear doors / lift-fan doors) — [Servos](../docs/05-servos.md)
 - **Variant / qty:** 2g Plastic Gear · 4
 - **Price:** €4.11 each (€16.44 for 4)
@@ -409,7 +409,3 @@ Build context: [Servos](../docs/05-servos.md).
 
 ---
 
-## Still to card (paste product pages)
-
-NEEBRC S002 4.3g (door micro servo). Owned-summary specs in
-[Servos doc inventory](../docs/05-servos.md#inventory-on-hand).
