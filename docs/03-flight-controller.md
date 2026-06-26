@@ -106,10 +106,9 @@ Long-press BOOT to cycle modes:
 
 ## PWM channel budget
 
-The F405 provides 11 usable PWM outputs. The F-35B needs far more than that once VTOL servos,
-flight surfaces, landing gear, and doors are counted — so the **Pico adds up to 16 extra PWM
-outputs** over UART. Motor/ESC channels and primary flight surfaces stay on the FC; secondary and
-cosmetic actuators move to the Pico. See [Servos](05-servos.md) and [Pico](04-raspberry-pi-pico.md).
+The F405 provides 11 usable PWM outputs; 10 are used (4 ESCs + 6 flight surfaces), 1 spare.
+Secondary actuators move to the **Pico** (~8–10 PWM channels; ~14 physical servos, but symmetric
+pairs share a channel). See [Servos](05-servos.md) and [Pico](04-raspberry-pi-pico.md).
 
 ## Open questions / TODO
 

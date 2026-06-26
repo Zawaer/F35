@@ -37,7 +37,7 @@ fit on two counts:
 | Board | Carries | ~GPIO used |
 |-------|---------|-----------|
 | **WeAct — avionics** | UART↔FC, NTC mux (SIG + S0–S3), 2× battery-voltage ADC, LEDs, cockpit TFT | ~19 / 26 |
-| **Pico — servo bank** | UART↔FC, 13–16 secondary-servo PWM | ~15–18 / 26 |
+| **Pico — servo bank** | UART↔FC, ~8–10 secondary-servo PWM channels (~14 servos, symmetric pairs share a channel) | ~10–12 / 26 |
 
 Each board uses one of the F405's spare UARTs (UART tally: USART1 wireless, USART6 ELRS, 1 for the
 STS3032 serial bus, 2 for the two RP2040s → 1 still free).
@@ -53,27 +53,32 @@ STS3032 serial bus, 2 for the two RP2040s → 1 still free).
 
 | Pin | Function | Connected to |
 |----------|----------|--------------|
-| GPIO 26 (ADC0) | Multiplexer analog in | CD74HC4067 SIG — 13 NTC + 2 ACS712 (15 of 16, 1 free) |
-| 4× GPIO (e.g. 18–21) | Mux channel select | CD74HC4067 S0–S3 |
-| GPIO 27 (ADC1) | Main-pack voltage | 100 k/10 k divider |
-| GPIO 28 (ADC2) | Roll-post-pack voltage | 10 k/2 k divider |
+| GPIO 0 (TX) / GPIO 1 (RX) | UART0 FC link | F405 spare UART (MAVLink telemetry + LED/screen cmds) |
+| GPIO 2 (SCK) / GPIO 3 (MOSI) | SPI0 data | ST7789 SCK / SDA |
+| GPIO 4 (CS) | SPI0 chip select | ST7789 CS |
+| GPIO 5 (DC) | SPI0 data/command | ST7789 DC |
+| GPIO 6 (RST) | Display reset | ST7789 RST |
+| GPIO 7 (BLK) | Backlight enable | ST7789 BLK |
 | GPIO 10 / 11 / 12 | LED PWM | driver PWM inputs (red / green / strobe) |
 | GPIO 15 | Strobe enable / MOSFET gate | LED enable / IRLZ44N (COB strip) |
-| SPI (SCK/MOSI/CS/DC/RST/BLK) | Cockpit TFT | 1.47" ST7789 via FFC adapter |
-| UART (TX/RX) | FC link | F405 spare UART (MAVLink telemetry + LED/screen cmds) |
+| GPIO 18 / 19 / 20 / 21 | Mux channel select | CD74HC4067 S0–S3 |
+| GPIO 26 (ADC0) | Multiplexer analog in | CD74HC4067 SIG — 13 NTC + 2 ACS712 (15 of 16, 1 free) |
+| GPIO 27 (ADC1) | Main-pack voltage | 100 k/10 k divider |
+| GPIO 28 (ADC2) | Roll-post-pack voltage | 10 k/2 k divider |
 | 3.3V | Sensor / mux / pull-up supply | NTC dividers, mux, screen logic |
 | VSYS/5V in | Power | PDB 5.2V Flight BEC |
 | GND | Common ground | FC / PDB / sensors |
 
-> Pin numbers for LEDs (10/11/12/15) and the ADCs (26/27/28) are design values; SPI pins are
-> allocated as the screen is finalised. **All ADC inputs live on this board** (3 ADC pins; the
-> current sensors ride the mux's spare channels — see [Sensors](07-sensors-monitoring.md)).
+> **19 of 26 GPIO used.** SPI1 is unavailable (GP10/11 taken by LEDs), so SPI0 is used for the
+> display. GP23/24/25/29 are internal board functions (SMPS, VBUS sense, user LED, VSYS ADC) —
+> leave floating/unused. **All ADC inputs live on this board** (3 ADC pins; current sensors ride
+> the mux's spare channels — see [Sensors](07-sensors-monitoring.md)).
 
 ## Pin map — servo-bank board (Pico)
 
 | Pin | Function | Connected to |
 |----------|----------|--------------|
-| 13–16× PWM GPIO | Secondary servos | gear retracts, gear/lift-fan doors, vane box, nose steer, nozzle, canopy |
+| 8–10× PWM GPIO | Secondary servos | gear retracts, gear/lift-fan doors, vane box, nose steer, nozzle (canopy skipped v1) — symmetric pairs share a channel |
 | UART (TX/RX) | FC link | F405 spare UART (MAVLink PWM commands) |
 | VSYS/5V in | Power | PDB 5.2V Flight BEC |
 | GND | Common ground | FC / PDB |
@@ -139,9 +144,9 @@ temps). A custom `NAMED_VALUE_FLOAT` does **not** auto-appear on the radio. Ther
 - ✅ **Resolved: two RP2040 boards** (WeAct avionics + Pico servo bank) — one board can't fit the
   pin/ADC budget (see [above](#why-two-boards-pin-budget)). PCA9685 single-board alternative noted.
 - Lock down the MAVLink dialect/rate on each RP2040↔F405 UART.
-- Allocate specific GPIOs for each secondary PWM servo (servo-bank board) and the mux select lines.
+- ✅ **Resolved: mux select lines (GP18–21) and SPI0 display pins (GP2–7) locked** — avionics board pin map complete.
+- Allocate specific GPIOs for each secondary PWM servo (servo-bank board).
 - Rewrite the temperature code for NTC + CD74HC4067.
-- Confirm SPI pin mapping for the ST7789 display.
 
 ## Related
 

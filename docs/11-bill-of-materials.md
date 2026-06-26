@@ -62,7 +62,7 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | Part | Qty | € | Notes |
 |------|-----|---|-------|
 | CoreWing F405 WING V2 stack | 1 | 66.88 | FC + PDB + wireless · 9 Apr 2026 |
-| WeAct RP2040 (primary) + Raspberry Pi Pico (spare) | 1 + 1 | — | Secondary I/O — both had on hand |
+| WeAct Studio RP2040 (avionics) + Raspberry Pi Pico (servo bank) | 1 + 1 | — | Secondary I/O — both owned; WeAct: sensors/LEDs/display, Pico: ~8–10 servo PWM channels |
 | Jumper T14 CNC Hall ELRS transmitter | 1 | 123.09 | Radio · 10 Nov 2025 |
 | Jumper T14 rocker switch mod | 1 set | 6.51 | Extra TX switches · 9 Apr 2026 |
 | RadioMaster RP3 ELRS RX | 1 | 22.03 | On-aircraft RX · 1 Apr 2026 |
@@ -133,7 +133,6 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | 2 mm bullet connectors | EDF motor leads | 🛒 later |
 | Main / rear landing wheels (~50–56 mm) | F35B main gear (38 mm nose ordered) | 🛒 later |
 | Matek 150A current sensor | Main/lift EDF current logging (>20A) | ⚠️ optional |
-| Spare RP2040 board | Flash-and-swap hot-spare (bare Pico now an active board — see [Pico](04-raspberry-pi-pico.md)) | 🛒 later |
 | Stainless button-head screw kit (600 pc) | General fasteners | 🛒 to card |
 
 ## Key decisions
@@ -147,9 +146,9 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
   150A optional, buy-later).
 - **Batteries:** **two 5000 mAh 6S** packs (one per fan) — lift +260 g vs the old 2700 mAh (now spare),
   AUW ~3445 g. Fallbacks: 2700 lift + 5000 main, or 2× 2700.
-- **Secondary controller:** **two RP2040 boards** — WeAct (avionics: sensors + screen + LEDs) + Pi Pico
-  (servo bank); one board can't fit the pin/ADC budget. Spare RP2040 now buy-later (Pico promoted to
-  active). ESP32-S3 stash kept for bench/ground tooling.
+- **Secondary controller:** **two RP2040 boards** — WeAct Studio (avionics: sensors + screen + LEDs)
+  + Raspberry Pi Pico (servo bank: ~8–10 PWM channels); one board can't fit the pin/ADC budget. No
+  spare. ESP32-S3 stash kept for bench/ground tooling.
 
 ## Related
 [Power System](02-power-system.md) · [Propulsion](06-propulsion.md) · [Servos](05-servos.md) ·

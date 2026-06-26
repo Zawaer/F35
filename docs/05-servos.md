@@ -42,7 +42,7 @@ MG996R are deliberately **avoided** in the final build — too heavy (55 g each)
 | Lift-fan vane box | MG90S | 2.2 kg | 13 g | ✅ own |
 | Roll post L / R* | MG90S | 2.2 kg | 13 g | ✅ own |
 | Exhaust nozzle (opt) | SG90 | 1.8 kg | 9 g | ✅ own |
-| Canopy (opt) | SG90 | 1.8 kg | 9 g | ✅ own |
+| Canopy | SG90 | 1.8 kg | 9 g | ⏭️ skipped v1, possible v2 |
 
 \* Roll-post *servos* only apply if vanes/doors are actuated; roll **thrust** now comes from small
 wingtip motors, not bleed-air vanes — see [Propulsion — roll control](06-propulsion.md#roll-control).
@@ -110,9 +110,33 @@ retraction. The print-it-yourself route gives full control of the kinematics.
 
 ## PWM routing
 
-Primary flight surfaces + ESCs are on the **F405** (11 PWM channels). Secondary/cosmetic actuators
-(doors, canopy, nozzle, etc.) move to the **Raspberry Pi Pico** (up to 16 extra PWM over UART). See
-[Flight Controller](03-flight-controller.md) and [Pico](04-raspberry-pi-pico.md).
+Primary flight surfaces + ESCs are on the **F405** (10 of 11 channels used, 1 spare). Secondary
+actuators move to the **Raspberry Pi Pico**. The servo count (~14) is higher than the PWM channel
+count because symmetric pairs share one channel:
+
+| PWM channel | Drives | Servos |
+|-------------|--------|--------|
+| FC 1–2 | Flaperon L/R | NEEBRC 28g ×2 |
+| FC 3–4 | Stabilator L/R | NEEBRC 21g ×2 |
+| FC 5–6 | Rudder L/R | MG90S ×2 |
+| FC 7 | Main EDF ESC | — |
+| FC 8 | Lift EDF ESC | — |
+| FC 9–10 | Roll-post EDF ESCs L/R | — |
+| FC 11 | Spare | — |
+| Pico 1 | Main gear retracts | custom retract ×2 (shared) |
+| Pico 2 | Nose retract | custom retract ×1 |
+| Pico 3 | Gear doors | SG90/M005 ×2–3 (shared) |
+| Pico 4 | Nose steering | MG90S ×1 |
+| Pico 5 | Lift-fan doors | SG90 ×2–4 (shared) |
+| Pico 6 | Lift-fan vane box | MG90S ×1 |
+| Pico 7 | 3BSM yaw | MG90S ×1 |
+| Pico 8 | Exhaust nozzle (opt) | SG90 ×1 |
+| Pico 9+ | Roll-post servos (if needed) | MG90S ×2 |
+
+**Pico v1 channel count: 8 (optional nozzle + possible roll-post servos adds 1–3 more).** Canopy
+skipped in v1. STS3032 nozzle rotate is on its own serial bus — not a PWM channel.
+
+See [Flight Controller](03-flight-controller.md) and [Pico](04-raspberry-pi-pico.md).
 
 ## Open questions / TODO
 
