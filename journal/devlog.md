@@ -9,6 +9,28 @@ records go in [decisions.md](decisions.md); this is the looser narrative around 
 
 ---
 
+## 2026-06-28 — All CF tubes confirmed pultruded; implications documented
+
+- Looked into whether the ordered CF tubes/rods are roll-wrapped or pultruded.
+- **6×3mm sleeve tubes:** smooth matte exterior, no woven grid texture → confirmed pultruded.
+- **8×6mm spar tubes:** product listing said "3K woven" but the product page photo shows the same
+  smooth surface — no weave. "3K" just describes the tow size, not the manufacturing method.
+  Confirmed pultruded. The "woven" label was marketing copy.
+- **2mm solid rods:** pultruded by default — rolling a 2mm solid rod would be unusual.
+- **Conclusion: all CF stock in this build is pultruded.** At this price point and diameter range
+  on AliExpress, that's the norm. Roll-wrapped tubes are noticeably more expensive and always show
+  the woven grid pattern on the outside.
+- **Does it matter?** For spars the load is almost entirely bending — pultruded is actually
+  *better* than roll-wrapped there (100% axial fibres = maximum bending stiffness). Torsion on
+  the spars is negligible at this scale and planform.
+- **Real risk:** radial crushing at mounting points. Pultruded tubes have no hoop fibres, so a
+  bare metal screw or tight clamp can split the tube longitudinally. Mitigation: always use
+  printed collars/saddles with large bearing surface — never clamp metal directly onto the tube.
+- Updated `components/structural.md` (all three CF cards now say pultruded) and added a
+  pultruded vs roll-wrapped comparison table + callout to `docs/09-materials-airframe.md`.
+
+---
+
 ## 2026-06-28 — Roll-post nozzle shape settled: 2 deflectors
 
 - Found Paolo Raddri's EDF nozzle comparison (he also built an RC F-35B). Tested 4 nozzle geometries

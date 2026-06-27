@@ -134,6 +134,7 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | Main / rear landing wheels (~50–56 mm) | F35B main gear (38 mm nose ordered) | 🛒 later |
 | Matek 150A current sensor | Main/lift EDF current logging (>20A) | ⚠️ optional |
 | Stainless button-head screw kit (600 pc) | General fasteners | 🛒 to card |
+| Biltema Pika Epoksi 2×21 g (€3.55) | Spar joints + tube sockets (CA too brittle) — [Biltema](https://www.biltema.fi/rakentaminen/liimat/epoksiliimat/pika-epoksi-2-x-21-g-2000050118) | 🛒 to buy |
 
 ## Key decisions
 - **Roll-post ESCs:** use the 2× FVT **LittleBee 20A** (cheap, BLHeli_S/DSHOT); the 20A ESCs bundled

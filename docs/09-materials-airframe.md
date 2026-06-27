@@ -127,8 +127,11 @@ See [Propulsion — 3BSM](06-propulsion.md#3bsm--three-bearing-swivel-module).
 ## Adhesives & misc
 
 - **CA glue: Deli 502** (15 g ×3) for foam/CF fast bonding and panels.
-- **2-part epoxy** for structural bonds / spar joints (~35 ml — see joining method above). CA is
-  too brittle for spar joints.
+- **2-part epoxy: Biltema Pika Epoksi** (2×21 g, 20-min working time, transparent, gap-filling) —
+  structural bonds / spar joints / tube sockets. CA is too brittle for spar joints. One pack
+  (42 g) should cover all spar joints + sockets (~35 ml needed); buy a second as backup. Leave
+  clamped 24 h before loading for full strength. 🛒 not yet ordered. €3.55 / pack.
+  [Biltema](https://www.biltema.fi/rakentaminen/liimat/epoksiliimat/pika-epoksi-2-x-21-g-2000050118)
 - 3 mm plywood sheet (reinforcement plates).
 - **Frosted PP sheet 0.5 mm** (100×200 mm, 10 pc) — LED diffuser.
 - Silicone tubing 25–30 mm ID (was for bleed-air ducts — **obsolete** now roll posts use motors,
