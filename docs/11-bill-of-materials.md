@@ -127,7 +127,7 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 ## Buy later / gaps
 | Item | Why | Status |
 |------|-----|--------|
-| MicroSD card | ArduPilot blackbox logging | 🛒 when needed |
+| MicroSD card — Maxell 32GB SDHC Class 10 | ArduPilot blackbox logging (SDHC ≤32GB, FAT32 — no SDXC). [Tokmanni €10.99](https://www.tokmanni.fi/muistikortti-32gb-micro-sd-4902580745264) · [Puuilo €12.99](https://www.puuilo.fi/maxell-micro-sdhc-muistikortti-32gb-class-10-adapteri) (backup if Tokmanni OOS) | 🛒 when needed |
 | GPS module | ArduPilot VTOL altitude / position hold (EKF) | 🛒 later — post-validation, budget |
 | Downward rangefinder / lidar | Precise low-altitude hover hold (TF-Luna / VL53L1X) | 🛒 later — post-validation, budget |
 | 2 mm bullet connectors | EDF motor leads | 🛒 later |
