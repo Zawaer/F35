@@ -9,6 +9,24 @@ records go in [decisions.md](decisions.md); this is the looser narrative around 
 
 ---
 
+## 2026-06-28 — Roll-post nozzle shape settled: 2 deflectors
+
+- Found Paolo Raddri's EDF nozzle comparison (he also built an RC F-35B). Tested 4 nozzle geometries
+  on a thrust bench:
+  - Nozzle 1: simple radius, no deflectors → 510 g / 55 A (9.3 g/A)
+  - Nozzle 2: simple radius, 1 deflector → 620 g / 61 A (10.2 g/A)
+  - **Nozzle 3: simple radius, 2 deflectors → 630 g / 60 A (10.5 g/A) ✅ winner**
+  - Nozzle 4: elliptical profile, no deflectors → 460 g / 53 A (8.7 g/A) — worst
+- The deflectors act as turning vanes, preventing flow separation at the 90° bend.
+  Nozzle 3 wins on both absolute thrust and efficiency. The elliptical wall alone (Nozzle 4)
+  can't stop detachment — hence worse than even the plain radius.
+- Absolute thrust values are for Paolo's fan (larger than our 30 mm); the ranking transfers.
+- **Decision locked:** roll-post nozzle = simple radius + 2 deflectors. → [decisions.md](decisions.md)
+
+![Paolo Raddri nozzle comparison — Nozzle 3 (2 deflectors) wins at 630 g / 60 A](img/roll-post-nozzle-comparison.png)
+
+---
+
 ## 2026-06-27 — Battery IR baseline logged
 
 - First internal-resistance measurements taken with the HOTA D6 Pro during charge (2 Jun 2026).

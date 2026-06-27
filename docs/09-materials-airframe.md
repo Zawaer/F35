@@ -38,6 +38,8 @@ the shade is close enough; white+paint if a faithful livery matters more. (To re
 **Rule:** tubes for spars (stiffer per gram — hollow = better strength-to-weight), solid rods for
 pushrods (compression/tension).
 
+![Structural load types — tension, compression, shear, bending, torsion](../journal/img/structural-load-types.jpg)
+
 ### Owned
 
 - **10× CF tube, 6 mm OD / 3 mm ID, 400 mm** — used as **press-fit inner sleeves** to join the

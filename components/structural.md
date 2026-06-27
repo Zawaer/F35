@@ -108,7 +108,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 | Spec | Value |
 |------|-------|
-| Form | solid round rod |
+| Form | solid round rod, **pultruded** |
 | Diameter | 2 mm |
 | Length | 250 mm |
 | Qty | 10 pcs |
@@ -124,7 +124,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 ---
 
 ### Carbon fibre tube 500 × 8 × 6 mm (×16) — main spars / spine
-- **Category:** Structural (3K CF tube, hollow)
+- **Category:** Structural (CF tube, hollow, pultruded)
 - **Status:** ✅ owned (16-pack · ordered 24 Jun 2026)
 - **Used for:** **main spars & fuselage spine** — 500 mm tubes joined in pairs with 6 mm sleeves into
   ~900 mm runs — [Materials & Airframe → spar plan](../docs/09-materials-airframe.md#spar-plan-final--16-50086-mm-joined-with-6-mm-sleeves)
@@ -134,7 +134,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 | Spec | Value |
 |------|-------|
-| Form | 3K carbon fibre tube (hollow, woven) |
+| Form | hollow round CF tube, **pultruded** |
 | Outer diameter | 8 mm |
 | Inner diameter | 6 mm |
 | Wall thickness | **1 mm** |
@@ -234,7 +234,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 | Spec | Value |
 |------|-------|
-| Form | hollow round CF tube |
+| Form | hollow round CF tube, **pultruded** |
 | Outer diameter | 6 mm |
 | Inner diameter | 3 mm |
 | Wall thickness | **1.5 mm** |
@@ -242,7 +242,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 | Qty | 10 pcs |
 | Material | carbon fibre |
 
-- **Notes:** the **6 mm OD slides into the 8 mm spar tube's 6 mm ID** as a 0 mm-gap interference fit —
+- **Notes:** confirmed pultruded — smooth glossy exterior, no woven grid texture (roll-wrapped tubes show the characteristic weave). the **6 mm OD slides into the 8 mm spar tube's 6 mm ID** as a 0 mm-gap interference fit —
   bond with **2-part epoxy** (shear), cut ~80–100 mm lengths (~50 mm into each side). See the
   [8 mm spar card](#carbon-fibre-tube-500--8--6-mm-16--main-spars--spine) and
   [joining method](../docs/09-materials-airframe.md#joining-method-press-fit-sleeve--epoxy). Also handy

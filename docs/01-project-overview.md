@@ -45,7 +45,7 @@ batteries, ESCs, and motors (see [Propulsion](06-propulsion.md) and [Power](02-p
 - **Secondary controller:** two RP2040 boards (WeAct avionics + Pi Pico servo bank) for extra PWM
   outputs, temperature sensing, and LED control, each talking to the FC over UART (MAVLink). See
   [Pico](04-raspberry-pi-pico.md).
-- **Airframe:** LW-PLA printed shell + carbon/aluminium spars + plywood reinforcement. See
+- **Airframe:** LW-PLA printed shell + carbon fibre spars + plywood reinforcement. See
   [Materials & Airframe](09-materials-airframe.md).
 
 ## Build order (Phase 2)
