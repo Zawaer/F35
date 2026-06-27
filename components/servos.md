@@ -76,7 +76,7 @@ Build context: [Servos](../docs/05-servos.md).
 - **Status:** **300 mm ✅ owned** (ordered 2 Apr 2026) · **200 mm ✅ owned** (ordered 24 Jun 2026)
 - **Used for:** extending servo leads to the FC/Pico across the airframe — [Servos](../docs/05-servos.md)
 - **Variant / qty:** 200 mm ×10 + 300 mm ×10
-- **Price:** 200 mm €2.68 (in cart) · 300 mm **€2.72** (owned, U-Angel-1988)
+- **Price:** 200 mm €2.68 · 300 mm **€2.72** (owned, U-Angel-1988)
 - **Link:** [200 mm](https://www.aliexpress.com/item/1005007480672910.html) · 300 mm = U-Angel-1988 X501
 
 | Spec | Value |
@@ -88,7 +88,7 @@ Build context: [Servos](../docs/05-servos.md).
 
 - **Notes:** extend servo leads across the ~1 m airframe. The **300 mm (owned)** covers the long
   wingtip → FC runs that 200 mm can't — resolving the earlier "200 mm may be short" concern; the
-  **200 mm (in cart)** suits shorter hops. Thin signal wire is fine for servo PWM current; daisy-chain
+  **200 mm (ordered 24 Jun 2026)** suits shorter hops. Thin signal wire is fine for servo PWM current; daisy-chain
   for even longer runs.
 
 ---

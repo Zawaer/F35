@@ -131,7 +131,7 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | GPS module | ArduPilot VTOL altitude / position hold (EKF) | 🛒 later — post-validation, budget |
 | Downward rangefinder / lidar | Precise low-altitude hover hold (TF-Luna / VL53L1X) | 🛒 later — post-validation, budget |
 | 2 mm bullet connectors | EDF motor leads | 🛒 later |
-| Main / rear landing wheels (~50–56 mm) | F35B main gear (38 mm nose ordered) | 🛒 later |
+| Main / rear landing wheels (55–56 mm) | F35B main gear (38 mm nose ordered) | 🛒 later |
 | Matek 150A current sensor | Main/lift EDF current logging (>20A) | ⚠️ optional |
 | Stainless button-head screw kit (600 pc) | General fasteners | 🛒 to card |
 | Biltema Pika Epoksi 2×21 g (€3.55) | Spar joints + tube sockets (CA too brittle) — [Biltema](https://www.biltema.fi/rakentaminen/liimat/epoksiliimat/pika-epoksi-2-x-21-g-2000050118) | 🛒 to buy |

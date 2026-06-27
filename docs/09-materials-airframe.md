@@ -59,7 +59,7 @@ pushrods (compression/tension).
   500 mm main tubes (the 6 mm OD slides into the 6 mm ID main tube with ~0 mm gap), plus secondary
   structure, 3BSM supports, ribs/formers.
 
-### In cart (not yet ordered)
+### Ordered (24 Jun 2026)
 
 - **16× CF tube, 8 mm OD / 6 mm ID, 500 mm** (1 mm wall) — **main spars & fuselage spine**, joined
   in pairs into ~900 mm runs (see spar plan below).
@@ -109,7 +109,7 @@ See [Propulsion — 3BSM](06-propulsion.md#3bsm--three-bearing-swivel-module).
 
 ## Landing gear hardware
 
-- **Wheels:** standard RC-plane wheels (no O-ring tricks). **38 mm PU pair (in cart)** = F35B **nose
+- **Wheels:** standard RC-plane wheels (no O-ring tricks). **38 mm PU pair (ordered 24 Jun 2026)** = F35B **nose
   gear** (scale-matched, 2.1 mm bore → 2 mm axle). F35B **main gear** → order **~55/56 mm** later
   (cheap when in stock on AliExpress). The owned **45/50 mm pair is on the trainer** (45 mm nose,
   2× 50 mm main), not the F35B.
@@ -153,7 +153,7 @@ Grey primer + filler primer (hide layer lines), F-35B livery colours, sandpaper 
 ## Open questions / TODO
 
 - ⚠️ **Still open:** one 8 mm tube per wing spar, or two side-by-side? (Undecided — needs a load call.)
-- Rear/main wheel (~50–56 mm): **deferred to buy-later** (see [BOM](11-bill-of-materials.md)); 38 mm
+- Rear/main wheel (55–56 mm): **deferred to buy-later** (see [BOM](11-bill-of-materials.md)); 38 mm
   nose wheel already ordered.
 - Confirm the fastener kit includes M2 nuts; otherwise add separately.
 

@@ -106,7 +106,7 @@ drawing the avionics from it balances the two packs. It carries only BEC *input*
 current: the BEC steps 22.2 V → 6 V, so input current is far lower than servo output (~3.4 A input
 for ~10.8 A of 6 V servo output). **Total tap current peaks ~4–5 A.**
 
-- **18AWG silicone wire** (in cart) is plenty — rated ~24.5 A vs the ~5 A tap load. (The cart's
+- **18AWG silicone wire** (ordered 24 Jun 2026) is plenty — rated ~24.5 A vs the ~5 A tap load. (The cart's
   **10AWG** is for *extending the main/lift EDF power* runs if needed — those carry the ~89 A.)
 - **Tap point:** solder the 18AWG to the **exposed solder joint between the lift ESC and its EC5
   connector** (the battery-side EC5 joint is already heat-shrunk, so use the ESC side). Re-protect the

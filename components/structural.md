@@ -171,7 +171,7 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 | Brand / model | NoEnName_Null · LT602 |
 
 - **Notes:** 2.1 mm bore → suits a **2 mm axle** (CF rod or wire). Standard RC-plane wheel, no O-ring
-  tricks. **The F35B nose-gear wheel** (currently in cart) — scale-matched. F35B **main gear** is a
+  tricks. **The F35B nose-gear wheel** (ordered 24 Jun 2026) — scale-matched. F35B **main gear** is a
   larger wheel ordered later (~55/56 mm). Same listing scales 1.0″–5.0″.
 
 ---
