@@ -40,6 +40,19 @@ pushrods (compression/tension).
 
 ![Structural load types — tension, compression, shear, bending, torsion](../journal/img/structural-load-types.jpg)
 
+| Property | Pultruded tube | Roll-wrapped tube |
+|----------|---------------|-------------------|
+| Axial tension (pulling) | ★★★★★ Excellent | ★★★★☆ Very good |
+| Axial compression (pushing) | ★★★★★ Excellent | ★★★★☆ Very good |
+| Simple bending | ★★★★★ Very stiff | ★★★★☆ Good–excellent |
+| Torsion (twisting) | ★★☆☆☆ Fair | ★★★★★ Excellent |
+| Radial crushing (clamps, bolts) | ★★☆☆☆ Fair | ★★★★★ Excellent |
+| Multi-directional loads | ★★☆☆☆ Fair | ★★★★★ Excellent |
+| Impact resistance | ★★☆☆☆ Lower | ★★★★☆ Better |
+
+> All CF tubes in this build are **pultruded** — excellent for the bending loads spars actually carry.
+> Weak spots: radial crushing at mounting points → always use printed collars/saddles, never bare metal screws clamping directly onto the tube wall.
+
 ### Owned
 
 - **10× CF tube, 6 mm OD / 3 mm ID, 400 mm** — used as **press-fit inner sleeves** to join the
