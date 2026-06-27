@@ -1,5 +1,7 @@
 # F-35B RC Project — Knowledge Base
 
+![F-35B](docs/img/cover.jpg)
+
 Centralized, living documentation for a multi-phase RC aircraft project culminating in a
 3D-printed, VTOL-capable **F-35B**. This repo is the single source of truth for component
 choices, pin mappings, wiring, power architecture, and the reasoning behind every decision.
