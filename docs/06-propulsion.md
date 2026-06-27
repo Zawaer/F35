@@ -62,8 +62,10 @@ horizontal (cruise) to downward (hover), mimicking the real F-35B nozzle.
   [Servos](05-servos.md#3bsm-actuation--single-sts3032--gear-linked-sections).
 - The section junctions run on the **4 mm loose ball race** (100 pc owned) in printed grooves —
   chosen for smoother rotation. (Caged **6805ZZ 37×25×7 mm** thin-section bearings were considered as
-  an alternative but **dropped/not purchased**.) **Finalise the ball-race geometry before modeling**
-  the 3BSM in Fusion — design the seats/grooves around the real 4 mm ball dimensions.
+  an alternative but **dropped/not purchased**.) The balls are standardized 4 mm — no need to
+  measure them. Design the groove for 4 mm + small clearance (groove radius ~2.15 mm as a starting
+  point), print a test piece with 2–3 groove sizes, and validate fit once the balls arrive. The 3BSM
+  can be modeled before the balls land; groove sizing just needs one print iteration.
 - ⚠️ Reliability of the 3BSM under exhaust pressure is a key open risk — test thoroughly on the
   ground before any hover attempt. See [Materials & Airframe](09-materials-airframe.md) for bearings.
 
@@ -113,7 +115,7 @@ Final plan (parts chosen):
 
 - ⚠️ **Before first power-up:** set Hobbywing ESC **LiPo Cells → 6S** (currently factory default "Auto Calc" — must be changed manually via transmitter stick protocol or LED program box). See [ESC card](../components/propulsion.md) for the full parameter table and step-by-step procedure.
 - ⚠️ Validate 3BSM thrust-vectoring reliability and bearing wear under exhaust on the ground.
-- Finalise ArduPilot quadplane motor mixing for the 4-motor hover layout.
+- ✅ **Resolved: ArduPilot output mapping complete** — Lift fan=SERVO1 (Motor1), R roll post=SERVO2 (Motor2), Main EDF=SERVO3 (Motor3), L roll post=SERVO4 (Motor4), Q_FRAME_TYPE=0 (plus). See [Flight Controller](03-flight-controller.md#ardupilot-output-mapping).
 - Tune lift-fan vane-box authority vs main-EDF balance for hover pitch.
 
 ## Related

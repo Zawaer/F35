@@ -49,24 +49,28 @@ only signal (PWM/DSHOT) to the ESCs.
 > airframe is validated; deferred for budget) and/or a **downward rangefinder/lidar** (e.g. TF-Luna /
 > VL53L1X) — **both deferred for budget**, likely added after airframe validation — not another baro.
 
-### Port assignments (planned)
+### Port assignments
 
-| Port | Assigned to |
-|------|-------------|
-| USART1 | Wireless expansion board |
-| USART6 | ELRS receiver (CRSF) |
-| One UART | **RP2040 avionics board** (WeAct) — MAVLink: temp/current/voltage telemetry + LED/screen cmds |
-| One UART | **RP2040 servo-bank board** (Pico) — MAVLink: secondary-servo PWM commands |
-| One UART | **Feetech STS3032** serial half-duplex bus (3BSM nozzle) — `PROTOCOL=23, BAUD=1000, OPTIONS=4` |
-| ADC 1 | Battery 1 (main) voltage — from PDB divider |
-| ADC 2 | Battery 2 (lift) voltage |
-| ADC 3/4 | Spare / RSSI / airspeed |
+| Port | ArduPilot SERIAL | Assigned to | Key params |
+|------|-----------------|-------------|------------|
+| USART1 | SERIAL1 | Wireless expansion board | — |
+| USART2 | SERIAL2 | **Feetech STS3032** half-duplex bus (3BSM nozzle) | `PROTOCOL=23, BAUD=1000, OPTIONS=4` |
+| USART3 | SERIAL3 | **RP2040 avionics board** (WeAct) — MAVLink telemetry | `PROTOCOL=2, BAUD=57` |
+| UART4  | SERIAL4 | **RP2040 servo-bank board** (Pico) — MAVLink PWM cmds | `PROTOCOL=2, BAUD=57` |
+| UART5  | SERIAL5 | Spare — GPS or rangefinder (deferred post-airframe) | — |
+| USART6 | SERIAL6 | ELRS receiver (CRSF) | — |
+| ADC 1 | — | Battery 1 (main) voltage — from PDB divider | — |
+| ADC 2 | — | Battery 2 (lift) voltage | — |
+| ADC 3/4 | — | Spare / RSSI / airspeed | — |
 
-> Six UARTs, four now spoken for (wireless, ELRS, two RP2040s) plus the STS3032 bus = five; one
-> free. The **two RP2040 boards** (one couldn't fit the pin/ADC budget) each run **MAVLink** to the
-> FC — see [Pico — why two boards](04-raspberry-pi-pico.md#why-two-boards-pin-budget). Note: their
-> custom sensor values reach a MAVLink GCS and the blackbox easily, but **only ArduPilot's fixed CRSF
-> schema reaches the Jumper T14** — custom temps go on the cockpit TFT, not the radio (see
+> USART2 has a hardware-inverted RX pad (reverse-SBUS circuit on the board). That's fine for the
+> STS3032: half-duplex uses TX only (`OPTIONS=4` ties TX/RX internally), so the inverted RX pad is
+> left unconnected and plays no role. Five of six UARTs spoken for; UART5 spare for GPS/lidar later.
+
+> The **two RP2040 boards** each run **MAVLink v2** to the FC — see
+> [Pico — why two boards](04-raspberry-pi-pico.md#why-two-boards-pin-budget). Custom sensor values
+> reach a MAVLink GCS and the blackbox easily, but **only ArduPilot's fixed CRSF schema reaches the
+> Jumper T14** — custom temps go on the cockpit TFT, not the radio (see
 > [Pico — communication](04-raspberry-pi-pico.md#communication-with-the-fc-and-onward-to-the-t14)).
 
 > **Current sensing changed:** the earlier plan put Matek 150A sensors on each battery lead into
@@ -104,17 +108,50 @@ Long-press BOOT to cycle modes:
 - **WiFi-AP / WiFi-STA** → SpeedyBee, INAV Configurator, Mission Planner, QGroundControl
 - Four RGB LEDs show real-time voltage ratio.
 
-## PWM channel budget
+## ArduPilot output mapping
 
-The F405 provides 11 usable PWM outputs; 10 are used (4 ESCs + 6 flight surfaces), 1 spare.
-Secondary actuators move to the **Pico** (~8–10 PWM channels; ~14 physical servos, but symmetric
-pairs share a channel). See [Servos](05-servos.md) and [Pico](04-raspberry-pi-pico.md).
+The F405 provides 11 usable PWM outputs: 4 VTOL motor ESCs + 6 flight surfaces + 1 spare. Secondary
+actuators (gear doors, lift-fan doors, vane box, nozzle, etc.) are on the Pico servo-bank board —
+see [Servos](05-servos.md) and [Pico](04-raspberry-pi-pico.md).
+
+All four VTOL motors use standard **50 Hz PWM** — the Hobbywing 100A V2 ESCs don't support DSHOT,
+and mixing DSHOT (LittleBee 20A roll posts) with PWM on the same motor group complicates setup.
+
+**Q_FRAME_TYPE = 0 (plus):** Motor 1 = front, Motor 2 = right, Motor 3 = rear, Motor 4 = left.
+
+| Output | Connected to | ArduPilot `SERVOn_FUNCTION` | Notes |
+|--------|-------------|-----------------------------|-------|
+| SERVO1 | Lift fan ESC (Hobbywing 100A V2) | **33** (Motor 1 — front) | VTOL front lift |
+| SERVO2 | Right roll-post ESC (FVT LittleBee 20A) | **34** (Motor 2 — right) | VTOL roll |
+| SERVO3 | Main EDF ESC (Hobbywing 100A V2) | **35** (Motor 3 — rear) | VTOL rear lift + forward thrust via 3BSM |
+| SERVO4 | Left roll-post ESC (FVT LittleBee 20A) | **36** (Motor 4 — left) | VTOL roll |
+| SERVO5 | Flaperon L (NEEBRC 28g) | **24** (Flaperon) | Aileron + flap mixing |
+| SERVO6 | Flaperon R (NEEBRC 28g) | **24** (Flaperon), reversed | |
+| SERVO7 | Stabilator L (NEEBRC 21g) | **19** (Elevator) | |
+| SERVO8 | Stabilator R (NEEBRC 21g) | **19** (Elevator), reversed | |
+| SERVO9 | Rudder L (MG90S) | **21** (Rudder) | |
+| SERVO10 | Rudder R (MG90S) | **21** (Rudder), reversed | |
+| SERVO11 | — | spare | Reserved |
+
+> **Servo reversal:** set `SERVOn_REVERSED = 1` on the reversed outputs (SERVO6, 8, 10) after bench
+> rigging — direction depends on physical linkage.
+
+> **Main EDF dual-use (SERVO3):** in VTOL, the 3BSM points down and Motor 3 provides rear lift. In
+> cruise, the 3BSM rotates back and the same ESC becomes the forward thruster. ArduPilot tiltrotor
+> params (`Q_TILT_MASK`, `Q_TILT_TYPE`) handle the throttle blend during transition, but since the
+> 3BSM is STS3032-driven (Lua script) rather than a standard PWM tilt servo, the nozzle rotation is
+> custom. **Bench-test this transition before any hover attempt.**
+
+> **Roll-post mixing:** Motor 2 (right) and Motor 4 (left) provide roll via differential thrust in
+> the wing plane. ArduPilot's quad mixer treats them as lift motors — tune `Q_MOT_THST_HOVER` and
+> PID gains carefully; the roll posts contribute ~5% of total hover thrust, so their mixing weight
+> will need manual adjustment.
 
 ## Open questions / TODO
 
-- Finalise exact UART number for the Pico link and the CRSF/MAVLink-style framing used.
-- Confirm ArduPilot quadplane motor/servo output mapping against the [Propulsion](06-propulsion.md)
-  4-motor hover mix.
+- ✅ **Resolved: UART assignments locked** — USART2=STS3032, USART3=WeAct, UART4=Pico, UART5=spare.
+- ✅ **Resolved: ArduPilot output mapping table complete** — SERVO1–10 assigned; see above.
+- Bench-validate the SERVO3 (main EDF) tiltrotor transition and roll-post mixer weights before first hover.
 - **GPS + downward rangefinder/lidar:** both planned for **later** (after the airframe is validated) —
   GPS strongly benefits ArduPilot VTOL altitude/position hold, lidar gives precise low-altitude hover
   hold; both deferred now for budget.

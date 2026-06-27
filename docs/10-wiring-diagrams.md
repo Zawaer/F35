@@ -99,7 +99,7 @@ PDB 12V ──► LED driver (700mA CC, PWM dim) ──► 3W LED
 
 ## Open questions / TODO
 
-- Confirm exact F405 UART used for the Pico and the framing.
+- ✅ **Resolved: F405 UART assignments locked** — WeAct=USART3 (SERIAL3, MAVLink v2), Pico=UART4 (SERIAL4, MAVLink v2). See [Flight Controller](03-flight-controller.md#port-assignments).
 - Assign each secondary servo to a specific Pico GPIO and add it to this map.
 - Add a proper schematic/drawing (e.g. exported from KiCad or a diagram tool) once finalised.
 

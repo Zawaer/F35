@@ -48,6 +48,23 @@ batteries, ESCs, and motors (see [Propulsion](06-propulsion.md) and [Power](02-p
 - **Airframe:** LW-PLA printed shell + carbon/aluminium spars + plywood reinforcement. See
   [Materials & Airframe](09-materials-airframe.md).
 
+## Build order (Phase 2)
+
+| Step | What | Notes |
+|------|------|-------|
+| 1 | **CG estimate for hover rig** | Quick weight/position estimate before building anything — battery placement must balance lift fan (front) vs main EDF + 3BSM (rear). Doesn't require full CAD. |
+| 2 | **3BSM** | Highest mechanical risk; validate on the bench before committing to an airframe. Model in Fusion, print groove test pieces, iterate fit once 4 mm balls arrive. |
+| 3 | **Hover rig** | Carbon tube frame + 3D-printed connectors. Mounts: main EDF + 3BSM, lift fan, 2× roll-post EDFs, F405 FC, all ESCs, batteries. Simple fixed standoffs for legs — no retractable gear yet. |
+| 4 | **Hover testing + ArduPilot tuning** | Validate VTOL before any fuselage work. Expect multiple sessions. |
+| 5 | **Fuselage CAD** | Design landing gear, LED housings (wingtips, exhaust, nose), doors, and cosmetic panels **as integral parts** of each section — not added after. Hover rig electronics transfer into the fuselage. |
+| 6 | **Progressive fuselage build-up** | Structural shell → landing gear → doors → cosmetics. LEDs installed as each section is completed. |
+
+> **Landing gear:** don't design retractable gear as a standalone step. It comes with the fuselage
+> in step 5 — its geometry depends on fuselage shape anyway.
+>
+> **LEDs:** design each light's housing/mount when that fuselage section is CAD'd (wingtip nav
+> lights with wingtip CAD, afterburner glow with exhaust section, etc.). No separate LED step needed.
+
 ## Hard open design questions
 
 These are the genuinely unsolved / high-risk items flagged during design:
