@@ -132,7 +132,6 @@ See [Propulsion — 3BSM](06-propulsion.md#3bsm--three-bearing-swivel-module).
   (42 g) should cover all spar joints + sockets (~35 ml needed); buy a second as backup. Leave
   clamped 24 h before loading for full strength. 🛒 not yet ordered. €3.55 / pack.
   [Biltema](https://www.biltema.fi/rakentaminen/liimat/epoksiliimat/pika-epoksi-2-x-21-g-2000050118)
-- 3 mm plywood sheet (reinforcement plates).
 - **Frosted PP sheet 0.5 mm** (100×200 mm, 10 pc) — LED diffuser.
 - Silicone tubing 25–30 mm ID (was for bleed-air ducts — **obsolete** now roll posts use motors,
   see [Propulsion](06-propulsion.md#roll-control)).

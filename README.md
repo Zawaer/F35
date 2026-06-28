@@ -24,7 +24,7 @@ The trainer (Phase 1) validates basic flying and the FC/RX setup; the F-35B (Pha
   fan, 2× wingtip micro motors). See [Propulsion](docs/06-propulsion.md).
 - **Flight controller:** CoreWing F405 WING V2 stack (FC + PDB PLUS + wireless), ArduPilot
 - **Secondary I/O:** two RP2040 boards (WeAct avionics + Pi Pico servo bank) for extra PWM, temperature sensing, and LED control
-- **Airframe:** LW-PLA print + carbon spars + plywood reinforcement
+- **Airframe:** LW-PLA print + carbon spars
 
 ## Documentation index
 
