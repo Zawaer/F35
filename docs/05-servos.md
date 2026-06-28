@@ -147,7 +147,7 @@ retraction. The print-it-yourself route gives full control of the kinematics.
 *F-35B nose gear front view.*
 
 ![Main gear front view](img/landing-gear-rear/main-gear-front-01.jpeg)
-*Main gear front view: single large wheel, compact vertical strut retracting inward into the fuselage. Note how much larger the main wheel is relative to the nose wheel.*
+*Main gear front view: single large wheel, compact vertical strut retracting inward into the fuselage.*
 
 ![Main gear shock strut close-up](img/landing-gear-rear/main-gear-strut-closeup.jpeg)
 *Main gear oleo strut detail — shows the retraction pivot and drag-brace attachment points that the custom retract linkage needs to reproduce.*
