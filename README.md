@@ -53,6 +53,16 @@ Detailed per-part specs (weight, dimensions, electrical) live in the
 CG/AUW and power-budget math. Code will live in [`code/`](code/) — the [Pico firmware](code/pico/) is
 not written yet (planned modules + wiring recipes documented there).
 
+## Adding images
+
+Compress before committing — keeps the repo lean without visible quality loss:
+
+```bash
+sips -Z 1920 -s format jpeg -s formatOptions 82 photo.jpg --out photo.jpg
+```
+
+Drop the compressed file into the relevant `docs/img/<subfolder>/` and reference it in the matching doc.
+
 ## Conventions
 
 - **Units & numbers** are kept as recorded during design (mostly metric, currency in €).

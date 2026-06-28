@@ -99,3 +99,14 @@ Still parked (not committed):
 - **Engine sound:** DFPlayer Mini (~€2) + 40mm 2W speaker, triggered by Pico from FC flight state.
   EDFs already sound convincingly jet-like.
 - Variable exhaust nozzle.
+
+## Reference images — VTOL
+
+![F-35B VTOL hover, front-on](img/vtol-day/vtol-day-front-on.jpeg)
+*Front-on hover: canopy in egress position (hinged forward), 3BSM nozzle fully vectored down, all three gear extended, lift-fan door open. Key geometry reference for door sizing and 3BSM nozzle angle.*
+
+![F-35B VTOL hover, side view](img/vtol-day/vtol-day-carrier-side.jpeg)
+*Side view of hover: shows the relative fore/aft positions of the lift fan (front) and 3BSM nozzle (rear) — the two lift sources whose balance drives the CG constraint.*
+
+![F-35B fleet on carrier deck](img/general/f35b-carrier-deck.jpeg)
+*Full airframe reference: wing planform, fuselage proportions, tail surfaces and their relative scale.*

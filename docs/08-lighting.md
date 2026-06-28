@@ -114,6 +114,30 @@ while True:
   (1.0 s cycle = 20% duty, 1 Hz), matching the real F-35 anti-collision strobe. The Pico toggles the
   driver on/off (not PWM-dimmed).
 
+## Reference images
+
+### Afterburner
+
+![Real F-35 afterburner glow](img/afterburner/real-afterburner-glow.jpeg)
+*Real F-35 afterburner — warm amber/orange, not blue-white. Target colour for the BA15S bulb.*
+
+![RC EDF with BA15S lit](img/afterburner/rc-edf-ba15s-lit.jpeg)
+*RC EDF with automotive BA15S bulb lit — warm amber glow matches the real aircraft well.*
+
+![RC EDF with BA15S unlit](img/afterburner/rc-edf-ba15s-unlit.jpeg)
+*Same setup unlit — shows how the bulb mounts at the motor hub inside the duct.*
+
+### Formation lights, nav lights & landing light
+
+![Night VTOL showing all lights active](img/vtol-night/vtol-night-all-lights.jpeg)
+*Night VTOL approach: green formation strips along the fuselage top, green wingtip nav, blazing landing light on the nose strut, red/orange 3BSM exhaust glow below. All light types visible simultaneously.*
+
+![Nav light housing on wing leading edge](img/nav-lights/nav-lights-flush-housing.jpeg)
+*Flush nav light installation — small aperture in the wing skin, no external protrusion.*
+
+![Landing lights on night ground roll](img/landing-light/landing-light-night-taxi.jpeg)
+*Night taxi with landing lights at full power — note the intensity and forward beam spread from the nose-strut mount.*
+
 ## Related
 
 [Raspberry Pi Pico](04-raspberry-pi-pico.md) · [Power System](02-power-system.md) ·

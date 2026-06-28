@@ -222,6 +222,18 @@ trimmed PETG to it. For the opening canopy (V1), the sill becomes a separate hin
   panels/hatches** (battery hatch, canopy, access covers). 80 °C max; keep clear of any
   compass/magnetometer. See the [magnet card](../components/structural.md).
 
+## Cosmetic details — EOTS sapphire bump
+
+The real F-35B has a distinctive **EOTS (Electro-Optical Targeting System) dome** on the nose underside — a small faceted sapphire window housing that reads as a raised bump, visible from below and slightly from the side.
+
+![EOTS sapphire dome, side-below view](img/eots/eots-nose-side-below.jpeg)
+*The amber-tinted faceted EOTS dome on the nose underside — one of the most recognisable detail features of the F-35 silhouette.*
+
+![EOTS and nose wheel bay from below](img/eots/eots-nose-bay-below.jpeg)
+*Nose wheel bay open, showing the EOTS housing in the context of the lower-forward fuselage geometry.*
+
+Model the EOTS as a **printed insert** in the nose-bottom panel — clear PETG or ASA, tinted amber from inside with translucent film if backlit.
+
 ## Finishing
 
 Grey primer + filler primer (hide layer lines), F-35B livery colours, sandpaper assortment, decals.

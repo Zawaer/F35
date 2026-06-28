@@ -75,6 +75,9 @@ Front-mounted EDF providing ~3300 g lift at peak, with actuated **lift-fan doors
 **variable-area vane box** (MG90S) to modulate/redirect thrust. Balances against the rear 3BSM for
 pitch in hover — driving the CG constraint (see [Project Overview](01-project-overview.md#cg-the-central-challenge)).
 
+![Real F-35B lift fan bay open](img/vane-box/lift-fan-vane-box.jpeg)
+*Real F-35B with lift fan door open: the horizontal louvre-style vanes that redirect and throttle thrust downward. The vane box servo (MG90S) controls these collectively.*
+
 ### Roll control
 
 **Decision: small dedicated wingtip motors, NOT bleed air.**

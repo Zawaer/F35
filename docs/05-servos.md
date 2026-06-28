@@ -135,6 +135,23 @@ retraction. The print-it-yourself route gives full control of the kinematics.
   challenge — **reliable over-centre geometry under landing loads is.** ⚠️ This is a known-hard part.
 - Main gear also needs the multi-axis **90° wheel twist** so the wheel lies flat in the bay.
 
+### Reference images — real F-35B gear geometry
+
+![Nose gear left-front view](img/landing-gear-front/nose-gear-left-front.jpg)
+*Nose gear left-front: single small wheel, simple trailing-link strut, doors flush with fuselage underside.*
+
+![Nose gear right-front view](img/landing-gear-front/nose-gear-right-front.jpg)
+*Nose gear right-front: shows the shimmy damper and pivot point geometry for the steering linkage.*
+
+![Nose gear F-35B vs F-35C comparison](img/landing-gear-front/nose-gear-b-vs-c.png)
+*F-35B vs F-35C nose gear comparison — useful for identifying B-specific details.*
+
+![Main gear front view](img/landing-gear-rear/main-gear-front-01.jpg)
+*Main gear front view: single large wheel, compact vertical strut retracting inward into the fuselage. Note how much larger the main wheel is relative to the nose wheel.*
+
+![Main gear shock strut close-up](img/landing-gear-rear/main-gear-strut-closeup.jpg)
+*Main gear oleo strut detail — shows the retraction pivot and drag-brace attachment points that the custom retract linkage needs to reproduce.*
+
 ## PWM routing
 
 Primary flight surfaces + ESCs are on the **F405** (10 of 11 channels used, 1 spare). Secondary
