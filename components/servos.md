@@ -384,12 +384,12 @@ Build context: [Servos](../docs/05-servos.md).
 
 ---
 
-### Z-bend pushrod wires 1.2 mm × 200 mm (×40) — control pushrods
+### Z-bend pushrod wires 1.2 mm × 200 mm — control pushrods
 - **Category:** Hardware (pushrod / pull rod)
-- **Status:** ✅ owned (2× 20 = 40 pcs · ordered 7 Apr 2026)
+- **Status:** ✅ owned (16 pcs remaining — bought 40, sold 20 to friend, used 4 on trainer)
 - **Used for:** **control-surface pushrods** — Z-bend hooks into the servo arm, far end into a linkage
   stopper/clevis; trainer + F35B light surfaces — [Servos](../docs/05-servos.md)
-- **Variant / qty:** 1.2 mm dia × 200 mm, Z-type · 40 pcs
+- **Variant / qty:** 1.2 mm dia × 200 mm, Z-type · 16 pcs remaining
 - **Price:** **€4.54** (2 packs of 20 + shipping)
 - **Source:** AliExpress — Sparkhobby Z-type steering rod (1.2 mm × 200 mm)
 
@@ -399,13 +399,14 @@ Build context: [Servos](../docs/05-servos.md).
 | Diameter | **1.2 mm** |
 | Length | 200 mm |
 | End | pre-formed **Z-bend** (servo-arm end) |
-| Qty | 40 |
+| Qty | 16 (remaining) |
 
 - **Notes:** the thin steel pushrod that **pairs with the
   [D1.3 mm linkage stoppers](#pushrod-linkage-stoppers-d13-mm-20--servo-linkage-clamps)** (1.2 mm fits
   the 1.0–1.3 mm range). Z-bend clicks into the servo horn; cut to length and clamp the far end. For
   **light/secondary control surfaces** (the F35B's primary surfaces use 2 mm CF rods). 40 pcs → ample.
   ⚠️ Thin 1.2 mm wire flexes under load — keep runs short or use only for low-force surfaces.
+  ⚠️ Only 16 remaining — may need to reorder before full surface count is wired up.
 
 ---
 
