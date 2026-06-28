@@ -9,6 +9,40 @@ records go in [decisions.md](decisions.md); this is the looser narrative around 
 
 ---
 
+## 2026-06-28 — Canopy material/forming + cockpit screen filter researched
+
+- **Canopy material: clear PETG, 0.5–0.75 mm.** Chosen for the forming method, not in the abstract —
+  forgiving, wide temp window, no pre-drying. Rejected acrylic (shatters cold-bent, needs vacuum +
+  oven control) and polycarbonate (must dry, ~50% failure rate). Talked myself into acrylic mid-research
+  then back out — PETG is the right call for a hobby setup.
+- **Thickness: go thin.** The "scale thickness ~1.3 mm" math is a red herring — invisible at viewing
+  distance, and thicker = heavier nose + harder to form + more distortion. Wind load on the canopy at
+  RC speed is trivial, so 0.5 mm is structurally fine; 0.75 mm if more rigidity wanted.
+- **Single piece** — the real F-35 canopy is a frameless single bubble, so splitting it would *add* a
+  seam that isn't there; also easier and optically cleaner to form as one.
+- **Tint: clear / very light smoke.** The blue-purple iridescence is a vapour-deposited coating, not
+  replicable, and a heavy tint would hide the cockpit screen anyway.
+- **Forming: DIY vacuum forming**, not heat-gun draping (single nozzle pulls unevenly → wrinkles).
+  Principle worked through: sealed plenum box + perforated top + plug on top + household vacuum; the
+  box spreads suction evenly so vac *power* matters less than *seal quality*. Heat **only the framed
+  sheet** in the **kitchen oven** (~100–120 °C until it sags), drape over the plug, vacuum on
+  immediately, hold ~15 s. (Air fryer too small for a ~220 mm canopy.)
+- **Vacuum-box material left UNDECIDED** — plastic tub (cheapest, front-runner), 3D-printed (cleanest
+  hole grid + integral hose port, but filament cost is significant and walls are porous → needs epoxy
+  seal), or MDF box. Holding off to avoid locking in 3D printing on cost grounds.
+- **Opening canopy:** very tempting as a scale detail. Real cost isn't weight — it's **one scarce Pico
+  PWM channel** + a hinge, which is why it was cut from V1. Compromise: **V1 = removable, magnet-located**
+  (reuses the owned N35 5×2 discs already earmarked for hatches), **powered opening = V2.**
+- **Cockpit screen filter:** ST7789 is a transmissive TFT (washed blacks, glare). A ~30–50% smoke
+  filter + black bezel helps — but via *ambient rejection* (reflected light double-passes the filter
+  ∝ T², emission single-passes ∝ T → image/glare improves by 1/T), **not** the "darkens blacks more"
+  explanation that floated around. The tinted canopy already does some of this, so trial bezel-only
+  first. Burn-in irrelevant (TFT, not OLED).
+- Wrote it up: new Canopy section in `docs/09-materials-airframe.md`, filter note in
+  `docs/04-raspberry-pi-pico.md`.
+
+---
+
 ## 2026-06-28 — All CF tubes confirmed pultruded; implications documented
 
 - Looked into whether the ordered CF tubes/rods are roll-wrapped or pultruded.

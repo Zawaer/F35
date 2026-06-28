@@ -137,6 +137,82 @@ See [Propulsion — 3BSM](06-propulsion.md#3bsm--three-bearing-swivel-module).
 - Silicone tubing 25–30 mm ID (was for bleed-air ducts — **obsolete** now roll posts use motors,
   see [Propulsion](06-propulsion.md#roll-control)).
 
+## Canopy (transparency)
+
+> **Current plan:** single-piece clear **PETG, 0.5–0.75 mm**, heat-formed over a positive 3D-printed
+> plug. **V1: removable, magnet-located** (no servo); **powered opening deferred to V2.** Forming
+> method = DIY vacuum forming; the vacuum-box material is **still undecided** (see below).
+
+### Material & thickness
+
+- **PETG, clear, 0.5–0.75 mm.** PETG is chosen *because of the forming method*, not in the abstract:
+  wide forming-temperature window, very forgiving, no pre-drying needed, clear enough at viewing
+  distance. It is the RC community default for heat-/vacuum-formed canopies.
+- **Acrylic (PMMA)** is what real canopies and the best RC bubbles are made of, but it shatters if
+  cold-bent and needs an oven + tight temperature control — wrong tool for a hobby heat/vacuum setup.
+  **Polycarbonate** must be dried before forming and has a narrow window (~50% failure rate even for
+  experienced builders). Both rejected for this build.
+- **Thickness:** 0.5 mm forms easiest and is structurally fine — wind load on a ~50 cm² canopy at RC
+  cruise (~100–150 km/h) is trivial. 0.75 mm adds rigidity. *Scale thickness math is a red herring*
+  (real F-22 canopy 19 mm ÷ ~15 ≈ 1.3 mm) — optical scale thickness is invisible at viewing distance,
+  and thicker sheet is heavier on the nose, harder to form, and more optically distorting. Go thin.
+- **Tint:** clear, or a *very* light smoke at most. The real F-35 canopy's blue/purple iridescence is
+  a thin-film vapour-deposited coating — not replicable with hobby materials and not worth faking. A
+  heavy tint would also hide the cockpit screen, which is the more impressive detail. See the
+  [cockpit TFT filter note](04-raspberry-pi-pico.md#4-cockpit-tft-display).
+
+### Single piece
+
+Form the canopy as **one piece.** The real F-35 canopy is a frameless single bubble — splitting it
+into a windscreen + canopy would *add* a seam the real aircraft doesn't have, and one bubble is also
+easier (one plug, one pull) and optically cleaner (no join line to glue/align). The long, shallow
+F-35 profile is forgiving to form; keep the plug's rear taper gradual so the sheet pulls in instead
+of bridging.
+
+### Opening vs fixed (V1 scope)
+
+A powered opening canopy is a very cool scale detail, but its real cost is **one scarce Pico PWM
+channel** plus a hinge mechanism — which is exactly why it was cut from V1 (servo budget short by
+6–9 outputs, see [Pico](04-raspberry-pi-pico.md) / [Servos](05-servos.md)). **V1 plan: removable,
+located by the owned N35 5×2 mm magnets** (see [Magnets](#magnets) below) — lift off by hand to show
+the cockpit, self-aligns on replacement, zero servo/channel. **Powered opening = V2** once the pin
+budget is resolved; it stays a single piece glued to a hinged printed sill either way.
+
+### Forming method — DIY vacuum forming
+
+The plan is **vacuum forming**, which gives far more even, crisp results than heat-gun draping (a
+single nozzle pulls at one point and leaves the rest of the sheet loose/wrinkly). Principle: a sealed
+air chamber (**plenum**) with a perforated top, the plug sitting on the perforated surface, and a
+vacuum emptying the chamber so atmospheric pressure presses the heated sheet uniformly onto the plug.
+
+Setup, all room-temperature except the sheet:
+
+- **Plug:** solid 3D-printed canopy shape (LW-PLA or PLA), sanded smooth, slightly undersized, raised
+  a few mm on standoffs / a small base so air reaches its edges, with release agent (wax/vaseline).
+- **Box (plenum):** sealed chamber, hole grid (~1–1.5 mm, ~10–15 mm spacing) in the flat top over the
+  plug footprint, one hose port in the **side or bottom** (never the top). Must be reasonably airtight
+  *everywhere except the hole grid* — leaks steal suction. **Material undecided:**
+  - *Plastic tub* — cheapest, already airtight, just drill a lid + side hole. Front-runner for cost.
+  - *3D-printed box* — easiest clean hole grid + integral tapered hose port + plug standoffs, but
+    **filament cost is significant** at canopy footprint (~220×80 mm, likely a 2-piece print on most
+    beds) and FDM walls are porous (need 4+ perimeters + an inside epoxy wipe to seal). **Not locked
+    in** pending the cost call.
+  - *MDF/ply box* — classic, cheap, more woodwork.
+- **Vacuum:** an ordinary household vacuum is plenty — the chamber spreads its suction evenly, so
+  power matters less than seal quality. (Wet/dry shop vac slightly better.)
+- **Heat:** the **kitchen oven** (~100–120 °C, sheet flat on a rack until it sags a few cm) gives the
+  most even heat; a heat gun works for a part this small but heats less evenly. *(Air fryer too small
+  for a ~220 mm canopy.)*
+
+Process: heat **only the framed sheet** in the oven → the moment it droops, drape the frame over the
+plug so it seals on the box rim → **switch the vacuum on immediately** (PETG stiffens in seconds) →
+hold ~10–20 s → vacuum off, pop off plug, trim. Oven gloves: the frame is hot.
+
+### Canopy sill / frame
+
+Print the sill the PETG sits on as **part of the fuselage** in LW-PLA for an exact fit; CA-glue the
+trimmed PETG to it. For V2's opening canopy, the sill becomes a separate hinged printed part.
+
 ## Magnets
 
 - **Diametric rod magnet 4 × 10 mm N42** (magneettikauppa.fi) — only needed if a 3BSM position

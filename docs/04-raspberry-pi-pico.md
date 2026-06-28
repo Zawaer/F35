@@ -109,6 +109,17 @@ permanently-attached **0.5 mm-pitch FFC ribbon** slides into a **ZIF FFC→2.54 
 to the screen itself**. The 12-pin variant was chosen over 8-pin for thinner bezels (unused touch
 pins left floating). Driven over SPI by the Pico.
 
+**Contrast / anti-glare filter (optional, V1 trial):** the ST7789 is a transmissive TFT — washed-out
+blacks, backlight bleed, and outdoor glare. A thin **neutral smoke filter (~30–50% transmission)**
+behind the canopy with a **black bezel** around the screen makes it read like a real avionics MFD.
+The mechanism is ambient-rejection, *not* "darkening blacks more than whites" (a neutral tint is
+linear — it attenuates all emitted light equally): reflected sunlight passes through the filter
+**twice** (in and out, ∝ T²) while the display's own light passes **once** (∝ T), so the image-to-glare
+ratio improves by 1/T. This matters because the plane is viewed outdoors. Note the **tinted canopy
+already does some of this** — build with just a black bezel first, look through the actual canopy, and
+add a dedicated smoke disc (a smoked-acrylic offcut, *not* uneven packaging plastic) only if still
+washed out. Burn-in is a non-issue: this is a TFT, not OLED. See [Canopy](09-materials-airframe.md#canopy-transparency).
+
 ## MicroPython
 
 Firmware will be written once the actual components are in hand. The wiring/divider recipes it will

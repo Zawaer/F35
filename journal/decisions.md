@@ -32,6 +32,7 @@ in git history (`git log`); the *Ref* column points to the doc that holds the fu
 | **Afterburner LED** | Addressable WS2812B RGB ring | Single **amber BA15S/1156** automotive bulb (throttle-PWM-dimmed; CANBUS resistor removed) | A plain incandescent-look amber bulb reads more realistic and needs no addressable-LED code; BA15S straight pins chosen over BAU15S offset for a simpler printed socket | [08](../docs/08-lighting.md) |
 | **Roll-post exhaust doors** | Servo-actuated wingtip inlet/outlet doors (2× 2 g) | **v1: permanent open slots**; doors deferred to v2 | Skip the actuation complexity until the airframe flies; just cut openings for now | [06](../docs/06-propulsion.md#roll-control) |
 | **Roll-post nozzle shape** | Simple radius bend (no deflectors) | **Simple radius + 2 deflectors** (turning vanes) | Paolo Raddri's thrust bench: no-deflector = 510 g / 55 A (9.3 g/A); 1 deflector = 620 g / 61 A; **2 deflectors = 630 g / 60 A (10.5 g/A best)**; elliptical no-deflector was worst (460 g). Deflectors prevent flow separation at the 90° bend — absolute numbers don't transfer to the 30 mm scale but the ranking does. See [devlog 2026-06-28](devlog.md) | [06](../docs/06-propulsion.md#roll-control) |
+| **Canopy material** | Considered acrylic (PMMA) / polycarbonate mid-research | **Clear PETG, 0.5–0.75 mm** | Acrylic shatters cold-bent + needs vacuum/oven control; PC must be dried + ~50% failure rate. PETG is forgiving for a hobby heat/vacuum setup. Thin beats scale-thick (lighter nose, easier form, less distortion; RC wind load trivial) | [09](../docs/09-materials-airframe.md#canopy-transparency) |
 | **Doc prices** | USD + EUR conversions | EUR only | Single currency, less clutter | — |
 
 ## Notable picks (settled, not reversals)
@@ -47,6 +48,13 @@ in git history (`git log`); the *Ref* column points to the doc that holds the fu
   it's only on during approach/landing. Heatsink = **2× 14×14×6 mm stacked** (switched from 20×20×6 mm
   when that size's price jumped).
 - **Cockpit screen = ST7789, 12-pin FFC** over 8-pin (thinner bezel).
+- **Canopy = single piece** (real F-35 is a frameless bubble; splitting would add a seam, harder to
+  form, more join lines). Clear / very-light-smoke tint — iridescent coating not replicable and a
+  heavy tint would hide the cockpit screen.
+- **Canopy V1 = removable, magnet-located** (reuses owned N35 5×2 discs); **powered opening deferred
+  to V2** — it would cost a scarce Pico PWM channel + a hinge, the reason it was cut from V1.
+- **Vacuum-box material = undecided** (tub vs 3D-print vs MDF) — 3D-print not locked in on filament-cost
+  grounds.
 - **Final paint colour = pending** — decided after the first airframe flies.
 
 ## Related
