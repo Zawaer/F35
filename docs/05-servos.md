@@ -143,8 +143,8 @@ retraction. The print-it-yourself route gives full control of the kinematics.
 ![Nose gear right-front view](img/landing-gear-front/nose-gear-right-front.jpeg)
 *Nose gear right-front: shows the shimmy damper and pivot point geometry for the steering linkage.*
 
-![Nose gear F-35B vs F-35C comparison](img/landing-gear-front/nose-gear-b-vs-c.jpeg)
-*F-35B vs F-35C nose gear comparison — useful for identifying B-specific details.*
+![Nose gear front view](img/landing-gear-front/nose-gear-front.jpeg)
+*F-35B nose gear front view.*
 
 ![Main gear front view](img/landing-gear-rear/main-gear-front-01.jpeg)
 *Main gear front view: single large wheel, compact vertical strut retracting inward into the fuselage. Note how much larger the main wheel is relative to the nose wheel.*
