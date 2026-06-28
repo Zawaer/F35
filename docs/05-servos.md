@@ -220,6 +220,8 @@ count because symmetric pairs share one channel:
 
 **Pico v1 channel count: 9 (canopy now included; optional nozzle + possible roll-post servos adds 1–3 more).** STS3032 nozzle rotate is on its own serial bus — not a PWM channel.
 
+**Why FC surfaces get separate channels even though they're symmetric pairs:** the FC needs independent control over each side for differential mixing (elevon, flaperon), surface reversal, and trim. Pico actuators (doors, retracts) that always move identically share one channel via Y-splitter cable.
+
 See [Flight Controller](03-flight-controller.md) and [Pico](04-raspberry-pi-pico.md).
 
 ## Open questions / TODO
