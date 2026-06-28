@@ -155,6 +155,44 @@ retraction. The print-it-yourself route gives full control of the kinematics.
 ![Main gear shock strut close-up](img/landing-gear-rear/main-gear-strut-closeup.jpeg)
 *Main gear oleo strut detail — shows the retraction pivot and drag-brace attachment points that the custom retract linkage needs to reproduce.*
 
+## Door reference images
+
+### Landing gear doors
+
+![Nose gear doors open](img/doors/nose-gear-doors-open.jpeg)
+*Nose gear doors open during retraction — two thin flat panels fold back flush with the fuselage belly. Shows the door geometry and hinge line relative to the strut.*
+
+![Main gear doors on RC model](img/doors/main-gear-doors-rc-model.jpeg)
+*RC model with main gear doors open — useful for understanding how the doors split and the bay geometry at scale.*
+
+### Lift fan and VTOL doors
+
+![Lift fan inlet door open](img/doors/lift-fan-inlet-door-open.jpeg)
+*Lift fan inlet door fully open — single large clamshell panel hinged at the forward edge, revealing the full circular rotor face. The aft auxiliary inlet is also visible below.*
+
+![Lift fan exhaust doors open](img/doors/lift-fan-exhaust-doors-open.jpeg)
+*Lift fan exhaust doors open from below during hover — multiple small panels fold out around the exhaust aperture between the lift fan and the main gear bay.*
+
+![3BSM nozzle in hover position](img/doors/3bsm-nozzle-hover-deployed.jpeg)
+*3BSM nozzle deployed for hover — three-section bearing structure rotated ~90° down, serrated nozzle pointing directly downward. The surrounding door petals and the roll-post openings are visible.*
+
+![Roll post exhaust opening](img/doors/roll-post-exhaust-opening.jpeg)
+*Roll post exhaust opening from below — small rectangular aperture in the wing-fuselage junction with the door open, showing the internal actuator linkage.*
+
+### Other doors
+
+![Canopy open](img/doors/canopy-open.jpeg)
+*Canopy open — single-piece clamshell hinged at the rear, tilting forward and up. Note the hinge mechanism and the lack of a centre frame across the whole transparency.*
+
+![Aux air intake door open](img/doors/aux-air-intake-door-open.jpeg)
+*Auxiliary air intake door open on the fuselage spine — rectangular panel that pops up to supply additional intake airflow at low speed and during VTOL.*
+
+![Aerial refueling door open](img/doors/aerial-refueling-door-open.jpeg)
+*Aerial refueling receptacle door open on the left spine forward of the cockpit, with the probe engaged on a tanker drogue. Shows the door size and location relative to the canopy.*
+
+![Weapons bay doors open](img/doors/weapons-bay-doors-open.jpeg)
+*Weapons bay doors open in flight from below-rear — both bays open simultaneously, missiles on launchers visible inside. Illustrates the door span and hinge geometry.*
+
 ## PWM routing
 
 Primary flight surfaces + ESCs are on the **F405** (10 of 11 channels used, 1 spare). Secondary
