@@ -127,10 +127,16 @@ while True:
 ![RC EDF with BA15S unlit](img/afterburner/rc-edf-ba15s-unlit.jpeg)
 *Same setup unlit — shows how the bulb mounts at the motor hub inside the duct.*
 
+![RC F-16 with afterburner LED active](img/afterburner/rc-f16-afterburner-led.jpeg)
+*RC F-16 with afterburner LED on — warm amber/orange glow from the nozzle, confirming the colour target even in a non-EDF installation.*
+
 ### Formation lights, nav lights & landing light
 
 ![Night VTOL showing all lights active](img/vtol-night/vtol-night-all-lights.jpeg)
 *Night VTOL approach: green formation strips along the fuselage top, green wingtip nav, blazing landing light on the nose strut, red/orange 3BSM exhaust glow below. All light types visible simultaneously.*
+
+![All nav lights active on night taxi](img/nav-lights/nav-lights-night-all.jpeg)
+*Night taxi with all nav and position lights active — green formation strips on fuselage, red/green wingtip navs, and landing light illuminating the taxiway ahead.*
 
 ![Nav light housing on wing leading edge](img/nav-lights/nav-lights-flush-housing.jpeg)
 *Flush nav light installation — small aperture in the wing skin, no external protrusion.*
@@ -138,8 +144,17 @@ while True:
 ![Nav light wingtip detail](img/nav-lights/nav-lights-wingtip-detail.jpeg)
 *Wingtip nav light close-up — LED array on a PCB strip with individual reflector cups, recessed behind a flush clear lens in the wingtip skin.*
 
+![Landing light during night approach](img/landing-light/landing-light-approach.jpeg)
+*Landing light during night VTOL approach — from below-front, showing the light mounted on the extended nose strut with gear fully down.*
+
+![Night VTOL with landing light and all lights active](img/landing-light/landing-light-night-vtol.jpeg)
+*Night VTOL with landing light blazing — green formation strips, red collision light, and orange 3BSM exhaust glow all visible simultaneously.*
+
 ![Landing lights on night ground roll](img/landing-light/landing-light-night-taxi.jpeg)
 *Night taxi with landing lights at full power — note the intensity and forward beam spread from the nose-strut mount.*
+
+![All lights active on night ground roll](img/landing-light/landing-light-all-lights.jpeg)
+*Night ground roll showing all light types from the side — landing light, green formation strips, red/green nav lights, and red collision strobe all active.*
 
 ## Related
 

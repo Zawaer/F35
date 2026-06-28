@@ -232,6 +232,9 @@ The real F-35B has a distinctive **EOTS (Electro-Optical Targeting System) dome*
 ![EOTS and nose wheel bay from below](img/eots/eots-nose-bay-below.jpeg)
 *Nose wheel bay open, showing the EOTS housing in the context of the lower-forward fuselage geometry.*
 
+![EOTS dome close-up from below](img/eots/eots-dome-closeup.jpeg)
+*EOTS faceted sapphire dome close-up — multi-panel angled window set into a protruding housing, surrounded by hydraulic lines and actuators from the open nose bay.*
+
 Model the EOTS as a **printed insert** in the nose-bottom panel — clear PETG or ASA, tinted amber from inside with translucent film if backlit.
 
 ## Finishing
