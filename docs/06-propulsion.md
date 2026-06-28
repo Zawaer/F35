@@ -97,6 +97,36 @@ Final plan (parts chosen):
 - Cosmetic roll-post inlet/outlet doors on SG90.
 - ArduPilot mixes them as quadcopter roll motors.
 
+#### Throttle control vs thrust vectoring
+
+**Throttle differential alone is sufficient — no thrust vectoring needed on the roll posts.**
+
+This is the same mechanism the real F-35B uses: roll posts are fixed downward nozzles, roll authority comes purely from differential thrust (left post faster, right slower, or vice versa). It is also identical to how a quadcopter rolls — differential throttle on fixed-direction motors.
+
+Vectoring would only add value if a single post needed to push in both directions (up and down) from the same location. That's not the case here: left and right posts are symmetric, so differential throttle handles both roll directions.
+
+The FVT LittleBee 20A + BLHeli_S/DSHOT combination already has ~5 ms signal latency; a 30mm fan spools in ~200–400 ms. A servo-actuated nozzle would be slower, heavier, and an extra failure point with no benefit.
+
+The one practical constraint: both fans must run at a **midpoint hover throttle baseline** so there is headroom to increase or decrease either side. ArduPilot QuadPlane mode sets this automatically — it establishes a hover baseline and mixes roll authority above and below it.
+
+#### 30mm EDF intake placement
+
+**Rule: each 30mm must have its own dedicated intake, fully isolated from the 70mm plenum.**
+
+A 70mm EDF moves ~10–15× the mass flow of a 30mm. If both draw from the same internal cavity, the 70mm dominates and the 30mm is starved — at high 70mm throttle, exactly when roll authority is most critical. In the worst case the 30mm stalls or reverse-flows.
+
+The bad design — seen in other builders' test rigs — mounts the 30mm at the same intake zone as the 70mm. This appears to work on an open frame (all fans see ambient air freely), but in a fuselage the same geometry becomes a closed competition the 30mm loses badly.
+
+![Bad design — shared intake, perspective 1](img/roll-post/roll-post-shared-intake-bad-01.png)
+*Bad: 30mm roll post positioned at the same intake zone as the 70mm. Works on an open frame, fails in a fuselage.*
+
+![Bad design — shared intake, perspective 2](img/roll-post/roll-post-shared-intake-bad-02.png)
+*Second perspective of the same bad design.*
+
+The correct approach: each 30mm gets a dedicated scoop on the fuselage skin, internally walled off from the main engine plenum. Even a small separate flush inlet eliminates the competition entirely. The wingtip location (where the 30mm EDFs already sit) is natural — each fan can have its own inlet on the wing underside or leading edge with no shared duct.
+
+**Design rule:** plan an internal bulkhead separating the 30mm intake pocket from the main engine plenum from day one. Retrofitting this partition into a finished fuselage is much harder than baking it in.
+
 #### Roll-post power & wiring
 
 - **Power source:** separate **3S 850 mAh** LiPo packs (CNHL MiniStar 70C, ~59.5 A capability — the

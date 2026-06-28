@@ -68,7 +68,7 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 - **Notes:** **WeAct is the primary** secondary-I/O board (USB-C + hardware reset button = nicer for
   flashing/field resets); the bare **Pi Pico is the flash-and-swap spare** — same RP2040, pin/firmware
   compatible, so a crash-fried board is a 2-minute swap. Programmed in MicroPython; pin map in the
-  [RP2040 doc](../docs/04-raspberry-pi-pico.md#pin-map).
+  [RP2040 doc](../docs/04-raspberry-pi-pico.md#pin-map--avionics-board-weact).
 - **Why RP2040 over the ESP32-S3 stash:** the secondary controller's analog sensing (NTC mux + ACS712)
   wants the RP2040's cleaner 3.3 V ADC, PIO gives jitter-free multi-servo/LED timing, and there's **no
   2.4 GHz conflict** with the ELRS RX (the ESP32's WiFi/BT shares the control band). The cockpit screen

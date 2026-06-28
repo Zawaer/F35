@@ -149,8 +149,8 @@ retraction. The print-it-yourself route gives full control of the kinematics.
 ![Main gear front view](img/landing-gear-rear/main-gear-front-01.jpeg)
 *Main gear front view: single large wheel, compact vertical strut retracting inward into the fuselage.*
 
-![Main gear side view](img/landing-gear-rear/main-gear-front-02.jpeg)
-*Main gear from a slightly different angle — shows the strut pivot geometry and drag-brace linkage relative to the fuselage belly.*
+![Main gear side view](img/landing-gear-rear/main-gear-side.jpeg)
+*Main gear side-on view — shows the full strut height, drag-brace geometry, and how the strut retracts inward into the fuselage bay.*
 
 ![Main gear shock strut close-up](img/landing-gear-rear/main-gear-strut-closeup.jpeg)
 *Main gear oleo strut detail — shows the retraction pivot and drag-brace attachment points that the custom retract linkage needs to reproduce.*

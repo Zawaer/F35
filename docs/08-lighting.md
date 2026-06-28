@@ -85,7 +85,7 @@ Pico GPIO      → IRLZ44N gate      → switches 12V COB strip on/off
 ```
 
 Pin assignments (design values): GPIO 10 (red), 11 (green), 12 (strobe), 15 (strobe-enable alt).
-See [Pico pin map](04-raspberry-pi-pico.md#pin-map). The IRLZ44N is a logic-level MOSFET so a 3.3V
+See [Pico pin map](04-raspberry-pi-pico.md#pin-map--avionics-board-weact). The IRLZ44N is a logic-level MOSFET so a 3.3V
 GPIO drives the gate directly.
 
 ```python

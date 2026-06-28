@@ -217,7 +217,7 @@ trimmed PETG to it. For the opening canopy (V1), the sill becomes a separate hin
 
 - **Diametric rod magnet 4 × 10 mm N42** (magneettikauppa.fi) — only needed if a 3BSM position
   sensor is built from a bare encoder. The chosen **STS3032** smart servos already have a built-in
-  magnetic encoder, so this is largely redundant. See [Servos](05-servos.md#3bsm-smart-servos-sts3032).
+  magnetic encoder, so this is largely redundant. See [Servos](05-servos.md#3bsm-actuation--single-sts3032--gear-linked-sections).
 - **N35 neodymium discs, 5 × 2 mm (×100, owned)** — embedded in printed seats for **removable
   panels/hatches** (battery hatch, canopy, access covers). 80 °C max; keep clear of any
   compass/magnetometer. See the [magnet card](../components/structural.md).
