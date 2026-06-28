@@ -126,7 +126,7 @@ records go in [decisions.md](decisions.md); this is the looser narrative around 
     5× 12P FFC adapter.
   - **Servos** — Feetech STS3032 360° (magnetic encoder, 3BSM nozzle), 4× NEEBRC M005 2g plastic gear (light
     doors), 10× 200 mm servo extension.
-  - **Roll-post propulsion** — 2× 30 mm EDF 7000KV 3S (bundled ESCs = spares), 2× FVT LittleBee 20A.
+  - **Roll-post propulsion** — 2× 30 mm EDF 7000KV 3S, 2× FVT LittleBee 20A ESC (bought separately).
   - **Wire** — 10 AWG (2 m), 18 AWG (2 m), 22 AWG (10 m).
   - **Structural** — CF tube 500×8×6 mm ×16, CF rod 2×250 mm ×10, 4 mm steel balls ×100, MR62ZZ ×10,
     38 mm nose wheel ×2, CA glue ×3.

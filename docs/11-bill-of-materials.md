@@ -23,7 +23,7 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | XXD A2212 1400KV + 30A ESC | 1 | 11.10 | Trainer (low-KV option) · 17 Apr 2026 |
 | EP-6035 propellers | 4 | 1.75 | Trainer prop spares · 7 Apr 2026 |
 | Gemfan 8×4 propellers | 2 | 3.34 | Trainer (1400KV) · 17 Apr 2026 |
-| QX-Motor 30 mm EDF QF1611 7000KV 3S | 2 | 39.06 | Roll-post thrusters (bundled ESCs = spares) · 24 Jun 2026 |
+| QX-Motor 30 mm EDF QF1611 7000KV 3S | 2 | 39.06 | Roll-post thrusters · 24 Jun 2026 |
 | FVT LittleBee 20A ESC (BLHeli_S) | 2 | 11.56 | Roll-post chosen ESCs · 24 Jun 2026 |
 
 ### Servos & linkage hardware
@@ -121,24 +121,42 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | Part | Qty | € | Notes |
 |------|-----|---|-------|
 | CNHL G+Plus 5000 mAh 6S 70C (EC5) | 2 | 58.82 | Main + lift EDF (one each) |
-| CNHL 2700 mAh 6S 40C (XT60) | 1 | 24.06 | Spare / fallback lift pack |
+| CNHL 2700 mAh 6S 40C (XT60) | 4 | 24.06 | Spare / fallback packs |
 | HOTA D6 Pro charger | 1 | 105.96 | Bench (Banggood) |
 
 ## Buy later / gaps
+
+### Airframe & mechanical
 | Item | Why | Status |
 |------|-----|--------|
-| MicroSD card — Maxell 32GB SDHC Class 10 | ArduPilot blackbox logging (SDHC ≤32GB, FAT32 — no SDXC). [Tokmanni €10.99](https://www.tokmanni.fi/muistikortti-32gb-micro-sd-4902580745264) · [Puuilo €12.99](https://www.puuilo.fi/maxell-micro-sdhc-muistikortti-32gb-class-10-adapteri) (backup if Tokmanni out of stock) | 🛒 when needed |
-| GPS module | ArduPilot VTOL altitude / position hold (EKF) | 🛒 later — post-validation, budget |
-| Downward rangefinder / lidar | Precise low-altitude hover hold (TF-Luna / VL53L1X) | 🛒 later — post-validation, budget |
-| 2 mm bullet connectors | EDF motor leads | 🛒 later |
-| Main / rear landing wheels (55–56 mm) | F35B main gear (38 mm nose ordered) | 🛒 later |
-| Matek 150A current sensor | Main/lift EDF current logging (>20A) | ⚠️ optional |
-| Stainless button-head screw kit (600 pc) | General fasteners | 🛒 to card |
+| Main / rear landing wheels (55–56 mm) | F-35B main gear (38 mm nose already ordered) | 🛒 soon |
+| Servo linkage hardware (pushrods, clevises, horns) | Current stock likely insufficient for full surface/door count — buy once linkage geometry is laid out | 🛒 later — once surface count confirmed |
+| Additional 2g micro servos (e.g. NEEBRC M005 or similar) | Most doors too light for SG90s; current 2g count bought conservatively pending 3BSM/hover/airframe validation | 🛒 later — post-validation |
+| Clear PETG sheet (0.5–0.75 mm) | Canopy transparency — vacuum/heat formed over mould | 🛒 later — once canopy mould shape is known |
+
+### Power & batteries
+| Item | Why | Status |
+|------|-----|--------|
+| CNHL G+Plus 5000 mAh 6S 70C EC5 ×2 | Own replacements for the two borrowed main/lift packs (~€59 each, ~€118 total) | 🛒 later — post-validation |
+| LiPo charger (HOTA D6 Pro or equiv.) | Charger is borrowed — needed once school drone club kit is returned (~€106) | 🛒 later — when borrowed kit returned |
+| 2 mm bullet connectors | EDF motor leads | 🛒 urgent |
+
+### Electronics & sensors
+| Item | Why | Status |
+|------|-----|--------|
+| MicroSD card — Maxell 32GB SDHC Class 10 | ArduPilot blackbox logging (SDHC ≤32GB, FAT32 — no SDXC). [Tokmanni €10.99](https://www.tokmanni.fi/muistikortti-32gb-micro-sd-4902580745264) · [Puuilo €12.99](https://www.puuilo.fi/maxell-micro-sdhc-muistikortti-32gb-class-10-adapteri) (backup) | 🛒 when needed |
+| GPS module | ArduPilot VTOL altitude / position hold (EKF) | 🛒 later — post-validation |
+| Downward rangefinder / lidar | Precise low-altitude hover hold (TF-Luna / VL53L1X) | 🛒 later — post-validation |
+| Matek 150A current sensor | Main/lift EDF current logging (>20 A range) | ⚠️ optional |
+
+### Consumables & fasteners
+| Item | Why | Status |
+|------|-----|--------|
+| Stainless button-head screw kit (600 pc) | General fasteners | 🛒 later |
 | Biltema Pika Epoksi 2×21 g (€3.55) | Spar joints + tube sockets (CA too brittle) — [Biltema](https://www.biltema.fi/rakentaminen/liimat/epoksiliimat/pika-epoksi-2-x-21-g-2000050118) | 🛒 to buy |
 
 ## Key decisions
-- **Roll-post ESCs:** use the 2× FVT **LittleBee 20A** (cheap, BLHeli_S/DSHOT); the 20A ESCs bundled
-  with the 30 mm EDFs are kept as **spares**.
+- **Roll-post ESCs:** 2× FVT **LittleBee 20A** (BLHeli_S/DSHOT) — bought separately; the 30 mm EDFs did not come bundled with ESCs.
 - **3BSM rotation:** **4 mm loose steel ball race** (printed groove); MR62ZZ = backup; **6805ZZ
   dropped** (not bought). One **STS3032** suffices (sections gear-linked); yaw is a separate MG90S/SG90.
 - **Temperature:** NTC 100K + CD74HC4067 mux (one shared 47 kΩ divider); **DS18B20 dropped**.

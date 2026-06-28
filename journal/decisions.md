@@ -16,7 +16,7 @@ in git history (`git log`); the *Ref* column points to the doc that holds the fu
 | **Lift battery** | 2700 mAh 6S (lighter nose) | 2nd 5000 mAh 6S (matched pair) | Current margin + longer hover + matched charging/spares; accepts +260 g forward CG (shift main pack rearward). Lighter fallbacks kept | [02](../docs/02-power-system.md) |
 | **Servo BEC rating** | Feared 4 A → considered a UBEC split | IC-confirmed **7.5 A cont / 14 A peak** | Product *text* said 4 A (wrong); manual says 8 A (slightly rounded up); IC read on board: SCT2481 (Silicon Content Technology) → 7.5 A cont. CSD18511Q5A MOSFET (30 A) corroborates. Rail isn't marginal → no UBEC ordered | [02](../docs/02-power-system.md#servo-rail-headroom) |
 | **Roll-post battery** | Per-side: one 850 mAh per roll post | Single 3S 850 mAh feeds **both** | A dead pack in a split = uncommanded asymmetric roll; one shared pack fails *symmetric* (both posts die together) — safer, and one 70C pack has ample current | [06](../docs/06-propulsion.md#roll-control) |
-| **Roll-post ESCs** | The 20 A ESCs bundled with the 30 mm EDFs | 2× FVT LittleBee 20A (BLHeli_S/DSHOT) | Better firmware/DShot, known-good. No BEC → cut the red wire, signal+GND to FC | [06](../docs/06-propulsion.md) |
+| **Roll-post ESCs** | Various options considered | 2× FVT LittleBee 20A (BLHeli_S/DSHOT) — bought separately | Better firmware/DShot, known-good. No BEC → cut the red wire, signal+GND to FC | [06](../docs/06-propulsion.md) |
 | **Wingtip roll control** | Bleed-air roll posts (and a 40 mm EDF option) | Dedicated **30 mm EDFs** (inrunner) | Bleed air rejected as impractical; 30 mm over 40 mm (40 mm = more thrust/weight/cost than the roll task needs) | [06](../docs/06-propulsion.md) |
 | **Main/lift EDF current sensing** | Matek 150A sensor on each battery lead → FC ADC | None in v1 (ACS712 20A only on roll posts; PDB reports pack A) | 89 A / 40 A exceed the ACS712 20A range; defer a 150A-class sensor; the PDB already logs pack current/voltage | [07](../docs/07-sensors-monitoring.md) |
 | **3BSM actuation** | continuous-360 SG90 + external AS5600 encoder → then 2× STS3032 (one per section) | **One** STS3032, sections **gear-coupled** | Serial-bus smart servo with a built-in encoder does the >180° a PWM servo can't; gear-linking the sections lets one motor turn the whole nozzle → saves ~€35, a servo, *and* the external AS5600 encoder | [05](../docs/05-servos.md) |
@@ -51,8 +51,13 @@ in git history (`git log`); the *Ref* column points to the doc that holds the fu
 - **Canopy = single piece** (real F-35 is a frameless bubble; splitting would add a seam, harder to
   form, more join lines). Clear / very-light-smoke tint — iridescent coating not replicable and a
   heavy tint would hide the cockpit screen.
-- **Canopy V1 = removable, magnet-located** (reuses owned N35 5×2 discs); **powered opening deferred
-  to V2** — it would cost a scarce Pico PWM channel + a hinge, the reason it was cut from V1.
+- **Canopy V1 = servo-actuated opening** (SG90, hinged) — not deferred; adds minimal weight and the
+  hinge mechanism is straightforward. Magnet-only approach dropped.
+- **Canopy interior = realistic cockpit** — when the canopy opens it should look like a real cockpit
+  (seat, instrument panel, pilot figure), not expose electronics or a battery. Hide any avionics
+  below the instrument panel sightline.
+- **Battery placement = TBD** — location depends on what fits and what keeps CG acceptable once the
+  airframe geometry is known. "Weapons-bay hot-swap" was a placeholder idea, not a decision.
 - **Vacuum-box material = undecided** (tub vs 3D-print vs MDF) — 3D-print not locked in on filament-cost
   grounds.
 - **Final paint colour = pending** — decided after the first airframe flies.

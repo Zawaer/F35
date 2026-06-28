@@ -90,9 +90,7 @@ Final plan (parts chosen):
 - **2× 30mm 6-blade ducted fan, QF1611 7000KV (3S)** — ~220 g raw thrust → ~165 g after duct losses,
   ~11.2 A draw. Hidden inside the wingtips behind small inlet/outlet doors. **30 mm chosen over
   40 mm** (40 mm = more thrust/weight/cost than needed for roll authority).
-- **ESCs:** **decision — use the 2× FVT LittleBee 20A (BLHeli_S/DSHOT)**; the 20A ESCs bundled with
-  the 30mm EDFs become spares. (LittleBees are cheap and give better/faster response.) At 11.2 A on a
-  20A ESC they run ~56% — no heatsink needed.
+- **ESCs:** 2× FVT **LittleBee 20A** (BLHeli_S/DSHOT) — bought separately (30 mm EDFs did not come bundled with ESCs). At 11.2 A on a 20A ESC they run ~56% — no heatsink needed.
 - Cosmetic roll-post inlet/outlet doors on SG90.
 - ArduPilot mixes them as quadcopter roll motors.
 

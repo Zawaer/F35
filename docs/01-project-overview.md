@@ -98,4 +98,4 @@ Still parked (not committed):
 
 - **Engine sound:** DFPlayer Mini (~€2) + 40mm 2W speaker, triggered by Pico from FC flight state.
   EDFs already sound convincingly jet-like.
-- Weapons-bay battery hot-swap, canopy actuation, variable exhaust nozzle.
+- Variable exhaust nozzle.

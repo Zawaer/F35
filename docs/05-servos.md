@@ -42,7 +42,7 @@ MG996R are deliberately **avoided** in the final build — too heavy (55 g each)
 | Lift-fan vane box | MG90S | 2.2 kg | 13 g | ✅ own |
 | Roll post L / R* | MG90S | 2.2 kg | 13 g | ✅ own |
 | Exhaust nozzle (opt) | SG90 | 1.8 kg | 9 g | ✅ own |
-| Canopy | SG90 | 1.8 kg | 9 g | ⏭️ skipped v1, possible v2 |
+| Canopy | SG90 | 1.8 kg | 9 g | 🛒 v1 |
 
 \* Roll-post *servos* only apply if vanes/doors are actuated; roll **thrust** now comes from small
 wingtip motors, not bleed-air vanes — see [Propulsion — roll control](06-propulsion.md#roll-control).
@@ -160,8 +160,7 @@ count because symmetric pairs share one channel:
 | Pico 8 | Exhaust nozzle (opt) | SG90 ×1 |
 | Pico 9+ | Roll-post servos (if needed) | MG90S ×2 |
 
-**Pico v1 channel count: 8 (optional nozzle + possible roll-post servos adds 1–3 more).** Canopy
-skipped in v1. STS3032 nozzle rotate is on its own serial bus — not a PWM channel.
+**Pico v1 channel count: 9 (canopy now included; optional nozzle + possible roll-post servos adds 1–3 more).** STS3032 nozzle rotate is on its own serial bus — not a PWM channel.
 
 See [Flight Controller](03-flight-controller.md) and [Pico](04-raspberry-pi-pico.md).
 

@@ -211,7 +211,7 @@ hold ~10–20 s → vacuum off, pop off plug, trim. Oven gloves: the frame is ho
 ### Canopy sill / frame
 
 Print the sill the PETG sits on as **part of the fuselage** in LW-PLA for an exact fit; CA-glue the
-trimmed PETG to it. For V2's opening canopy, the sill becomes a separate hinged printed part.
+trimmed PETG to it. For the opening canopy (V1), the sill becomes a separate hinged printed part.
 
 ## Magnets
 
