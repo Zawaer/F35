@@ -1,10 +1,10 @@
-# F-35B RC Project — Knowledge Base
+# F-35B VTOL RC Build
 
 ![F-35B](docs/img/cover.jpeg)
 
-Centralized, living documentation for a multi-phase RC aircraft project culminating in a
-3D-printed, VTOL-capable **F-35B**. This repo is the single source of truth for component
-choices, pin mappings, wiring, power architecture, and the reasoning behind every decision.
+A multi-phase RC aircraft project culminating in a 3D-printed, VTOL-capable **F-35B**.
+This repo is the single source of truth for code, component choices, pin mappings, wiring,
+power architecture, and the reasoning behind every decision.
 
 > **How to use this repo:** each doc in [`docs/`](docs/) covers one subsystem and opens with a
 > short **"current decision"** callout, followed by the supporting analysis. When a decision
@@ -19,8 +19,7 @@ choices, pin mappings, wiring, power architecture, and the reasoning behind ever
 | 1 | Trainer prop plane (foamboard) | Built & repaired — awaiting re-flight (runway needed) |
 | 2 | VTOL F-35B (3D-printed) | Primary focus / in design |
 
-The trainer (Phase 1) validates basic flying and the FC/RX setup; the F-35B (Phase 2) is the real
-goal, and most of the technical depth in this KB concerns it.
+The trainer (Phase 1) validates basic flying and the FC/RX setup; the F-35B (Phase 2) is the real goal.
 
 ## Aircraft at a glance (Phase 2 F-35B)
 
@@ -48,10 +47,10 @@ goal, and most of the technical depth in this KB concerns it.
 | 10 | [Wiring Diagrams](docs/10-wiring-diagrams.md) | Consolidated power/signal wiring and pin connections |
 | 11 | [Bill of Materials](docs/11-bill-of-materials.md) | Master parts list with own/order status and cost |
 
-Detailed per-part specs (weight, dimensions, electrical) live in the
-[Component Knowledge Base](components/) — datasheet-style cards that back the BOM and feed the
-CG/AUW and power-budget math. Code will live in [`code/`](code/) — the [Pico firmware](code/pico/) is
-not written yet (planned modules + wiring recipes documented there).
+Detailed per-part specs (weight, dimensions, electrical) live in [components/](components/) —
+datasheet-style cards that back the BOM and feed the CG/AUW and power-budget math. Firmware lives
+in [`code/`](code/) — the [Pico firmware](code/pico/) is not written yet (planned modules + wiring
+recipes documented there).
 
 ## Adding images
 
