@@ -55,13 +55,11 @@ not written yet (planned modules + wiring recipes documented there).
 
 ## Adding images
 
-Compress before committing — keeps the repo lean without visible quality loss:
+Keep originals in `docs/img-hires/<subfolder>/` (gitignored). Compress into `docs/img/<subfolder>/` before committing:
 
 ```bash
-sips -Z 1920 -s format jpeg -s formatOptions 82 photo.jpg --out photo.jpg
+sips -Z 1920 -s format jpeg -s formatOptions 82 docs/img-hires/vtol-day/photo.jpeg --out docs/img/vtol-day/photo.jpeg
 ```
-
-Drop the compressed file into the relevant `docs/img/<subfolder>/` and reference it in the matching doc.
 
 ## Conventions
 
