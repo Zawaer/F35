@@ -3,14 +3,9 @@
 ![F-35B](docs/img/cover.jpeg)
 
 A multi-phase RC aircraft project culminating in a 3D-printed, VTOL-capable **F-35B**.
-This repo is the single source of truth for code, component choices, pin mappings, wiring,
-power architecture, and the reasoning behind every decision.
+Code, docs, decisions, and build log all live here.
 
-> **How to use this repo:** each doc in [`docs/`](docs/) covers one subsystem and opens with a
-> short **"current decision"** callout, followed by the supporting analysis. When a decision
-> changes, update the doc — keep it a reference, not a history log. The *history* — why decisions
-> changed, plus build progress — lives in [`journal/`](journal/) ([decision log](journal/decisions.md)
-> + [devlog](journal/devlog.md)).
+Each doc in [`docs/`](docs/) covers one subsystem. Design decisions and build progress are tracked in [`journal/`](journal/) ([decision log](journal/decisions.md) + [devlog](journal/devlog.md)).
 
 ## Project phases
 
@@ -29,7 +24,7 @@ The trainer (Phase 1) validates basic flying and the FC/RX setup; the F-35B (Pha
   fan, 2× wingtip micro motors). See [Propulsion](docs/06-propulsion.md).
 - **Flight controller:** CoreWing F405 WING V2 stack (FC + PDB PLUS + wireless), ArduPilot
 - **Secondary I/O:** two RP2040 boards (WeAct avionics + Pi Pico servo bank) for extra PWM, temperature sensing, and LED control
-- **Airframe:** LW-PLA print + carbon/aluminium spars + plywood reinforcement
+- **Airframe:** LW-PLA print + carbon spars + plywood reinforcement
 
 ## Documentation index
 
@@ -43,7 +38,7 @@ The trainer (Phase 1) validates basic flying and the FC/RX setup; the F-35B (Pha
 | 06 | [Propulsion](docs/06-propulsion.md) | EDFs, lift fan, 3BSM thrust vectoring, roll posts, trainer motor |
 | 07 | [Sensors & Monitoring](docs/07-sensors-monitoring.md) | NTC temp + ACS712 current sensing, blackbox logging |
 | 08 | [Lighting](docs/08-lighting.md) | Nav lights, strobes, 3W LEDs + drivers, Pico control |
-| 09 | [Materials & Airframe](docs/09-materials-airframe.md) | Filaments, carbon/aluminium spars, bearings, fasteners, glue |
+| 09 | [Materials & Airframe](docs/09-materials-airframe.md) | Filaments, carbon spars, bearings, fasteners, glue |
 | 10 | [Wiring Diagrams](docs/10-wiring-diagrams.md) | Consolidated power/signal wiring and pin connections |
 | 11 | [Bill of Materials](docs/11-bill-of-materials.md) | Master parts list with own/order status and cost |
 
