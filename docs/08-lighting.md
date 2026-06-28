@@ -135,6 +135,9 @@ while True:
 ![Nav light housing on wing leading edge](img/nav-lights/nav-lights-flush-housing.jpeg)
 *Flush nav light installation — small aperture in the wing skin, no external protrusion.*
 
+![Nav light wingtip detail](img/nav-lights/nav-lights-wingtip-detail.jpeg)
+*Wingtip nav light close-up — LED array on a PCB strip with individual reflector cups, recessed behind a flush clear lens in the wingtip skin.*
+
 ![Landing lights on night ground roll](img/landing-light/landing-light-night-taxi.jpeg)
 *Night taxi with landing lights at full power — note the intensity and forward beam spread from the nose-strut mount.*
 
