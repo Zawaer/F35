@@ -9,9 +9,6 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 > [Servos](05-servos.md) · [Materials](09-materials-airframe.md) · [Sensors](07-sensors-monitoring.md) ·
 > [Lighting](08-lighting.md) · [Flight Controller](03-flight-controller.md)
 
-> ⚠️ **Customs:** China→Finland AliExpress orders incur ~22% import VAT/customs — budget for it on the
-> in-cart total.
-
 ## ✅ Owned / ordered
 
 ### Propulsion (F-35B + trainer)

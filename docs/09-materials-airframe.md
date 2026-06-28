@@ -120,8 +120,6 @@ See [Propulsion — 3BSM](06-propulsion.md#3bsm--three-bearing-swivel-module).
   servo/ESC/EDF mounting, carbon-tube clamps, landing gear, general airframe. Stainless chosen over
   zinc (no rust from exhaust condensation).
 - ⚠️ Confirm **M2 nuts** are included (needed to secure 3BSM from both sides).
-- Add **M2/M3 nyloc nuts** (~€2) for vibration-prone areas (EDF mounts, landing gear) so screws
-  don't shake loose. **Threadlocker (Loctite blue)** for the rest.
 - Linkage hardware: 2 mm linkage rods, clevises, M2 threaded rod for adjustable linkages.
 
 ## Adhesives & misc
