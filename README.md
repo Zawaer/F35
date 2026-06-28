@@ -1,6 +1,6 @@
 # F-35B RC Project — Knowledge Base
 
-![F-35B](docs/img/cover.jpg)
+![F-35B](docs/img/cover.jpeg)
 
 Centralized, living documentation for a multi-phase RC aircraft project culminating in a
 3D-printed, VTOL-capable **F-35B**. This repo is the single source of truth for component
@@ -10,7 +10,7 @@ choices, pin mappings, wiring, power architecture, and the reasoning behind ever
 > short **"current decision"** callout, followed by the supporting analysis. When a decision
 > changes, update the doc — keep it a reference, not a history log. The *history* — why decisions
 > changed, plus build progress — lives in [`journal/`](journal/) ([decision log](journal/decisions.md)
-> + [devlog](journal/devlog.md)). Raw chat exports that seeded this KB live in [`archive/`](archive/).
+> + [devlog](journal/devlog.md)).
 
 ## Project phases
 
