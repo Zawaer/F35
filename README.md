@@ -55,10 +55,10 @@ not written yet (planned modules + wiring recipes documented there).
 
 ## Adding images
 
-Keep originals in `docs/img-hires/<subfolder>/` (gitignored). Compress into `docs/img/<subfolder>/` before committing:
+Keep originals in `docs/img-high-res/<subfolder>/` (gitignored). Compress into `docs/img/<subfolder>/` before committing:
 
 ```bash
-sips -Z 1920 -s format jpeg -s formatOptions 82 docs/img-hires/vtol-day/photo.jpeg --out docs/img/vtol-day/photo.jpeg
+sips -Z 1920 -s format jpeg -s formatOptions 82 docs/img-high-res/vtol-day/photo.jpeg --out docs/img/vtol-day/photo.jpeg
 ```
 
 ## Conventions

@@ -137,19 +137,19 @@ retraction. The print-it-yourself route gives full control of the kinematics.
 
 ### Reference images — real F-35B gear geometry
 
-![Nose gear left-front view](img/landing-gear-front/nose-gear-left-front.jpg)
+![Nose gear left-front view](img/landing-gear-front/nose-gear-left-front.jpeg)
 *Nose gear left-front: single small wheel, simple trailing-link strut, doors flush with fuselage underside.*
 
-![Nose gear right-front view](img/landing-gear-front/nose-gear-right-front.jpg)
+![Nose gear right-front view](img/landing-gear-front/nose-gear-right-front.jpeg)
 *Nose gear right-front: shows the shimmy damper and pivot point geometry for the steering linkage.*
 
-![Nose gear F-35B vs F-35C comparison](img/landing-gear-front/nose-gear-b-vs-c.png)
+![Nose gear F-35B vs F-35C comparison](img/landing-gear-front/nose-gear-b-vs-c.jpeg)
 *F-35B vs F-35C nose gear comparison — useful for identifying B-specific details.*
 
-![Main gear front view](img/landing-gear-rear/main-gear-front-01.jpg)
+![Main gear front view](img/landing-gear-rear/main-gear-front-01.jpeg)
 *Main gear front view: single large wheel, compact vertical strut retracting inward into the fuselage. Note how much larger the main wheel is relative to the nose wheel.*
 
-![Main gear shock strut close-up](img/landing-gear-rear/main-gear-strut-closeup.jpg)
+![Main gear shock strut close-up](img/landing-gear-rear/main-gear-strut-closeup.jpeg)
 *Main gear oleo strut detail — shows the retraction pivot and drag-brace attachment points that the custom retract linkage needs to reproduce.*
 
 ## PWM routing
