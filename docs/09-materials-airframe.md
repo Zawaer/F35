@@ -1,7 +1,8 @@
 # Materials & Airframe
 
-> **Current plan (Phase 2):** LW-PLA printed shell, PETG for structural parts, ASA/ABS for
-> heat-critical parts near the EDF exhaust. Spars from **16× 500×8×6 mm carbon tube** (8 mm OD /
+> **Current plan (Phase 2):** LW-PLA printed shell, XPETG for structural parts, **PA6-CF for the
+> motor/ESC mounts** (the only genuinely hot parts — EDF exhaust is near-ambient, not turbine-hot).
+> Spars from **16× 500×8×6 mm carbon tube** (8 mm OD /
 > 6 mm ID), joined with the existing **6 mm OD / 3 mm ID** tubes as press-fit inner sleeves.
 > Plywood reinforcement plates. **Phase 1 trainer is foamboard.**
 
@@ -26,6 +27,12 @@ each with a **Bambu Lab AMS 2 Pro** (4-spool active dryer, 65 °C, ceramic inlet
 A big advantage of a printed airframe: servo bays, internal pushrod channels, and horn slots can
 be designed straight into the print (see [Servos — internal actuation](05-servos.md)).
 
+⚠️ **Run LW-PLA from an external spool, NOT through the AMS.** Two reasons specific to foaming
+filament: (1) the AMS 2 Pro's 65 °C active drying sits on the spool — LW-PLA is heat-activated, so
+warming it in the box risks premature/inconsistent foaming; (2) foaming PLA + the AMS Bowden/buffer
+path + ineffective retraction = feed and stringing trouble. Keep the AMS for the PETG/nylon/GreenTEC
+rolls.
+
 ### STUHI sponsorship — extrudr filaments (all 1.75 mm, up to 1.1 kg spools)
 
 STUHI (the community behind this project) received 8 rolls of extrudr filament as sponsorship.
@@ -43,8 +50,13 @@ These are available to the build in reasonable quantities (not 100% of each roll
 | 8 | **XPETG Matt** | White | Structural parts + **white base coat** option for the final livery |
 
 **Key notes:**
-- **PA6-CF / GreenTEC Pro CF** replace ASA/ABS for heat-critical and structural roles — better
-  specific stiffness and higher continuous service temp than plain PETG.
+- **"Heat-critical" here = the motor mount + ESC mount only.** An EDF exhaust is electric — the air
+  leaving the duct is near-ambient (~40–60 °C), *not* turbine-hot. The only genuinely hot parts are
+  the **EDF motor mount** (motor 80–100 °C under load) and the **ESC mount**. Everything else people
+  instinctively call "near the exhaust" — ducting, nozzle shroud, fairings — is fine in **XPETG**.
+  Reserve the scarce **PA6-CF / GreenTEC Pro CF** for those two mounts; don't spend it on warm-ish
+  parts PETG handles. (PA6-CF for the vibrating motor mount — tougher; GreenTEC Pro CF for rigid
+  non-vibrating brackets — stiffer but more brittle, and anneal it to realise its heat resistance.)
 - **XPETG Matt White** opens the *white-base + paint* airframe colour path (see below) without
   buying a separate white roll; matte surface also takes primer better than gloss PETG.
 - **FLEX SEMISOFT/MEDIUM** fill a gap not covered by the eSUN stock — vibration isolation and
@@ -57,8 +69,10 @@ These are available to the build in reasonable quantities (not 100% of each roll
 | Role | Filament |
 |------|----------|
 | Main airframe shell | LW-PLA (eSUN, black, in hand) |
-| Structural parts, 3BSM, spar collars | XPETG Matt, DuraPro PA6-GF |
-| EDF motor mount, high-heat structural | DuraPro PA6-CF, GreenTEC Pro CF |
+| Structural parts, 3BSM, ducting / nozzle shroud / fairings | XPETG Matt |
+| Spar collars / saddles, bulkheads | DuraPro PA6-GF |
+| EDF motor mount (hot + vibrating) | DuraPro PA6-CF |
+| ESC mount / rigid high-load brackets | DuraPro PA6-CF (vibration) or GreenTEC Pro CF (rigid) |
 | Landing gear struts | DuraPro PA12 |
 | Cosmetic / silver panels | GreenTEC Pro Silver |
 | Vibration mounts, seals | FLEX SEMISOFT / FLEX MEDIUM |
