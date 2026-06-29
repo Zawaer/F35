@@ -156,6 +156,9 @@ while True:
 ![All lights active on night ground roll](img/landing-light/landing-light-all-lights.jpeg)
 *Night ground roll showing all light types from the side — landing light, green formation strips, red/green nav lights, and red collision strobe all active.*
 
+![RC jet with green LED formation strips at sunset](img/formation-lights/formation-rc-03.jpeg)
+*RC F-14 at sunset with green LED formation strips along the fuselage spine, wing roots, and tail fins — shows how bar-style LED strips look integrated flush into printed/foam surfaces.*
+
 ## Related
 
 [Raspberry Pi Pico](04-raspberry-pi-pico.md) · [Power System](02-power-system.md) ·
