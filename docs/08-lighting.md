@@ -159,6 +159,15 @@ while True:
 ![RC jet with green LED formation strips at sunset](img/formation-lights/formation-rc-03.jpeg)
 *RC F-14 at sunset with green LED formation strips along the fuselage spine, wing roots, and tail fins — shows how bar-style LED strips look integrated flush into printed/foam surfaces.*
 
+![RC F-14 under a field tent at sunset — green LED formation strips on wingtips and tail fins](img/formation-lights/formation-rc-04.jpeg)
+*Side profile under a field tent at golden hour — LED bar strips flush-mounted on vertical and horizontal stabilizers, and both wingtips.*
+
+![RC F-14 three-quarter rear view with green LED strips on tail fins and wing trailing edges](img/formation-lights/formation-rc-05.jpeg)
+*Three-quarter rear view on a ground mat at sunset — green bar strips on both tail fins and wing trailing edges show the rear lighting geometry clearly.*
+
+![RC F-14 on tarmac with full light suite active — green formation strips, red collision light, green nav points](img/formation-lights/formation-rc-06.jpeg)
+*Three-quarter front view at dusk on a tarmac runway — green formation strips on wings and nose, red collision light, and green nav point lights all active simultaneously.*
+
 ## Related
 
 [Raspberry Pi Pico](04-raspberry-pi-pico.md) · [Power System](02-power-system.md) ·
