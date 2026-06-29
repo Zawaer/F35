@@ -165,7 +165,3 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 - **Secondary controller:** **two RP2040 boards** — WeAct Studio (avionics: sensors + screen + LEDs)
   + Raspberry Pi Pico (servo bank: ~8–10 PWM channels); one board can't fit the pin/ADC budget. No
   spare. ESP32-S3 stash kept for bench/ground tooling.
-
-## Related
-[Power System](02-power-system.md) · [Propulsion](06-propulsion.md) · [Servos](05-servos.md) ·
-[Sensors & Monitoring](07-sensors-monitoring.md) · [Materials & Airframe](09-materials-airframe.md)

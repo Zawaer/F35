@@ -171,9 +171,3 @@ telemetry over UART, this gives a complete per-flight picture.
 - ✅ **Main/lift EDF current: accept no logging in v1.** A 150A-class Hall sensor (e.g. Matek 150A) is
   **buy-later/optional** if precise EDF-current logging is wanted; the PDB still reports pack current.
 - Confirm CD74HC4067 wiring (S0–S3 select pins + SIG on GP26) and the spare-channel ACS712 mapping.
-
-## Related
-
-[Power System](02-power-system.md) · [Flight Controller](03-flight-controller.md) ·
-[Raspberry Pi Pico](04-raspberry-pi-pico.md) · [Wiring Diagrams](10-wiring-diagrams.md) ·
-[Bill of Materials](11-bill-of-materials.md)

@@ -102,8 +102,3 @@ PDB 12V ──► LED driver (700mA CC, PWM dim) ──► 3W LED
 - ✅ **Resolved: F405 UART assignments locked** — WeAct=USART3 (SERIAL3, MAVLink v2), Pico=UART4 (SERIAL4, MAVLink v2). See [Flight Controller](03-flight-controller.md#port-assignments).
 - Assign each secondary servo to a specific Pico GPIO and add it to this map.
 - Add a proper schematic/drawing (e.g. exported from KiCad or a diagram tool) once finalised.
-
-## Related
-
-[Power System](02-power-system.md) · [Flight Controller](03-flight-controller.md) ·
-[Raspberry Pi Pico](04-raspberry-pi-pico.md) · [Sensors & Monitoring](07-sensors-monitoring.md)

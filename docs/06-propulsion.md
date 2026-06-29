@@ -148,9 +148,3 @@ The correct approach: each 30mm gets a dedicated scoop on the fuselage skin, int
 - ⚠️ Validate 3BSM thrust-vectoring reliability and bearing wear under exhaust on the ground.
 - ✅ **Resolved: ArduPilot output mapping complete** — Lift fan=SERVO1 (Motor1), R roll post=SERVO2 (Motor2), Main EDF=SERVO3 (Motor3), L roll post=SERVO4 (Motor4), Q_FRAME_TYPE=0 (plus). See [Flight Controller](03-flight-controller.md#ardupilot-output-mapping).
 - Tune lift-fan vane-box authority vs main-EDF balance for hover pitch.
-
-## Related
-
-[Power System](02-power-system.md) · [Servos](05-servos.md) ·
-[Project Overview](01-project-overview.md) · [Materials & Airframe](09-materials-airframe.md) ·
-[Bill of Materials](11-bill-of-materials.md)

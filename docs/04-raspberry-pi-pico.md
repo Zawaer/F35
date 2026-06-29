@@ -157,8 +157,3 @@ temps). A custom `NAMED_VALUE_FLOAT` does **not** auto-appear on the radio. Ther
 - ✅ **Resolved: mux select lines (GP18–21) and SPI0 display pins (GP2–7) locked** — avionics board pin map complete.
 - Allocate specific GPIOs for each secondary PWM servo (servo-bank board).
 - Rewrite the temperature code for NTC + CD74HC4067.
-
-## Related
-
-[Flight Controller](03-flight-controller.md) · [Servos](05-servos.md) ·
-[Sensors & Monitoring](07-sensors-monitoring.md) · [Lighting](08-lighting.md)

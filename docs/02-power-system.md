@@ -176,9 +176,3 @@ telemetry (PDB VBAT divider → FC).
 - **Lift battery decided: a 2nd 5000 mAh pack** (matched pair) for current margin + hover time, at a
   +260 g forward CG cost. Fallbacks if CG/weight don't work out: **2700 mAh lift + 5000 mAh main**
   (the old plan, lighter front), or **2× 2700 mAh** (lightest, shortest flight).
-
-## Related
-
-[Flight Controller](03-flight-controller.md) · [Propulsion](06-propulsion.md) ·
-[Sensors & Monitoring](07-sensors-monitoring.md) · [Wiring Diagrams](10-wiring-diagrams.md) ·
-[Bill of Materials](11-bill-of-materials.md)

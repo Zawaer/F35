@@ -230,9 +230,3 @@ See [Flight Controller](03-flight-controller.md) and [Pico](04-raspberry-pi-pico
 - Map each servo to a specific FC or Pico PWM output.
 - ✅ **Resolved: STS3032 wiring and ArduPilot config** — TX-only + 10 kΩ, PROTOCOL=23, BAUD=1000, OPTIONS=4; Lua script for 3BSM mixing.
 - Write the Lua script for 3BSM nozzle mixing (pitch/yaw → STS position packets).
-
-## Related
-
-[Power System](02-power-system.md) · [Flight Controller](03-flight-controller.md) ·
-[Raspberry Pi Pico](04-raspberry-pi-pico.md) · [Propulsion](06-propulsion.md) ·
-[Materials & Airframe](09-materials-airframe.md)

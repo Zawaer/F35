@@ -302,7 +302,3 @@ Grey primer + filler primer (hide layer lines), F-35B livery colours, sandpaper 
 - Rear/main wheel (55–56 mm): **deferred to buy-later** (see [BOM](11-bill-of-materials.md)); 38 mm
   nose wheel already ordered.
 - Confirm the fastener kit includes M2 nuts; otherwise add separately.
-
-## Related
-
-[Propulsion](06-propulsion.md) · [Servos](05-servos.md) · [Bill of Materials](11-bill-of-materials.md)

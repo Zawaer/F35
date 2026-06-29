@@ -167,8 +167,3 @@ while True:
 
 ![RC F-14 on tarmac with full light suite active — green formation strips, red collision light, green nav points](img/formation-lights/formation-rc-06.jpeg)
 *Three-quarter front view at dusk on a tarmac runway — green formation strips on wings and nose, red collision light, and green nav point lights all active simultaneously.*
-
-## Related
-
-[Raspberry Pi Pico](04-raspberry-pi-pico.md) · [Power System](02-power-system.md) ·
-[Bill of Materials](11-bill-of-materials.md)

@@ -155,8 +155,3 @@ and mixing DSHOT (LittleBee 20A roll posts) with PWM on the same motor group com
 - **GPS + downward rangefinder/lidar:** both planned for **later** (after the airframe is validated) —
   GPS strongly benefits ArduPilot VTOL altitude/position hold, lidar gives precise low-altitude hover
   hold; both deferred now for budget.
-
-## Related
-
-[Power System](02-power-system.md) · [Raspberry Pi Pico](04-raspberry-pi-pico.md) ·
-[Servos](05-servos.md) · [Sensors & Monitoring](07-sensors-monitoring.md)
