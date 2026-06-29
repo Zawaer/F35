@@ -47,6 +47,42 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 ---
 
+### extrudr filaments (×8) — STUHI sponsorship
+- **Category:** Filament (engineering / flex — 8 rolls, various)
+- **Status:** ✅ in hand (via STUHI / extrudr sponsorship, Jun 2026)
+- **Used for:** structural parts, heat-critical parts, cosmetic panels, flex mounts — see role
+  mapping in [Materials & Airframe → sponsorship filaments](../docs/09-materials-airframe.md#stuhi-sponsorship--extrudr-filaments-all-175-mm-up-to-11-kg-spools)
+- **Variant / qty:** all 1.75 mm · see spool weights below · 8 rolls total (order 447426, 29 Jun 2026)
+
+**Print settings:**
+
+| # | Filament | Colour | Spool | Print temp | Bed temp | Speed | HDT / Shore |
+|---|----------|--------|-------|------------|----------|-------|-------------|
+| 8 | XPETG Matt | White | **1 kg** | 210–240 °C | 60–90 °C | 20–200 mm/s | **85–95 °C** HDT |
+| 6 | GreenTEC Pro | Silver | 0.8 kg | 210–230 °C | 20–90 °C | 20–200 mm/s | **160 °C** VICAT A / 115 °C HDT/B |
+| 7 | GreenTEC Pro CF | Black | 0.8 kg | 225–250 °C | 20–90 °C | 20–200 mm/s | **165 °C** VICAT A / 115 °C HDT/B |
+| 3 | DuraPro PA6-CF | Black | 0.8 kg | 270–300 °C | 80–100 °C | 20–150 mm/s | heat 9/10 |
+| 4 | DuraPro PA6-GF | Nature | 0.8 kg | 270–300 °C | 80–100 °C | 20–150 mm/s | heat 9/10 |
+| 5 | DuraPro PA12 | Black | 0.7 kg | 260–290 °C | **110 °C** | max 150 mm/s | **142 °C** VICAT A |
+| 2 | FLEX Medium | Transparent | 0.75 kg | 230–250 °C | 50–90 °C | 20–100 mm/s | Shore **A98**, HDT 115 °C |
+| 1 | FLEX Semisoft | Black | 0.75 kg | 220–250 °C | 50–90 °C | 20–100 mm/s | Shore **A85**, HDT 98 °C |
+
+**Key gotchas:**
+- ⚠️ **GreenTEC Pro CF** — requires a **hardened steel nozzle, min 0.5 mm** (10% CF content). Standard
+  brass nozzle will wear rapidly.
+- ⚠️ **PA6-CF / PA6-GF / PA12** — **must be pre-dried** before printing (12 h @ 70–80 °C); store in
+  sealed bags with desiccant between sessions. PA12's 110 °C bed needs good adhesion (PEI/glue stick).
+- ⚠️ **FLEX Semisoft** — rated "difficult" by extrudr (layer adhesion 5/10). Print slowly (≤40 mm/s),
+  disable retraction or keep it minimal, use a direct-drive extruder if possible.
+- **XPETG Matt**: behaves like an improved PETG — no warping, no enclosure needed, FDA-compliant. The
+  matte surface takes primer well — best candidate for the **white-base-coat + paint** airframe finish.
+- **GreenTEC Pro / GreenTEC Pro CF**: bio-based (renewable raw materials) with excellent heat resistance
+  (160–165 °C VICAT A) — far better than standard PETG for parts near the EDF exhaust.
+- **FLEX Medium** (Shore A98) is notably firmer than **FLEX Semisoft** (A85) — use Semisoft for maximum
+  compliance (vibration damping), Medium where flex + some structure is needed.
+
+---
+
 ### 304 stainless steel balls 4 mm — 3BSM ball race
 - **Category:** Hardware (loose bearing balls)
 - **Status:** ✅ owned (100 pcs · ordered 24 Jun 2026)

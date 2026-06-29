@@ -7,18 +7,51 @@
 
 ## Filaments
 
-| Filament | Use | Qty |
-|----------|-----|-----|
-| LW-PLA | Main airframe shell (light, printable internal channels) | 2–3 rolls |
-| PETG | Structural parts, 3BSM sections | 1–2 rolls |
-| ASA / ABS | Heat-critical parts near EDF exhaust, motor mounts | 1 roll |
+### Owned / in hand
 
-**LW-PLA in hand:** 2 rolls of **eSUN LW-PLA, black, 1 kg** (foaming PLA, ~0.54 g/cm³ foamed at
-260–270 °C) — for **test prints + the first airframe**. Full spec on the
-[eSUN LW-PLA card](../components/structural.md). ⚠️ Needs an **all-metal hotend** to foam properly
-(>250 °C); retraction is ineffective so expect stringing. A big advantage of a printed airframe:
-servo bays, internal pushrod channels, and horn slots can be designed straight into the print (see
-[Servos — internal actuation](05-servos.md)).
+**eSUN LW-PLA, black, 1 kg × 2 rolls** — main airframe shell (foaming PLA, ~0.54 g/cm³ foamed at
+260–270 °C). Full spec on the [eSUN LW-PLA card](../components/structural.md). ⚠️ Needs an
+**all-metal hotend** to foam properly (>250 °C); retraction is ineffective so expect stringing.
+A big advantage of a printed airframe: servo bays, internal pushrod channels, and horn slots can
+be designed straight into the print (see [Servos — internal actuation](05-servos.md)).
+
+### STUHI sponsorship — extrudr filaments (all 1.75 mm, up to 1.1 kg spools)
+
+STUHI (the community behind this project) received 8 rolls of extrudr filament as sponsorship.
+These are available to the build in reasonable quantities (not 100% of each roll).
+
+| # | Filament | Colour | Best use in this build |
+|---|----------|--------|------------------------|
+| 1 | **FLEX SEMISOFT** | Black | Vibration-isolating mounts, servo grommets, landing gear bump stops |
+| 2 | **FLEX MEDIUM** | Transparent | Flex joints, dust/water seals, wiring strain-relief clips |
+| 3 | **DuraPro PA6-CF** | Black | EDF motor mount, structural brackets — very stiff, heat-resistant |
+| 4 | **DuraPro PA6-GF** | Nature | Secondary structural parts, spar collars, bulkheads |
+| 5 | **DuraPro PA12** | Black | Parts needing impact resistance and light flex (landing gear struts) |
+| 6 | **GreenTEC Pro** | Silver | Cosmetic panels, scale detail parts — silver matches bare metal areas |
+| 7 | **GreenTEC Pro CF** | Carbon/black | High-load structural parts as ASA/ABS replacement; good heat resistance |
+| 8 | **XPETG Matt** | White | Structural parts + **white base coat** option for the final livery |
+
+**Key notes:**
+- **PA6-CF / GreenTEC Pro CF** replace ASA/ABS for heat-critical and structural roles — better
+  specific stiffness and higher continuous service temp than plain PETG.
+- **XPETG Matt White** opens the *white-base + paint* airframe colour path (see below) without
+  buying a separate white roll; matte surface also takes primer better than gloss PETG.
+- **FLEX SEMISOFT/MEDIUM** fill a gap not covered by the eSUN stock — vibration isolation and
+  compliant parts.
+- PA nylons (PA6-CF, PA6-GF, PA12) must be **dried before printing** (12 h @ 70–80 °C); keep in
+  sealed bags with desiccant between sessions.
+
+### Filament-to-role mapping (summary)
+
+| Role | Filament |
+|------|----------|
+| Main airframe shell | LW-PLA (eSUN, black, in hand) |
+| Structural parts, 3BSM, spar collars | XPETG Matt, DuraPro PA6-GF |
+| EDF motor mount, high-heat structural | DuraPro PA6-CF, GreenTEC Pro CF |
+| Landing gear struts | DuraPro PA12 |
+| Cosmetic / silver panels | GreenTEC Pro Silver |
+| Vibration mounts, seals | FLEX SEMISOFT / FLEX MEDIUM |
+| Canopy vacuum-form box (if printed) | XPETG Matt or PA6-GF |
 
 ### Final airframe colour: gray vs paint
 
