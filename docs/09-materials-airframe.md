@@ -5,6 +5,17 @@
 > 6 mm ID), joined with the existing **6 mm OD / 3 mm ID** tubes as press-fit inner sleeves.
 > Plywood reinforcement plates. **Phase 1 trainer is foamboard.**
 
+## Printing Hardware
+
+**2× Bambu Lab P2S** (enclosed CoreXY, 256×256×256 mm build volume, 300 °C max hotend, 600 mm/s),
+each with a **Bambu Lab AMS 2 Pro** (4-spool active dryer, 65 °C, ceramic inlets).
+
+- Both printers ship with a **hardened steel 0.4 mm nozzle** as standard — no upgrade needed for
+  abrasive CF/GF filaments (PA6-CF, GreenTEC Pro CF, PA6-GF).
+- AMS 2 Pro ceramic inlets (1200 Vickers) protect the full feed path on abrasive materials.
+- AMS 2 Pro active drying (65 °C, rotating spool) covers the mandatory pre-dry for PA nylons
+  before printing — no separate dryer box needed.
+
 ## Filaments
 
 ### Owned / in hand
