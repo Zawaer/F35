@@ -75,7 +75,9 @@ Build context: [Propulsion](../docs/06-propulsion.md).
   850 mAh pack). **3-pin servo lead → FC:** use **signal + GND** for throttle (ArduPilot drives the
   roll posts); LittleBee has **no BEC**, so **cut/de-pin the red +5 V wire** (avoids backfeed to the
   FC 5 V rail). Motor end is **bare pads** — the 30 mm EDF already has 2 mm bullets, so either fit
-  matching **2 mm bullets** to the pads (to buy — not in cart) or solder the EDF leads straight on.
+  matching **2 mm bullets** to the pads (to buy — not in cart; picked:
+  [10-pair 2mm gold bullet connector, AliExpress](https://www.aliexpress.com/item/4000993445977.html))
+  or solder the EDF leads straight on.
 
 ---
 

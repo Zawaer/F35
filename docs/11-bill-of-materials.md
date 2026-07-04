@@ -136,7 +136,7 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 |------|-----|--------|
 | CNHL G+Plus 5000 mAh 6S 70C EC5 ×2 | Own replacements for the two borrowed main/lift packs (~€59 each, ~€118 total) | 🛒 later — post-validation |
 | LiPo charger (HOTA D6 Pro or equiv.) | Charger is borrowed — needed once school drone club kit is returned (~€106) | 🛒 later — when borrowed kit returned |
-| 2 mm bullet connectors | EDF motor leads | 🛒 urgent |
+| 2 mm bullet connectors | EDF motor leads (roll-post 30mm, ~11–15 A each) | 🛒 urgent — [AliExpress](https://www.aliexpress.com/item/4000993445977.html) |
 
 ### Electronics & sensors
 | Item | Why | Status |
