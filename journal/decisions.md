@@ -61,6 +61,11 @@ in git history (`git log`); the *Ref* column points to the doc that holds the fu
 - **Vacuum-box material = undecided** (tub vs 3D-print vs MDF) — 3D-print not locked in on filament-cost
   grounds.
 - **Final paint colour = pending** — decided after the first airframe flies.
+- **Control-surface linkage = internal pushrod + horn (Option B), not a direct-drive wire-into-pocket
+  ("RDS")** — the direct-drive variant removes one joint (marginally less backlash) but loses
+  post-build trim adjustability and is tolerance-critical before exact surface geometry exists from
+  Fusion. Revisit per-surface only if flight testing shows annoying pushrod play — see
+  [devlog 2026-07-04](devlog.md) and [05](../docs/05-servos.md#direct-drive-wire-linkage-rds--considered-deferred).
 
 ## Related
 [Project overview](../docs/01-project-overview.md) · [devlog](devlog.md)

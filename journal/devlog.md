@@ -30,6 +30,20 @@ records go in [decisions.md](decisions.md); this is the looser narrative around 
   hinge line clears an 8–10 mm horn through its full ±25° sweep, and re-run the torque-sizing table
   with real surface area/chord instead of the current pre-CAD estimates.
 - Wrote it up in [`docs/05-servos.md`](../docs/05-servos.md#internal-horn-leverage--resolved).
+- **Follow-up:** found a comparison write-up pitching a "Rotary Drive System (RDS)" — a bent wire
+  direct off the servo spline into a pocket in the control surface, skipping the horn+clevis stage.
+  The mechanism is real (used in some scale foamy jets) but "RDS" isn't a term I recognize as
+  established RC vocabulary, and the write-up had marketing-flavored overstatements (e.g.
+  "mechanical advantage gets stronger as the surface deflects" isn't generally true without a
+  specific non-linear geometry; flutter risk is driven mainly by control-surface mass balance and
+  overall stiffness, not just linkage type). **Decision: not adopted for v1** — it saves one joint's
+  worth of backlash but loses post-build trim adjustability and is tolerance-critical before the
+  Fusion geometry exists. Staying with the internal pushrod + horn plan; revisit per-surface only if
+  flight testing shows annoying play. Video reference and reasoning added to
+  [`docs/05-servos.md`](../docs/05-servos.md#direct-drive-wire-linkage-rds--considered-deferred).
+- **Open item surfaced but not yet actioned:** control-surface mass balance (weight ahead of the
+  hinge line to counter flutter) isn't documented anywhere yet — it's the primary flutter defense
+  regardless of linkage choice. Still needs a home in the docs.
 
 ---
 

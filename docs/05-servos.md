@@ -110,6 +110,28 @@ surface and confirm ≥8–10 mm of internal depth with clearance for the horn t
 touching either skin. Re-run the torque-sizing table above with the actual surface area/chord —
 the current numbers are pre-CAD estimates and need recalculating once exact geometry is known.
 
+### Direct-drive wire linkage ("RDS") — considered, deferred
+
+An alternative to horn + pushrod + clevis: skip the horn entirely and mount a precisely bent wire
+directly on the servo spline, with the bend engaging a tight-fitting pocket printed into the
+control surface. Some sources online call this a "Rotary Drive System (RDS)" — that name isn't
+established RC terminology as far as I can tell (treat write-ups using it with some skepticism,
+they read as SEO/marketing content), but the mechanism itself is real and used in some scale foamy
+jets. [Demonstration video](https://www.youtube.com/watch?v=X5JoxLxJ3tM).
+
+- **Benefit:** one fewer joint than horn+pushrod+clevis, so marginally less backlash. Real, but
+  small — the internal-pushrod plan above already has little slop to begin with.
+- **Cost:** no post-build trim adjustability (a clevis can move to a different hole or thread
+  in/out; a bent wire sized to one pocket geometry can't), it's tolerance-critical before the exact
+  surface geometry is known (wire bend angle must match the pocket angle or you get binding/slop
+  with no fine-tuning), and a worn pocket in a printed LW-PLA surface is harder to fix than
+  swapping a $0.50 clevis.
+- **Decision: not adopted for v1.** Keep the internal pushrod + horn (Option B above) as the
+  default for all surfaces — it stays adjustable while tuning trim on first flights, and the build
+  has bigger open risks (3BSM fit, hover/cruise CG) than the small backlash this would shave off.
+  Revisit a direct-drive wire for one specific surface only if flight testing shows it has annoying
+  play with the pushrod — a targeted upgrade, not the starting design.
+
 ## 3BSM actuation — single STS3032 + gear-linked sections
 
 The 3-bearing swivel module needs **continuous rotation with position feedback** (sections turn
