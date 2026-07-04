@@ -52,6 +52,14 @@ records go in [decisions.md](decisions.md); this is the looser narrative around 
   meaningfully cost servo resolution the way the source claimed). Recorded the two practical
   mitigations (aluminium set-screw coupler, PTFE/brass pocket liner) for if this is revisited in v2.
   Decision unchanged — still deferred for v1.
+- **Real-aircraft validation found:** an Aviation Stack Exchange thread on fighter jet flight-control
+  actuators confirms full-scale jets use the same basic principle as the chosen Option B — a linear
+  (hydraulic, or EHA on newer designs) actuator drives a pushrod into a control horn, converting
+  linear motion to rotation. Also picked up a useful detail: the real horn/actuator junction is
+  covered by a small streamlined fairing/blister rather than sitting perfectly flush — a tiny
+  cosmetic bump at the hinge-line pushrod slot would actually be more scale-accurate than forcing
+  it flush. Added as a reference note in
+  [`docs/05-servos.md`](../docs/05-servos.md#torque-sizing-why-the-choices-are-right).
 
 ---
 

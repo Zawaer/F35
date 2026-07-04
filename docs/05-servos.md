@@ -83,6 +83,16 @@ validation step; the analytical margin is enough.
 > (13.2 × 29.6 mm) fits inside the F-35B wing-root thickness at 70mm EDF scale. Design servo bays
 > and pushrod channels directly into the LW-PLA print in Fusion 360.
 
+**Real-aircraft reference:** full-scale fighter jets use the same basic principle as Option B — a
+linear actuator (hydraulic on older jets like the F-15's cable/pushrod-controlled valve actuators;
+electro-hydraulic/EHA on newer designs, avoiding hydraulic lines routed through the wing) drives a
+pushrod into a control horn, converting linear motion into the surface's rotation. Also worth
+noting: the horn/actuator junction on the real aircraft isn't perfectly flush with the skin either —
+it's covered by a small streamlined fairing/blister (visible on e.g. the 787's ailerons), so a tiny
+cosmetic bump at the hinge-line slot would be more scale-accurate than forcing it perfectly flush.
+See [How do linear actuators for flight controls work in fighter jets?](https://aviation.stackexchange.com/questions/78967/how-do-linear-actuators-for-flight-controls-work-in-fighter-jets)
+(Aviation Stack Exchange).
+
 ### Internal-horn leverage — resolved
 
 Worry: does hiding the horn inside the skin (vs. an external horn) cost leverage or max deflection
