@@ -71,11 +71,44 @@ covers **landing impact loads**, high-speed maneuvers, and rapid VTOL-transition
 servo failure on a VTOL is catastrophic. Rudder aerodynamic load is genuinely tiny, so MG90S
 (rather than a heavier 9kg servo) is the right call and saves weight.
 
+**Speed uncertainty is accepted as covered by the 3× margin.** There's no way to know the real
+top speed before the airframe flies, but hinge moment scales with V², so even a 30% error on the
+100 km/h estimate (i.e. ~130 km/h) is only ~1.7× the computed torque — well inside the 3× factor
+already applied. Not chasing an exact failure torque or planning a bench pull-test as a separate
+validation step; the analytical margin is enough.
+
 > **Internal actuation, scale appearance:** the real F-35B has no external pushrods. Use **internal
 > pushrods** (Option B) — servo mounted in the wing/tail close to the surface, short 50–80 mm carbon
 > pushrod hidden in the skin, exiting through a 2–3 mm slot at the hinge line. The NEEBRC 21g
 > (13.2 × 29.6 mm) fits inside the F-35B wing-root thickness at 70mm EDF scale. Design servo bays
 > and pushrod channels directly into the LW-PLA print in Fusion 360.
+
+### Internal-horn leverage — resolved
+
+Worry: does hiding the horn inside the skin (vs. an external horn) cost leverage or max deflection
+angle, since an internal horn is boxed in by the surface's actual thickness near the hinge line,
+unlike an external horn which has unlimited room in open air?
+
+**No — not inherently.** Torque multiplication and achievable deflection angle are both set by the
+*ratio* of servo-arm radius to horn-arm radius, not the horn's absolute length:
+
+```
+pushrod travel   ≈ r_servo · Δθ_servo ≈ r_horn · Δθ_surface
+torque to surface = T_servo · (r_horn / r_servo)
+```
+
+Shrink the horn to fit inside a thin flaperon/stabilator, and shrink the servo arm to match — the
+deflection range and torque ratio are both preserved (a horn arm longer than the servo arm, easily
+done at this scale, actually multiplies torque above the servo's rated spec). What genuinely gets
+worse as the horn shrinks: linkage slop turns into a bigger *angular* error at the surface
+(error ≈ backlash / r_horn), pushrod force rises for the same torque, and below roughly 8–10 mm
+horn radius the 2 mm CF rod / M2 clevis hardware already in the BOM stops mounting reliably. That
+hardware floor — not the physics — is the real constraint.
+
+**Action once the Fusion model exists:** take a cross-section at the hinge line of each flight
+surface and confirm ≥8–10 mm of internal depth with clearance for the horn to sweep ±25° without
+touching either skin. Re-run the torque-sizing table above with the actual surface area/chord —
+the current numbers are pre-CAD estimates and need recalculating once exact geometry is known.
 
 ## 3BSM actuation — single STS3032 + gear-linked sections
 

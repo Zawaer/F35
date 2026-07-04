@@ -9,6 +9,30 @@ records go in [decisions.md](decisions.md); this is the looser narrative around 
 
 ---
 
+## 2026-07-04 — Internal control-surface leverage worry resolved; torque-sizing caveat noted
+
+- Worried whether going fully internal (no external pushrods/horns, matching the real F-35B) costs
+  leverage or max deflection angle vs. an external horn, since an internal horn is boxed in by the
+  surface's actual thickness near the hinge line while an external one has unlimited room.
+- Worked through the linkage math: torque multiplication and deflection angle are both set by the
+  *ratio* of servo-arm radius to horn-arm radius, not the horn's absolute size. Shrink the horn to
+  fit inside a thin flaperon/stabilator and shrink the servo arm to match — nothing is lost. A horn
+  arm longer than the servo arm (easy at this scale) even multiplies torque above the servo's rated
+  spec.
+- The real cost of a small horn isn't angle or torque — it's backlash sensitivity (linkage slop
+  becomes a bigger angular error at small horn radius) and a practical hardware floor: the 2 mm CF
+  rod / M2 clevis hardware already in the BOM needs ~8–10 mm horn radius to mount reliably.
+- Also revisited how to know top speed for torque sizing — no way to know it exactly pre-flight,
+  but the existing 100 km/h + 3× safety factor already absorbs that (V² scaling means a 30% speed
+  error is still well inside 3×). Decided against chasing an exact failure torque or a bench
+  pull-test; the analytical margin is enough.
+- **Action item:** once the Fusion model exists, check each flight surface's internal depth at the
+  hinge line clears an 8–10 mm horn through its full ±25° sweep, and re-run the torque-sizing table
+  with real surface area/chord instead of the current pre-CAD estimates.
+- Wrote it up in [`docs/05-servos.md`](../docs/05-servos.md#internal-horn-leverage--resolved).
+
+---
+
 ## 2026-06-28 — Canopy material/forming + cockpit screen filter researched
 
 - **Canopy material: clear PETG, 0.5–0.75 mm.** Chosen for the forming method, not in the abstract —
