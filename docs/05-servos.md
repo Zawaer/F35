@@ -173,6 +173,10 @@ nozzle assembly down for hover. [LaLaRC built exactly this — a 3BSM driven by 
 sections gear-linked together](https://www.youtube.com/watch?v=paESNOqIGYk) — direct evidence the
 approach works.
 
+![LaLaRC's single-servo, gear-linked 3BSM](img/3bsm/lalarc-single-servo-gear-linked.jpeg)
+*One servo (top left) drives the whole nozzle via curved gear-toothed arcs running along each
+section's edge — the same gear-coupling principle planned here, from the linked build.*
+
 Yaw is separate: a **single MG90S (or SG90)** tilts the *whole* 3BSM ±~15° for yaw control — a
 small range, so an ordinary 90°/180° servo is plenty (no continuous rotation needed there).
 
