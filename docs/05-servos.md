@@ -132,6 +132,27 @@ jets. [Demonstration video](https://www.youtube.com/watch?v=X5JoxLxJ3tM).
   Revisit a direct-drive wire for one specific surface only if flight testing shows it has annoying
   play with the pushrod — a targeted upgrade, not the starting design.
 
+**Why it's genuinely hard, if this is revisited later** (filtered from marketing-flavored source
+material — some of its claims were overstated or wrong, corrected below):
+
+- **Zero-slop pocket fit is the crux, not the wire bend.** A pocket even ~0.2 mm oversized lets the
+  wire rattle under aero load — the same backlash-driven flutter risk already flagged above, except
+  here there's no clevis to snug up afterward; the fit has to be right in the print.
+- **The wire's bend point must land on the hinge axis**, or the crank-in-slot geometry binds partway
+  through the sweep — this shows up as the servo drawing high current / stalling, not a clean
+  deflection. Worth simulating the full sweep in Fusion before committing to a bend angle.
+- **L/R bend-angle mismatch is real but not the big deal one source made it out to be** — it shows
+  up as asymmetric neutral/authority between wings, correctable with ordinary per-channel
+  trim/endpoints in ArduPilot. That uses a negligible slice of the servo's PWM resolution (thousands
+  of steps), not a meaningful loss of it as claimed — just something to trim out, not a blocker.
+- **Spline-to-wire coupling wear** — a printed plastic coupler under cyclic torque from a steel wire
+  can wallow out over time. Same "hardware floor" concern already flagged above for small horns,
+  relocated to the servo end.
+
+**Mitigations if ever adopted:** a machined aluminium set-screw coupler at the servo spline (cheap,
+removes the plastic-wear failure mode) and a thin PTFE or brass wear strip lining the printed
+pocket, so the steel wire rides on a hard, low-friction surface instead of bare LW-PLA/PETG.
+
 ## 3BSM actuation — single STS3032 + gear-linked sections
 
 The 3-bearing swivel module needs **continuous rotation with position feedback** (sections turn

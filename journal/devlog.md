@@ -44,6 +44,14 @@ records go in [decisions.md](decisions.md); this is the looser narrative around 
 - **Open item surfaced but not yet actioned:** control-surface mass balance (weight ahead of the
   hinge line to counter flutter) isn't documented anywhere yet — it's the primary flutter defense
   regardless of linkage choice. Still needs a home in the docs.
+- **Follow-up:** a second write-up detailed why RDS has a reputation for being hard despite looking
+  simple — zero-slop pocket fit, hinge-axis alignment of the wire bend (else binding/stall), L/R
+  bend-angle asymmetry, and spline-coupler wear. Kept the genuinely useful parts (pocket fit and
+  hinge-axis alignment are real; spline wear matches the horn-side hardware-floor concern already
+  noted) and corrected an overstated one (L/R asymmetry is trimmed out in software, doesn't
+  meaningfully cost servo resolution the way the source claimed). Recorded the two practical
+  mitigations (aluminium set-screw coupler, PTFE/brass pocket liner) for if this is revisited in v2.
+  Decision unchanged — still deferred for v1.
 
 ---
 
