@@ -169,7 +169,9 @@ The 3-bearing swivel module needs **continuous rotation with position feedback**
 well past 180°), which standard PWM servos can't do. **Decision: ONE Feetech STS3032** (serial-bus
 smart servo, built-in magnetic encoder) drives the nozzle, with the **three 3BSM sections coupled
 mechanically by gears running along each section's circumference** — so one motor rotates the whole
-nozzle assembly down for hover. (A YouTube build demonstrated this works well.)
+nozzle assembly down for hover. [LaLaRC built exactly this — a 3BSM driven by one servo with the
+sections gear-linked together](https://www.youtube.com/watch?v=paESNOqIGYk) — direct evidence the
+approach works.
 
 Yaw is separate: a **single MG90S (or SG90)** tilts the *whole* 3BSM ±~15° for yaw control — a
 small range, so an ordinary 90°/180° servo is plenty (no continuous rotation needed there).
