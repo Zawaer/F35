@@ -36,6 +36,29 @@ The EDFs already produce a convincing jet sound across the throttle range (risin
 turbine hum at idle, jet scream at full throttle, descending whine on spool-down). See
 [Power System](02-power-system.md) for battery/ESC/connector detail.
 
+### Main EDF intake sizing — fan swept area (FSA)
+
+Undersized intakes starve the fan of mass flow, which chokes it aerodynamically (turbulent/stalled
+inflow, reduced thrust) and electrically (motor can't reach commanded RPM freely → ESC drives more
+current → heat in motor windings/ESC MOSFETs, risking demagnetization or ESC failure). The battery
+isn't cooled by duct airflow directly, but sees the extra current draw as a side effect. The lift
+fan is low-risk here (full door opening, minimal restriction); the main rear EDF (side intakes +
+auxiliary top intake only) is the one that needs checking.
+
+**QX-Motor 70mm EDF (QF3027) measured fan geometry:**
+- Blade tip diameter: **69.6 mm**
+- Hub/spinner diameter: **32 mm**
+- Swept (annulus) area = π/4 × (69.6² − 32²) ≈ **3000 mm²** (30 cm² / 4.65 in²)
+
+**Target total intake area** (side intakes + auxiliary top intake, combined, measured at the
+narrowest point air actually passes through):
+- Minimum (1×): ~3000 mm²
+- Ideal (1.5–2×): ~4500–6000 mm²
+
+⚠️ **TODO: intakes not yet designed.** Once the side + auxiliary intake openings are drawn, sum
+their effective open area and check against the targets above before finalizing the fuselage
+geometry.
+
 ## VTOL / hover control architecture
 
 Hover is controlled as a **4-motor quadcopter** in ArduPilot — chosen after evaluating bleed-air
@@ -148,3 +171,6 @@ The correct approach: each 30mm gets a dedicated scoop on the fuselage skin, int
 - ⚠️ Validate 3BSM thrust-vectoring reliability and bearing wear under exhaust on the ground.
 - ✅ **Resolved: ArduPilot output mapping complete** — Lift fan=SERVO1 (Motor1), R roll post=SERVO2 (Motor2), Main EDF=SERVO3 (Motor3), L roll post=SERVO4 (Motor4), Q_FRAME_TYPE=0 (plus). See [Flight Controller](03-flight-controller.md#ardupilot-output-mapping).
 - Tune lift-fan vane-box authority vs main-EDF balance for hover pitch.
+- ⚠️ Calculate total main-EDF intake area (side + auxiliary top) once designed and check against
+  the fan swept area target (~3000 mm² min, ~4500–6000 mm² ideal). See [Main EDF intake
+  sizing](#main-edf-intake-sizing--fan-swept-area-fsa).
