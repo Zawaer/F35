@@ -16,6 +16,14 @@ each with a **Bambu Lab AMS 2 Pro** (4-spool active dryer, 65 °C, ceramic inlet
 - AMS 2 Pro ceramic inlets (1200 Vickers) protect the full feed path on abrasive materials.
 - AMS 2 Pro active drying (65 °C, rotating spool) covers the mandatory pre-dry for PA nylons
   before printing — no separate dryer box needed.
+  - ⚠️ **Caveat: 65 °C is below the 70–80 °C this doc specs for PA drying.** The AMS at 65 °C is
+    enough to *maintain* an already-dry spool during a print, but a fresh/opened roll that has
+    absorbed moisture may not fully dry at 65 °C. Wet nylon-CF prints stringy, weak, and pops/hisses
+    on extrusion. For the **first dry of a damp spool**, use a dedicated dryer at 75–80 °C (12 h),
+    then keep it in the AMS to hold it dry. The P2S is also **passively** enclosed (no active chamber
+    heater like an X1E) — fine for small motor/ESC mounts, but large flat nylon parts can still warp
+    slightly. Bambu has no tuned system preset for PA6-CF — start from a generic PA-CF profile and
+    expect to tune. Textured PEI plate + glue stick for adhesion.
 
 ## Filaments
 
