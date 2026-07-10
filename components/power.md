@@ -88,7 +88,7 @@ Build context: [Power System](../docs/02-power-system.md).
   connectors — [Power System](../docs/02-power-system.md)
 - **Variant / qty:** 10 pair with cover · 1 set (10 pairs)
 - **Price:** €3.84 (set of 10 pairs)
-- **Link:** https://www.aliexpress.com/item/... (AOKIN XT60H, 10 pair with cover)
+- **Link:** https://www.aliexpress.com/item/1005007099881239.html (AOKIN XT60H, 10 pair with cover)
 
 | Spec | Value |
 |------|-------|
