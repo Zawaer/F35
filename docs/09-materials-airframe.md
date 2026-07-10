@@ -175,10 +175,14 @@ See [Propulsion — 3BSM](06-propulsion.md#3bsm--three-bearing-swivel-module).
 
 ## Landing gear hardware
 
-- **Wheels:** standard RC-plane wheels (no O-ring tricks). **38 mm PU pair (ordered 24 Jun 2026)** = F35B **nose
-  gear** (scale-matched, 2.1 mm bore → 2 mm axle). F35B **main gear** → order **~55/56 mm** later
-  (cheap when in stock on AliExpress). The owned **45/50 mm pair is on the trainer** (45 mm nose,
-  2× 50 mm main), not the F35B.
+- **Wheels:** standard **off-the-shelf RC-plane wheels** (no O-ring tricks, not printed/cast). **38 mm PU
+  pair (ordered 24 Jun 2026)** = F35B **nose gear** (scale-matched, 2.1 mm bore → 2 mm axle). F35B
+  **main gear** → order **~55/56 mm** later (cheap when in stock on AliExpress). The owned **45/50 mm
+  pair is on the trainer** (45 mm nose, 2× 50 mm main), not the F35B.
+  - COTS chosen over silicone-cast or TPU-printed wheels — cheap, proven under landing loads, no
+    print/tuning fuss. Custom TPU stays a later option if scale accuracy demands it (of the Extrudr
+    flex rolls, Semisoft A85 is too soft to bear load; Medium A98 is firm enough but transparent).
+    See [decisions](../journal/decisions.md).
 
 ## Fasteners
 
