@@ -52,6 +52,7 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | LiPo safety bag (fireproof) | 1 | 4.70 | Charging/storage · 1 Apr 2026 |
 | Amass/JHEMCU smoke stopper | 1 | 2.79 | Bench first-power-up fuse · 17 Apr 2026 |
 | XT60↔EC5 charge adapter | 4 | 8.21 | Charge the EC5 5000 mAh packs · 14 Apr 2026 |
+| DQLZV 2.0mm gold bullet connector (20-pair) | 1 | 7.74 | EDF motor leads (roll-post) · ordered 11 Jul 2026, arriving ~17–22 Jul · [AliExpress](https://www.aliexpress.com/item/1005009062349708.html) |
 | LiPo voltage tester + buzzer (1–8S) | 1 | 1.40 | Field battery check · 1 Apr 2026 |
 | LM2596 buck converter | 1 | — | Had on hand (2g-servo 4 V rail) |
 
@@ -136,7 +137,6 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 |------|-----|--------|
 | CNHL G+Plus 5000 mAh 6S 70C EC5 ×2 | Own replacements for the two borrowed main/lift packs (~€59 each, ~€118 total) | 🛒 later — post-validation |
 | LiPo charger (HOTA D6 Pro or equiv.) | Charger is borrowed — needed once school drone club kit is returned (~€106) | 🛒 later — when borrowed kit returned |
-| 2 mm bullet connectors | EDF motor leads (roll-post 30mm, ~11–15 A each) | 🛒 urgent — [AliExpress](https://www.aliexpress.com/item/4000993445977.html) |
 
 ### Electronics & sensors
 | Item | Why | Status |

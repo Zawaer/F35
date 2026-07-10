@@ -155,7 +155,7 @@ Verified-sound architecture; the must-gets:
 | EC5 | 5000 mAh main pack lead / system tap joint |
 | XT60→XT90 adapters | Charger side |
 | **XT60H** | Roll-post ESC power — 3S 850 mAh packs re-soldered from XT30U to XT60H |
-| **2 mm bullet** | EDF motor leads (on the buy list) |
+| **2 mm bullet** | EDF motor leads (ordered 11 Jul 2026, arriving ~17–22 Jul) |
 
 **Battery monitoring:** no standalone LiPo alarms — pack voltage is monitored via the FC/PDB
 telemetry (PDB VBAT divider → FC).
