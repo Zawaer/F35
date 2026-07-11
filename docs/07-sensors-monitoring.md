@@ -169,16 +169,40 @@ telemetry over UART, this gives a complete per-flight picture.
   lift is the sensible target if this gets built — they're the highest-power, highest-consequence
   motors and the only ones with zero mechanical health monitoring today — but it's a nice-to-have,
   not required for the aircraft to fly.** Not yet wired/tested.
-- **Downward pitch-attitude ranging — 2× VL53L0X ToF, nose + tail, parked idea, not committed, not
-  purchased.** Both sensors face straight down; comparing the two distances gives **pitch relative to
-  the ground** (plus average altitude) for a more level VTOL touchdown on uneven ground — on top of
-  the single downward rangefinder already planned for altitude hold
-  ([docs/11-bill-of-materials.md](11-bill-of-materials.md)). Wingtip units (for roll/lateral-terrain
-  sensing too) were considered and dropped — the IMU already covers roll attitude well, and the
-  wingtip wiring/GPIO cost wasn't worth the narrower benefit. Needs: 2× **XSHUT** GPIO (one per
-  sensor, for I2C address assignment at boot — default address 0x29 clashes otherwise), and a
-  Lua-script-style fusion (2-point line fit) to turn the two distances into a usable pitch estimate —
-  ArduPilot doesn't do this automatically. GPIO cost: +2 on the avionics board (→ 23/26 used).
+- **Downward pitch-attitude ranging — 2× VL53L0X ToF, nose + tail, parked idea, not committed.**
+  Both sensors face straight down; comparing the two distances gives **pitch relative to the ground**
+  (plus average altitude) for a more level VTOL touchdown on uneven ground — on top of the single
+  downward rangefinder already planned for altitude hold ([docs/11-bill-of-materials.md](11-bill-of-materials.md)).
+  Wingtip units (for roll/lateral-terrain sensing too) were considered and dropped — the IMU already
+  covers roll attitude well, and the wingtip wiring/GPIO cost wasn't worth the narrower benefit.
+  Needs: 2× **XSHUT** GPIO (one per sensor, for I2C address assignment at boot — default address
+  0x29 clashes otherwise), and a Lua-script-style fusion (2-point line fit) to turn the two distances
+  into a usable pitch estimate — ArduPilot doesn't do this automatically. GPIO cost: +2 on the
+  avionics board (→ 23/26 used).
+  - **Bench test result (12 Jul 2026, single unit on a Pico/MicroPython):** **±2-3mm accuracy**
+    against a 30cm ruler indoors, hard flat target, good lighting — a genuinely good result, better
+    than the chip's general-case ~±3-5% reputation.
+  - **⚠️ Grass conclusion:** a downward unit over an actual grass field will be **noisier than the
+    indoor test** — grass isn't a flat uniform target (blade-tips at varying heights + gaps down to
+    soil within the 25° FoV cone), so expect more reading-to-reading jitter and occasional outliers,
+    especially over tall/uneven grass. Mitigation if implemented: average/median-filter several
+    readings rather than trusting one instantaneous sample, and bench-test over the actual expected
+    landing surface (not just a hard floor) before trusting it in any control loop.
+  - **Barometer fusion:** the F405's onboard baro (SPA06-003) and this ToF sensor don't overlap much
+    — baro is weak exactly close to the ground (propwash/ground-effect pressure disturbance right
+    where the ToF is strongest) and the ToF's ~1-2m range doesn't reach where baro is strong. So this
+    isn't really "fusion for more precision at one altitude," it's **complementary handoff by
+    altitude band** — and ArduPilot already does this automatically if the sensor is wired as a
+    standard `RNGFND` input (EKF prefers rangefinder near ground, falls back to baro/GPS above its
+    range) — no custom code needed for that part. The custom Lua fusion only enters the picture for
+    the nose+tail *pitch* estimate, which is a separate thing ArduPilot doesn't do natively.
+  - **More sensors for accuracy — the better add isn't more downward rangefinders.** Redundant ToF
+    units (e.g. the shelved wingtips) mostly cover the same vertical axis with diminishing returns.
+    The one sensor type that would add genuinely new capability: a **PMW3901 optical flow sensor**,
+    which measures horizontal drift/velocity — an axis neither the ToF nor the baro touch at all.
+    Pairing downward ToF (altitude) + optical flow (horizontal drift) is the standard cheap-hover-drone
+    recipe for real position hold, and matters more for hover stability than adding more vertical
+    sensors. Not purchased, not committed — same status as everything else in this section.
 
 ## Open questions / TODO
 
