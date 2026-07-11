@@ -60,7 +60,7 @@ STS3032 serial bus, 2 for the two RP2040s → 1 still free).
 | GPIO 7 (BLK) | Backlight enable | ST7789 BLK |
 | GPIO 10 / 11 / 12 | LED PWM | driver PWM inputs (red / green / strobe) |
 | GPIO 15 | Strobe enable / MOSFET gate | LED enable / IRLZ44N (COB strip) |
-| GPIO 8 (SDA) / GPIO 9 (SCL) | I2C0 | 2× MPU6050 vibration sensors (main + lift EDF), shared bus — AD0 pin sets 0x68/0x69 |
+| GPIO 8 (SDA) / GPIO 9 (SCL) | I2C0 (**tentative, not committed**) | 2× MPU6050 vibration sensors (main + lift EDF), shared bus — AD0 pin sets 0x68/0x69 — see [Sensors](07-sensors-monitoring.md#other-monitoring-ideas) |
 | GPIO 18 / 19 / 20 / 21 | Mux channel select | CD74HC4067 S0–S3 |
 | GPIO 26 (ADC0) | Multiplexer analog in | CD74HC4067 SIG — 13 NTC + 2 ACS712 (15 of 16, 1 free) |
 | GPIO 27 (ADC1) | Main-pack voltage | 100 k/10 k divider |
@@ -69,10 +69,11 @@ STS3032 serial bus, 2 for the two RP2040s → 1 still free).
 | VSYS/5V in | Power | PDB 5.2V Flight BEC |
 | GND | Common ground | FC / PDB / sensors |
 
-> **21 of 26 GPIO used.** SPI1 is unavailable (GP10/11 taken by LEDs), so SPI0 is used for the
-> display. GP23/24/25/29 are internal board functions (SMPS, VBUS sense, user LED, VSYS ADC) —
-> leave floating/unused. **All ADC inputs live on this board** (3 ADC pins; current sensors ride
-> the mux's spare channels — see [Sensors](07-sensors-monitoring.md)).
+> **21 of 26 GPIO used (19 committed + 2 tentative for the MPU6050 I2C bus, not yet decided).** SPI1
+> is unavailable (GP10/11 taken by LEDs), so SPI0 is used for the display. GP23/24/25/29 are internal
+> board functions (SMPS, VBUS sense, user LED, VSYS ADC) — leave floating/unused. **All ADC inputs
+> live on this board** (3 ADC pins; current sensors ride the mux's spare channels — see
+> [Sensors](07-sensors-monitoring.md)).
 
 ## Pin map — servo-bank board (Pico)
 

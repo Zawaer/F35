@@ -158,12 +158,27 @@ telemetry over UART, this gives a complete per-flight picture.
 ### Other monitoring ideas
 
 - RPM sensor on EDFs (~€2) — imbalance / health. **Parked.**
-- **Vibration sensor — ✅ 2× MPU6050 in hand** (had on hand, confirmed 11 Jul 2026). **Main + lift 70mm
-  EDF** (the higher-power motors, most to lose from developing imbalance) — one sensor mounted rigidly
-  on each housing. Shared I2C0 bus on **GP8 (SDA) / GP9 (SCL)**
+- **Vibration sensor — 2× MPU6050 taken from STUHI hardware lab (11 Jul 2026), not yet committed.**
+  Plan if implemented: **main + lift 70mm EDF** (the higher-power motors, most to lose from a
+  developing imbalance, and currently the only propulsion units with no vibration sensing at all —
+  NTC only catches heat, not mechanical wear) — one sensor mounted rigidly on each housing. Shared
+  I2C0 bus on **GP8 (SDA) / GP9 (SCL)**
   ([Pico pin map](04-raspberry-pi-pico.md#pin-map--avionics-board-weact)); the two units get distinct
-  addresses (0x68 / 0x69) via each board's **AD0** pin (tie one low, one high). Roll-post EDFs not
-  monitored this way (lower power, already covered by NTC housing temp).
+  addresses (0x68 / 0x69) via each board's **AD0** pin (tie one low, one high). Roll-post EDFs would
+  not be monitored this way (lower power, already covered by NTC housing temp). **Assessment: main +
+  lift is the sensible target if this gets built — they're the highest-power, highest-consequence
+  motors and the only ones with zero mechanical health monitoring today — but it's a nice-to-have,
+  not required for the aircraft to fly.** Not yet wired/tested.
+- **Downward pitch-attitude ranging — 2× VL53L0X ToF, nose + tail, parked idea, not committed, not
+  purchased.** Both sensors face straight down; comparing the two distances gives **pitch relative to
+  the ground** (plus average altitude) for a more level VTOL touchdown on uneven ground — on top of
+  the single downward rangefinder already planned for altitude hold
+  ([docs/11-bill-of-materials.md](11-bill-of-materials.md)). Wingtip units (for roll/lateral-terrain
+  sensing too) were considered and dropped — the IMU already covers roll attitude well, and the
+  wingtip wiring/GPIO cost wasn't worth the narrower benefit. Needs: 2× **XSHUT** GPIO (one per
+  sensor, for I2C address assignment at boot — default address 0x29 clashes otherwise), and a
+  Lua-script-style fusion (2-point line fit) to turn the two distances into a usable pitch estimate —
+  ArduPilot doesn't do this automatically. GPIO cost: +2 on the avionics board (→ 23/26 used).
 
 ## Open questions / TODO
 

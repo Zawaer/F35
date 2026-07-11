@@ -89,7 +89,7 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | CD74HC4067 16-ch analog mux | 1 | 1.74 | Expands ADC for NTCs · 24 Jun 2026 |
 | 1.47" ST7789 TFT (12-pin SPI) | 1 | 3.40 | Cockpit display · 24 Jun 2026 |
 | FFC/FPC adapter board 12P ZIF | 5 | 2.95 | Screen cable breakout · 24 Jun 2026 |
-| MPU6050 (I2C IMU) | 2 | — | Had on hand — main + lift EDF vibration/imbalance sensing · confirmed 11 Jul 2026 |
+| MPU6050 (I2C IMU) | 2 | — | Taken from STUHI hardware lab 11 Jul 2026 — planned for main+lift EDF vibration sensing, **not yet committed/implemented** |
 
 ### Structural & consumables
 | Part | Qty | € | Notes |
