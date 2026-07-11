@@ -5,10 +5,6 @@ Master parts list for the F-35B build. This **mirrors the component cards** in
 dates). Status: ✅ owned/ordered · 🛒 in cart (to buy) · 🔄 borrowed. Prices in € (AliExpress VAT
 incl., or the listed source). USD orders were converted at the order-date rate; see the cards.
 
-> Cross-references: [Power](02-power-system.md) · [Propulsion](06-propulsion.md) ·
-> [Servos](05-servos.md) · [Materials](09-materials-airframe.md) · [Sensors](07-sensors-monitoring.md) ·
-> [Lighting](08-lighting.md) · [Flight Controller](03-flight-controller.md)
-
 ## ✅ Owned / ordered
 
 ### Propulsion (F-35B + trainer)
@@ -28,7 +24,7 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 |------|-----|---|-------|
 | NEEBRC NB-S011M 12 kg metal-gear servo | 2 | 15.75 | Flaperons · 2 Apr 2026 (measured 28 g) |
 | NEEBRC NB-S007M 9 kg metal-gear servo | 2 | 11.54 | Stabilators · 1 Apr 2026 (21 g) |
-| MG90S 9 g metal-gear servo | 10 | 19.41 | Rudders / 3BSM yaw / vane box · 7 Apr 2026 |
+| MG90S 9 g metal-gear servo | 12 | 19.41 | Rudders / 3BSM yaw / vane box · 10 ordered 7 Apr 2026 + 2 free from STUHI lab 11 Jul 2026 |
 | SG90 9 g servo (180°) | 10 | 10.34 | Doors / cosmetic · 2 Apr 2026 |
 | MG996R 13–15 kg servo | 4 | 8.97 | Spare / high-torque · 23 Mar + 1 Apr 2026 |
 | Servo extension 300 mm | 10 | 2.72 | Long airframe runs · 2 Apr 2026 |
@@ -93,6 +89,7 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | CD74HC4067 16-ch analog mux | 1 | 1.74 | Expands ADC for NTCs · 24 Jun 2026 |
 | 1.47" ST7789 TFT (12-pin SPI) | 1 | 3.40 | Cockpit display · 24 Jun 2026 |
 | FFC/FPC adapter board 12P ZIF | 5 | 2.95 | Screen cable breakout · 24 Jun 2026 |
+| MPU6050 (I2C IMU) | 2 | — | Had on hand — main + lift EDF vibration/imbalance sensing · confirmed 11 Jul 2026 |
 
 ### Structural & consumables
 | Part | Qty | € | Notes |
@@ -149,7 +146,7 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 ### Consumables & fasteners
 | Item | Why | Status |
 |------|-----|--------|
-| Stainless button-head screw kit (600 pc) | General fasteners | 🛒 later |
+| Stainless button-head screw kit (600 pc) | General fasteners | 🛒 later — **STUHI hardware lab likely covers this** (screws, heat-set inserts, standoffs, nuts, bolts); check there before buying |
 | Biltema Pika Epoksi 2×21 g (€3.55) | Spar joints + tube sockets (CA too brittle) — [Biltema](https://www.biltema.fi/rakentaminen/liimat/epoksiliimat/pika-epoksi-2-x-21-g-2000050118) | 🛒 to buy |
 
 ## Key decisions

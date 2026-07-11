@@ -91,6 +91,12 @@ horizontal (cruise) to downward (hover), mimicking the real F-35B nozzle.
   can be modeled before the balls land; groove sizing just needs one print iteration.
 - ⚠️ Reliability of the 3BSM under exhaust pressure is a key open risk — test thoroughly on the
   ground before any hover attempt. See [Materials & Airframe](09-materials-airframe.md) for bearings.
+- **Cable protection (open TODO):** the STS3032's lead flexes with every nozzle rotation — worth
+  routing it through a chafe-protection sleeve rather than a bare zip-tied run. The thin **4mm ID
+  braided PET expandable sleeve** (STUHI hardware lab, effectively unlimited stock — see
+  [Servos → wire chafe protection](05-servos.md#wire-chafe-protection-braided-sleeving)) is a better
+  fit here than the bulkier 8mm spiral wrap (also at STUHI) — it's flexible enough for continuous
+  rotation and sized for a single 3-wire servo lead. Not yet taken/fitted.
 
 ### Lift fan
 

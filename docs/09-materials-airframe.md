@@ -190,6 +190,10 @@ See [Propulsion — 3BSM](06-propulsion.md#3bsm--three-bearing-swivel-module).
   servo/ESC/EDF mounting, carbon-tube clamps, landing gear, general airframe. Stainless chosen over
   zinc (no rust from exhaust condensation).
 - ⚠️ Confirm **M2 nuts** are included (needed to secure 3BSM from both sides).
+- **STUHI hardware lab likely covers general fastener needs** (screws, heat-set inserts, standoffs,
+  nuts, bolts, common sizes) — check there before buying the 600pc kit; may make it unnecessary.
+  Still worth confirming the specific **M2 nuts** for the 3BSM are actually on the shelf there too,
+  since that's a named risk item above.
 - Linkage hardware: 2 mm linkage rods, clevises, M2 threaded rod for adjustable linkages.
 
 ## Adhesives & misc

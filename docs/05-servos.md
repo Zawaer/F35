@@ -10,7 +10,7 @@
 | Servo | Qty | Torque | Weight | Gears |
 |-------|-----|--------|--------|-------|
 | SG90 | 12 | 1.8 kg·cm | 9 g | Plastic |
-| MG90S | 7 | 2.2 kg·cm | 13 g | Metal |
+| MG90S | 12 | 2.2 kg·cm | 13 g | Metal |
 | NEEBRC 21g | 2 | 9 kg·cm | 21 g | Metal |
 | NEEBRC 28g | 2 | 12 kg·cm | 28 g | Metal |
 | MG996R | 4 | ~15 kg·cm | 55 g | Metal |
@@ -18,6 +18,10 @@
 | NEEBRC M005 "2g" (plastic gear) | 4 | ~0.5 kg·cm | 2 g | Plastic — **max 4.2 V** |
 
 MG996R are deliberately **avoided** in the final build — too heavy (55 g each).
+
+> **STUHI hardware lab also has tens of spare SG90 and MG90S servos** on the shelf (confirmed 11 Jul
+> 2026, not taken) — a deep backup pool beyond the counts above if a servo fails, or for the
+> still-undecided canopy servo ([🛒 v1](#final-servo-assignment)) or any other role that comes up.
 
 > ⚠️ **Small servo voltage:** the 2g mini servos (**max 4.2 V**) will **burn out on the 6 V servo
 > rail**. Power them through an **LM2596 buck set to 4.0 V** (safely below the 4.2 V max). One
@@ -53,8 +57,20 @@ instead of SG90 to save weight — but they run on the **4.0 V LM2596 rail**, no
 
 ### MG90S count check
 
-Rudder ×2 + nose steer ×1 + 3BSM yaw ×1 + vane box ×1 + roll posts ×2 = **7 MG90S**. Exactly the
-7 on hand. ✅
+Rudder ×2 + nose steer ×1 + 3BSM yaw ×1 + vane box ×1 + roll posts ×2 = **7 MG90S** needed. **12 on
+hand** (10 ordered + 2 from STUHI hardware lab, 11 Jul 2026) → 5 spare. ✅
+
+### Wire chafe protection (braided sleeving)
+
+**Open TODO, not yet fitted anywhere.** Every hinge-line servo lead (flaperons, stabilators,
+rudders, nose steering, gear retracts/doors, 3BSM yaw) flexes with its surface — a bare zip-tied
+lead can chafe through its insulation over repeated cycles. **4mm ID braided PET expandable sleeve**
+(STUHI hardware lab, effectively unlimited stock, black/UV-green) fits a single 3-wire servo lead or
+small 2-3-wire bundle and is flexible enough for continuous flex points. Rated −60 to +125°C,
+UL94-V0 fire rating — fine near any warm ESC/EDF-adjacent run too. (For bundling *many* wires
+together in one run — e.g. a wing-root harness — the bulkier 8mm ID spiral wrap, also at STUHI, is
+the better fit; see the [3BSM cable note](06-propulsion.md#3bsm--three-bearing-swivel-module).)
+Neither has been taken from the lab yet — grab as needed once hinge-line wire routing is finalized.
 
 ## Torque sizing (why the choices are right)
 
@@ -226,6 +242,28 @@ retraction. The print-it-yourself route gives full control of the kinematics.
 - Retraction load is small (~0.18 kg·cm; wheel+strut ~45 g on a ~40 mm arm), so torque isn't the
   challenge — **reliable over-centre geometry under landing loads is.** ⚠️ This is a known-hard part.
 - Main gear also needs the multi-axis **90° wheel twist** so the wheel lies flat in the bay.
+
+### Parked idea — DC gear-motor actuation (not committed)
+
+Considered as an alternative to the servo-driven plan above: a small **6V N20 gear motor** (100rpm
+variant — torque is never the constraint at this load, but slower = gentler impact against the
+over-centre lock's mechanical stop) per leg, driven by a **DRV8833** H-bridge, stopped by **2× KW12
+micro limit switches** per leg (one at each end of travel). All three part types confirmed available
+free at STUHI hardware lab (100/200/300rpm N20 motors, DRV8833 + L298N drivers, KW12 switches — DRV8833
+and 100rpm chosen as the better fit; not yet taken).
+
+- **Qty if pursued:** 3 motors (1 nose + 2 main legs, each independently driven — don't parallel two
+  motors on one driver channel), 2× DRV8833 (covers 3 channels of the 4 available), 6× KW12 switches
+  (2 per leg).
+- **Why parked, not chosen:** functionally a cleaner fit (bistable + mechanically self-locked, no
+  need for a servo's continuous position feedback) and free, but it costs **~12 GPIO** (2 driver +
+  2 switch pins × 3 legs) on the servo-bank RP2040 — the exact resource that's already tight enough
+  to require [splitting avionics across two boards](04-raspberry-pi-pico.md#why-two-boards-pin-budget).
+  The servo-driven plan above costs only ~2 PWM channels (main pair shares one) and uses servos
+  already owned as spares (5 spare MG90S) — so the DC-motor route doesn't currently save anything
+  that's actually scarce (servos, weight, cost are all a wash), while spending GPIO that is scarce.
+  Revisit if the PWM/GPIO budget changes, or if a future mechanism needs continuous rotation /
+  bistable switching that a servo genuinely can't do well.
 
 ### Reference images — real F-35B gear geometry
 

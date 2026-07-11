@@ -155,10 +155,15 @@ ArduPilot auto-logs to the FC **microSD** (card not owned yet — buy when neede
 throttle, flight-mode transitions, RC in vs out. Combined with the Pico's temperature + ACS712
 telemetry over UART, this gives a complete per-flight picture.
 
-### Other monitoring ideas (parked)
+### Other monitoring ideas
 
-- RPM sensor on EDFs (~€2) — imbalance / health.
-- Vibration sensor (MPU6050 over I2C, ~€2) — early EDF imbalance detection.
+- RPM sensor on EDFs (~€2) — imbalance / health. **Parked.**
+- **Vibration sensor — ✅ 2× MPU6050 in hand** (had on hand, confirmed 11 Jul 2026). **Main + lift 70mm
+  EDF** (the higher-power motors, most to lose from developing imbalance) — one sensor mounted rigidly
+  on each housing. Shared I2C0 bus on **GP8 (SDA) / GP9 (SCL)**
+  ([Pico pin map](04-raspberry-pi-pico.md#pin-map--avionics-board-weact)); the two units get distinct
+  addresses (0x68 / 0x69) via each board's **AD0** pin (tie one low, one high). Roll-post EDFs not
+  monitored this way (lower power, already covered by NTC housing temp).
 
 ## Open questions / TODO
 

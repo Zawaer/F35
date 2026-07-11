@@ -124,14 +124,14 @@ Build context: [Servos](../docs/05-servos.md).
 
 ---
 
-### MG90S 9g metal-gear servo ×10 — rudders / 3BSM yaw / vane box
+### MG90S 9g metal-gear servo ×12 — rudders / 3BSM yaw / vane box
 - **Category:** Servo (micro, PWM, metal gear, ball-bearing)
-- **Status:** ✅ owned (10 pcs = 2× 5-pack · ordered 7 Apr 2026)
+- **Status:** ✅ owned (10 pcs = 2× 5-pack, ordered 7 Apr 2026 · +2 pcs from STUHI hardware lab, 11 Jul 2026)
 - **Used for:** higher-load control vs SG90 — **rudders, 3BSM yaw tilt (±~15°), lift-fan vane box** —
   [Servos](../docs/05-servos.md)
-- **Variant / qty:** all-metal gear · 5 pcs × 2 = 10
-- **Price:** **€19.41** (2× 5-pack; ~€1.94/servo)
-- **Source:** AliExpress — Skyquist MG90S (all-metal, 5 pcs × 2)
+- **Variant / qty:** all-metal gear · 5 pcs × 2 (ordered) + 2 (STUHI) = 12
+- **Price:** **€19.41** (2× 5-pack; ~€1.94/servo) — the 2 STUHI units were free
+- **Source:** AliExpress — Skyquist MG90S (all-metal, 5 pcs × 2) + 2 from STUHI hardware lab
 
 | Spec | Value |
 |------|-------|
