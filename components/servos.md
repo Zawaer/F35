@@ -279,13 +279,13 @@ Build context: [Servos](../docs/05-servos.md).
 
 ---
 
-### Magnetic snap-on 3-pin cable (1 pair, 20 cm) — experimental quick-disconnect
+### Magnetic snap-on 3-pin cable (1 pair owned, 1 more pair needed) — wingtip nav/strobe quick-disconnect
 - **Category:** Connector (magnetic pogo-pin, 3-pin servo)
-- **Status:** ✅ owned (1 pair · ordered 7 Apr 2026) — **experimental / bought to test**
-- **Used for:** idea: **quick-disconnect for removable wings** — pass servo signal (+ low-current
-  power) across a wing/fuselage joint that auto-separates when the wing comes off — [Servos](../docs/05-servos.md)
-- **Variant / qty:** 1 pair · 20 cm leads
-- **Price:** **€2.78**
+- **Status:** ✅ 1 pair owned (ordered 7 Apr 2026); **🛒 need 1 more pair** — plan settled 12 Jul 2026
+- **Used for:** **wingtip nav + strobe LED quick-disconnect** for detachable wings (transport) —
+  [Lighting](../docs/08-lighting.md), [Servos](../docs/05-servos.md)
+- **Variant / qty:** 1 pair · 20 cm leads (×2 pairs total needed — one per wing)
+- **Price:** **€2.78/pair**
 - **Source:** AliExpress — 9IMOD magnetic model cable (1 pair, 20 cm)
 
 | Spec | Value |
@@ -296,12 +296,26 @@ Build context: [Servos](../docs/05-servos.md).
 | Lead length | 20 cm each side |
 | Pins | ZH1.5 / 2.54 mm, 3P |
 | Insulation | soft rubber wire |
+| Rated current | ⚠️ **not specified by the manufacturer for this exact part** — no hard number found for
+  this specific 9IMOD 3-pin listing on two separate searches. Converging loose references: similar
+  ZH1.5/JR magnetic pogo connectors are commonly advertised ~2A continuous/3A peak; a third-party
+  YouTuber bench-tested a similar (but 5-pin, not 3-pin) magnetic connector at ~4A via measurement +
+  calculation. None of these are a confirmed number for *this* 3-pin part, but they converge on
+  "several amps of real headroom" — comfortably above the ~1.4A worst-case this design needs. Still
+  worth the bench test below rather than assuming. |
 
-- **Notes:** **exploratory** — one pair bought to test the concept of **removable wings** with an
-  auto-disconnecting servo link (magnets pull apart cleanly if a wing detaches). Polarity-keyed so it
-  can't mate wrong. ⚠️ **Pogo-pin current is limited** — fine for servo signal + a couple of LEDs,
-  *not* for EDF/high-current rails. Not yet committed to the design; if removable wings are adopted,
-  buy more pairs (one per servo/signal crossing). Soft leads route easily.
+- **Notes:** **Settled plan (12 Jul 2026):** roll-post EDFs and all servos stay in the fixed
+  (non-detachable) fuselage/wing-root section — only the **wingtip nav + strobe LEDs** cross the
+  wing-root disconnect joint, so this connector is a good fit after all (confirmed not needed for
+  motor power or servo signal). **2 connectors needed total** — one per wing, since each wing detaches
+  independently. **Use all 3 pins per connector as: shared GND (both LEDs' return) + nav LED+ + strobe
+  LED+.** Keep the ACELEX 700mA CC drivers **inboard** (fuselage/wing-root side, not at the tip) — only
+  the driver's already-regulated, already-PWM-dimmed constant-current output crosses the joint, so no
+  separate PWM signal wire is needed across the connector at all. Combined worst-case current through
+  the shared ground pin is ~1.4A (both LEDs at once) — bench-test this in series with a multimeter
+  before trusting it, since the connector has no formal rating. Polarity-keyed so it can't mate wrong.
+  ⚠️ Still **not for EDF/high-current rails** (those aren't crossing this joint per the settled plan,
+  so no conflict) — confirmed fine for this specific LED use case.
 
 ---
 

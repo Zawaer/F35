@@ -29,7 +29,7 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | MG996R 13–15 kg servo | 4 | 8.97 | Spare / high-torque · 23 Mar + 1 Apr 2026 |
 | Servo extension 300 mm | 10 | 2.72 | Long airframe runs · 2 Apr 2026 |
 | Servo Y-extension cable 150 mm | 3 | 2.63 | Paired-servo splitter · 7 Apr 2026 |
-| Magnetic snap-on 3-pin cable (pair) | 1 | 2.78 | Experimental removable-wing link · 7 Apr 2026 |
+| Magnetic snap-on 3-pin cable (pair) | 1 owned + 1 more needed | 2.78/pair | Wingtip nav/strobe LED quick-disconnect for detachable wings — settled plan 12 Jul 2026, 1 pair per wing · 7 Apr 2026 |
 | Pushrod linkage stoppers D1.3 mm | 20 | 3.65 | Thin-wire links · 7 Apr 2026 |
 | Control horns + clevises (nylon, 21 mm) | 20 sets | 2.70 | Control surfaces · 7 Apr 2026 |
 | Z-bend pushrod wires 1.2 mm × 200 mm | 16 remaining | 4.54 | Light pushrods · 7 Apr 2026 · sold 20, used 4 on trainer |

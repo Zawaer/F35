@@ -76,6 +76,18 @@ variant is in the cart — easier to mount than BAU15S (offset). A purpose-made 
 **optional**: solder leads directly to the bulb base contacts, or print a holder into the
 afterburner housing. Amber/yellow (~3000K) gives the right glow.
 
+## Wingtip quick-disconnect (detachable wings)
+
+**Settled plan (12 Jul 2026):** if wings are made detachable for transport, only the **nav + strobe
+LEDs** cross the wing-root joint — roll-post EDFs and all servos stay in the fixed fuselage/wing-root
+section, so they don't need a disconnect at all. Each wingtip uses a **magnetic 3-pin pogo connector**
+(9IMOD, [Servos component card](../components/servos.md)) wired as: shared GND (both LEDs' return) +
+nav LED+ + strobe LED+. The ACELEX CC drivers stay **inboard** (not at the tip) — only their
+already-regulated, already-PWM-dimmed output current crosses the joint, so no separate PWM wire is
+needed there. 2 connectors total (one per wing). Bench-test the shared-ground current (~1.4A
+worst-case, both LEDs on at once) before trusting it — the connector has no manufacturer current
+rating.
+
 ## Pico/RP2040 control
 
 ```
