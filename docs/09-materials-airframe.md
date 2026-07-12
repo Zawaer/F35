@@ -308,6 +308,34 @@ The real F-35B has a distinctive **EOTS (Electro-Optical Targeting System) dome*
 
 Model the EOTS as a **printed insert** in the nose-bottom panel — clear PETG or ASA, tinted amber from inside with translucent film if backlit.
 
+## Cosmetic details — pitot / air-data probe
+
+The real F-35B doesn't use a traditional protruding pitot tube — that's a decent radar reflector,
+which stealth aircraft avoid. Instead it uses a **Flush Air Data Sensing System (FADS)**: a small
+faceted, diamond/blade-section probe integrated into the skin, positioned at the **nose-radome/
+fuselage seam, on the side** (not the very tip) — flush enough to preserve the stealth profile,
+still standing off just enough from the skin to sample clean airflow outside the boundary layer.
+
+![RC Cougar pitot tube installation — mechanical reference](img/pitot/rc-cougar-nose-pitot-reference.jpeg)
+*A simple round pitot tube pushed through a drilled hole in an RC nose cone, sealed in place — the
+mechanical installation technique to reuse, even though the real F-35B's probe location/shape differs.*
+
+![Real F-35B nose showing the flush air-data probe location](img/pitot/f35b-nose-pitot-probe-reference.jpeg)
+*Real F-35B, nose-radome/fuselage seam — the small blade/vane-shaped probe sits right at this
+boundary, not at the nose tip. Confirms the "just aft of the nose radome" placement independently
+found via research.*
+
+**Decision:** replicate the real F-35B's **location** (radome/fuselage seam, side, not nose-tip)
+and general **blade/vane appearance**, but keep the underlying sensor simple — house a normal round
+pitot tube (Matek ASPD-4525's included tube, [BOM](11-bill-of-materials.md)) inside a small
+3D-printed diamond/blade-section fairing, rather than attempting a true multi-port FADS array (not
+worth the complexity at RC scale, and ArduPilot's airspeed driver just wants one clean differential-
+pressure reading anyway). The tube must protrude a small amount (~5-10mm) past the fairing/skin for
+clean, undisturbed airflow — full flush-mounting would put the sensing hole inside the fuselage's
+boundary layer and give a bad reading, so "flush" here means *the fairing* reads as flush/small, not
+that the actual pressure-sensing tip is literally skin-level. Route the silicone tubing inside the
+fuselage back to the sensor board near the FC (I2C, shares the bus with the GPS compass).
+
 ## Finishing
 
 Grey primer + filler primer (hide layer lines), F-35B livery colours, sandpaper assortment, decals.
