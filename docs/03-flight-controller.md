@@ -57,7 +57,7 @@ only signal (PWM/DSHOT) to the ESCs.
 | USART2 | SERIAL2 | **Feetech STS3032** half-duplex bus (3BSM nozzle) | `PROTOCOL=23, BAUD=1000, OPTIONS=4` |
 | USART3 | SERIAL3 | **RP2040 avionics board** (WeAct) — MAVLink telemetry | `PROTOCOL=2, BAUD=57` |
 | UART4  | SERIAL4 | **RP2040 servo-bank board** (Pico) — MAVLink PWM cmds | `PROTOCOL=2, BAUD=57` |
-| UART5  | SERIAL5 | Spare — GPS or rangefinder (deferred post-airframe) | — |
+| UART5  | SERIAL5 | **HGLRC M100-5883 GPS** — GPS+Galileo+BDS, no GLONASS (settled pick, not purchased — deferred post-airframe) | `PROTOCOL=5 (GPS), BAUD=115, GPS_TYPE=2 (u-blox)` |
 | USART6 | SERIAL6 | ELRS receiver (CRSF) | — |
 | ADC 1 | — | Battery 1 (main) voltage — from PDB divider | — |
 | ADC 2 | — | Battery 2 (lift) voltage | — |
@@ -65,7 +65,18 @@ only signal (PWM/DSHOT) to the ESCs.
 
 > USART2 has a hardware-inverted RX pad (reverse-SBUS circuit on the board). That's fine for the
 > STS3032: half-duplex uses TX only (`OPTIONS=4` ties TX/RX internally), so the inverted RX pad is
-> left unconnected and plays no role. Five of six UARTs spoken for; UART5 spare for GPS/lidar later.
+> left unconnected and plays no role. All six UARTs now spoken for; UART5 is the GPS's home.
+>
+> ⚠️ **UART3 is already taken (WeAct avionics MAVLink) — don't wire GPS there.** Some generic online
+> advice for this FC assumed 2 free UARTs ("UART3 free, UART4 free as backup") — that's wrong for
+> this specific build; only UART5 is actually free, and putting GPS on UART3 would silently break
+> the avionics telemetry link instead. Always check this table, not generic advice, before wiring a
+> new UART peripheral.
+>
+> GPS compass wiring: the FC's single **I2C port** was already earmarked for "compass / digital
+> airspeed" ([F405 FC specifications](#f405-fc-specifications)) — the HGLRC module's SDA/SCL go
+> there directly, no conflict. If a digital airspeed sensor is added later, it shares the same I2C
+> bus (different address, not a hardware conflict).
 
 > The **two RP2040 boards** each run **MAVLink v2** to the FC — see
 > [Pico — why two boards](04-raspberry-pi-pico.md#why-two-boards-pin-budget). Custom sensor values
@@ -149,7 +160,8 @@ and mixing DSHOT (LittleBee 20A roll posts) with PWM on the same motor group com
 
 ## Open questions / TODO
 
-- ✅ **Resolved: UART assignments locked** — USART2=STS3032, USART3=WeAct, UART4=Pico, UART5=spare.
+- ✅ **Resolved: UART assignments locked** — USART2=STS3032, USART3=WeAct, UART4=Pico, UART5=GPS
+  (HGLRC M100-5883, settled pick, not purchased).
 - ✅ **Resolved: ArduPilot output mapping table complete** — SERVO1–10 assigned; see above.
 - Bench-validate the SERVO3 (main EDF) tiltrotor transition and roll-post mixer weights before first hover.
 - **GPS + downward rangefinder/lidar:** both planned for **later** (after the airframe is validated) —
