@@ -279,6 +279,11 @@ Process: heat **only the framed sheet** in the oven → the moment it droops, dr
 plug so it seals on the box rim → **switch the vacuum on immediately** (PETG stiffens in seconds) →
 hold ~10–20 s → vacuum off, pop off plug, trim. Oven gloves: the frame is hot.
 
+**Reference — [How to vacuum form a canopy (YouTube)](https://www.youtube.com/watch?v=4jE_D0kLVDg):**
+a tutorial/demo that shows the whole thermoforming pull end-to-end. Uses 1 mm **Vivak** (an extruded
+copolyester — i.e. a PETG-family sheet, same forming behaviour as our plan) at **~140 °C**, which
+lines up with the material and method above.
+
 ### Canopy sill / frame
 
 Print the sill the PETG sits on as **part of the fuselage** in LW-PLA for an exact fit; CA-glue the
