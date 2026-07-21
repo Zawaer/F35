@@ -18,7 +18,7 @@
 
 | Venue | Access for a 17yo non-affiliated student | Cost | Best for |
 |---|---|---|---|
-| **[Oodi library](#oodi--kaupunkiverstas--konehuone-helsinki)** | Yes — full public access, just need a Helmet library card | Free use, cheap materials | **Only public laser cutter / UV printer / large-format printer** in the region |
+| **[Oodi library](#oodi--kaupunkiverstas--konehuone-helsinki)** | ✅ **Confirmed — Helmet library card already in hand.** No remaining unknowns. | Free use, cheap materials | **Only public laser cutter / UV printer / large-format printer** in the region |
 | **[Omnia Makerspace](#omnia-makerspace-espoo-otaniemi)** | Likely yes — open policy stated, but minimum-age rule unpublished. ⚠️ **Confirm by email first** | Free use, generous free-material allowance | Closest venue to school; 2 laser cutters, 2× Bambu H2S, vinyl/UV/sublimation |
 | **[Aalto Fablab](#aalto-fablab-espoo-otaniemi)** | **Public Open Days only** (schedule currently unconfirmed); closed for summer until 29 Aug 2026 | Free to use machines | **Most capable equipment overall** — best CNC (Recontech 1312), 80 W laser, SLA, vacuum forming, PCB milling — access is the bottleneck |
 | **[Espoo libraries](#espoo-libraries-iso-omena--sello--tapiola--entresse--lippulaiva)** | Yes, self-service via Espoo Varaamo | Free | Wood workshop (Iso Omena, 18+ for independent use), ABS/PC-capable 3D printing, sewing |
@@ -64,8 +64,9 @@ non-Aalto membership agreement may also be possible; fee unpublished. **Closed f
 ### Oodi – Kaupunkiverstas / Konehuone (Helsinki)
 
 **Töölönlahdenkatu 4, 00100 Helsinki.** Open to the public with just a **Helmet library card** — no
-Aalto/Espoo affiliation needed. First laser-cutter use requires a guided "opastettu aika" session.
-Booked via `varaamo.hel.fi`.
+Aalto/Espoo affiliation needed. ✅ **Already have a Helmet card — this venue is fully unblocked, no
+access unknowns left.** First laser-cutter use requires a guided "opastettu aika" session. Booked via
+`varaamo.hel.fi`.
 
 | Category | Machine | Model | Key specs | Materials | Cost |
 |---|---|---|---|---|---|

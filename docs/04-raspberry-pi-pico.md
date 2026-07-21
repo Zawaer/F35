@@ -122,10 +122,14 @@ already does some of this** — build with just a black bezel first, look throug
 add a dedicated smoke disc (a smoked-acrylic offcut, *not* uneven packaging plastic) only if still
 washed out. Burn-in is a non-issue: this is a TFT, not OLED. See [Canopy](09-materials-airframe.md#canopy-transparency).
 
-> **Aalto Fablab option:** the Epilog laser cutter handles acrylic up to 10 mm and would cut the smoke
-> disc to the screen's exact 1.47″ outline instead of trimming an offcut by hand — cleaner edge, no
-> hand-cut wobble. Same access caveat as [09](09-materials-airframe.md#forming-method--diy-vacuum-forming-default-or-aalto-fablab-better-if-accessible):
-> Public Open Days only, closed until 29 Aug 2026. Hand-cut offcut remains the default.
+> **Laser-cut option (better than a hand-cut offcut):** cut the smoke disc to the screen's exact
+> 1.47″ outline instead of trimming an offcut by hand — cleaner edge, no hand-cut wobble.
+> **Oodi Konehuone (Helsinki)** is the pick — its Epilog Fusion M2 (75 W CO2, cuts clear/black/white
+> acrylic) needs only a Helmet library card, no age/affiliation gate, and it's open now. **Aalto
+> Fablab's** Epilog Fusion Pro 48 (80 W, acrylic to 10 mm) is the fallback once it reopens, but is
+> Public-Open-Day-gated and closed until 29 Aug 2026. See
+> [Public Fab Lab Access](12-public-fablab-access.md#oodi--kaupunkiverstas--konehuone-helsinki).
+> Hand-cut offcut remains the zero-dependency default.
 
 ## MicroPython
 

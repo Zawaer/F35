@@ -32,6 +32,23 @@ records go in [decisions.md](decisions.md); this is the looser narrative around 
   Aalto's FDM/SLA/metal printers (own P2S + AMS setup is already better suited), and the electronics
   bench (already solder own connections).
 
+## 2026-07-22 — Broadened the venue survey; re-pointed TFT filter + decals/masking to Oodi
+
+- Compiled a full Helsinki-region public makerspace survey (Oodi, Omnia, Espoo/Vantaa libraries,
+  Aalto Fablab, Helsinki Hacklab, Kauniainen DigiLab) into
+  [12 — Public Fab Lab Access](../docs/12-public-fablab-access.md).
+- Realised Aalto Fablab isn't actually the best pick for the laser/vinyl tasks noted on 2026-07-21 —
+  it's both closed until 29 Aug and gated behind an unconfirmed Public Open Day schedule. **Oodi
+  Konehuone** needs only a Helmet library card (no age/affiliation question at all) and is open now,
+  with a bigger laser bed than Aalto's. Re-pointed the TFT smoke-disc note
+  ([04](../docs/04-raspberry-pi-pico.md#4-cockpit-tft-display)) and the decal/masking-stencil note
+  ([09 Finishing](../docs/09-materials-airframe.md#finishing)) to lead with Oodi, Aalto kept as the
+  fallback once it reopens. The canopy vacuum-forming plan is unchanged — Aalto is still the only
+  surveyed venue with a vacuum former, so it stays the sole Fablab option there.
+- **Already have a Helmet library card** — Oodi is fully unblocked, no access unknowns left. Marked
+  in [12](../docs/12-public-fablab-access.md#quick-verdict--which-venue-for-what) (quick-verdict table
+  + the Oodi section itself).
+
 ## 2026-07-04 — Internal control-surface leverage worry resolved; torque-sizing caveat noted
 
 - Worried whether going fully internal (no external pushrods/horns, matching the real F-35B) costs

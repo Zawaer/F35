@@ -356,16 +356,19 @@ fuselage back to the sensor board near the FC (I2C, shares the bus with the GPS 
 
 Grey primer + filler primer (hide layer lines), F-35B livery colours, sandpaper assortment, decals.
 
-> **Aalto Fablab option:** the **Roland GX-24 vinyl cutter** is useful two ways here — feed it an SVG
-> and it plots directly, far crisper than hand work:
+> **Vinyl cutter option:** a vinyl cutter is useful two ways here — feed it an SVG and it plots
+> directly, far crisper than hand work:
 > - **Stick-on decals** (squadron codes, warning placards, national insignia) — adhesive vinyl cut to
 >   shape and applied as the marking itself.
 > - **Paint masking stencils** — vinyl cut as a *removable mask* for the panel lines, laid down before
 >   spraying so the primer/base colour shows through in crisp lines, then peeled off after paint —
 >   sharper and more consistent than hand-taping panel lines.
 >
-> Same access caveat as above (Public Open Day only, closed until 29 Aug 2026). Bought decals /
-> hand-taping remain the default/fallback since they don't depend on lab access.
+> **Oodi Konehuone (Helsinki)** — needs only a Helmet library card, open now, no age/affiliation gate.
+> **Aalto Fablab's** Roland GX-24 is the fallback once it reopens (Public Open Day only, closed until
+> 29 Aug 2026). See [Public Fab Lab Access](12-public-fablab-access.md#quick-verdict--which-venue-for-what)
+> for other options (Omnia, Espoo/Vantaa libraries). Bought decals / hand-taping remain the
+> default/fallback since they don't depend on any venue's access.
 
 ## Open questions / TODO
 
