@@ -41,6 +41,7 @@ The trainer (Phase 1) validates basic flying and the FC/RX setup; the F-35B (Pha
 | 09 | [Materials & Airframe](docs/09-materials-airframe.md) | Filaments, carbon spars, bearings, fasteners, glue |
 | 10 | [Wiring Diagrams](docs/10-wiring-diagrams.md) | Consolidated power/signal wiring and pin connections |
 | 11 | [Bill of Materials](docs/11-bill-of-materials.md) | Master parts list with own/order status and cost |
+| 12 | [Public Fab Lab Access](docs/12-public-fablab-access.md) | Helsinki-region makerspace/fablab survey — access, machines, costs |
 
 Detailed per-part specs (weight, dimensions, electrical) live in [components/](components/) —
 datasheet-style cards that back the BOM and feed the CG/AUW and power-budget math. Firmware lives
