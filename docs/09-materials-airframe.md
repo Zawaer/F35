@@ -249,9 +249,20 @@ located by the owned N35 5×2 mm magnets** (see [Magnets](#magnets) below) — l
 the cockpit, self-aligns on replacement, zero servo/channel. **Powered opening = V2** once the pin
 budget is resolved; it stays a single piece glued to a hinged printed sill either way.
 
-### Forming method — DIY vacuum forming
+### Forming method — DIY vacuum forming (default) or Aalto Fablab (better, if accessible)
 
-The plan is **vacuum forming**, which gives far more even, crisp results than heat-gun draping (a
+> **Aalto Fablab option:** the lab's **CR Clarke 750FLB** vacuum former would skip the whole
+> plenum-material decision below — sealed chamber, perforated platen, and a real vacuum pump already
+> built. Forming area 432×482 mm / 140 mm mold height comfortably clears the ~220×80 mm canopy
+> footprint, and clear PET-family sheet (our PETG plan) is allowed (only PVC is banned on that
+> machine). Catch: not an Aalto student, so access is **Public Open Days only** — first-come,
+> lab-master-supervised, no advance booking — and the lab does a **summer/maintenance shutdown
+> (22 Jun – 28 Aug 2026)**, so this isn't available right now. Bring the sanded/undersized printed
+> plug plus **your own sheet** (they don't stock clear plastic, only opaque polystyrene). Treat this
+> as the better option *when* an open day lines up with the build; the DIY box below is the fallback
+> that doesn't depend on lab access.
+
+The DIY plan is **vacuum forming**, which gives far more even, crisp results than heat-gun draping (a
 single nozzle pulls at one point and leaves the rest of the sheet loose/wrinkly). Principle: a sealed
 air chamber (**plenum**) with a perforated top, the plug sitting on the perforated surface, and a
 vacuum emptying the chamber so atmospheric pressure presses the heated sheet uniformly onto the plug.
@@ -344,6 +355,17 @@ fuselage back to the sensor board near the FC (I2C, shares the bus with the GPS 
 ## Finishing
 
 Grey primer + filler primer (hide layer lines), F-35B livery colours, sandpaper assortment, decals.
+
+> **Aalto Fablab option:** the **Roland GX-24 vinyl cutter** is useful two ways here — feed it an SVG
+> and it plots directly, far crisper than hand work:
+> - **Stick-on decals** (squadron codes, warning placards, national insignia) — adhesive vinyl cut to
+>   shape and applied as the marking itself.
+> - **Paint masking stencils** — vinyl cut as a *removable mask* for the panel lines, laid down before
+>   spraying so the primer/base colour shows through in crisp lines, then peeled off after paint —
+>   sharper and more consistent than hand-taping panel lines.
+>
+> Same access caveat as above (Public Open Day only, closed until 29 Aug 2026). Bought decals /
+> hand-taping remain the default/fallback since they don't depend on lab access.
 
 ## Open questions / TODO
 

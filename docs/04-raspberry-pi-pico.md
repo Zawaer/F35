@@ -122,6 +122,11 @@ already does some of this** — build with just a black bezel first, look throug
 add a dedicated smoke disc (a smoked-acrylic offcut, *not* uneven packaging plastic) only if still
 washed out. Burn-in is a non-issue: this is a TFT, not OLED. See [Canopy](09-materials-airframe.md#canopy-transparency).
 
+> **Aalto Fablab option:** the Epilog laser cutter handles acrylic up to 10 mm and would cut the smoke
+> disc to the screen's exact 1.47″ outline instead of trimming an offcut by hand — cleaner edge, no
+> hand-cut wobble. Same access caveat as [09](09-materials-airframe.md#forming-method--diy-vacuum-forming-default-or-aalto-fablab-better-if-accessible):
+> Public Open Days only, closed until 29 Aug 2026. Hand-cut offcut remains the default.
+
 ## MicroPython
 
 Firmware will be written once the actual components are in hand. The wiring/divider recipes it will

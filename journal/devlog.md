@@ -9,6 +9,29 @@ records go in [decisions.md](decisions.md); this is the looser narrative around 
 
 ---
 
+## 2026-07-21 — Aalto Fablab scoped as a canopy/finishing option (not a student, closed for summer)
+
+- Researched Aalto Fablab access as an Otaniemi lukio student (not Aalto-affiliated): no Takeout
+  booking, but open to everyone via **Public Open Days**, lab-master supervised, first-come.
+- Relevant machine: **CR Clarke 750FLB vacuum former** — would replace the whole DIY plenum-box
+  build for the canopy (see [09](../docs/09-materials-airframe.md#forming-method--diy-vacuum-forming-default-or-aalto-fablab-better-if-accessible)).
+  432×482 mm forming area / 140 mm mold height, clear PET-family sheet allowed (only PVC banned) —
+  fits our PETG canopy plan with no material change. Also noted the **Roland GX-24 vinyl cutter**
+  as a better option than hand-painted/bought decals for panel lines and scale markings.
+- **Blocker right now:** lab is in its summer/maintenance shutdown, **22 Jun – 28 Aug 2026**, doors
+  reopen 29 Aug. No exact open-day time slot confirmed yet for the autumn term — check their site/
+  Instagram in the last week of August.
+- Kept the DIY vacuum-box plan as the default in the docs (doesn't depend on lab access); Fablab
+  is noted as the better option *if* an open day lines up with when the canopy plug is ready.
+- Swept the rest of the docs for other genuine fits. Two more turned up: the Epilog **laser cutter**
+  could cut the [cockpit TFT anti-glare smoke disc](../docs/04-raspberry-pi-pico.md#4-cockpit-tft-display)
+  to the screen's exact outline instead of trimming an acrylic offcut by hand; the **GX-24 vinyl
+  cutter** can also cut removable **paint masking stencils** for crisp panel lines (not just stick-on
+  decals) — added to [09 Finishing](../docs/09-materials-airframe.md#finishing).
+  Ruled out: CNC mills/Recontech router (no custom PCB or large flat panel in the current plan),
+  Aalto's FDM/SLA/metal printers (own P2S + AMS setup is already better suited), and the electronics
+  bench (already solder own connections).
+
 ## 2026-07-04 — Internal control-surface leverage worry resolved; torque-sizing caveat noted
 
 - Worried whether going fully internal (no external pushrods/horns, matching the real F-35B) costs
