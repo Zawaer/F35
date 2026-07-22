@@ -204,6 +204,15 @@ See [Propulsion — 3BSM](06-propulsion.md#3bsm--three-bearing-swivel-module).
   (42 g) should cover all spar joints + sockets (~35 ml needed); buy a second as backup. Leave
   clamped 24 h before loading for full strength. 🛒 not yet ordered. €3.55 / pack.
   [Biltema](https://www.biltema.fi/rakentaminen/liimat/epoksiliimat/pika-epoksi-2-x-21-g-2000050118)
+  — per SDS (both parts, ⚠️ sold under two Biltema names, same article no. 36-2361/composition:
+  "Pika Epoksi Perus/Kovetin" and "Epoksi Supervahva A/B"): dynamic viscosity ~11,000–16,000 mPa·s
+  both parts (thick/honey-to-peanut-butter — matches the gap-filling spec and won't run out of
+  the vertical sleeve joint before cure). Resin side (Perus/A) is a skin sensitizer (H317, can
+  cause an allergic reaction with repeated contact) — glove up every time, not just for a one-off
+  job. **Gloves: NBR (nitrile), 0.2 mm, >240 min breakthrough** — any standard nitrile glove
+  clears this. SDS gives no cured-joint heat rating (flash/boiling point data is for the
+  uncured liquid, irrelevant here) — standard epoxy softens ~50–70 °C once cured, so keep spar
+  joints away from EDF/exhaust heat if routing allows it.
 - **Frosted PP sheet 0.5 mm** (100×200 mm, 10 pc) — LED diffuser.
 - Silicone tubing 25–30 mm ID (was for bleed-air ducts — **obsolete** now roll posts use motors,
   see [Propulsion](06-propulsion.md#roll-control)).
