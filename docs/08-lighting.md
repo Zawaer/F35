@@ -3,8 +3,11 @@
 > **Current plan:** all lighting controlled by the **Pico/RP2040**. Nav/strobe lights use **3W
 > LEDs** (red/green/white) on 700mA PWM constant-current drivers. A **10W landing light** runs on
 > a 3A adjustable CC driver. An **automotive BA15S bulb** simulates the afterburner. A **12V COB
-> strip** provides accent lighting, switched by an **IRLZ44N MOSFET**. Most lighting is powered
-> from the PDB **12V VTX/CAM rail** — but see the afterburner power caveat.
+> strip** provides accent lighting, switched by an **IRLZ44N MOSFET**. **All** lighting — including
+> the afterburner — runs off the PDB **12V VTX/CAM rail**. The landing light and afterburner never
+> load the rail at the same time because of a **flight-mode firmware interlock** (landing light:
+> hover only; afterburner: cruise/transition only) — see
+> [below](#landing-light--afterburner-flight-mode-interlock-firmware-required).
 
 ## Inventory of light sources
 
@@ -14,7 +17,7 @@
 | Starboard nav | 3W LED green 520nm | 700mA CC, PWM | 12V VTX |
 | Strobes | 3W LED white 6500K | 700mA CC; **hard on/off, both wingtips synced — 0.2 s on / 0.8 s off (20% duty, 1 Hz)** | 12V VTX |
 | Landing light | 10W LED 6500K (XML-T6, 3A) | 3A adjustable CC, PWM | 12V VTX |
-| Afterburner | BA15S P21W 12V auto bulb | built-in CC IC; **throttle-reactive** (brighter at higher throttle, PWM) | servo BEC / dedicated tap ⚠️ |
+| Afterburner | BA15S P21W 12V auto bulb | built-in CC IC; **throttle-reactive** (brighter at higher throttle, PWM), **forced off in hover** | 12V VTX — cruise/transition only (interlocked) |
 | Formation (exterior) | 12V COB strip (green, 3 mm), **diffused via frosted PP 0.5 mm** | IRLZ44N MOSFET switch | 12V VTX |
 
 (3W LED stock: 10× each red/green/white. Diffusion via frosted **PP sheet** 0.5 mm.)
@@ -52,29 +55,58 @@ in-flight gear-bay airflow cools it further. Always **thermal-glue the 10W LED t
 directly to LW-PLA** (softens ~60 °C). Only step up to **≥20×20 mm — or PWM-dim to ~1–1.5 A
 (~3 W)** — if you want the light on **continuously** (taxi/headlight use).
 
-## Current budget (12V VTX/CAM rail, 2A)
+## Current budget (12V VTX/CAM rail, 2A continuous / 3A peak)
 
-| Load | Current |
-|------|---------|
-| Red + green nav (dimmed) | ~0.6–0.7A |
-| White strobes ×2 | avg ~0.14A (10% duty), ~1.4A peak |
-| COB strip | ~0.13A |
-| 10W landing light | ~0.82A (intermittent) |
+| Load | Current | When |
+|------|---------|------|
+| Red + green nav (dimmed) | ~0.6–0.7A | always |
+| White strobes ×2 | avg ~0.14A (10% duty), ~1.4A peak | always |
+| COB strip | ~0.13A | always |
+| 10W landing light | ~0.82A (intermittent) | **hover only** (interlocked) |
+| Afterburner (BA15S, CANBUS resistor removed) | ~0.7A | **cruise/transition only** (interlocked) |
 
-Nav + COB + strobe average ≈ **0.84A** ✅. Adding the landing light during approach pushes it up but
-it's brief. The **afterburner bulb is the problem child**: rated 17–18W ≈ 1.4–1.5A, which alone
-plus other loads exceeds the 2A rail.
+Nav + COB + strobe average ≈ **0.84A**, present the whole flight. The landing light and afterburner
+are **never commanded at the same time** (see the interlock below), so the rail only ever carries
+one of those two extra loads on top of the baseline:
+
+- **Hover:** 0.84A + landing light 0.82A ≈ **1.66A** ✅
+- **Cruise/transition:** 0.84A + afterburner 0.7A ≈ **1.54A** ✅ (a strobe-flash spike on top still
+  stays under the 3A peak)
+
+Without the interlock, all five loads together could sustain ~2.5–3A — over the 2A continuous
+rating. The interlock is what makes sharing one rail safe for both, so it's a **required firmware
+behavior**, not an optional nicety.
 
 ### Afterburner power & the CANBUS-resistor mod
 
 The BA15S P21W is an automotive LED bulb with a built-in **CANBUS load resistor** that *wastes*
 power to fake an incandescent bulb's current draw for a car computer — useless here. **Remove it**
-(open base, desolder the resistor that runs hot): actual LED draw drops from ~1.5A to **~0.7A**,
-keeping it cool and within budget. Even so, **power the afterburner from the servo BEC or a
-dedicated 12V tap, not the VTX rail** to avoid crowding it. The **BA15S** (straight pins, 180°)
-variant is in the cart — easier to mount than BAU15S (offset). A purpose-made BA15S socket is
-**optional**: solder leads directly to the bulb base contacts, or print a holder into the
-afterburner housing. Amber/yellow (~3000K) gives the right glow.
+(open base, desolder the resistor that runs hot): actual LED draw drops from ~1.5A to **~0.7A**.
+
+**Power source: the 12V VTX/CAM rail** — not the servo BEC (its adjustable 5/6/7.2V range is
+*below* the bulb's rated 12–48V minimum, so it wouldn't light reliably there). Sharing the VTX rail
+with the landing light only works because of the **hover/cruise interlock** below — without it, the
+two together would crowd the rail past its 2A continuous rating.
+
+The **BA15S** (straight pins, 180°) variant is in the cart — easier to mount than BAU15S (offset). A
+purpose-made BA15S socket is **optional**: solder leads directly to the bulb base contacts, or print
+a holder into the afterburner housing. Amber/yellow (~3000K) gives the right glow.
+
+### Landing-light / afterburner flight-mode interlock (firmware, required)
+
+The landing light and afterburner sit on the same 2A-continuous rail as the nav/strobe/COB baseline
+— sharing it safely depends on the two never being commanded on at once:
+
+- **Landing light: hover/VTOL modes only.** It also lives inside the front gear bay, so it isn't
+  even visible in cruise with the gear doors closed — no functional loss from disabling it there.
+- **Afterburner: cruise/transition only, forced off in hover.** This also matches the real
+  aircraft — the F-35B doesn't run reheat during STOVL hover.
+
+Enforce this on the **Pico**, reading ArduPilot's current flight mode over the existing MAVLink link
+to the FC (already planned for temp/current telemetry) — gate each light's PWM output on mode
+directly, don't rely on the pilot not flipping both switches. **Treat the VTOL transition phase the
+same as cruise** (afterburner allowed, landing light forced off) — it's the one window where 3BSM
+rotation and throttle are both changing, so leaving it ambiguous is exactly where this would break.
 
 ## Wingtip quick-disconnect (detachable wings)
 
@@ -116,9 +148,14 @@ while True:
 
 ## Notes & TODO
 
-- Remove the CANBUS resistor from the afterburner bulb on arrival; wire it to servo BEC / dedicated tap.
-- **Afterburner decided: throttle-reactive** — brightness scales with throttle (PWM from the Pico,
-  mapped to the throttle channel), brightest at full throttle.
+- Remove the CANBUS resistor from the afterburner bulb on arrival; wire it to the **12V VTX/CAM
+  rail** (not the servo BEC — voltage too low).
+- **Afterburner decided: throttle-reactive in cruise/transition, forced off in hover** — brightness
+  scales with throttle (PWM from the Pico, mapped to the throttle channel), brightest at full
+  throttle. See the [flight-mode interlock](#landing-light--afterburner-flight-mode-interlock-firmware-required).
+- ⚠️ **Not yet implemented:** the Pico-side flight-mode interlock itself (read ArduPilot mode over
+  MAVLink; gate landing-light PWM to hover-only and afterburner PWM to cruise/transition-only,
+  transition counted as cruise). Required before the two share the VTX rail safely — see above.
 - 10W landing-light heatsink resolved: two 14×14×6 mm (stacked, on metal) for intermittent use.
 - **COB strip decided: exterior formation lights** (green), **diffused through the frosted PP 0.5 mm
   sheet**. Cockpit glow was considered but dropped — not a priority and not very scale-realistic.

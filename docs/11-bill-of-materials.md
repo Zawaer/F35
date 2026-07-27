@@ -68,27 +68,27 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 ### Lighting
 | Part | Qty | € | Notes |
 |------|-----|---|-------|
-| 3W LED — white 6500K | 10 | 1.48 | Strobe / landing fallback · 24 Jun 2026 |
-| 3W LED — red 625 nm | 10 | 1.82 | Port nav · 24 Jun 2026 |
-| 3W LED — green 520 nm | 10 | 1.82 | Starboard nav · 24 Jun 2026 |
-| 10W LED 5050 XML-T6 6500K | 1 | 5.85 | Landing light · 24 Jun 2026 |
-| COB LED strip 12V (green, 3 mm, 1 m) | 1 | 2.68 | Formation lights · 24 Jun 2026 |
-| ACELEX 3W 700mA LED driver | 4 | 5.16 | Nav / strobe drivers · 24 Jun 2026 |
-| eletechsup LD2740SC 3A LED driver | 1 | 7.42 | 10W landing-light driver · 24 Jun 2026 |
-| IRLZ44N MOSFET (TO-220) | 10 | 3.93 | COB-strip / load switch · 24 Jun 2026 |
-| Frosted PP diffuser sheet 100×200×0.5 | 10 | 5.41 | LED diffuser · 24 Jun 2026 |
+| 3W LED — white 6500K | 10 | 1.48 | Strobe / landing fallback · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
+| 3W LED — red 625 nm | 10 | 1.82 | Port nav · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
+| 3W LED — green 520 nm | 10 | 1.82 | Starboard nav · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
+| 10W LED 5050 XML-T6 6500K | 1 | 5.85 | Landing light · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
+| COB LED strip 12V (green, 3 mm, 1 m) | 1 | 2.68 | Formation lights · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
+| ACELEX 3W 700mA LED driver | 4 | 5.16 | Nav / strobe drivers · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
+| eletechsup LD2740SC 3A LED driver | 1 | 7.42 | 10W landing-light driver · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
+| IRLZ44N MOSFET (TO-220) | 10 | 3.93 | COB-strip / load switch · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
+| Frosted PP diffuser sheet 100×200×0.5 | 10 | 5.41 | LED diffuser · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
 | Aluminium heatsink 14×14×6 mm | 10 | 2.68 | LED cooling · 24 Jun 2026 |
-| YiRui 1156 BA15S P21W bulb (yellow) | 2 | 4.11 | Afterburner glow · 24 Jun 2026 |
+| YiRui 1156 BA15S P21W bulb (yellow) | 2 | 4.11 | Afterburner glow · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
 
 ### Sensors
 | Part | Qty | € | Notes |
 |------|-----|---|-------|
 | Load cell 10 kg + HX711 | 1 set | 3.29 | Bench thrust test (not flown) · 2 Apr 2026 |
-| NTC thermistor 100K B3950 | 20 | 3.56 | Temperature sensing (mux) · 24 Jun 2026 |
+| NTC thermistor 100K B3950 | 20 | 3.56 | Temperature sensing (mux) · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
 | ACS712 20A current sensor | 3 | 3.40 | FC/servo rail + roll-post EDFs · 24 Jun 2026 |
 | CD74HC4067 16-ch analog mux | 1 | 1.74 | Expands ADC for NTCs · 24 Jun 2026 |
 | 1.47" ST7789 TFT (12-pin SPI) | 1 | 3.40 | Cockpit display · 24 Jun 2026 |
-| FFC/FPC adapter board 12P ZIF | 5 | 2.95 | Screen cable breakout · 24 Jun 2026 |
+| FFC/FPC adapter board 12P ZIF | 5 | 2.95 | Screen cable breakout · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
 | MPU6050 (I2C IMU) | 2 | — | Taken from STUHI hardware lab 11 Jul 2026 — planned for main+lift EDF vibration sensing, **not yet committed/implemented** |
 
 ### Structural & consumables
@@ -105,9 +105,9 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | Silicone wire 10 AWG | 2 m | 5.01 | Main EDF power · 24 Jun 2026 |
 | Silicone wire 18 AWG | 2 m | 1.96 | Battery tap / roll-post · 24 Jun 2026 |
 | Silicone wire 22 AWG | 10 m | 3.58 | Servo cables · 24 Jun 2026 |
-| CF tube 500 × 8 × 6 mm | 16 | 33.71 | Main spars (joined) · 24 Jun 2026 |
+| CF tube 500 × 8 × 6 mm | 16 | 33.71 | Main spars (joined) · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
 | CF solid rod 2 × 250 mm | 10 | 3.75 | Door joints / light linkages · 24 Jun 2026 |
-| 304 stainless balls 4 mm | 100 | 3.54 | 3BSM loose ball race · 24 Jun 2026 |
+| 304 stainless balls 4 mm | 100 | 3.54 | 3BSM loose ball race · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
 | MR62ZZ ball bearing | 10 | 3.93 | Backup / small gears · 24 Jun 2026 |
 | PU wheel 38 mm (1.5″) | 2 | 2.50 | F35B nose gear · 24 Jun 2026 |
 | Deli 502 CA glue (15 g) | 3 | 6.54 | Fast bonds · 24 Jun 2026 |

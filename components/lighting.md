@@ -209,8 +209,11 @@ Build context: [Lighting](../docs/08-lighting.md).
 | Colour | Yellow / amber |
 
 - **Notes (afterburner):** **remove the CANBUS load resistor** → stock ~1.5 A drops to ~0.7 A and
-  runs cooler. **Power from the servo BEC or a dedicated 12V tap, not the VTX rail** (too close to
-  the 2A limit). Very bright (2200 lm) — dim/diffuse for a scale glow. **BA15S = straight 180° pins**
+  runs cooler. **Power from the 12V VTX/CAM rail** — sharing it with the landing light only works
+  because of the **hover/cruise flight-mode interlock** (afterburner off in hover, landing light off
+  in cruise/transition) that keeps the two from ever loading the rail together — see
+  [Lighting](../docs/08-lighting.md#landing-light--afterburner-flight-mode-interlock-firmware-required).
+  Very bright (2200 lm) — dim/diffuse for a scale glow. **BA15S = straight 180° pins**
   → easy to print a holder for (BAU15S is the 150° offset version — not this). 2 pcs = spare.
 - **⚠️ Listing spec mismatch:** the generic spec box says *Interface Type: BA15D (1157)* / model
   C-0023, but the **ordered variant is 1156 BA15S P21W** — the variant selector governs what ships,
