@@ -168,8 +168,8 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 ### Carbon fibre tube 500 × 8 × 6 mm (×16) — main spars / spine
 - **Category:** Structural (CF tube, hollow, pultruded)
-- **Status:** 🛒 to reorder — original order (24 Jun 2026) ⚠️ never arrived (AliExpress bug); **not yet
-  re-ordered** (held back on 29 Jul 2026 due to card safety limits, alongside the PP diffuser sheet)
+- **Status:** ✅ owned (16-pack · ordered 24 Jun 2026) — did **not** hit the AliExpress never-arrived
+  bug that affected the other 24 Jun items; arrived fine, no reorder needed
 - **Used for:** **main spars & fuselage spine** — 500 mm tubes joined in pairs with 6 mm sleeves into
   ~900 mm runs — [Materials & Airframe → spar plan](../docs/09-materials-airframe.md#spar-plan-final--16-50086-mm-joined-with-6-mm-sleeves)
 - **Variant / qty:** 8 mm OD / 6 mm ID × 500 mm · 16 pcs (one "lot")

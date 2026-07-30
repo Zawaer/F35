@@ -185,8 +185,7 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ### Frosted translucent PP sheet — LED diffuser
 - **Category:** Material (diffuser sheet)
-- **Status:** 🛒 to reorder — original order (24 Jun 2026) ⚠️ never arrived (AliExpress bug); **not yet
-  re-ordered** (held back on 29 Jul 2026 due to card safety limits) — plan to order ~30 Jul 2026
+- **Status:** ✅ reordered (30 Jul 2026) — original order (24 Jun 2026) ⚠️ never arrived (AliExpress bug)
 - **Used for:** diffusing the wingtip nav / formation LEDs (and other point sources) for an even
   glow — [Lighting](../docs/08-lighting.md)
 - **Variant / qty:** 100 × 200 mm × 0.5 mm · 10 sheets

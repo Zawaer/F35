@@ -76,7 +76,7 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | ICGOICIC 3W/2W 700mA LED driver | 5 | 6.37 | Nav / strobe drivers · replaces ACELEX order (24 Jun 2026, ⚠️ never arrived — AliExpress bug) — **reordered 29 Jul 2026**; 5-pack covers the 4 needed + 1 spare |
 | eletechsup LD2740SC 3A LED driver | 1 | 4.04 | 10W landing-light driver · replaces 24 Jun 2026 order (⚠️ never arrived, AliExpress bug) — **reordered 29 Jul 2026**; price dropped from 7.42 |
 | IRLZ44N MOSFET (TO-220) | 10 | 3.23 | COB-strip / load switch · replaces 24 Jun 2026 order (⚠️ never arrived, AliExpress bug) — **reordered 29 Jul 2026** from a listing with an explicit IRLZ44N variant |
-| Frosted PP diffuser sheet 100×200×0.5 | 10 | 5.41 | LED diffuser · original order (24 Jun 2026) ⚠️ never arrived (AliExpress bug) — ⚠️ **not yet reordered**, held back 29 Jul 2026 on card safety limits, planned ~30 Jul 2026 |
+| Frosted PP diffuser sheet 100×200×0.5 | 10 | 5.41 | LED diffuser · replaces 24 Jun 2026 order (⚠️ never arrived, AliExpress bug) — **reordered 30 Jul 2026** |
 | Aluminium heatsink 14×14×6 mm | 10 | 2.68 | LED cooling · 24 Jun 2026 |
 | ASLENT 1156 BA15S P21W bulb (amber yellow) | 2 | 6.57 | Afterburner glow · replaces YiRui order (24 Jun 2026, ⚠️ never arrived — AliExpress bug) — **reordered 29 Jul 2026** from a different listing/seller |
 
@@ -105,7 +105,7 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | Silicone wire 10 AWG | 2 m | 5.01 | Main EDF power · 24 Jun 2026 |
 | Silicone wire 18 AWG | 2 m | 1.96 | Battery tap / roll-post · 24 Jun 2026 |
 | Silicone wire 22 AWG | 10 m | 3.58 | Servo cables · 24 Jun 2026 |
-| CF tube 500 × 8 × 6 mm | 16 | 35.11 | Main spars (joined) · original order (24 Jun 2026) ⚠️ never arrived (AliExpress bug) — ⚠️ **not yet reordered**, held back 29 Jul 2026 on card safety limits, planned ~30 Jul 2026 |
+| CF tube 500 × 8 × 6 mm | 16 | 33.71 | Main spars (joined) · 24 Jun 2026 — arrived fine, did **not** hit the never-arrived bug that affected the other 24 Jun items |
 | CF solid rod 2 × 250 mm | 10 | 3.75 | Door joints / light linkages · 24 Jun 2026 |
 | 304 stainless balls 4 mm | 100 | 3.57 | 3BSM loose ball race (primary size) · replaces 24 Jun 2026 order (⚠️ never arrived, AliExpress bug) — **reordered 29 Jul 2026** |
 | 304 stainless balls 6 mm | 50 | 4.21 | 3BSM ball-race size hedge · **bought 29 Jul 2026** — same listing/store as the 4mm; decide which size the race groove is actually built around once the 3BSM is modeled in CAD |
