@@ -48,7 +48,7 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | LiPo safety bag (fireproof) | 1 | 4.70 | Charging/storage · 1 Apr 2026 |
 | Amass/JHEMCU smoke stopper | 1 | 2.79 | Bench first-power-up fuse · 17 Apr 2026 |
 | XT60↔EC5 charge adapter | 4 | 8.21 | Charge the EC5 5000 mAh packs · 14 Apr 2026 |
-| DQLZV 2.0mm gold bullet connector (20-pair) | 1 | 7.74 | EDF motor leads (roll-post) · ordered 11 Jul 2026, arriving ~17–22 Jul · [AliExpress](https://www.aliexpress.com/item/1005009062349708.html) |
+| DQLZV 2.0mm gold bullet connector (20-pair) | 1 | 7.74 | EDF motor leads (roll-post) · ordered 11 Jul 2026, arrived · [AliExpress](https://www.aliexpress.com/item/1005009062349708.html) |
 | LiPo voltage tester + buzzer (1–8S) | 1 | 1.40 | Field battery check · 1 Apr 2026 |
 | LM2596 buck converter | 1 | — | Had on hand (2g-servo 4 V rail) |
 
@@ -68,27 +68,27 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 ### Lighting
 | Part | Qty | € | Notes |
 |------|-----|---|-------|
-| 3W LED — white 6500K | 10 | 1.48 | Strobe / landing fallback · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
-| 3W LED — red 625 nm | 10 | 1.82 | Port nav · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
-| 3W LED — green 520 nm | 10 | 1.82 | Starboard nav · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
-| 10W LED 5050 XML-T6 6500K | 1 | 5.85 | Landing light · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
-| COB LED strip 12V (green, 3 mm, 1 m) | 1 | 2.68 | Formation lights · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
-| ACELEX 3W 700mA LED driver | 4 | 5.16 | Nav / strobe drivers · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
-| eletechsup LD2740SC 3A LED driver | 1 | 7.42 | 10W landing-light driver · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
-| IRLZ44N MOSFET (TO-220) | 10 | 3.93 | COB-strip / load switch · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
-| Frosted PP diffuser sheet 100×200×0.5 | 10 | 5.41 | LED diffuser · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
+| 3W LED — white 6500K (SZRZGT) | 10 | 3.16 | Strobe / landing fallback · replaces 24 Jun 2026 order (⚠️ never arrived, AliExpress bug) — **reordered 29 Jul 2026** from a different listing/seller |
+| 3W LED — red 625 nm (SZRZGT) | 10 | 3.57 | Port nav · replaces 24 Jun 2026 order (⚠️ never arrived, AliExpress bug) — **reordered 29 Jul 2026** from a different listing/seller |
+| 3W LED — green 520 nm (SZRZGT) | 10 | 3.41 | Starboard nav · replaces 24 Jun 2026 order (⚠️ never arrived, AliExpress bug) — **reordered 29 Jul 2026** from a different listing/seller |
+| 10W LED 5050 XML-T6 6500K | 1 | 2.70 | Landing light · replaces 24 Jun 2026 order (⚠️ never arrived, AliExpress bug) — **reordered 29 Jul 2026**; price dropped from 5.85 |
+| COB LED strip 12V (green, 3 mm, 1 m) | 1 | 3.06 | Formation lights · original order 24 Jun 2026 shipped the wrong product — **reordered 29 Jul 2026** from a different listing/seller |
+| ICGOICIC 3W/2W 700mA LED driver | 5 | 6.37 | Nav / strobe drivers · replaces ACELEX order (24 Jun 2026, ⚠️ never arrived — AliExpress bug) — **reordered 29 Jul 2026**; 5-pack covers the 4 needed + 1 spare |
+| eletechsup LD2740SC 3A LED driver | 1 | 4.04 | 10W landing-light driver · replaces 24 Jun 2026 order (⚠️ never arrived, AliExpress bug) — **reordered 29 Jul 2026**; price dropped from 7.42 |
+| IRLZ44N MOSFET (TO-220) | 10 | 3.23 | COB-strip / load switch · replaces 24 Jun 2026 order (⚠️ never arrived, AliExpress bug) — **reordered 29 Jul 2026** from a listing with an explicit IRLZ44N variant |
+| Frosted PP diffuser sheet 100×200×0.5 | 10 | 5.41 | LED diffuser · original order (24 Jun 2026) ⚠️ never arrived (AliExpress bug) — ⚠️ **not yet reordered**, held back 29 Jul 2026 on card safety limits, planned ~30 Jul 2026 |
 | Aluminium heatsink 14×14×6 mm | 10 | 2.68 | LED cooling · 24 Jun 2026 |
-| YiRui 1156 BA15S P21W bulb (yellow) | 2 | 4.11 | Afterburner glow · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
+| ASLENT 1156 BA15S P21W bulb (amber yellow) | 2 | 6.57 | Afterburner glow · replaces YiRui order (24 Jun 2026, ⚠️ never arrived — AliExpress bug) — **reordered 29 Jul 2026** from a different listing/seller |
 
 ### Sensors
 | Part | Qty | € | Notes |
 |------|-----|---|-------|
 | Load cell 10 kg + HX711 | 1 set | 3.29 | Bench thrust test (not flown) · 2 Apr 2026 |
-| NTC thermistor 100K B3950 | 20 | 3.56 | Temperature sensing (mux) · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
+| NTC thermistor 100K B3950 | 20 | 4.08 | Temperature sensing (mux) · replaces 24 Jun 2026 order (⚠️ never arrived, AliExpress bug) — **reordered 29 Jul 2026** from the same listing (price rose €1.78→€2.04/pack) |
 | ACS712 20A current sensor | 3 | 3.40 | FC/servo rail + roll-post EDFs · 24 Jun 2026 |
 | CD74HC4067 16-ch analog mux | 1 | 1.74 | Expands ADC for NTCs · 24 Jun 2026 |
 | 1.47" ST7789 TFT (12-pin SPI) | 1 | 3.40 | Cockpit display · 24 Jun 2026 |
-| FFC/FPC adapter board 12P ZIF | 5 | 2.95 | Screen cable breakout · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
+| FFC/FPC adapter board 12P ZIF | 5 | 3.01 | Screen cable breakout · replaces 24 Jun 2026 order (⚠️ never arrived, AliExpress bug) — **reordered 29 Jul 2026** |
 | MPU6050 (I2C IMU) | 2 | — | Taken from STUHI hardware lab 11 Jul 2026 — planned for main+lift EDF vibration sensing, **not yet committed/implemented** |
 
 ### Structural & consumables
@@ -105,9 +105,10 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 | Silicone wire 10 AWG | 2 m | 5.01 | Main EDF power · 24 Jun 2026 |
 | Silicone wire 18 AWG | 2 m | 1.96 | Battery tap / roll-post · 24 Jun 2026 |
 | Silicone wire 22 AWG | 10 m | 3.58 | Servo cables · 24 Jun 2026 |
-| CF tube 500 × 8 × 6 mm | 16 | 33.71 | Main spars (joined) · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
+| CF tube 500 × 8 × 6 mm | 16 | 35.11 | Main spars (joined) · original order (24 Jun 2026) ⚠️ never arrived (AliExpress bug) — ⚠️ **not yet reordered**, held back 29 Jul 2026 on card safety limits, planned ~30 Jul 2026 |
 | CF solid rod 2 × 250 mm | 10 | 3.75 | Door joints / light linkages · 24 Jun 2026 |
-| 304 stainless balls 4 mm | 100 | 3.54 | 3BSM loose ball race · 24 Jun 2026 · ⚠️ never arrived (AliExpress bug) — reordering |
+| 304 stainless balls 4 mm | 100 | 3.57 | 3BSM loose ball race (primary size) · replaces 24 Jun 2026 order (⚠️ never arrived, AliExpress bug) — **reordered 29 Jul 2026** |
+| 304 stainless balls 6 mm | 50 | 4.21 | 3BSM ball-race size hedge · **bought 29 Jul 2026** — same listing/store as the 4mm; decide which size the race groove is actually built around once the 3BSM is modeled in CAD |
 | MR62ZZ ball bearing | 10 | 3.93 | Backup / small gears · 24 Jun 2026 |
 | PU wheel 38 mm (1.5″) | 2 | 2.50 | F35B nose gear · 24 Jun 2026 |
 | Deli 502 CA glue (15 g) | 3 | 6.54 | Fast bonds · 24 Jun 2026 |
@@ -153,8 +154,10 @@ incl., or the listed source). USD orders were converted at the order-date rate; 
 
 ## Key decisions
 - **Roll-post ESCs:** 2× FVT **LittleBee 20A** (BLHeli_S/DSHOT) — bought separately; the 30 mm EDFs did not come bundled with ESCs.
-- **3BSM rotation:** **4 mm loose steel ball race** (printed groove); MR62ZZ = backup; **6805ZZ
-  dropped** (not bought). One **STS3032** suffices (sections gear-linked); yaw is a separate MG90S/SG90.
+- **3BSM rotation:** **4 mm loose steel ball race** (printed groove) is the primary plan — **6 mm
+  balls also bought as a size hedge** (50pcs, same stainless listing) pending groove geometry being
+  finalized once the 3BSM is modeled in CAD. MR62ZZ = backup; **6805ZZ dropped** (not bought). One
+  **STS3032** suffices (sections gear-linked); yaw is a separate MG90S/SG90.
 - **Temperature:** NTC 100K + CD74HC4067 mux (one shared 47 kΩ divider); **DS18B20 dropped**.
 - **Current:** 3× ACS712 20A owned — **2 used** (both roll-post EDFs), 1 spare; avionics-tap current
   read by the PDB. Read via 2 spare mux channels. Main/lift EDF current **not logged** in v1 (Matek

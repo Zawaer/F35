@@ -83,26 +83,33 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 ---
 
-### 304 stainless steel balls 4 mm — 3BSM ball race
+### 304 stainless steel balls 4 mm + 6 mm — 3BSM ball race
 - **Category:** Hardware (loose bearing balls)
-- **Status:** ✅ owned (100 pcs · ordered 24 Jun 2026)
+- **Status:** ✅ reordered (29 Jul 2026, both sizes) — 4mm replaces the 24 Jun 2026 order (⚠️ never
+  arrived — AliExpress bug); 6mm bought new as a size hedge (see notes)
 - **Used for:** **3BSM swivel ball race** — loose balls in a printed groove for smooth 360° nozzle
   rotation — [Propulsion → 3BSM](../docs/06-propulsion.md#3bsm--three-bearing-swivel-module)
-- **Variant / qty:** 4 mm · 100 pcs
-- **Price:** €3.54
+- **Variant / qty:** 4 mm · 100 pcs + 6 mm · 50 pcs — same listing/store (YMAX Shinevien), just two
+  size variants bought together
+- **Price:** €3.57 (4mm, 100pcs) + €4.21 (6mm, 50pcs) = €7.78 total
 - **Link:** https://www.aliexpress.com/item/1005008768287413.html
 
 | Spec | Value |
 |------|-------|
-| Diameter | 4 mm |
-| Material | 304 stainless steel |
+| Diameter | 4 mm (primary) and 6 mm (hedge — see notes) |
+| Material | 304 stainless steel (confirmed solid bearing balls, not drilled/jewelry beads) |
 | Properties | high precision/hardness, smooth, good roundness, corrosion-resistant |
-| Weight | ~0.26 g each (steel, 4 mm) |
+| Weight | ~0.26 g each (4 mm, steel); ~0.88 g each (6 mm, steel, calc. from volume ratio) |
 
-- **Notes:** 4 mm chosen deliberately for smoother 3BSM rotation (see
-  [Materials → bearings](../docs/09-materials-airframe.md#bearings--3bsm-rotation)). Design the
-  printed race groove around the 4 mm ball diameter. 304 is non-magnetic + rust-resistant. 100 pcs
-  → race fill + plenty of spares.
+- **Notes:** **4 mm is still the primary/deliberate choice** for smoother 3BSM rotation (see
+  [Materials → bearings](../docs/09-materials-airframe.md#bearings--3bsm-rotation)) — design the
+  printed race groove around the 4 mm ball diameter first. The **6 mm 50-pack is a hedge, not a
+  parallel plan**: the materials doc flags the ball-race geometry as "finalize before modeling," so
+  6 mm is bought now (same trusted stainless listing/store as the 4mm) to have on hand *in case* the
+  3BSM CAD model ends up wanting a larger race — decide which size the actual printed groove is built
+  around once the 3BSM is modeled, then the other size is just spares/unused. 304 is non-magnetic +
+  rust-resistant, appropriate for loose balls sitting exposed in a printed groove (not a sealed
+  bearing). 100 pcs (4mm) → race fill + plenty of spares either way.
 
 ---
 
@@ -161,7 +168,8 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 
 ### Carbon fibre tube 500 × 8 × 6 mm (×16) — main spars / spine
 - **Category:** Structural (CF tube, hollow, pultruded)
-- **Status:** ✅ owned (16-pack · ordered 24 Jun 2026)
+- **Status:** 🛒 to reorder — original order (24 Jun 2026) ⚠️ never arrived (AliExpress bug); **not yet
+  re-ordered** (held back on 29 Jul 2026 due to card safety limits, alongside the PP diffuser sheet)
 - **Used for:** **main spars & fuselage spine** — 500 mm tubes joined in pairs with 6 mm sleeves into
   ~900 mm runs — [Materials & Airframe → spar plan](../docs/09-materials-airframe.md#spar-plan-final--16-50086-mm-joined-with-6-mm-sleeves)
 - **Variant / qty:** 8 mm OD / 6 mm ID × 500 mm · 16 pcs (one "lot")

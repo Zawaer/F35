@@ -33,7 +33,9 @@ on an LED causes thermal runaway → burnout.
 
 Both LED drivers are **switch-mode step-down (buck) constant-current** drivers — **not linear**:
 
-- 700mA nav/strobe driver (ACELEX 3W): ~**96%** efficiency, internal loss <1 W at a single-3W-LED load.
+- 700mA nav/strobe driver (ICGOICIC 3W/2W, replaces the ACELEX board that never arrived — same specs/
+  form factor): ~**96%** efficiency *(figure from the equivalent ACELEX listing, not re-confirmed for
+  this one)*, internal loss <1 W at a single-3W-LED load.
 - 3A landing-light driver (eletechsup LD2740SC): ~**92%** efficiency.
 
 So they **don't** dissipate the input–output voltage difference as heat, and input voltage (12 V vs
@@ -114,7 +116,7 @@ rotation and throttle are both changing, so leaving it ambiguous is exactly wher
 LEDs** cross the wing-root joint — roll-post EDFs and all servos stay in the fixed fuselage/wing-root
 section, so they don't need a disconnect at all. Each wingtip uses a **magnetic 3-pin pogo connector**
 (9IMOD, [Servos component card](../components/servos.md)) wired as: shared GND (both LEDs' return) +
-nav LED+ + strobe LED+. The ACELEX CC drivers stay **inboard** (not at the tip) — only their
+nav LED+ + strobe LED+. The ICGOICIC CC drivers stay **inboard** (not at the tip) — only their
 already-regulated, already-PWM-dimmed output current crosses the joint, so no separate PWM wire is
 needed there. 2 connectors total (one per wing). Bench-test the shared-ground current (~1.4A
 worst-case, both LEDs on at once) before trusting it — the connector has no manufacturer current
@@ -157,6 +159,16 @@ while True:
   MAVLink; gate landing-light PWM to hover-only and afterburner PWM to cruise/transition-only,
   transition counted as cruise). Required before the two share the VTX rail safely — see above.
 - 10W landing-light heatsink resolved: two 14×14×6 mm (stacked, on metal) for intermittent use.
+- ⚠️ **Open: check the 3W nav/strobe LEDs actually fit flush in the wingtip.** The bare emitter is an
+  **8mm dome, 5.5mm tall, on a 6mm copper slug** — plausibly too chunky for a scale-accurate flush
+  wingtip point light (see the reference photos above: "small aperture, no external protrusion").
+  Not yet checked against a real wingtip cross-section because the wing CAD doesn't exist yet.
+  **Revisit once the wing is modeled** — measure the actual available depth at the intended nav-light
+  location before committing to the mounting. If it doesn't fit: a standard 5mm superbright
+  through-hole LED (smaller dome, some brightness cost) or a flat high-power SMD LED (5050/3535-class,
+  <2mm thick, similar wattage) are both drop-in-ish alternatives on the same 700mA CC driver family —
+  no redesign of the driver/rail plan needed either way. (The COB strip, by contrast, is already thin
+  — 2.7–3mm × 1.5mm — and doesn't need this check.)
 - **COB strip decided: exterior formation lights** (green), **diffused through the frosted PP 0.5 mm
   sheet**. Cockpit glow was considered but dropped — not a priority and not very scale-realistic.
 - **Strobe decided: hard on/off, both wingtips synced** — full brightness, **0.2 s on / 0.8 s off**

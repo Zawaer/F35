@@ -7,11 +7,12 @@ Build context: [Sensors & Monitoring](../docs/07-sensors-monitoring.md).
 
 ### NTC thermistor MF52B 100K B3950 — temperature sensing
 - **Category:** Sensor (NTC thermistor, analog)
-- **Status:** ✅ owned (2× 10-pack = 20 pcs · ordered 24 Jun 2026)
+- **Status:** ✅ reordered (29 Jul 2026) — replaces the 24 Jun 2026 order (⚠️ never arrived, AliExpress
+  bug); **same listing**, re-bought (link unchanged, price has drifted up since)
 - **Used for:** ESC / battery / exhaust temperature → CD74HC4067 mux → Pico ADC — [Sensors & Monitoring](../docs/07-sensors-monitoring.md)
-- **Variant / qty:** B3950 100K · 2 packs (20 pcs)
-- **Price:** €1.78 / 10 pcs (€3.56 for 2 packs)
-- **Link:** https://www.aliexpress.com/item/1005006889194503.html?mp=1&sourceType=570&pdp_ext_f=%7B%22cart2PdpParams%22%3A%7B%22sourceType%22%3A%22570%22%2C%22cartSource%22%3A%22main%22%7D%7D
+- **Variant / qty:** Color: **B3950 100K** · 2 packs (20 pcs)
+- **Price:** €2.04 / 10 pcs (€4.08 for 2 packs) — was €1.78/pack at the original 24 Jun 2026 order
+- **Link:** https://www.aliexpress.com/item/1005006889194503.html
 
 | Spec | Value |
 |------|-------|

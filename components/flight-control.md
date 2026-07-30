@@ -132,7 +132,8 @@ Cards for the FC stack, the Pico, and the cockpit/IO electronics. See the
 
 ### FFC/FPC adapter board 12P 0.5 mm → 2.54 mm (ZIF) — display breakout
 - **Category:** Adapter board
-- **Status:** ✅ owned (5-pack · ordered 24 Jun 2026)
+- **Status:** ✅ reordered (29 Jul 2026, 5-pack) — original order (24 Jun 2026) ⚠️ never arrived
+  (AliExpress bug)
 - **Used for:** the [cockpit TFT](#147-st7789-tft--cockpit-display)'s 0.5 mm FFC ribbon → 2.54 mm
   pins → Pico SPI
 - **Variant / qty:** 12P · 5 pcs

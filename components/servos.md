@@ -309,7 +309,7 @@ Build context: [Servos](../docs/05-servos.md).
   wing-root disconnect joint, so this connector is a good fit after all (confirmed not needed for
   motor power or servo signal). **2 connectors needed total** — one per wing, since each wing detaches
   independently. **Use all 3 pins per connector as: shared GND (both LEDs' return) + nav LED+ + strobe
-  LED+.** Keep the ACELEX 700mA CC drivers **inboard** (fuselage/wing-root side, not at the tip) — only
+  LED+.** Keep the ICGOICIC 700mA CC drivers **inboard** (fuselage/wing-root side, not at the tip) — only
   the driver's already-regulated, already-PWM-dimmed constant-current output crosses the joint, so no
   separate PWM signal wire is needed across the connector at all. Combined worst-case current through
   the shared ground pin is ~1.4A (both LEDs at once) — bench-test this in series with a multimeter

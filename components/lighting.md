@@ -7,10 +7,15 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ### 3W High-Power LED — Pure White 6500K — strobes (+ landing-light fallback)
 - **Category:** LED (bare high-power emitter)
-- **Status:** ✅ owned (1 set · ordered 24 Jun 2026)
+- **Status:** ✅ reordered (29 Jul 2026) — replaces the earlier listing (ordered 24 Jun 2026, ⚠️ never
+  arrived — AliExpress bug); switched to a different listing/seller (SZRZGT) for the reorder
 - **Used for:** white wingtip **strobes**; fallback **landing light** if the 10W LED is too
   big/hot/power-hungry or fails — [Lighting](../docs/08-lighting.md)
-- **Source / price:** AliExpress · €1.48 / 10 pcs
+- **Source / price:** AliExpress · "Pure White 6500K" / "3W 10pcs" variant · €3.16 / 10 pcs (checkout
+  price; **the ≥2-piece bulk discount doesn't apply here** — that tier needs ≥2 packs of the *same*
+  colour variant, and each colour is priced individually at qty 1: white €3.16, red €3.57, green
+  €3.41)
+- **Link:** https://www.aliexpress.com/item/1005003810952677.html
 
 | Spec | Value |
 |------|-------|
@@ -34,9 +39,12 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ### 3W High-Power LED — Red 625nm — port nav light
 - **Category:** LED (bare high-power emitter)
-- **Status:** ✅ owned (1 set · ordered 24 Jun 2026)
+- **Status:** ✅ reordered (29 Jul 2026) — replaces the earlier listing (ordered 24 Jun 2026, ⚠️ never
+  arrived — AliExpress bug); switched to a different listing/seller (SZRZGT) for the reorder
 - **Used for:** **port (left) wingtip** navigation light — [Lighting](../docs/08-lighting.md)
-- **Source / price:** AliExpress · €1.82 / 10 pcs
+- **Source / price:** AliExpress · "Red 625nm" / "3W 10pcs" variant · €3.57 / 10 pcs (checkout price
+  at qty 1 — see the white-LED card above for why the ≥2-piece bulk tier doesn't apply across colours)
+- **Link:** https://www.aliexpress.com/item/1005003810952677.html
 
 | Spec | Value |
 |------|-------|
@@ -60,9 +68,12 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ### 3W High-Power LED — Green 520nm — starboard nav light
 - **Category:** LED (bare high-power emitter)
-- **Status:** ✅ owned (1 set · ordered 24 Jun 2026)
+- **Status:** ✅ reordered (29 Jul 2026) — replaces the earlier listing (ordered 24 Jun 2026, ⚠️ never
+  arrived — AliExpress bug); switched to a different listing/seller (SZRZGT) for the reorder
 - **Used for:** **starboard (right) wingtip** navigation light — [Lighting](../docs/08-lighting.md)
-- **Source / price:** AliExpress · €1.82 / 10 pcs
+- **Source / price:** AliExpress · "Green 520nm" / "3W 10pcs" variant · €3.57 / 10 pcs (€3.39 ea ≥2
+  packs — buying 3 packs, one per colour, together qualifies)
+- **Link:** https://www.aliexpress.com/item/1005003810952677.html
 
 | Spec | Value |
 |------|-------|
@@ -81,19 +92,28 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 - **Notes:** same 700mA CC driver + heatsink as the others. Dim to ~40% for scale brightness.
 
-> **Shared notes (all three 3W LEDs):** same listing/family (CE/RoHS, 42 mil chip, >50,000 h).
-> Bare **2-pin single-die** emitters on a Ø6 mm copper slug — no heatsink/PCB included, so plan a
-> small heatsink + mount per LED (slug is the thermal path). Dimensions from the datasheet drawing;
-> only **weight** remains unknown. The same listing also sells **4-pin / 6-pin RGB** versions (three
-> dies in one package) — **not** what we're using here. Full 3W-row reference from the listing:
-> Warm/Nature/Cold White & 6500K all ≈ 3.2–3.6 V / 700 mA / 260–280 lm; Yellow 2000K ≈ 180–200 lm;
-> Blue 460 / Royal Blue 445 ≈ 30–40 lm.
+> **Shared notes (all three 3W LEDs):** ⚠️ **reordering from a new listing** (brand **SZRZGT**, CE
+> cert, spec box lists "Voltage 3.0–3.6V" for the family; AI summary quotes **2.2–2.4V / 3.0–3.6V /
+> 3.2–3.6V / 6–7V** forward-voltage bins and **300–350mA / 600–700mA** current bins across the whole
+> colour/wattage range) — broadly consistent with the per-colour Vf/current figures already recorded
+> below (red lower-Vf, white/green ~3.2–3.6V, 700mA at 3W), but this listing gives far less per-colour
+> detail than the original. **Dimensions confirmed identical** via a datasheet drawing pasted from
+> this listing: Ø8.0mm lens, 5.5mm tall, 14.4mm overall incl. leads, 7.26mm body width, Ø6.0mm copper
+> slug, 2-pin anode/cathode+slug — matches the figures below exactly, so this is almost certainly the
+> **same physical emitter**, just a different reseller. The **42 mil chip size and luminous-flux
+> figures** are still carried over from the earlier (never-arrived) listing and aren't independently
+> re-confirmed, but given the dimensional match there's no reason to expect them to differ. Bare
+> **2-pin single-die** emitters, on a copper slug — no heatsink/PCB included, so plan a small heatsink
+> + mount per LED. The listing also sells **4-pin / 6-pin RGB**
+> versions (three dies in one package) and many other colours/wavelengths (grow-light IR/UV, etc.) —
+> **not** what we're using here; only the Red 625nm / Green 520nm / Pure White 6500K, 3W variants
+> apply.
 
 ---
 
 ### 10W LED 5050 XML-T6 — landing light
 - **Category:** LED (high-power emitter on star PCB)
-- **Status:** ✅ owned (ordered 24 Jun 2026)
+- **Status:** ✅ reordered (29 Jul 2026) — original order (24 Jun 2026) ⚠️ never arrived (AliExpress bug)
 - **Used for:** **landing light** — [Lighting](../docs/08-lighting.md). (3W white is the fallback.)
 - **Variant / qty:** 12 mm / Cold White 6500K · 1 pc
 - **Price:** €5.85 (€4.50 ea ≥2)
@@ -122,46 +142,51 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ### 3mm 400-LED 12V COB flexible strip — formation lights
 - **Category:** LED strip (COB on flexible FPC)
-- **Status:** ✅ owned (ordered 24 Jun 2026)
+- **Status:** ✅ reordered (29 Jul 2026) — replaces the earlier listing (ordered 24 Jun 2026), which
+  **shipped the wrong product**; switched to a different listing/seller for the reorder
 - **Used for:** **formation lights** on the F-35B — [Lighting](../docs/08-lighting.md)
-- **Variant / qty:** Green / 3 mm / 1 m · 1 pc
-- **Price:** €2.68
-- **Link:** https://www.aliexpress.com/item/1005009514688713.html?mp=1&sourceType=570&pdp_ext_f=%7B%22cart2PdpParams%22%3A%7B%22sourceType%22%3A%22570%22%2C%22cartSource%22%3A%22main%22%7D%7D
+- **Variant / qty:** Green / 3 mm, 400 LEDs per m / 1 m · 1 pc
+- **Price:** €3.06 (current price; list €6.37)
+- **Link:** https://www.aliexpress.com/item/1005009818813644.html
 
 | Spec | Value |
 |------|-------|
-| Weight | ~7 g/m *(est. from FPC cross-section; +1–2 g for lead wires; weigh to confirm)* |
-| Model | COB-3mm-400D-12V/24V (2025 Ed.1) |
-| Input voltage | DC 12 V (chosen; listing also 24 V) |
-| Power per metre | **see mismatch below** (~5.76–7 W/m) |
-| Current draw | ~0.35–0.48 A/m at 12 V (≈4.2–5.8 W/m) |
-| LED density | 400 LEDs/m, COB (Epistar) |
-| Efficacy | 90 lm/W ±10% (@4000K) |
-| CRI (Ra) | >90 |
-| Width × thickness | ~2.7–3 mm × 1.5 mm (see mismatch) |
-| Cut interval | every ~10–20 mm (see mismatch) |
-| Cascade length | >5 m |
-| Leads | both ends 15 cm, 20AWG; free DC head + 2-pin wire |
-| Waterproof | none (IP20/IP21) |
-| Life / cert | 50,000 h · CE/RoHS/UL |
+| Weight | ~7 g/m *(est., carried over from the earlier strip — same 3mm/400-LED class; weigh to confirm)* |
+| Model | — *(not stated on this listing)* |
+| Input voltage | DC 12 V (per marketing image and listing spec box) — **⚠️ see mismatch below** |
+| Power per metre | ⚠️ **MISSING** — not clearly stated (listing gives only an odd "Luminous Flux 2000-82000" range, not a per-metre power/current figure). Previous listing's ~5.76–7 W/m / ~0.35–0.48 A/m is **not** carried over — different product. Measure on arrival before relying on it for the power budget. |
+| LED density | 400 LEDs/m, COB (per variant title) |
+| Efficacy | — *(not stated on this listing)* |
+| CRI (Ra) | ≥98 ("full spectrum," per marketing image — AliExpress CRI claims run optimistic, treat as best-case) |
+| Luminous angle | 180° (per marketing image) |
+| Width × thickness | 3 mm width (caliper-verified in a marketing image; thickness not given numerically, described as "Ultra Thin") |
+| Cut interval | 20 mm (per marketing image) |
+| Cascade length | — *(not stated on this listing)* |
+| Leads | — *(not stated on this listing)* |
+| Backing | adhesive-backed (per marketing image) |
+| Waterproof | — *(not stated on this listing)* |
+| Life / cert | — *(not stated on this listing)* |
 
-- **⚠️ Spec mismatches in the listing** (flagged per KB convention — verify on arrival):
-  - **Power/m:** PDF says **7 W/m**; product-page spec says **5.76 W/m**; description says
-    **6–8 W/m**; a reviewer measured **~0.35 A/m (≈4.2 W/m)** at 12 V. Use **~0.4–0.5 A/m** for the
-    power budget and confirm by measuring.
-  - **Width:** title/“COB width” say **3 mm**, but the dimensions line says **2.7 mm**.
-  - **Cut interval:** PDF “minimum 10 mm” vs description “20 mm”.
-  - **Waterproof:** PDF IP20 vs description IP21 (both effectively non-waterproof).
-- **Notes:** dimmable; cut to length and solder ~0.3 mm² wire to the pads (don't bridge the two
-  rails). For the [12V VTX rail budget](../docs/08-lighting.md#current-budget-12v-vtxcam-rail-2a),
-  size by the **actual cut length** used for formation lighting — a full metre at ~0.4–0.5 A is
-  more than the ~0.13 A assumed for a short accent segment.
+- **⚠️ Spec mismatch:** the cutting-guide marketing image prints **"24V+"** silkscreen labels at the
+  pads either side of each cut mark, but every other source (title, spec box, the "DC 12V" marketing
+  graphic) says **12 V**. Likely a reused PCB artwork shared across a 12V/24V product family (same
+  pattern of listing sloppiness as the earlier strip) rather than an actual 24V part — but **confirm
+  with a multimeter/bench test before powering it from the 12V rail**, since driving a 24V-rated
+  strip at 12V would just under-drive it (safe) but the reverse would not be.
+- **Notes:** dimmable per the listing. Several specs still aren't stated (per-metre power/current,
+  cascade length, lead length, waterproofing) — **treat current draw as unverified until measured on
+  arrival**, since carrying over the old listing's figures isn't safe for a different product that
+  arrived wrong once already. Cut to length and solder ~0.3 mm² wire to the pads (don't bridge the two
+  rails). For the
+  [12V VTX rail budget](../docs/08-lighting.md#current-budget-12v-vtxcam-rail-2a), size by the
+  **actual measured current** at the cut length used for formation lighting once it arrives.
 
 ---
 
 ### Frosted translucent PP sheet — LED diffuser
 - **Category:** Material (diffuser sheet)
-- **Status:** ✅ owned (ordered 24 Jun 2026)
+- **Status:** 🛒 to reorder — original order (24 Jun 2026) ⚠️ never arrived (AliExpress bug); **not yet
+  re-ordered** (held back on 29 Jul 2026 due to card safety limits) — plan to order ~30 Jul 2026
 - **Used for:** diffusing the wingtip nav / formation LEDs (and other point sources) for an even
   glow — [Lighting](../docs/08-lighting.md)
 - **Variant / qty:** 100 × 200 mm × 0.5 mm · 10 sheets
@@ -184,46 +209,55 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ---
 
-### YiRui 1156 BA15S P21W LED bulb — afterburner
+### ASLENT 1156 BA15S P21W LED bulb — afterburner
 - **Category:** LED bulb (automotive turn-signal type)
-- **Status:** ✅ owned (ordered 24 Jun 2026)
+- **Status:** ✅ reordered (29 Jul 2026) — replaces the earlier YiRui-listing order (ordered 24 Jun
+  2026, ⚠️ never arrived — AliExpress bug); switched to a different listing/seller (ASLENT) for the
+  reorder
 - **Used for:** **afterburner glow** — [Lighting](../docs/08-lighting.md#afterburner-power--the-canbus-resistor-mod)
-- **Variant / qty:** 1156 BA15S P21W / Yellow (amber) · 2 pcs
-- **Price:** €4.11 / 2 pcs
-- **Link:** https://www.aliexpress.com/item/1005007112305568.html?mp=1&sourceType=570&pdp_ext_f=%7B%22cart2PdpParams%22%3A%7B%22sourceType%22%3A%22570%22%2C%22cartSource%22%3A%22main%22%7D%7D
+- **Variant / qty:** Socket Type: **1156 ba15s P21W** / Emitting Color: **Amber Yellow** · 2 pcs
+- **Price:** €6.57 / 2 pcs
+- **Link:** https://www.aliexpress.com/item/1005007026242769.html
 
 | Spec | Value |
 |------|-------|
-| Weight | ~15–20 g *(est.; weigh to confirm)* |
-| Dimensions | Ø20 × 55 mm |
-| Base / socket | BA15S (1156), single contact, **180° straight pins** |
-| Voltage | 12–48 V |
-| Current | ~1.86–1.95 A stock (CANBUS); **~0.7 A after resistor removal** |
-| Power | ~20–25 W (P21W class) |
-| Luminous flux | 2200 lm |
-| Emitter | 144 × 3014 SMD, 360° beam |
-| Body / cooling | aviation aluminium 6063 + clear glass cover |
-| Waterproof | IP68 |
-| Driver | built-in constant-current + intelligent temp control |
-| Life | 50,000 h |
-| Colour | Yellow / amber |
+| Weight | ~15–20 g *(est.; carried over from the earlier bulb — same bulb class; weigh to confirm)* |
+| Dimensions | Ø20 mm × 57 mm bulb body (per marketing image); 15 mm socket base pin spacing |
+| Base / socket | BA15S (1156), single-contact **180° straight pins** — confirmed via marketing image socket-comparison chart (distinct from the 150°-offset BAU15S) |
+| Voltage | 12 V (per spec box and marketing image) |
+| Current | ~1.86–1.95 A stock (CANBUS, carried over est.); **~0.7 A after resistor removal** — not re-confirmed for this listing, verify after the CANBUS-resistor mod |
+| Power | 21 W (per marketing image: "12V 21W 2100LM/Bulb") |
+| Luminous flux | 2100 lm (per spec box and marketing image) |
+| Emitter | 144 × 3014 SMD, "2 Sides LED Chipsets," 360° shine (per marketing image) — matches the earlier bulb's emitter spec exactly |
+| Body / cooling | metal base + frosted dome cap (per marketing images); no explicit material/rating given |
+| Waterproof | — *(not stated on this listing)* |
+| Driver | **built-in load resistor + "Intelligent IC Drive"** — marketing image explicitly shows it converting unstable input current to stable output current, i.e. a built-in CANBUS load resistor + constant-current IC, same mechanism as the earlier bulb |
+| Life | — *(not stated on this listing)* |
+| Colour | Amber Yellow |
 
-- **Notes (afterburner):** **remove the CANBUS load resistor** → stock ~1.5 A drops to ~0.7 A and
-  runs cooler. **Power from the 12V VTX/CAM rail** — sharing it with the landing light only works
-  because of the **hover/cruise flight-mode interlock** (afterburner off in hover, landing light off
-  in cruise/transition) that keeps the two from ever loading the rail together — see
+- **Notes (afterburner):** **remove the CANBUS load resistor** → stock current should drop
+  substantially, same as the earlier bulb — **re-verify the before/after current** on this specific
+  bulb once it arrives rather than assuming the old ~1.5→0.7A figures carry over exactly (the
+  underlying built-in-resistor + IC-driver mechanism is now confirmed the same, so the mod should
+  still apply, just re-measure the actual current). **Power from the 12V VTX/CAM rail** — sharing it
+  with the landing light only works because of the **hover/cruise flight-mode interlock** (afterburner
+  off in hover, landing light off in cruise/transition) that keeps the two from ever loading the rail
+  together — see
   [Lighting](../docs/08-lighting.md#landing-light--afterburner-flight-mode-interlock-firmware-required).
-  Very bright (2200 lm) — dim/diffuse for a scale glow. **BA15S = straight 180° pins**
-  → easy to print a holder for (BAU15S is the 150° offset version — not this). 2 pcs = spare.
-- **⚠️ Listing spec mismatch:** the generic spec box says *Interface Type: BA15D (1157)* / model
-  C-0023, but the **ordered variant is 1156 BA15S P21W** — the variant selector governs what ships,
-  so ignore the box. (Confirm it's the single-contact 180° base on arrival.)
+  **BA15S = straight 180° pins** → easy to print a holder for (this listing's own **BAU15S** variant
+  is the 150°-offset one — not the one selected; confirmed via the listing's own socket-comparison
+  chart). 2 pcs = spare.
+- **Listing is cleaner than the earlier one:** the spec box here says *Interface Type: BA15S (1156)*,
+  which **matches** the Socket Type variant selected — no mismatch to flag this time (the earlier
+  YiRui listing's spec box wrongly said BA15D/1157 and had to be overridden by the variant selector).
+  Dimensions, emitter type, and driver mechanism are now confirmed via marketing images rather than
+  carried over as estimates.
 
 ---
 
 ### eletechsup LD2740SC 3A — constant-current LED driver (landing light)
 - **Category:** LED driver (switch-mode buck, constant-current)
-- **Status:** ✅ owned (ordered 24 Jun 2026)
+- **Status:** ✅ reordered (29 Jul 2026) — original order (24 Jun 2026) ⚠️ never arrived (AliExpress bug)
 - **Used for:** drives the **10W landing light** — [Lighting](../docs/08-lighting.md)
 - **Variant / qty:** 3A, No Terminal · 1 pc
 - **Price:** €7.42
@@ -257,48 +291,50 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ---
 
-### ACELEX 3W 700mA LED driver — nav-light / strobe driver
+### ICGOICIC 3W/2W 700mA LED driver — nav-light / strobe driver
 - **Category:** LED driver (switch-mode buck, constant-current)
-- **Status:** ✅ owned (ordered 24 Jun 2026)
+- **Status:** ✅ reordered (29 Jul 2026) — replaces the ACELEX listing (ordered 24 Jun 2026, ⚠️ never
+  arrived — AliExpress bug); same 36×20mm form factor and specs, different listing/seller
 - **Used for:** drives the **3W nav LEDs + white strobes** (one driver per channel) — [Lighting](../docs/08-lighting.md)
-- **Variant / qty:** "3W LED Driver" (700 mA) · 4 pcs
-- **Price:** €0.70 ea · 4 × €0.70 = €2.80 + €2.36 shipping = €5.16 total
-- **Link:** https://www.aliexpress.com/item/32826230105.html
+- **Variant / qty:** "5PCS" pack (4 needed + 1 spare)
+- **Price:** €6.37 / 5 pcs (€1.27 ea)
+- **Link:** https://www.aliexpress.com/item/1005007486363935.html
 
 | Spec | Value |
 |------|-------|
-| Weight | ~4 g *(est.; weigh to confirm)* |
+| Weight | ~4 g *(est., carried over from the ACELEX board — same dimensions; weigh to confirm)* |
 | Dimensions | 36 × 20 mm |
 | Type | switch-mode step-down (buck) constant-current |
 | Input voltage | DC 5–35 V |
 | Output current | 700 mA ±20 mA (fixed) |
-| LED load | 1–10× 3W LEDs in series (string Vf must be ~2–3 V below Vin) |
-| Efficiency | ~96% (full load) |
-| Output accuracy | ±2–3% |
-| Ripple + noise | 120 mV |
-| PWM dimming | 20 Hz–20 kHz, logic-level; **min on-time 0.7 ms** |
+| LED load | 1–10× 3W (or 2W) LEDs in series (string Vf must be ~2–3 V below Vin) |
+| Efficiency | — *(not stated on this listing; ~96% on the equivalent ACELEX board, not re-confirmed for this seller)* |
+| Ripple + noise | — *(not stated on this listing)* |
+| PWM dimming | logic-level (frequency/min-on-time not stated on this listing) |
 | Protection | overload / short-circuit / overcurrent |
-| Pins | VIN+, GND, PWM, LED+, LED− |
-| Brand | ACELEX (1W sibling = 350 mA) |
+| Pins | VIN+, VIN−, PWM (implied), LED+, LED− |
+| Brand | ICGOICIC (item no. LED-3w) |
 
-- **Notes:** one driver per nav LED / strobe channel, from the 12V rail. Efficient buck → internal
-  loss <1 W at a single-3W-LED load, so it **runs cool and a heatsink is optional** at these loads.
-  Min PWM on-time 0.7 ms → keep dimming frequency modest (≈≤1 kHz).
-- **⚠️ Verify PWM polarity:** the listing text for this 3W board says *"high level closes the output,
-  low level opens"* (**inverted** — logic-high = LED off), but the waveform diagrams look
-  non-inverted. Confirm on arrival so the RP2040 strobe/dim logic is the right way round (it changes
+- **Notes:** one driver per nav LED / strobe channel, from the 12V rail. Same dimensions and core
+  specs (5–35V in, 700mA±20mA out, 1–10× 3W LEDs) as the ACELEX board it replaces — likely the same
+  generic board relisted by a different seller. Efficiency/ripple/PWM-frequency figures from the old
+  ACELEX listing are **not re-confirmed** for this one; treat as estimates until checked on arrival.
+- **⚠️ Verify PWM polarity:** this listing's text says *"PWM dimming high level off output, low
+  level on output"* (**inverted** — logic-high = LED off) — same polarity quirk flagged on the
+  ACELEX board. Confirm on arrival so the RP2040 strobe/dim logic is the right way round (it changes
   whether 0% duty = off or on).
 
 ---
 
 ### IRLZ44N — logic-level N-channel MOSFET (LED-strip / load switch)
 - **Category:** MOSFET (low-side switch)
-- **Status:** ✅ owned (ordered 24 Jun 2026)
+- **Status:** ✅ reordered (29 Jul 2026) — replaces the earlier listing (ordered 24 Jun 2026, ⚠️ never
+  arrived — AliExpress bug); switched to a different listing/seller (GUXINWAY) for the reorder
 - **Used for:** switching the **12V COB strip** on/off from an RP2040 GPIO (also usable as a
   landing-light on/off switch) — [Lighting](../docs/08-lighting.md)
-- **Variant / qty:** IRLZ44N · 10 pcs
-- **Price:** €3.93 / 10 pcs (€0.39/pc)
-- **Link:** https://www.aliexpress.com/item/1005012176934991.html?mp=1&sourceType=570&pdp_ext_f=%7B%22cart2PdpParams%22%3A%7B%22sourceType%22%3A%22570%22%2C%22cartSource%22%3A%22main%22%7D%7D
+- **Variant / qty:** Color: **IRLZ44N** · 10 pcs
+- **Price:** €3.23 / 10 pcs (€0.32/pc)
+- **Link:** https://www.aliexpress.com/item/1005009242758699.html
 
 | Spec | Value |
 |------|-------|
@@ -312,14 +348,17 @@ Build context: [Lighting](../docs/08-lighting.md).
 | Gate drive | fully on from 3.3–5 V → **RP2040-compatible** |
 | P_D (max) | ~83 W (heatsinked) |
 
-- **Notes:** specs from the **standard IRLZ44N datasheet** (the AliExpress listing is a generic
-  multi-MOSFET page with no IRLZ44N data). Wire as a low-side switch: Source→GND, Drain→COB strip −,
+- **Notes:** specs from the **standard IRLZ44N datasheet** (this listing itself gives no electrical
+  spec table beyond brand/package/condition — the generic AliExpress "Type: Voltage Regulator" tag is
+  a mislabelled category, not a real spec). Wire as a low-side switch: Source→GND, Drain→COB strip −,
   strip +→12 V; Gate→RP2040 GPIO via a ~100–220 Ω series resistor + a 10 kΩ gate→GND pulldown. At the
   COB strip's ~0.4 A the R_DS(on) loss is negligible and no heatsink is needed, even with a 3.3 V
   gate. Being **logic-level**, it's fully enhanced by 3.3–5 V (unlike a standard IRFZ44N that needs ~10 V).
-- **Listing:** generic multi-MOSFET page (IRFZ/IRLZ family); the **IRLZ44N variant** is the one
-  ordered, and reviews confirm IRLZ44N units (one notes it "works perfectly with Arduino"). Confirm
-  the parts are stamped "IRLZ44N" on arrival.
+- **Listing:** unlike the earlier reorder-source (a generic multi-MOSFET page with no part-specific
+  data), **this listing has a "Color" variant selector that names the exact part** (IRLZ24N / IRLZ34N
+  / **IRLZ44N**) — a cleaner pick, less ambiguity about what actually ships. Reviews reference this
+  specific listing working fine for small projects. Still worth confirming the parts are stamped
+  "IRLZ44N" on arrival, as with any AliExpress MOSFET buy.
 
 ---
 
