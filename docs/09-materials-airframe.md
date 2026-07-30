@@ -304,6 +304,12 @@ a tutorial/demo that shows the whole thermoforming pull end-to-end. Uses 1 mm **
 copolyester — i.e. a PETG-family sheet, same forming behaviour as our plan) at **~140 °C**, which
 lines up with the material and method above.
 
+**Reference — [Clear parts from 3D-printed molds, no vacuum (YouTube Shorts)](https://www.youtube.com/shorts/SIwsHYTWdLk):**
+a no-vacuum alternative for forming clear parts over a printed mold — if it holds up for a piece this
+size/shape, it could sidestep the whole plenum-box material decision above (still undecided between
+plastic tub / printed box / MDF). Not yet evaluated against this canopy's specific size/draw depth —
+watch and compare before committing further to the vacuum-box build.
+
 ### Canopy sill / frame
 
 Print the sill the PETG sits on as **part of the fuselage** in LW-PLA for an exact fit; CA-glue the
