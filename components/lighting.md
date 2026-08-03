@@ -111,6 +111,48 @@ Build context: [Lighting](../docs/08-lighting.md).
 
 ---
 
+### 3535 SMD LED — Cool White 6000–7000K — candidate flat alternative (not ordered)
+- **Category:** LED (SMD emitter, ceramic substrate, no PCB)
+- **Status:** 🔍 **candidate only — not ordered.** Holding off until the domed 3W emitters above
+  (already ordered) arrive, so their real physical size can be checked against the wingtip before
+  spending again — see the [orientation/fit open question](../docs/08-lighting.md#L162).
+- **Would be used for:** potential flat-mount replacement for the wingtip **strobe** LED if the domed
+  3W emitter doesn't fit — [Lighting](../docs/08-lighting.md)
+- **Source / price:** AliExpress · OUMURUI Official Store · "10pcs high power LED 3535 chip 1w 3w 5w
+  SMD diodes 6000-7000k Cool white 35mil 45mil 55mil Ceramic Substrate" · €2.92/lot (10 pcs)
+- **Link:** https://www.aliexpress.com/item/1005005580913171.html
+
+| Spec | Value |
+|------|-------|
+| Power | 1W / 3W / 5W (chip size 35mil / 45mil / 55mil respectively) |
+| Forward voltage | 3.0–3.4 V |
+| Forward current | 1W: 350mA · 3W: 700mA · 5W: 1000mA |
+| Colour / CT | Cool White 6000–7000K **only** — no red/green variant on this listing |
+| CRI | 70–80 |
+| Beam angle | 120° |
+| Package | ceramic substrate SMD, no star PCB — footprint 3.5×3.5mm |
+| Height | **1.67mm** dome apex to base (2.8mm lens diameter, 0.85mm standoff) — per datasheet drawing pasted from listing |
+| Pads | 3 pads visible in outline drawing (labelled ①②③); top view marks only **+ / −** — the centre pad is almost certainly a thermal/die pad, not a third electrical connection, but **not independently confirmed against this specific datasheet** |
+| Life | 50,000 h |
+
+- **Notes:** the **3W / 700mA variant matches the existing CC driver spec** used for the domed
+  emitters — drop-in on the same driver/rail if swapped, no redesign needed. Dramatically thinner
+  than the domed part (1.67mm vs 5.5mm dome + 6mm slug), which matters most for the sideways/vertical
+  mounting orientation. **Gap: red 625nm / green 520nm equivalents not yet found** — this listing is
+  white-only, so the two nav lights would need a separate matching listing before this could fully
+  replace the domed set. No PCB/breakout board included, same as the domed emitters — solder wires
+  directly to the pads.
+- **Soldering plan (if ordered):** only 2 pads carry current (+ / −, hand-solderable with flux + fine
+  tip despite the sub-mm pad size — reflow/hot-air is easier if available); the centre pad is thermal
+  and should be soldered to a copper spreader/heatsink for heat transfer, not wired to anything.
+- **Considered and ruled out: opening the domed 3W emitters to get a bare die.** They already ship
+  with no PCB, so there's nothing to desolder — the dome itself is a silicone/epoxy encapsulant molded
+  directly over the die's gold bond wires, not a removable lens. Grinding or cutting it away exposes
+  and almost certainly breaks those bond wires, killing the emitter. Not a viable path to a flatter
+  part; the 3535 candidate above is the real alternative if the domed ones don't fit.
+
+---
+
 ### 10W LED 5050 XML-T6 — landing light
 - **Category:** LED (high-power emitter on star PCB)
 - **Status:** ✅ reordered (29 Jul 2026) — original order (24 Jun 2026) ⚠️ never arrived (AliExpress bug)

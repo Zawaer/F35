@@ -160,15 +160,26 @@ while True:
   transition counted as cruise). Required before the two share the VTX rail safely — see above.
 - 10W landing-light heatsink resolved: two 14×14×6 mm (stacked, on metal) for intermittent use.
 - ⚠️ **Open: check the 3W nav/strobe LEDs actually fit flush in the wingtip.** The bare emitter is an
-  **8mm dome, 5.5mm tall, on a 6mm copper slug** — plausibly too chunky for a scale-accurate flush
-  wingtip point light (see the reference photos above: "small aperture, no external protrusion").
-  Not yet checked against a real wingtip cross-section because the wing CAD doesn't exist yet.
-  **Revisit once the wing is modeled** — measure the actual available depth at the intended nav-light
-  location before committing to the mounting. If it doesn't fit: a standard 5mm superbright
-  through-hole LED (smaller dome, some brightness cost) or a flat high-power SMD LED (5050/3535-class,
-  <2mm thick, similar wattage) are both drop-in-ish alternatives on the same 700mA CC driver family —
-  no redesign of the driver/rail plan needed either way. (The COB strip, by contrast, is already thin
-  — 2.7–3mm × 1.5mm — and doesn't need this check.)
+  **8mm dome, 5.5mm tall, on a 6mm copper slug** (~14.4mm long overall incl. leads) — plausibly too
+  chunky for a scale-accurate flush wingtip point light (see the reference photos above: "small
+  aperture, no external protrusion"). Not yet checked against a real wingtip cross-section because
+  the wing CAD doesn't exist yet.
+  - **Orientation matters, and it's worse than it first looks.** Mounting with the PCB facing
+    up/down (dome through the top or bottom skin) only needs to clear the local skin-to-skin
+    *thickness*, and the mount point can be shifted a bit inboard to a thicker part of the airfoil.
+    Mounting with the PCB facing **sideways/vertical** — dome pointing spanwise-outward, which is the
+    *correct* orientation to match a real nav/strobe light and the reference photos — has to fit the
+    whole ~14.4mm package inside the pocket right at the outboard tip cap, typically the **thinnest
+    cross-section on the entire wing**. So the scale-accurate orientation is likely the worst case for
+    this part, not a minor variant.
+  - **Revisit once the wing is modeled** — measure the actual available depth at the intended
+    nav-light location before committing to the mounting. If it doesn't fit: a standard 5mm
+    superbright through-hole LED (smaller dome, some brightness cost) keeps the same "needs axial
+    depth" problem just scaled down; a **flat high-power SMD LED (5050/3535-class, <2mm thick, similar
+    wattage)** is the better fit specifically for the sideways/outward orientation, since a flat chip
+    against a vertical mounting face only needs a shallow pocket, not dome depth. Both are drop-in-ish
+    on the same 700mA CC driver family — no redesign of the driver/rail plan needed either way. (The
+    COB strip, by contrast, is already thin — 2.7–3mm × 1.5mm — and doesn't need this check.)
 - **COB strip decided: exterior formation lights** (green), **diffused through the frosted PP 0.5 mm
   sheet**. Cockpit glow was considered but dropped — not a priority and not very scale-realistic.
 - **Strobe decided: hard on/off, both wingtips synced** — full brightness, **0.2 s on / 0.8 s off**
