@@ -160,6 +160,11 @@ the sleeve or gently warm the outer tube. **Use 2-part epoxy** (5-min is fine) f
 *not* CA (brittle under vibration). Sand mating surfaces, glue, align straight, cure fully before
 loading. Resulting run ≈ 900 mm. Budget ~35 ml epoxy total (~5 ml/joint).
 
+**Fit confirmed by hand (3 Aug 2026):** the 400×6×3 mm sleeve fits perfectly inside the 500×8×6 mm
+main tube. It doesn't slide on its own once inserted, but moves easily when pushed by hand — exactly
+the right balance for aligning a joint before the epoxy sets. Measured weights: 500×8×6 mm tube =
+**15.3 g**, 400×6×3 mm sleeve = **12.5 g** (per piece).
+
 ## Bearings & 3BSM rotation
 
 - **3BSM swivel — loose ball race:** the main 3BSM rotation runs on **4 mm loose steel balls

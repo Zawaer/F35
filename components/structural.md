@@ -186,12 +186,15 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 | Qty | 16 pcs |
 | Brand | U-Angel-1988 |
 | Note | ID tolerance can run ~+0.2 mm (positive) per reviews |
+| **Measured weight** | **15.3 g/tube** (weighed 3 Aug 2026) |
 
 - **Notes:** tubes for spars (stiffer per gram than solid rod). Each full run is **two 500 mm tubes
   joined** with the owned **6 mm OD / 3 mm ID** tube as a press-fit inner sleeve (~0 mm gap), bonded
   with **2-part epoxy** (not CA) — see the [joining method](../docs/09-materials-airframe.md#joining-method-press-fit-sleeve--epoxy).
   ~4 full runs need 8 tubes min; 16-pack gives all runs + spares. The 6 mm ID is sized to accept the
-  sleeve. Conductive + CF dust — mask when cutting.
+  sleeve. Conductive + CF dust — mask when cutting. **Fit confirmed by hand** (3 Aug 2026): the 6 mm
+  sleeve doesn't slide freely by itself once inside, but moves easily when pushed by hand — good
+  interference fit for gluing (see sleeve card below).
 
 ---
 
@@ -285,12 +288,16 @@ Cards for filament, carbon tube/rod, bearings, balls, fasteners, wheels, and adh
 | Length | 400 mm |
 | Qty | 10 pcs |
 | Material | carbon fibre |
+| **Measured weight** | **12.5 g/tube** (weighed 3 Aug 2026) |
 
 - **Notes:** confirmed pultruded — smooth glossy exterior, no woven grid texture (roll-wrapped tubes show the characteristic weave). the **6 mm OD slides into the 8 mm spar tube's 6 mm ID** as a 0 mm-gap interference fit —
   bond with **2-part epoxy** (shear), cut ~80–100 mm lengths (~50 mm into each side). See the
   [8 mm spar card](#carbon-fibre-tube-500--8--6-mm-16--main-spars--spine) and
   [joining method](../docs/09-materials-airframe.md#joining-method-press-fit-sleeve--epoxy). Also handy
   for 3BSM supports, ribs/formers, secondary structure. Conductive + CF dust — mask when cutting.
+  **Fit confirmed by hand** (3 Aug 2026): doesn't slide freely under its own weight once inserted in
+  the 8 mm tube's 6 mm ID, but is easy to reposition by hand — good balance of grip + workability for
+  aligning the joint before epoxy cures.
 
 ---
 
