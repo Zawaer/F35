@@ -77,7 +77,9 @@ roll. Yaw in hover comes from the 3BSM yaw element; pitch from the lift-fan/main
 ### 3BSM — three-bearing swivel module
 
 The main EDF exhausts through a **3-bearing swivel module** that vectors thrust from
-horizontal (cruise) to downward (hover), mimicking the real F-35B nozzle.
+horizontal (cruise) to downward (hover), mimicking the real F-35B nozzle. For the joint-chain
+design, motion-link gear-ratio math, wedge-cut-angle/symmetry trade-offs, and the locked V1
+(1-motor) vs V2 (3-motor) roadmap, see [3BSM Swivel Kinematics](13-3bsm-swivel-kinematics.md).
 
 - Driven by **one Feetech STS3032** smart servo (continuous rotation + built-in encoder); the three
   sections are **gear-coupled along their circumference** so a single motor rotates the whole

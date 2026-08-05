@@ -35,9 +35,20 @@ in git history (`git log`); the *Ref* column points to the doc that holds the fu
 | **Landing gear wheels** | Considered silicone cast in 3D-printed molds, then TPU-print (FLEX Medium A98) | **Off-the-shelf RC wheels** | Silicone molds too fiddly/costly (surface finish, degassing, cure inhibition); of the Extrudr flex rolls, Semisoft A85 is too soft to bear load and Medium A98 is firm enough but transparent (wrong colour). COTS wheels are cheap, proven under landing loads, no print/tuning fuss — custom TPU stays a later option if scale accuracy matters | [06](../docs/06-propulsion.md) |
 | **Canopy material** | Considered acrylic (PMMA) / polycarbonate mid-research | **Clear PETG, 0.5–0.75 mm** | Acrylic shatters cold-bent + needs vacuum/oven control; PC must be dried + ~50% failure rate. PETG is forgiving for a hobby heat/vacuum setup. Thin beats scale-thick (lighter nose, easier form, less distortion; RC wind load trivial) | [09](../docs/09-materials-airframe.md#canopy-transparency) |
 | **Doc prices** | USD + EUR conversions | EUR only | Single currency, less clutter | — |
+| **3BSM wedge cut angle** | 30° → 26.25° (105° target) → 22.5° (flat 90° target) | **23.75° (95° target)** | 30° overshot (120° at full rotation); 26.25°/105° end-stop left the 90° hover point asymmetric; 22.5°/90° was perfectly symmetric at hover but had zero braking margin; 23.75°/95° puts the symmetric end-stop just past 90° so normal flight-controller corrections near hover stay a negligible, gyro-correctable offset, while keeping a little forward-pointing braking margin | [13](../docs/13-3bsm-swivel-kinematics.md#5-the-90-hover-asymmetry-problem-why-95-not-90-or-105) |
+| **3BSM V1 wall geometry** | Straight-wall loft with guide rails (bulges only in hover) | **Hourglass pinch, no guide rails** (matches Eric Maglio's reference build) | RC-scale duct velocities are far below where a mild cruise-position pinch should matter; guide rails kept as a documented, easy-to-swap fallback if bench testing shows otherwise | [13](../docs/13-3bsm-swivel-kinematics.md#6-the-ellipsehourglass-wall-problem) |
+| **3BSM braking method** | Extra nozzle deflection past 90° (105°/95° end-stop) built into the mechanism | **90°-locked nozzle + software nose-up airframe pitch** for the extra braking vector | Keeps the symmetric mechanical end-stop simple (single motor, fixed gear ratio) instead of re-opening the asymmetry trade-off just to gain braking margin | [13](../docs/13-3bsm-swivel-kinematics.md#5-the-90-hover-asymmetry-problem-why-95-not-90-or-105) |
 
 ## Notable picks (settled, not reversals)
 
+- **3BSM roadmap locked: V1 = 1 motor, V2 = 3 motors.** V1 uses one STS3032 with the three sections
+  gear-linked at a fixed 1 : −2 : 2 ratio (23.75° wedge cuts, 95° end-stop — see the wedge-angle row
+  above); this accepts a small, gyro-correctable lateral offset away from the two symmetric extremes.
+  V2 (funds permitting) swaps in **3 independent servos**, one per bearing, removing the fixed-ratio
+  constraint entirely so the flight controller can hold a perfectly on-axis vector at *any*
+  deflection angle, not just 0°/95°. Non-circular (elliptical) gears on a single motor were
+  considered and rejected as a cheaper alternative to V2 — they'd bind at the fixed bearing shaft
+  spacing and only fix symmetry at one hardcoded angle. See [13 — §7](../docs/13-3bsm-swivel-kinematics.md#7-v1-vs-v2--the-motor-count-decision).
 - **Hover control = 4-motor quadcopter mix** (ArduPilot quadplane) over bleed-air schemes.
 - **Afterburner = amber BA15S bulb, throttle-reactive** (PWM brightness scales with throttle).
 - **COB strip = exterior formation lights** (green, diffused through frosted PP 0.5 mm); cockpit
